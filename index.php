@@ -1,3 +1,18 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+
+if(isset($_SESSION['id'])){
+    $userId= $_SESSION['id'];
+    $username= $_SESSION['username'];
+
+}else{
+    header('location: login.php');
+    die();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,7 +133,7 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a>Home</a></li>
+          <li class="active"><a><?php echo $username;?></a></li>
           <li><a value="Show Dialog" onclick="$('#myInput').click();">Upload</a></li>
           <li><a href="#" id="EditTourButton">Edit Tour</a></li>
           <li><a href="#" id="menu-toggle">Note</a></li>
