@@ -6,7 +6,9 @@ $password = $_POST['form-password'];
 $result = pg_query("SELECT * FROM users WHERE Username='$username'");
 
 if ($result) {
-	echo "working";
+		$row = pg_fetch_row($result);
+
+	echo $row[0];
 }
 
 if ($result) {
