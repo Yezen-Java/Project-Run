@@ -20,12 +20,12 @@ $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
 echo " Please Enter Vaild Email";
 }else{
-$resultemail = mysql_query("SELECT * FROM users WHERE Email='$email'");
-$resultuser = mysql_query("SELECT * FROM users WHERE Username='$username'");
-$dataEmail = mysql_num_rows($resultemail);
-$dataUsername = mysql_num_rows($resultuser);
+$resultemail = pg_query("SELECT * FROM users WHERE Email='$email'");
+$resultuser = pg_query("SELECT * FROM users WHERE Username='$username'");
+$dataEmail = pg_num_rows($resultemail);
+$dataUsername = pg_num_rows($resultuser);
 if(($dataEmail)==0 &&($dataUsername)==0 ){
-$query = mysql_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('$fname', '$lastname','$email','$username','$password')"); // Insert query
+$query = pg_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('$fname', '$lastname','$email','$username','$password')"); // Insert query
 if($query){
 echo "You have Successfully Registered";
 }else
@@ -36,7 +36,7 @@ echo "Error!!";
 echo "This email is already registered, Please try another email";
 }
 }
-mysql_close ($connection);
+pg_close ($connection);
 }
 
 if (isset($_POST['btlogin'])) {
