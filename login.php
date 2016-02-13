@@ -1,6 +1,7 @@
 <?php
-require_once("database/Connect.php");
+
 if (isset($_POST['signup'])){
+include("database/Connect.php");
 $fname=$_POST['firstname']; 
 $lastname=$_POST['lastname'];
 $email=$_POST['form-create-email'];
