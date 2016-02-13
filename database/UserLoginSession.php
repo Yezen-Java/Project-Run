@@ -3,7 +3,11 @@ error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 $username = $_POST['form-username'];
 $password = $_POST['form-password'];
-$result = pg_query("SELECT * FROM users WHERE username='$username'");
+$result = pg_query("SELECT * FROM users WHERE Username='$username'");
+
+if (pg_query) {
+	echo "working";
+}
 
 if ($result) {
 	$row = pg_fetch_row($result);
