@@ -1,4 +1,3 @@
-
 $(document).ready();
 $("#EditTourButton").click(function(){
   window.location = "https://www.google.com/maps/d/edit?mid=zdaGz_kxHGcY.kNA-vyp_PChI&usp=sharing" + this.id;
@@ -25,4 +24,10 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 }else{
   alert('The File API is is not fully supported in this browser.')
 }
+
+
+
+
+
+
      
