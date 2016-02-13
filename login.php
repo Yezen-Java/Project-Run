@@ -1,5 +1,5 @@
 <?php
-include("database/Connect.php");
+require("database/Connect.php");
 if (isset($_POST['signup'])){
 $fname=$_POST['firstname']; 
 $lastname=$_POST['lastname'];
