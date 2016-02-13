@@ -5,11 +5,6 @@ $username = $_POST['form-username'];
 $password = $_POST['form-password'];
 $result = pg_query("SELECT * FROM users WHERE Username='$username'");
 
-if ($result) {
-		$row = pg_fetch_row($result);
-
-	echo $row[0];
-}
 
 if ($result) {
 	$row = pg_fetch_row($result);
@@ -17,7 +12,7 @@ if ($result) {
 	$usernameR = $row[4];
 	$passwordR = $row[5];
 }
-if($username === $usernameR  && sha1($password)=== $passwordR){
+if($username == $usernameR  && sha1($password) == $passwordR){
 	$_SESSION['username'] = $username;
 	$_SESSION['id'] = $userId;
    header('Location: index.php');
