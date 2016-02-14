@@ -96,12 +96,22 @@ if(isset($_SESSION['id'])){
     }
 
     function addNoteFunc(){
+        myFunction();
         var ul = $('#sideBar');
         ul.find('li:first').clone(true).appendTo(ul);
     }
-   
+
+    function randomStringGenerator() {
+      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+      var string_length = 18;
+      var randomstring = '';
+      for (var i=0; i<string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+      }
+      document.getElementById("randomfield").value = randomstring;
+    }
     google.maps.event.addDomListener(window, 'load', initialize);
-    
 </script>
 
 </head>
@@ -133,10 +143,12 @@ if(isset($_SESSION['id'])){
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a><?php echo $username;?></a></li>
+          <li class="active"><a>Home</a></li>
           <li><a value="Show Dialog" onclick="$('#myInput').click();">Upload</a></li>
           <li><a href="#" id="EditTourButton">Edit Tour</a></li>
           <li><a href="#" id="menu-toggle">Note</a></li>
+          <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
+          <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

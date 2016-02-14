@@ -26,6 +26,11 @@ html, body {
 	width: 230px;
 }
 
+#codeGenerateCssLi {
+    margin: 5px;
+    padding-top: 3px;
+}
+
 #sideBar {
     padding-top: 50px;
     margin: 10px;
