@@ -11,8 +11,19 @@ if(isset($_SESSION['id'])){
     die();
 }
 
-?>
 
+$toursListQuery = pg_query("SELECT tour_name, level, tourgode From tour");
+
+if ($toursListQuery) {
+
+echo "Tour query successed. ";
+}else{
+  echo "Failed to Tour data. ";
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,8 +113,8 @@ if(isset($_SESSION['id'])){
     }
 
     function randomStringGenerator() {
-      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-      var string_length = 18;
+      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+      var string_length = 6;
       var randomstring = '';
       for (var i=0; i<string_length; i++) {
         var rnum = Math.floor(Math.random() * chars.length);
@@ -144,11 +155,17 @@ if(isset($_SESSION['id'])){
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a>Home</a></li>
-          <li><a value="Show Dialog" onclick="$('#myInput').click();">Upload</a></li>
           <li><a href="#" id="EditTourButton">Edit Tour</a></li>
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
+          <li><?php echo "<select name='tourSelect' class='form-control' id='sel1' >";
+       
+       while ($temp = mysql_fetch_assoc($toursListQuery)) {
+    echo "<option value='".$temp['id']."'>".$temp['name']."</option>";
+}
+echo "</select>";
+?></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -171,6 +188,13 @@ if(isset($_SESSION['id'])){
         </div>
         <div class="modal-body">
 
+        <h4>Or drag and drop files below</h4>
+          <div class="upload-drop-zone" id="drop-zone">
+            Just drag and drop files here
+          </div>
+
+
+
         <script src="jquery.sortable.js"></script>
 
           <ul class="sortable">
@@ -187,6 +211,7 @@ if(isset($_SESSION['id'])){
 
         </div>
         <div class="modal-footer">
+        <button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
           <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
