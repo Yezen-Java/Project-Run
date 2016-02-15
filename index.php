@@ -26,9 +26,6 @@ echo "Tour query successed. ";
   echo "Failed to Tour data. ";
 }
 
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,6 +161,7 @@ echo "Tour query successed. ";
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
+          <li></li>
           <li> <select class="form-control" id="tourSelector" name="tourSelector">
         <option vlaue= "chose">Edit A Tour</option>
             <?php
@@ -178,10 +176,7 @@ echo "Tour query successed. ";
             
             }
                 
-            ?>
-    
-        </select>
-          </li>
+            ?></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
