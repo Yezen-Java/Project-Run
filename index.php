@@ -176,7 +176,8 @@ echo "Tour query successed. ";
             
             }
                 
-            ?></li>
+            ?>
+            </select></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
