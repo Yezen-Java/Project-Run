@@ -22,10 +22,11 @@ if ($toursListQuery) {
 
 echo "Tour query successed. ";
 
- foreach($Group as $m)
-    {
-      echo $m['tourgode'];
-    }
+while ($row = pg_fetch_assoc($toursListQuery)) {
+  echo $row['tourid'];
+  echo $row['tourgode'];
+  echo $row['tour_name'];
+}
 }else{
   echo "Failed to Tour data. ";
 }
