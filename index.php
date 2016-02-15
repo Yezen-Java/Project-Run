@@ -175,9 +175,8 @@ while ($row = pg_fetch_assoc($toursListQuery)) {
             
           
             echo '<option value="'.$row['tourid'].'">'.$row['tourgode'].'</option>'; //close your tags!!
-
-          
-        ?>
+}
+          ?>
         </select></li>
         </ul>
       </div><!--/.nav-collapse -->
