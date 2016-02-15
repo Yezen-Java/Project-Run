@@ -172,7 +172,7 @@ while ($row = pg_fetch_assoc($toursListQuery)) {
           <li> <select name="Group" id="Group"> <option>Select a type:</option>
             <?php
      while ($row = pg_fetch_assoc($toursListQuery)) {
-            {
+            
             ?>
                 <option value="<?php echo $row['tourid'];?>"><?php echo $row['tourgode'];echo", ";echo $row['tour_name'];?></option>
             <?php
