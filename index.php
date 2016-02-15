@@ -16,7 +16,7 @@ if(isset($_SESSION['id'])){
 }
 
 
-$toursListQuery = pg_query("SELECT tour_name, level, tourgode From tour");
+$toursListQuery = pg_query("SELECT * From Tour");
 
 if ($toursListQuery) {
 
@@ -166,7 +166,7 @@ echo "Tour query successed. ";
           <li><?php echo "<select name='tourSelect' class='form-control' id='sel1' >";
        
        while ($temp = mysql_fetch_assoc($toursListQuery)) {
-    echo "<option value='".$temp['tourgode']."'>".$temp['tour_name']."</option>";
+    echo "<option value='".$temp['tourgode']."'>".$temp['tourgode'].$temp['tour_name']."</option>";
 }
 echo "</select>";
 ?></li>
