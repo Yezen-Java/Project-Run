@@ -163,13 +163,16 @@ echo "Tour query successed. ";
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
-          <li><?php echo "<select name='tourSelect' class='form-control' id='sel1' >";
-       
-       while ($temp = mysql_fetch_assoc($toursListQuery)) {
-    echo "<option value='".$temp['tourgode']."'>".$temp['tourgode'].$temp['tour_name']."</option>";
-}
-echo "</select>";
-?></li>
+          <li> <select name="Group" id="Group"> <option>Select a type:</option>
+            <?php
+            foreach($Group as $toursListQuery)
+            {
+            ?>
+                <option value="<?php echo $m['Group'];?>"><?php echo $m['tourgode'];?></option>
+            <?php
+            }
+        ?>
+        </select></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
