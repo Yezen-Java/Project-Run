@@ -164,7 +164,7 @@ echo "Tour query successed. ";
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
-          <li> <select class="form-group" id="tourSelector" name="tourSelector">
+          <li> <select class="form-control" id="tourSelector" name="tourSelector">
         <option vlaue= "chose">Edit A Tour</option>
             <?php
             
