@@ -171,10 +171,10 @@ while ($row = pg_fetch_assoc($toursListQuery)) {
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
           <li> <select name="Group" id="Group"> <option>Select a type:</option>
             <?php
-            foreach($Group as $toursListQuery)
+     while ($row = pg_fetch_assoc($toursListQuery)) {
             {
             ?>
-                <option value="<?php echo $m['Group'];?>"><?php echo $m['tourgode'];?></option>
+                <option value="<?php echo $row['tourid'];?>"><?php echo $row['tourgode'];echo", ";echo $row['tour_name'];?></option>
             <?php
             }
         ?>
