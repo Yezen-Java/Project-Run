@@ -166,7 +166,7 @@ echo "Tour query successed. ";
           <li><?php echo "<select name='tourSelect' class='form-control' id='sel1' >";
        
        while ($temp = mysql_fetch_assoc($toursListQuery)) {
-    echo "<option value='".$temp['id']."'>".$temp['name']."</option>";
+    echo "<option value='".$temp['tourgode']."'>".$temp['tour_name']."</option>";
 }
 echo "</select>";
 ?></li>
