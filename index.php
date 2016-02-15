@@ -169,15 +169,24 @@ while ($row = pg_fetch_assoc($toursListQuery)) {
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
-          <li> <select name="Group" id="Group"> <option>Select a type:</option>
+          <li> <select id="cd" name="cd">
+        
             <?php
-     while ($row = pg_fetch_assoc($toursListQuery)) {
             
-          
-            echo '<option value="'.$row['tourid'].'">'.$row['tourgode'].'</option>'; //close your tags!!
-}
-          ?>
-        </select></li>
+            while ($rows =pg_fetch_array($toursListQuery)) {
+            $tour_id =$rows["tourgode"];
+            $tour_name =$rows["tour_name"];
+
+                echo "<option value='$tour_id '>
+                $tour_name
+              </option>";
+            
+            }
+                
+            ?>
+    
+        </select>
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
