@@ -21,6 +21,11 @@ $toursListQuery = pg_query("SELECT * From Tour");
 if ($toursListQuery) {
 
 echo "Tour query successed. ";
+
+ foreach($Group as $m)
+    {
+      echo $m['tourgode'];
+    }
 }else{
   echo "Failed to Tour data. ";
 }
