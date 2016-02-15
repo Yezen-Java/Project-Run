@@ -25,7 +25,7 @@ echo "Tour query successed. ";
 }else{
   echo "Failed to Tour data. ";
 }
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
