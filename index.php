@@ -22,11 +22,6 @@ if ($toursListQuery) {
 
 echo "Tour query successed. ";
 
-while ($row = pg_fetch_assoc($toursListQuery)) {
-  echo $row['tourid'];
-  echo $row['tourgode'];
-  echo $row['tour_name'];
-}
 }else{
   echo "Failed to Tour data. ";
 }
@@ -177,7 +172,7 @@ while ($row = pg_fetch_assoc($toursListQuery)) {
             $tour_id =$rows["tourgode"];
             $tour_name =$rows["tour_name"];
 
-                echo "<option value='$tour_id '>
+                echo "<option value='$tour_id'>
                 $tour_name
               </option>";
             
