@@ -141,9 +141,8 @@ function getLocations(){
 
   $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
-          alert(output);
          });
-
+          alert(output);
 }
 
 </script>
