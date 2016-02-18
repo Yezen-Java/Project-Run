@@ -138,7 +138,12 @@ if (isset($_POST['buttonR'])) {
 
 <script>
 function getLocations(){
- alert("Working");
+
+  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+         function(output){
+          alert(output);
+         });
+
 }
 
 </script>
