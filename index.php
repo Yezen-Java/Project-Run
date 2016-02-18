@@ -138,7 +138,7 @@ if (isset($_POST['buttonR'])) {
 
 function getLocations(){
 
-  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+  $.POST('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
           alert(output);
          });
@@ -181,7 +181,7 @@ function getLocations(){
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
           <li></li>
-          <li> <select class="form-control" id="tourSelector" name="tourSelector" onclick="getLocations()">
+          <li> <select class="form-control" id="tourSelector1" name="tourSelector">
         <option vlaue= "chose">Edit A Tour</option>
             <?php
             
@@ -189,7 +189,7 @@ function getLocations(){
             $tour_id =$rows["tourgode"];
             $tour_name =$rows["tour_name"];
 
-                echo "<option value='$tour_id'>
+                echo "<option onclick='getLocations()' value='$tour_id'>
                 $tour_name
               </option>";
             
