@@ -25,6 +25,13 @@ echo "Tour query successed. ";
 }else{
   echo "Failed to Tour data. ";
 }
+
+if (isset($_POST['buttonR'])) {
+  $TouridFromList = $_POST['tourSelector'];
+  $NodesSelectQuery = pg_query("SELECT * From");
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,6 +134,18 @@ echo "Tour query successed. ";
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
+<script type="text/javascript">
+
+function get(){
+
+  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+         function(output){
+          alert(output);
+         });
+}
+
+</script>
+
 </head>
 
 <body onload="myFunction()">
@@ -178,6 +197,9 @@ echo "Tour query successed. ";
                 
             ?>
             </select></li>
+
+            <li><button class="btn btn-default" name="buttonR">Retrieve</button>
+            </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
