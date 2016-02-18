@@ -133,19 +133,16 @@ if (isset($_POST['buttonR'])) {
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 
+</script>
 
+<script>
 function getLocations(){
  alert("Working");
   $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
           alert(output);
          });
-}
-
-
-</script>
-
-
+}</script>
 
 </head>
 
@@ -190,7 +187,7 @@ function getLocations(){
             $tour_id =$rows["tourgode"];
             $tour_name =$rows["tour_name"];
 
-                echo "<option onclick='getLocations()' value='$tour_id'>
+                echo "<option onclick='getLocations();' value='$tour_id'>
                 $tour_name
               </option>";
             
@@ -199,7 +196,7 @@ function getLocations(){
             ?>
             </select></li>
 
-            <li><button class="btn btn-default" name="buttonR">Retrieve</button>
+            <li><button class="btn btn-default" name="buttonR" type="button" onclick="getLocations();">Retrieve</button>
             </li>
         </ul>
       </div><!--/.nav-collapse -->
