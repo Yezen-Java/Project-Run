@@ -132,19 +132,20 @@ if (isset($_POST['buttonR'])) {
       document.getElementById("randomfield").value = randomstring;
     }
     google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 
-<script type="text/javascript">
 
 function getLocations(){
-
-  $.POST('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+ alert("Working");
+  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
           alert(output);
          });
 }
 
+
 </script>
+
+
 
 </head>
 
