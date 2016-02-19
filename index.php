@@ -104,11 +104,16 @@ echo "Tour query passed. ";
             fillColor:"#0000FF",
             fillOpacity:0.4
         });
+
+        circle.id = uniqueId;
+        uniqueId++;
   		
     	google.maps.event.addListener(circle, "click", function (e){
         	whichCircle = circle.id;
         	$("#myModal").modal();
       	});
+
+      	circles.push(circle);
       
     } 
 
