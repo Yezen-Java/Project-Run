@@ -86,8 +86,6 @@ if (isset($_POST['buttonR'])) {
             fillColor:"#0000FF",
             fillOpacity:0.4
         });
-        circle.id = uniqueId;
-        
   
     google.maps.event.addListener(circle, "click", function (e){
         whichCircle = circle.id;
@@ -96,7 +94,7 @@ if (isset($_POST['buttonR'])) {
 
     circles.push(circle);
 
-    document.getElementById("search_results").innerHTML = uniqueId;
+    
 
       
     } 
@@ -104,9 +102,9 @@ if (isset($_POST['buttonR'])) {
         for (var i = 0; i < circles.length; i++){
             if (circles[i].id == whichCircle){
                 circles[i].setMap(null);
-                circles.splice(i, uniqueId);
+                circles.splice(i, circle);
                 $('#myModal').modal('hide');
-                cirles.toString();
+                document.getElementById("search_results").innerHTML = circles.toString();
                 return;
             }
         }
