@@ -74,8 +74,9 @@ echo "Tour query passed. ";
     <script>
     var whichCircle;
     var map;
-    var locationTwo = 51.515128, -0.110744;
-    var myCenter=new google.maps.LatLng(locationTwo);
+    var latitude = 51.515128; 
+    var longitude = -0.110744;
+    var myCenter=new google.maps.LatLng(latitude, longitude);
     var circles = [];
     var uniqueId = 0;
     
