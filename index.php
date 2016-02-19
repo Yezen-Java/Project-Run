@@ -92,6 +92,7 @@ echo "Tour query passed. ";
     }
 
     function placeMarker(location) {
+
         var circle = new google.maps.Circle({
             center:location,
             map:map,
@@ -103,7 +104,7 @@ echo "Tour query passed. ";
             fillColor:"#0000FF",
             fillOpacity:0.4
         });
-  
+  		
     	google.maps.event.addListener(circle, "click", function (e){
         	whichCircle = circle.id;
         	$("#myModal").modal();
@@ -111,27 +112,11 @@ echo "Tour query passed. ";
       
     } 
 
-    function circleMarker(currentLocation) {
-        var circle = new google.maps.Circle({
-            center:currentLocation,
-            map:map,
-            position:currentLocation,
-            radius:10,
-            strokeColor:"#0000FF",
-            strokeOpacity:0.8,
-            strokeWeight:2,
-            fillColor:"#0000FF",
-            fillOpacity:0.4
-        });
-        	whichCircle = circle.id;
-        	$("#myModal").modal();  	
-    }
-
     function DeleteCircle(){
         for (var i = 0; i < circles.length; i++){
             if (circles[i].id == whichCircle){
                 circles[i].setMap(null);
-                circles = circles.slice(i);
+                circles.slice(i, 1);
                 $('#myModal').modal('hide');
                 return;
             }
