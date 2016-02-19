@@ -90,11 +90,16 @@ echo "Tour query passed. ";
       });
     }
  
-    function placeMarker(location) {
+ 	
+
+    function placeMarker() {
+
+		var currentLocation = "51.515182, -0.110530"
+
         var circle = new google.maps.Circle({
-            center:location,
+            center:currentLocation,
             map:map,
-            position:location,
+            position:currentLocation,
             radius:10,
             strokeColor:"#0000FF",
             strokeOpacity:0.8,
@@ -103,10 +108,10 @@ echo "Tour query passed. ";
             fillOpacity:0.4
         });
   
-    	google.maps.event.addListener(circle, "click", function (e){
-        	whichCircle = circle.id;
-        	$("#myModal").modal();
-      	});
+    	//google.maps.event.addListener(circle, "click", function (e){
+        //	whichCircle = circle.id;
+        //	$("#myModal").modal();
+      	//});
       
     } 
     function DeleteCircle(){
@@ -239,7 +244,7 @@ $(function() {
 
             </li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit" onclick="placeMarker(51.515182, -0.110530);"></input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit" onclick="placeMarker()"></input>
             </form>
             </li>
         </ul>
