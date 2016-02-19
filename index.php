@@ -77,6 +77,7 @@ echo "Tour query passed. ";
     var myCenter=new google.maps.LatLng(51.48963307250382, -0.1708325743675232);
     var circles = [];
     var uniqueId = 0;
+
     function initialize(){
     var mapProp = {
       center:myCenter,
@@ -92,14 +93,11 @@ echo "Tour query passed. ";
  
  	
 
-    function placeMarker() {
-
-		var currentLocation = "51.515182, -0.110530"
-
+    function placeMarker(cursorLocation) {
         var circle = new google.maps.Circle({
-            center:currentLocation,
+            center:cursorLocation,
             map:map,
-            position:currentLocation,
+            position:cursorLocation,
             radius:10,
             strokeColor:"#0000FF",
             strokeOpacity:0.8,
@@ -108,10 +106,10 @@ echo "Tour query passed. ";
             fillOpacity:0.4
         });
   
-    	//google.maps.event.addListener(circle, "click", function (e){
-        //	whichCircle = circle.id;
-        //	$("#myModal").modal();
-      	//});
+    	google.maps.event.addListener(circle, "click", function (e){
+        	whichCircle = circle.id;
+        	$("#myModal").modal();
+      	});
       
     } 
     function DeleteCircle(){
@@ -244,7 +242,7 @@ $(function() {
 
             </li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit" onclick="placeMarker()"></input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" onclick="placeMarker(51.48963307250382, -0.1708325743675232)"></input>
             </form>
             </li>
         </ul>
