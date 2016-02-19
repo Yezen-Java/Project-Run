@@ -257,7 +257,7 @@ $(function() {
 
             </li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" onclick="placeMarker(51.48963307250382, -0.1708325743675232)"></input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" value = "dfsf" onclick="placeMarker(51.48963307250382, -0.1708325743675232)"></input>
             </form>
             </li>
         </ul>
