@@ -98,7 +98,7 @@ if (isset($_POST['buttonR'])) {
 
 
 
-    document.getElementById("search_results").innerHTML = circles;
+    document.getElementById("search_results").innerHTML = circles[uniqueId];
 
       
     } 
@@ -108,7 +108,7 @@ if (isset($_POST['buttonR'])) {
                 circles[i].setMap(null);
                 circles.splice(i, uniqueId);
                 $('#myModal').modal('hide');
-              document.getElementById("search_results").innerHTML = circles;
+              //document.getElementById("search_results").innerHTML = circles[uniqueId];
 
                 return;
             }
