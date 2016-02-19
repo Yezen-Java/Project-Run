@@ -96,7 +96,7 @@ if (isset($_POST['buttonR'])) {
 
     circles.push(circle);
 
-    document.getElementById("search_results").innerHTML = circles;
+    document.getElementById("search_results").innerHTML = uniqueId;
 
       
     } 
@@ -152,7 +152,7 @@ $(function() {
       });
 
 
-function(){
+function (){
 
 
 }
