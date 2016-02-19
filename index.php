@@ -85,16 +85,16 @@ if (isset($_POST['buttonR'])) {
             strokeWeight:2,
             fillColor:"#0000FF",
             fillOpacity:0.4
-            uniqueId = circle.id;
         });
   
-  
+  		
 
     google.maps.event.addListener(circle, "click", function (e){
         whichCircle = circle.id;
         $("#myModal").modal();
       });
-
+    
+    uniqueId = circle.id;
     circles.push(circle);
 
       
