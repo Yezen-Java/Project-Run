@@ -140,7 +140,7 @@ $(function() {
         $("#lets_search").bind('submit',function() {
         	var select = document.getElementById("tourSelector1");
             var answer = select.options[select.selectedIndex].value;
-           $.post('database/TourLocationQuery.php',{value:answer}, function(data){
+           $.post('database/TourLocationQuery.php',{TourCode:answer}, function(data){
              $("#search_results").html(data);
            });
            return false;
