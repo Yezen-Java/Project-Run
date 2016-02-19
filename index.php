@@ -44,6 +44,9 @@ echo "Tour query passed. ";
 
 
 
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,11 +89,13 @@ echo "Tour query passed. ";
         var location = event.latLng;
       });
     }
-    function placeMarker(location) {
+ 
+    function placeMarker(latitude, longitude) {
         var circle = new google.maps.Circle({
-            center:location,
+            latitude: latitude,
+            longitude: longitude,
             map:map,
-            position:location,
+            //position:location,
             radius:10,
             strokeColor:"#0000FF",
             strokeOpacity:0.8,
@@ -99,14 +104,10 @@ echo "Tour query passed. ";
             fillOpacity:0.4
         });
   
-  		document.getElementById("search_results").innerHTML = circles.toString();
-
     	google.maps.event.addListener(circle, "click", function (e){
         	whichCircle = circle.id;
         	$("#myModal").modal();
       	});
-
-    circles.push(circle);
       
     } 
     function DeleteCircle(){
@@ -149,22 +150,22 @@ echo "Tour query passed. ";
 </script>
 
 <script>
+
 $(function() {
         $("#lets_search").bind('submit',function() {
         	var select = document.getElementById("tourSelector1");
             var answer = select.options[select.selectedIndex].value;
-           $.post('database/TourLocationQuery.php',{TourCode:answer}, function(data){
-             $("#search_results").html(data);
-           });
+
+           	$.post('database/TourLocationQuery.php',{TourCode:answer}, function(data){
+             	$("#search_results").html(data);
+
+				placeMarker(51.515182, -0.110530);
+
+           	});
+
            return false;
         });
-      });
-
-
-function (){
-
-
-}
+});
 
 </script>
 
@@ -220,8 +221,8 @@ function (){
             ?>
             </select></li>
 
-            <li><select class="form-control" id="tourSelector1" name="tourSelector">
-        <option vlaue= "chose">Edit A Tour</option>
+            <li><select class="form-control" id="locationSelector1" name="locationSelector">
+        <option vlaue= "chose">Add Location</option>
             <?php
             
             while ($rows =pg_fetch_array($locationsQuery)) {
@@ -230,17 +231,13 @@ function (){
             $location_latitude =$rows["latitude"];
             $location_longitude =$rows["logitude"];
 
-                echo "<option value='$location_id'>
-                $location_name 
-              </option>";
+                echo "<option value='$location_id'>$location_name </option>";
             
             }
                 
             ?>
-            </select><
-
-
-            	
+            </select>
+            
 
 
             </li>
