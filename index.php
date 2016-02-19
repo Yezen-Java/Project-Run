@@ -139,7 +139,7 @@ if (isset($_POST['buttonR'])) {
 <script>
 function getLocations(){
 
-  $.POST('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
          });
 }
@@ -189,7 +189,7 @@ function getLocations(){
             $tour_id =$rows["tourgode"];
             $tour_name =$rows["tour_name"];
 
-                echo "<option onclick='getLocations();' value='$tour_id'>
+                echo "<option value='$tour_id'>
                 $tour_name
               </option>";
             
