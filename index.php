@@ -20,7 +20,7 @@ $toursListQuery = pg_query("SELECT * From Tour");
 
 if ($toursListQuery) {
 
-echo "Tour query successed. ";
+echo "Tour query passed. ";
 
 }else{
   echo "Failed to Tour data. ";
@@ -138,10 +138,11 @@ if (isset($_POST['buttonR'])) {
 
 <script>
 function getLocations(){
+	var select = document.getElementById("tourSelector1");
+var answer = select.options[select.selectedIndex].value;
 
-  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
-         function(output){
-         });
+alert(answer);
+
 }
 
 </script>
