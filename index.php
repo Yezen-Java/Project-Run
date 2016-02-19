@@ -48,7 +48,6 @@ if (isset($_POST['buttonR'])) {
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script> 
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA5UfBMd4ogo--f-j_ysGFxiQT2h2cJwnA"></script>
-   <!-- <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script
@@ -138,12 +137,20 @@ if (isset($_POST['buttonR'])) {
 
 <script>
 function getLocations(){
-	var select = document.getElementById("tourSelector1");
-var answer = select.options[select.selectedIndex].value;
-
-alert(answer);
+	
 
 }
+
+$(function() {
+        $("#lets_search").bind('submit',function() {
+        	var select = document.getElementById("tourSelector1");
+            var answer = select.options[select.selectedIndex].value;
+           $.post('database/TourLocationQuery.php',{value:answer}, function(data){
+             $("#search_results").html(data);
+           });
+           return false;
+        });
+      });
 
 </script>
 
@@ -199,7 +206,8 @@ alert(answer);
             ?>
             </select></li>
 
-            <li><button class="btn btn-default" name="buttonR" type="button" onclick="getLocations();">Retrieve</button>
+            <li><form id="lets_search" action=""> <button class="btn btn-default" name="buttonR" type="submit" onclick="getLocations();">Retrieve</button>
+            </form>
             </li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -258,6 +266,7 @@ alert(answer);
 </div>
 <div id="show">
 </div>
+<div id = "search_results"></div>
 </body>
     <script type="text/javascript" src="script.js"></script>
     <script>
