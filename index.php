@@ -201,7 +201,7 @@ $(function() {
             ?>
             </select></li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit">Retrieve</input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit"></input>
             </form>
             </li>
         </ul>
@@ -261,7 +261,7 @@ $(function() {
 </div>
 <div id="show">
 </div>
-<div id = "search_results"></div>
+<div id = "search_results">Testing</div>
 </body>
     <script type="text/javascript" src="script.js"></script>
     <script>
