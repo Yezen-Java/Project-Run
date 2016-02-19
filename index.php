@@ -96,7 +96,9 @@ if (isset($_POST['buttonR'])) {
 
     circles.push(circle);
 
-    document.getElementById("search_results").innerHTML = uniqueId;
+
+
+    document.getElementById("search_results").innerHTML = circles;
 
       
     } 
@@ -104,8 +106,10 @@ if (isset($_POST['buttonR'])) {
         for (var i = 0; i < circles.length; i++){
             if (circles[i].id == whichCircle){
                 circles[i].setMap(null);
-                circles.splice(i, 1);
+                circles.splice(i, uniqueId);
                 $('#myModal').modal('hide');
+              document.getElementById("search_results").innerHTML = circles;
+
                 return;
             }
         }
