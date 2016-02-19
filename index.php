@@ -90,12 +90,11 @@ echo "Tour query passed. ";
       });
     }
  
-    function placeMarker(latitude, longitude) {
+    function placeMarker(location) {
         var circle = new google.maps.Circle({
-            latitude: latitude,
-            longitude: longitude,
+            center:location,
             map:map,
-            //position:location,
+            position:location,
             radius:10,
             strokeColor:"#0000FF",
             strokeOpacity:0.8,
