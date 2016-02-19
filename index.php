@@ -93,8 +93,7 @@ if (isset($_POST['buttonR'])) {
         whichCircle = circle.id;
         $("#myModal").modal();
       });
-    
-    uniqueId = circle.id;
+
     circles.push(circle);
 
       
@@ -103,7 +102,7 @@ if (isset($_POST['buttonR'])) {
         for (var i = 0; i < circles.length; i++){
             if (circles[i].id == whichCircle){
                 circles[i].setMap(null);
-                circles.splice(i, uniqueId);
+                circles.splice(i, i);
                 $('#myModal').modal('hide');
                 document.getElementById("search_results").innerHTML = circles.toString();
                 return;
