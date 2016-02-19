@@ -136,11 +136,6 @@ if (isset($_POST['buttonR'])) {
 </script>
 
 <script>
-function getLocations(){
-	
-
-}
-
 $(function() {
         $("#lets_search").bind('submit',function() {
         	var select = document.getElementById("tourSelector1");
@@ -206,7 +201,7 @@ $(function() {
             ?>
             </select></li>
 
-            <li><form id="lets_search" action=""> <button class="btn btn-default" name="buttonR" type="submit" onclick="getLocations();">Retrieve</button>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit">Retrieve</input>
             </form>
             </li>
         </ul>
