@@ -139,10 +139,9 @@ if (isset($_POST['buttonR'])) {
 <script>
 function getLocations(){
 
-  $.post('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
+  $.POST('database/TourLocationQuery.php', {TourCode: tourSelector.value}   
          function(output){
          });
-          alert(output);
 }
 
 </script>
@@ -255,6 +254,8 @@ function getLocations(){
     </div>
   </div>
   
+</div>
+<div id="show">
 </div>
 </body>
     <script type="text/javascript" src="script.js"></script>
