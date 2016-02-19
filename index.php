@@ -61,7 +61,7 @@ if (isset($_POST['buttonR'])) {
     var map;
     var myCenter=new google.maps.LatLng(51.48963307250382, -0.1708325743675232);
     var circles = [];
-    var uniqueId = 1;
+    var uniqueId = 0;
     function initialize(){
     var mapProp = {
       center:myCenter,
@@ -93,7 +93,11 @@ if (isset($_POST['buttonR'])) {
         whichCircle = circle.id;
         $("#myModal").modal();
       });
+
     circles.push(circle);
+
+    document.getElementById("search_results").innerHTML = circles;
+
       
     } 
     function DeleteCircle(){
@@ -146,6 +150,12 @@ $(function() {
            return false;
         });
       });
+
+
+function(){
+
+
+}
 
 </script>
 
