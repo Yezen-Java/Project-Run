@@ -159,8 +159,6 @@ $(function() {
            	$.post('database/TourLocationQuery.php',{TourCode:answer}, function(data){
              	$("#search_results").html(data);
 
-				placeMarker(51.515182, -0.110530);
-
            	});
 
            return false;
@@ -242,7 +240,7 @@ $(function() {
 
             </li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit"></input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit" onclick="placeMarker(51.515182, -0.110530);"></input>
             </form>
             </li>
         </ul>
