@@ -32,6 +32,18 @@ if (isset($_POST['buttonR'])) {
 }
 
 
+$locationsQuery = pg_query("SELECT * From location");
+
+if ($locationsQuery) {
+
+echo "Tour query passed. ";
+
+}else{
+  echo "Failed to Tour data. ";
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,13 +101,12 @@ if (isset($_POST['buttonR'])) {
   
   		document.getElementById("search_results").innerHTML = circles.toString();
 
-    google.maps.event.addListener(circle, "click", function (e){
-        whichCircle = circle.id;
-        $("#myModal").modal();
-      });
+    	google.maps.event.addListener(circle, "click", function (e){
+        	whichCircle = circle.id;
+        	$("#myModal").modal();
+      	});
 
     circles.push(circle);
-
       
     } 
     function DeleteCircle(){
@@ -208,6 +219,31 @@ function (){
                 
             ?>
             </select></li>
+
+            <li><select class="form-control" id="tourSelector1" name="tourSelector">
+        <option vlaue= "chose">Edit A Tour</option>
+            <?php
+            
+            while ($rows =pg_fetch_array($locationsQuery)) {
+            $location_id =$rows["locationid"];
+            $location_name =$rows["lname"];
+            $location_latitude =$rows["latitude"];
+            $location_longitude =$rows["logitude"];
+
+                echo "<option value='$location_id'>
+                $location_name 
+              </option>";
+            
+            }
+                
+            ?>
+            </select><
+
+
+            	
+
+
+            </li>
 
             <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type="submit"></input>
             </form>
