@@ -74,9 +74,11 @@ echo "Tour query passed. ";
     <script>
     var whichCircle;
     var map;
-    var myCenter=new google.maps.LatLng(51.48963307250382, -0.1708325743675232);
+    var locationTwo = "51.515128, -0.110744";
+    var myCenter=new google.maps.LatLng(locationTwo);
     var circles = [];
     var uniqueId = 0;
+    
 
     function initialize(){
     var mapProp = {
@@ -247,7 +249,7 @@ $(function() {
 
             </li>
 
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" value = "dfsf" onclick="placeMarker(51.48963307250382, -0.1708325743675232)"></input>
+            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" value = "dfsf" onclick="placeMarker()"></input>
             </form>
             </li>
         </ul>
