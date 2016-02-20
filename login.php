@@ -125,7 +125,6 @@ include("database/UserLoginSession.php");
       }
     #laname-div {
     float: right;
-
   flex: 1;
 }
     </style>

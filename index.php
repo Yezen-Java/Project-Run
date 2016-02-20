@@ -1,58 +1,9 @@
-<?php
-$dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
- password=z3paibkPjPYeWNWib9d3nD0Pi8")
-or die('Could not connect: ' . pg_last_error());
-
-error_reporting(E_ALL & ~E_NOTICE);
-session_start();
-
-if(isset($_SESSION['id'])){
-    $userId= $_SESSION['id'];
-    $username= $_SESSION['username'];
-
-}else{
-    header('location: login.php');
-    die();
-}
-
-
-$toursListQuery = pg_query("SELECT * From Tour");
-
-if ($toursListQuery) {
-
-echo "Tour query passed. ";
-
-}else{
-  echo "Failed to Tour data. ";
-}
-
-if (isset($_POST['buttonR'])) {
-  $TouridFromList = $_POST['tourSelector'];
-  $NodesSelectQuery = pg_query("SELECT * From");
-}
-
-
-$locationsQuery = pg_query("SELECT * From location");
-
-if ($locationsQuery) {
-
-echo "Tour query passed. ";
-
-}else{
-  echo "Failed to Tour data. ";
-}
-
-
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,74 +13,29 @@ echo "Tour query passed. ";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script> 
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="shortcut icon" href="http://www.hongkiat.com/blog/favicon.ico">
+    <link rel="icon" href="http://www.hongkiat.com/blog/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="global.css">
+    <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=ABeeZee">
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA5UfBMd4ogo--f-j_ysGFxiQT2h2cJwnA"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
     <script
         src="https://www.google.com/maps/d/embed?mid=zdaGz_kxHGcY.kNA-vyp_PChI">
     </script>
 
-
-
     <script>
     var whichCircle;
     var map;
-    var latitude = 51.515128
-    var longitude = -0.110744
-    var myCenter = new google.maps.LatLng({lat:latitude,lng:longitude})
+    var myCenter=new google.maps.LatLng(51.48963307250382, -0.1708325743675232);
     var circles = [];
-    var uniqueId = 0;
-    
-
-    function initialize(){
-    var mapProp = {
-      center:myCenter,
-      zoom:18,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-      google.maps.event.addListener(map, 'click', function(event) {
-        placeMarker(event.latLng);
-        var location = event.latLng;
-      });
-    }
-
-    function placeMarker(location) {
-
-        var circle = new google.maps.Circle({
-            center:location,
-            map:map,
-            position:location,
-            radius:10,
-            strokeColor:"#0000FF",
-            strokeOpacity:0.8,
-            strokeWeight:2,
-            fillColor:"#0000FF",
-            fillOpacity:0.4
-        });
-
-        circle.id = uniqueId;
-        uniqueId++;
-  		
-    	google.maps.event.addListener(circle, "click", function (e){
-        	whichCircle = circle.id;
-        	$("#myModal").modal();
-      	});
-
-      	circles.push(circle);
-      
-    } 
-
-    function DeleteCircle(){
-        for (var i = 0; i < circles.length; i++){
-            if (circles[i].id == whichCircle){
-                circles[i].setMap(null);
-                circles.slice(i, 1);
-                $('#myModal').modal('hide');
-                return;
-            }
-        }
-    };
+    var uniqueId = 1;
+    var toursArray = [];
+    var ul;
 
   $(function() {
     $( "#sortable" ).sortable();
@@ -141,8 +47,11 @@ echo "Tour query passed. ";
 
     function addNoteFunc(){
         myFunction();
-        var ul = $('#sideBar');
+        ul = $('#sideBar');
         ul.find('li:first').clone(true).appendTo(ul);
+    }
+    function createTour(){
+
     }
 
     function randomStringGenerator() {
@@ -155,43 +64,95 @@ echo "Tour query passed. ";
       }
       document.getElementById("randomfield").value = randomstring;
     }
+
+    function w3_open() {
+        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    }
+    function w3_close() {
+        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    }
+
+    function createInput(){
+      ul = $('#buttonsListTours');
+      ul.find('li:first').clone(true).appendTo(ul);
+    }
+
+    function createTour(tourNameVar){
+        var $input = $("<button type="+"button"+" class="+"list-group-item"+" id="+"tourOne"+" onclick="+"w3_open()"+">"+tourNameVar+"</button>");
+        toursArray.push($input);
+        $input.appendTo($("#buttonsListTours"));
+    }
+
+    /* createTourDialogueButton onclick method,
+    we should take the values inserted into the three text area's 
+    and append this value i.e. tour name to the tourOne button text*/
+
+    function createTourDetails(){
+      var tourName = document.getElementById("tourNameField").value;
+      //var tourFloor = document.getElementById("tourLevelField").value;
+      //var tourName = document.getElementById("tourDateField").value;
+
+      createTour(tourName);
+    }
+
     google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>
-
-<script>
-
-$(function() {
-        $("#lets_search").bind('submit',function() {
-        	var select = document.getElementById("tourSelector1");
-            var answer = select.options[select.selectedIndex].value;
-
-           	$.post('database/TourLocationQuery.php',{TourCode:answer}, function(data){
-             	$("#search_results").html(data);
-
-           	});
-
-           return false;
-        });
-});
 
 </script>
 
 </head>
 
 <body onload="myFunction()">
-  <div id="wrapper" class="">
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav" id="sideBar">
 
-        <button type="button" class="btn btn-success" id="addNoteButton" onclick="addNoteFunc()">+</button>
-            <li class="sidebar-brand" style="padding-top:10px;">
-                <textarea class="form-control" rows="5" id="notesArea" type="text"></textarea>
-            </li>
+<!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
+<div id="wrapperLeft"> 
+
+      <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
+      tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
+      tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
+      should be added to the end, currently we have only one item called "Link 1"-->
+      <div id="leftBar">
+        <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
+          <a href="#">Pointer 1</a>
+          <a href="#">Pointer 2</a>
+          <a href="#">Pointer 3</a>
+          <a href="#">Pointer 4</a>
+          <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
+            <button id="deletePointer" type="button" class="btn btn-danger"><strong>Delete</strong></button>
+            <button id="addPointer" type="button" class="btn btn-success"><strong>Add</strong></button>
+          </div>    
+        </nav>
+      </div>
+
+      <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
+      tour button so that when we click the button, a function should add a new button to the end of the
+      list group-->
+      <div class="list-group" id="tourList">
+        <ul id="buttonsListTours">
+          <li>
+            <button type="button" class="list-group-item" id="tourOne" onclick="w3_open()">Tour One</button>
+          </li>
         </ul>
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
+          <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
+          <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
+      </div>
+      
+    <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
+    so forth.-->
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav" id="sideBar">
+            <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
+            <button type="button" class="btn btn-success" id="addNoteButton" onclick="addNoteFunc()">+</button>
+              <li class="sidebar-brand" style="padding-top:10px;">
+                  <textarea class="form-control" rows="5" id="notesArea" type="text"></textarea>
+              </li>
+          </ul>
+        </div>
     </div>
-  </div>
+</div>
 
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -202,7 +163,7 @@ $(function() {
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">Project name</a>
+        <a class="navbar-brand"><strong>Hive</strong> Dashboard</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -211,63 +172,38 @@ $(function() {
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
-          <li></li>
-          <li> <select class="form-control" id="tourSelector1" name="tourSelector">
-        <option vlaue= "chose">Edit A Tour</option>
-            <?php
-            
-            while ($rows =pg_fetch_array($toursListQuery)) {
-            $tour_id =$rows["tourgode"];
-            $tour_name =$rows["tour_name"];
-
-                echo "<option value='$tour_id'>
-                $tour_name
-              </option>";
-            
-            }
-                
-            ?>
-            </select></li>
-
-            <li><select class="form-control" id="locationSelector1" name="locationSelector">
-        <option vlaue= "chose">Add Location</option>
-            <?php
-            
-            while ($rows =pg_fetch_array($locationsQuery)) {
-            $location_id =$rows["locationid"];
-            $location_name =$rows["lname"];
-            $location_latitude =$rows["latitude"];
-            $location_longitude =$rows["logitude"];
-
-                echo "<option value='$location_id'>$location_name </option>";
-            
-            }
-                
-            ?>
-            </select>
-            
-
-
-            </li>
-
-            <li><form id="lets_search" action=""> <input class="btn btn-default" name="buttonR" type = "button" value = "dfsf" onclick="placeMarker()"></input>
-            </form>
-            </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
 
-  <div id="page-content-wrapper">
-    <div id="googleMap"></div>
-    <input id="myInput" type="file" style="visibility:hidden"/>
-  </div>
+  <!--Create tour dialogue box-->
+  <div class="modal fade" id="createTourDialogue" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Tour</h4>
+        </div>
 
-<!-- Modal -->
+        <div class="modal-body" id="tourTextFields">
+          <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
+          <input type="text" class="form-control" id="tourLevelField" placeholder="Floor level" >
+          <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTourDetails();" id="createTourDialogueButton">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Create tour dialogue box-->
+
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -279,8 +215,6 @@ $(function() {
           <div class="upload-drop-zone" id="drop-zone">
             Just drag and drop files here
           </div>
-
-
 
         <script src="jquery.sortable.js"></script>
 
@@ -306,18 +240,15 @@ $(function() {
       
     </div>
   </div>
-  
 </div>
-<div id="show">
-</div>
-<div id = "search_results">Testing</div>
 </body>
-    <script type="text/javascript" src="script.js"></script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+
+<script type="text/javascript" src="script.js"></script>
+<script>
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
 
 </html>

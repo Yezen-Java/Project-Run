@@ -16,10 +16,7 @@ $result = pg_query( "SELECT latitude, logitude from tour r, tour_res tr, locatio
 
 
 
-        if ($result) {
-
-        	echo "Query succeed";
-        }else{
+        if (!$result) {
 
         	echo "Query Failed";
         }
