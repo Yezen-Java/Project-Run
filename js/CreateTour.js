@@ -6,7 +6,7 @@ var tourlevel = $("#tourLevelField").val();
 if (Tourid == '' || tourname == '' || tourlevel == '') {
 alert("Insertion Failed, Some Fields are Blank");
 } else {
-$.post("Insertour.php", {
+$.post("database/Insertour.php", {
 TourID: Tourid,
 Tourname: tourname,
 Tlevel: tourlevel
