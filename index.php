@@ -181,11 +181,7 @@ echo "Tour query passed. ";
             <button type="button" class="list-group-item" id="tourOne" onclick="w3_open()">Tour One</button>
           </li>
 
-          <?php
-         while($row = pg_fetch_object($toursListQuery )){
-          echo '<li>< type="button" class="list-group-item" id='.$row['tourid'].' onclick="w3_open()">'.$row['tour_name'].'</a>';
-          echo '</li>';}
-?>
+
 
         </ul>
       </div>
