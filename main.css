@@ -1,10 +1,3 @@
-
-#googleMap{
-    width: 100%;
-    height: 750px;
-    position: fixed;
-}
-
 html, body {
   height: 100%;
   overflow: hidden;
@@ -13,14 +6,6 @@ html, body {
 #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
   #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
   #sortable li span { position: absolute; margin-left: -1.3em; }
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
 
 #notesArea {
 	width: 230px;
@@ -36,9 +21,64 @@ html, body {
     margin: 10px;
 }
 
+#leftSidebar {
+    padding-top: 50px;
+    margin: 10px;
+}
+#tourNameField {
+    margin: 10px;
+    width: 470px;
+}
+#tourLevelField {
+    margin: 10px;
+    width: 470px;
+}
+#tourDateField {
+    margin: 10px;
+    width: 470px;
+}
+#tourTextFields{
+  padding-left: 50px;
+}
+#tourList {
+    padding-top: 50px;
+    margin: 10px;
+    width: 900px;
+    float: center;
+    overflow-y: auto;
+    position: fixed;
+}
+
+#buttonsListTours {
+    height: 400px;
+}
+
+#buttonGroupPointer{
+    padding: 10px;
+}
+#deletePointer{
+    width: 80px;
+}
+#addPointer{
+    width: 80px;
+}
+
+#tourButtonGroup{
+    padding: 10px;
+    margin-top: 500px;
+}
+#deleteTour{
+    width: 80px;
+}
+#addTour{
+    width: 80px;
+}
+
 #wrapper.toggled {
     padding-left: 250px;
 }
+
+
 #demo {
     background-color: white;
 }
@@ -47,9 +87,27 @@ html, body {
 	float: right;
 }
 
+#deleteNoteButton{
+  margin: 10px 20px 10px 130px;
+  float: left;
+
+}
+
+#wrapperLeft{
+  display: flex;
+}
+
 #noteFieldContainer{
 	padding-top: 10px;
 }
+
+#leftBar{
+  float: left;
+  height: 100%;
+  width: 200px;
+  padding-top: 50px;
+}
+
 
 
 #sidebar-wrapper {
@@ -133,9 +191,10 @@ html, body {
   border-color: #222;
 }
 
-@media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
+        float:right;
+        height: 100%
     }
 
     #wrapper.toggled {
