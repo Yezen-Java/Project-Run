@@ -71,6 +71,7 @@ echo "Tour query passed. ";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
+    <script src="js/CreateTour"></script>
     <script
         src="https://www.google.com/maps/d/embed?mid=zdaGz_kxHGcY.kNA-vyp_PChI">
     </script>
@@ -242,7 +243,8 @@ echo "Tour query passed. ";
 
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTourDetails();" id="createTourDialogueButton">Create</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTourDetails();" 
+          id="createTourDialogueButton" >Create</button>
         </div>
       </div>
     </div>
