@@ -184,12 +184,10 @@ echo "Tour query passed. ";
          <?php
             
             while ($rows =pg_fetch_array($toursListQuery)) {
-            $tour_id =$rows["tourgode"];
+            $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
 
-                echo "<li value='$tour_id'>
-                $tour_name
-              </li>";
+           echo "<li> <button type='button' class='list-group-item' id='$tour_id' onclick='w3_open()'>'$tour_name'</button> </li>";
             
             }
                 
