@@ -71,7 +71,7 @@ echo "Tour query passed. ";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
-    <script src="js/CreateTour"></script>
+    <script src="js/CreateTour.js"></script>
     <script
         src="https://www.google.com/maps/d/embed?mid=zdaGz_kxHGcY.kNA-vyp_PChI">
     </script>
