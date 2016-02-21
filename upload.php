@@ -37,9 +37,9 @@ echo "<div class='error'>"."(".$_FILES["file"]["name"].")".
 else
 {
 move_uploaded_file($_FILES["file"]["tmp_name"],
-"media" . $_FILES["file"]["name"]);
+"media/" . $_FILES["file"]["name"]);
 echo "<div class='sucess'>"."Stored in: " .
-"media" . $_FILES["file"]["name"]."</div>";
+"media/" . $_FILES["file"]["name"]."</div>";
 }
 }
 }
