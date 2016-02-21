@@ -8,12 +8,12 @@ color:red;
 </style>
 
 <?php
-$file_exts = array("jpg", "bmp", "jpeg", "gif", "png");
+$file_exts = array("jpg", "bmp", "jpeg", "gif", "png","m4v");
 $upload_exts = end(explode(".", $_FILES["file"]["name"]));
 if ((($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "image/jpeg")
 || ($_FILES["file"]["type"] == "image/png")
-|| ($_FILES["file"]["type"] == "image/pjpeg"))
+|| ($_FILES["file"]["type"] == "video/m4v"))
 && ($_FILES["file"]["size"] < 2000000)
 && in_array($upload_exts, $file_exts))
 {
