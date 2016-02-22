@@ -84,7 +84,7 @@ echo "Tour query passed. ";
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
       tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
       should be added to the end, currently we have only one item called "Link 1"-->
-      <div class=".col-md-3">
+      <div class=".col-xs-3 .col-sm-4 .col-md-3">
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
@@ -102,7 +102,7 @@ echo "Tour query passed. ";
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div class=".col-md-9">
+      <div class=".col-xs-9 .col-sm-6 .col-md-9">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
@@ -127,7 +127,7 @@ echo "Tour query passed. ";
       </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
-    <div class=".col-md-3">
+    <div class=".col-xs-3 .col-sm-4 .col-md-3">
     <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">
