@@ -66,6 +66,7 @@ html, body {
 #buttonsListTours {
     height: 400px;
     list-style-type: none;
+    position: relative;
 
 }
 

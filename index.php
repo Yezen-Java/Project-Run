@@ -79,7 +79,6 @@ echo "Tour query passed. ";
 <body onload="myFunction()">
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
-<div class="container">
 <div id="wrapperLeft"> 
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
@@ -141,7 +140,6 @@ echo "Tour query passed. ";
         </div>
     </div>
     </div>
-</div>
 </div>
 
 <div class="container">
