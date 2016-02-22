@@ -80,11 +80,11 @@ echo "Tour query passed. ";
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
-
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
       tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
       should be added to the end, currently we have only one item called "Link 1"-->
+      <div class=".col-md-3">
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
@@ -98,10 +98,11 @@ echo "Tour query passed. ";
           </div>    
         </nav>
       </div>
-
+      </div>
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
+      <div class=".col-md-6">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
@@ -126,9 +127,10 @@ echo "Tour query passed. ";
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
       </div>
-      
+      </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
+    <div class=".col-md-3">
     <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">
@@ -139,6 +141,7 @@ echo "Tour query passed. ";
               </li>
           </ul>
         </div>
+    </div>
     </div>
 </div>
 
@@ -218,7 +221,6 @@ echo "Tour query passed. ";
           <script>
           </script>
 
-
         </div>
         <div class="modal-footer">
         <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
@@ -231,6 +233,7 @@ echo "Tour query passed. ";
     </div>
   </div>
 </div>
+
 </body>
 
 <script>
