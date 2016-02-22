@@ -79,6 +79,7 @@ echo "Tour query passed. ";
 <body onload="myFunction()">
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
+<div class="container">
 <div id="wrapperLeft"> 
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
@@ -103,7 +104,6 @@ echo "Tour query passed. ";
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
       <div class=".col-xs-9 .col-sm-6 .col-md-9" id="middleTourButtons">
-      <div class="container" id="toursListMiddle">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
@@ -120,7 +120,6 @@ echo "Tour query passed. ";
             }  
             ?>
         </ul>
-      </div>
       </div>
       <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
@@ -142,6 +141,7 @@ echo "Tour query passed. ";
         </div>
     </div>
     </div>
+</div>
 </div>
 
 <div class="container">
