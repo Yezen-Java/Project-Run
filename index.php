@@ -120,11 +120,9 @@ echo "Tour query passed. ";
             ?>
         </ul>
       </div>
-      <div class=".col-xs-3 .col-sm-6 .col-md-9">
       <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
-      </div>
       </div>
       </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and

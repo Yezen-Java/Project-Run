@@ -83,6 +83,7 @@ html, body {
 #tourButtonGroup{
     padding: 10px;
     margin-top: 500px;
+    position: relative;
 }
 #deleteTour{
     width: 80px;
