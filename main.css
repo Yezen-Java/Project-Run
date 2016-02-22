@@ -91,6 +91,11 @@ html, body {
     padding-left: 250px;
 }
 
+#wrapper.toggled {
+    margin: 10px;
+    position: relative;
+}
+
 #demo {
     background-color: white;
 }
