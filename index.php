@@ -142,6 +142,7 @@ echo "Tour query passed. ";
     </div>
 </div>
 
+<div class="container">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -164,7 +165,9 @@ echo "Tour query passed. ";
       </div><!--/.nav-collapse -->
     </div>
   </nav>
+  </div>
 
+  <div class="container">
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
     <div class="modal-dialog">
@@ -188,6 +191,7 @@ echo "Tour query passed. ";
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!--Create tour dialogue box-->
 
