@@ -83,7 +83,6 @@ html, body {
 #tourButtonGroup{
     padding: 10px;
     margin-top: 500px;
-    position: relative;
 }
 #deleteTour{
     width: 80px;
@@ -95,7 +94,6 @@ html, body {
 #wrapper.toggled {
     padding-left: 250px;
 }
-
 
 #demo {
     background-color: white;
