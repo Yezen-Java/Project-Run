@@ -26,10 +26,6 @@ html, body {
     margin: 10px;
 }
 
-#topNavbar{
-    position: absolute;
-}
-
 #topNavbarContainer{
     position: relative;
 }
