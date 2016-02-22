@@ -72,9 +72,7 @@ echo "Tour query passed. ";
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
     <script src="js/CreateTour.js"></script>
-    <script
-        src="https://www.google.com/maps/d/embed?mid=zdaGz_kxHGcY.kNA-vyp_PChI">
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 
 </head>
 
@@ -90,7 +88,7 @@ echo "Tour query passed. ";
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
-          <a href="#">Pointer 1</a>
+          <a href="#" id="pointer1" >Pointer 1</a>
           <a href="#">Pointer 2</a>
           <a href="#">Pointer 3</a>
           <a href="#">Pointer 4</a>
@@ -231,7 +229,6 @@ echo "Tour query passed. ";
 </div>
 </body>
 
-<script type="text/javascript" src="script.js"></script>
 <script>
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
