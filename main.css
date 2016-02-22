@@ -91,7 +91,7 @@ html, body {
     padding-left: 250px;
 }
 
-#wrapper.toggled {
+#tourButtonGroup{
     margin: 10px;
     position: relative;
 }
