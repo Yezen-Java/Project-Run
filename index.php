@@ -102,13 +102,12 @@ echo "Tour query passed. ";
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div class=".col-md-6">
+      <div class=".col-md-6" id="middleTourButtons">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
             <button type="button" class="list-group-item" id="tourOne" onclick="w3_open()">Tour One</button>
           </li>
-
          <?php
             
             while ($rows =pg_fetch_array($toursListQuery)) {
@@ -117,10 +116,8 @@ echo "Tour query passed. ";
 
            echo "<li> <button type='button' class='list-group-item' id='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
             
-            }
-                
+            }  
             ?>
-
         </ul>
       </div>
       <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">

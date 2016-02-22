@@ -11,6 +11,12 @@ html, body {
 	width: 230px;
 }
 
+#middleTourButtons {
+  top: 0;
+  bottom: 0;
+  position: relative;
+}
+
 #codeGenerateCssLi {
     margin: 5px;
     padding-top: 3px;
@@ -46,7 +52,7 @@ html, body {
     width: 900px;
     float: center;
     overflow-y: auto;
-    position: fixed;
+    position: absolute;
 }
 
 #buttonsListTours {
