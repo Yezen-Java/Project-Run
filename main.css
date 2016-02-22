@@ -30,6 +30,9 @@ html, body {
     position: relative;
 }
 
+#bottomNavbarContainer{
+    position: absolute;
+}
 #tourNameField {
     margin: 10px;
     width: 470px;

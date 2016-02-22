@@ -154,7 +154,7 @@ echo "Tour query passed. ";
           		<span class="icon-bar"></span>
         	</button>
       	</div>
-      	<div class=".col-md-3">
+      	<div class=".col-md-3" id="bottomNavbarContainer">
       		<a class="navbar-brand"><strong>Hive</strong> Dashboard</a> 
       	</div>
       </div>
