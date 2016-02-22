@@ -25,6 +25,17 @@ html, body {
     padding-top: 50px;
     margin: 10px;
 }
+
+#topNavbar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+#topNavbarContainer{
+    position: relative;
+}
+
 #tourNameField {
     margin: 10px;
     width: 470px;
@@ -47,6 +58,10 @@ html, body {
     float: center;
     overflow-y: auto;
     position: relative;
+}
+
+.navbar-brand{
+  position: relative;
 }
 
 #buttonsListTours {

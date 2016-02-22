@@ -145,16 +145,16 @@ echo "Tour query passed. ";
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-      	<div class=".col-md-9">
+      <div class="navbar-header" id="topNavbar">
+      	<div class=".col-md-12" id="topNavbarContainer">
         	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           		<span class="sr-only">Toggle navigation</span>
           		<span class="icon-bar"></span>
           		<span class="icon-bar"></span>
           		<span class="icon-bar"></span>
         	</button>
-        </div>
-        	<a class="navbar-brand"><strong>MAFIA</strong> Dashboard</a> 
+        	<a class="navbar-brand"><strong>Hive</strong> Dashboard</a> 
+      	</div>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
