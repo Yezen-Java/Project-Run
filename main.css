@@ -53,6 +53,9 @@ html, body {
     width: 900px;
     float: center;
     overflow-y: auto;
+}
+
+#toursListMiddle {
     position: relative;
 }
 
