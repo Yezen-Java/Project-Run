@@ -76,77 +76,6 @@ echo "Tour query passed. ";
         src="https://www.google.com/maps/d/embed?mid=zdaGz_kxHGcY.kNA-vyp_PChI">
     </script>
 
-    <script>
-    var whichCircle;
-    var map;
-    var myCenter=new google.maps.LatLng(51.48963307250382, -0.1708325743675232);
-    var circles = [];
-    var uniqueId = 1;
-    var toursArray = [];
-    var ul;
-
-  $(function() {
-    $( "#sortable" ).sortable();
-  });
-
-    function myFunction() {
-        document.getElementById('notesArea').placeholder= Date();
-    }
-
-    function addNoteFunc(){
-        myFunction();
-        ul = $('#sideBar');
-        ul.find('li:first').clone(true).appendTo(ul);
-    }
-    function createTour(){
-
-    }
-
-    function randomStringGenerator() {
-      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
-      var string_length = 6;
-      var randomstring = '';
-      for (var i=0; i<string_length; i++) {
-        var rnum = Math.floor(Math.random() * chars.length);
-        randomstring += chars.substring(rnum,rnum+1);
-      }
-      document.getElementById("randomfield").value = randomstring;
-    }
-
-    function w3_open() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-    }
-    function w3_close() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-    }
-
-    function createInput(){
-      ul = $('#buttonsListTours');
-      ul.find('li:first').clone(true).appendTo(ul);
-    }
-
-    function createTour(tourNameVar){
-        var $input = $("<button type="+"button"+" class="+"list-group-item"+" id="+"tourOne"+" onclick="+"w3_open()"+">"+tourNameVar+"</button>");
-        toursArray.push($input);
-        $input.appendTo($("#buttonsListTours"));
-    }
-
-    /* createTourDialogueButton onclick method,
-    we should take the values inserted into the three text area's 
-    and append this value i.e. tour name to the tourOne button text*/
-
-    function createTourDetails(){
-      var tourName = document.getElementById("tourNameField").value;
-      //var tourFloor = document.getElementById("tourLevelField").value;
-      //var tourName = document.getElementById("tourDateField").value;
-
-      createTour(tourName);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-</script>
-
 </head>
 
 <body onload="myFunction()">
@@ -264,7 +193,7 @@ echo "Tour query passed. ";
   </div>
   <!--Create tour dialogue box-->
 
-  <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -281,22 +210,19 @@ echo "Tour query passed. ";
         <script src="jquery.sortable.js"></script>
 
           <ul class="sortable">
-            <li>Item 1
-            <li>Item 2
-            <li>Item 3
-            <li>Item 4
+            <li> item1
           </ul>
 
           <script>
-            $('.sortable').sortable();
           </script>
 
 
         </div>
         <div class="modal-footer">
+        <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
         <button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
-          <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       

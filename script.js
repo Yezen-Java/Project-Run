@@ -1,7 +1,66 @@
 $(document).ready();
 $("#EditTourButton").click(function(){
-  window.location = "https://www.google.com/maps/d/edit?mid=zdaGz_kxHGcY.kNA-vyp_PChI&usp=sharing" + this.id;
+  
+  console.log($("#myModal ul").sortable('toArray'));
 });
+
+$("#pointer1").click(function(){
+  $("#myModal ul").empty();
+    reorder();
+    $("#myModal").modal();
+    $('.sortable').sortable();
+});
+
+function Save(){
+
+var array = [];
+$('.sortable li').each(function(i, li) {
+  array.push($(li));
+});
+for (var i = 0; i < array.length; i++) {
+  console.log(array[i].text() + i);
+};
+
+}
+
+
+
+
+
+var files = [
+  {
+    name: "file1",
+    order: 1
+  },
+
+  {
+    name: "file2",
+    order: 0
+  },
+
+  {
+    name: "file3",
+    order: 2
+  }
+];
+
+function compare(a,b) {
+  if (a.order < b.order)
+    return -1;
+  else if (a.order > b.order)
+    return 1;
+  else 
+    return 0;
+}
+
+function reorder(){
+  files.sort(compare);
+  console.table(files);
+
+  for (var i = 0; i < files.length; i++) {
+      $("#myModal ul").append("<li>" +files[i].name);
+  }
+}
    
 var myCity = new google.maps.Circle({
   center: LONG,LAT,
@@ -56,6 +115,62 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         this.className = 'upload-drop-zone';
         return false;
     };
+
+    
+ function myFunction() {
+        document.getElementById('notesArea').placeholder= Date();
+    }
+
+    function addNoteFunc(){
+        myFunction();
+        ul = $('#sideBar');
+        ul.find('li:first').clone(true).appendTo(ul);
+    }
+    function createTour(){
+
+    }
+
+    function randomStringGenerator() {
+      var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+      var string_length = 6;
+      var randomstring = '';
+      for (var i=0; i<string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+      }
+      document.getElementById("randomfield").value = randomstring;
+    }
+
+    function w3_open() {
+        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    }
+    function w3_close() {
+        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    }
+
+    
+    function createInput(){
+      ul = $('#buttonsListTours');
+      ul.find('li:first').clone(true).appendTo(ul);
+    }
+
+    function createTour(tourNameVar){
+        var $input = $("<button type="+"button"+" class="+"list-group-item"+" id="+"tourOne"+" onclick="+"w3_open()"+">"+tourNameVar+"</button>");
+        toursArray.push($input);
+        $input.appendTo($("#buttonsListTours"));
+    }
+
+    /* createTourDialogueButton onclick method,
+    we should take the values inserted into the three text area's 
+    and append this value i.e. tour name to the tourOne button text*/
+
+    function createTourDetails(){
+      var tourName = document.getElementById("tourNameField").value;
+      //var tourFloor = document.getElementById("tourLevelField").value;
+      //var tourName = document.getElementById("tourDateField").value;
+
+      createTour(tourName);
+    }
 
 
 
