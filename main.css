@@ -29,9 +29,8 @@ html, body {
 #topNavbarContainer{
     position: relative;
 }
-
 #bottomNavbarContainer{
-    position: absolute;
+    position: relative;
 }
 #tourNameField {
     margin: 10px;
@@ -120,6 +119,7 @@ html, body {
   height: 100%;
   width: 200px;
   padding-top: 50px;
+  position: relative;
 }
 
 
