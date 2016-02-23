@@ -93,7 +93,7 @@ echo "Tour query passed. ";
               $location_id = $row['locationid'];
               $lname = $row['lname'];
 
-            echo "<option id = '$location_id' value='$location_id'>$lname</>";
+            echo "<option id = '$location_id' value='$location_id'>$lname</option>";
             }
              ?>
           </select></a>
