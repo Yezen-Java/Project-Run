@@ -86,6 +86,17 @@ echo "Tour query passed. ";
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
+          <a><select class="form-control">
+            <option>Choose Location</option>
+            <?php 
+            while ($row = pg_fetch_array($row)) {
+              $location_id = $row['locationid'];
+              $lname = $row['lname'];
+
+            echo "<option id = '$location_id' value='$location_id'>$lname</>";
+            }
+             ?>
+          </select></a>
           <a href="#" id="pointer1" onclick="$('#pointer1').click();" >Pointer 1</a>
           <a href="#">Pointer 2</a>
           <a href="#">Pointer 3</a>
