@@ -3,9 +3,24 @@ html, body {
   overflow: hidden;
 }
 
-#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable li span { position: absolute; margin-left: -1.3em; }
+#sortable { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  width: 60%; 
+}
+#sortable li { 
+  margin: 0 3px 3px 3px; 
+  padding: 0.4em; 
+  padding-left: 1.5em; 
+  font-size: 1.4em; 
+  height: 18px; 
+}
+
+#sortable li span { 
+  position: absolute; 
+  margin-left: -1.3em; 
+}
 
 #notesArea {
 	width: 230px;
@@ -15,17 +30,14 @@ html, body {
     margin: 5px;
     padding-top: 3px;
 }
-
 #sideBar {
     padding-top: 50px;
     margin: 10px;
 }
-
 #leftSidebar {
     padding-top: 50px;
     margin: 10px;
 }
-
 #topNavbarContainer{
     position: relative;
 }
@@ -123,7 +135,7 @@ html, body {
   float: left;
   height: 100%;
   width: 200px;
-  padding-top: 50px;
+  padding-top: 10px;
   position: relative;
 }
 

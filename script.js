@@ -23,10 +23,6 @@ for (var i = 0; i < array.length; i++) {
 
 }
 
-
-
-
-
 var files = [
   {
     name: "file1",
@@ -83,7 +79,6 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 }else{
   alert('The File API is is not fully supported in this browser.')
 }
-
 
     var dropZone = document.getElementById('drop-zone');
     var uploadForm = document.getElementById('js-upload-form');

@@ -19,11 +19,9 @@ if(isset($_SESSION['id'])){
 $toursListQuery = pg_query("SELECT * From Tour");
 
 if ($toursListQuery) {
-
-echo "Tour query passed. ";
-
+	echo "Tour query passed. ";
 }else{
-  echo "Failed to Tour data. ";
+  	echo "Failed to Tour data. ";
 }
 
 if (isset($_POST['buttonR'])) {
@@ -44,7 +42,6 @@ echo "Tour query passed. ";
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +53,7 @@ echo "Tour query passed. ";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script> 
@@ -80,6 +77,7 @@ echo "Tour query passed. ";
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
+
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
       tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
@@ -221,16 +219,14 @@ echo "Tour query passed. ";
 
           <script>
           </script>
-
         </div>
         <div class="modal-footer">
-        <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
-        <button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
-        <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        	<button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
+        	<button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
+        	<button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
     </div>
   </div>
 </div>
