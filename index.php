@@ -89,7 +89,7 @@ echo "Tour query passed. ";
           <a><select class="form-control">
             <option>Choose Location</option>
             <?php 
-            while ($row = pg_fetch_array($row)) {
+            while ($row = pg_fetch_array($locationsQuery)) {
               $location_id = $row['locationid'];
               $lname = $row['lname'];
 
