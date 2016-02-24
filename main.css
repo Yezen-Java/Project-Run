@@ -63,7 +63,7 @@ html, body {
     padding-top: 50px;
     margin: 10px;
     padding-left: 210px;
-    width: 800px;
+    width: 1000px;
     float: center;
     overflow-y: auto;
 }
@@ -135,6 +135,7 @@ html, body {
 #leftBar{
   float: left;
   height: 100%;
+  padding-top: 30px;
 }
 
 #leftBarId{
