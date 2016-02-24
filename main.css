@@ -60,9 +60,9 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
-    margin-top: 50px;
+    padding-top: 50px;
     margin: 10px;
-    margin-left: 210px;
+    padding-left: 210px;
     width: 1098px;
     float: center;
     overflow-y: auto;
