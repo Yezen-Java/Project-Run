@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   overflow: hidden;
-  background-color: #ffd000;
 }
 
 #sortable { 
@@ -41,6 +40,7 @@ html, body {
 }
 #topNavbarContainer{
     position: relative;
+    background-color: #ffd000;
 }
 #bottomNavbarContainer{
     position: relative;
