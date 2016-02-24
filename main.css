@@ -60,8 +60,8 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
-    top: 50px;
-    left: 210px;
+    padding-top: 50px;
+    padding-left: 210px;
     margin: 10px;
     width: 1098px;
     position: relative;
@@ -70,6 +70,9 @@ html, body {
 }
 
 #toursListMiddle {
+    position: relative;
+}
+#middleContainer {
     position: relative;
 }
 
