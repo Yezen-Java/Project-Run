@@ -83,10 +83,12 @@ html, body {
 #buttonsListTours {
     height: 400px;
     list-style-type: none;
+    position: relative;
+}
+#outerContainer {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-
 }
 
 #buttonGroupPointer{
