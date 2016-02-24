@@ -4,9 +4,10 @@ $("#EditTourButton").click(function(){
   console.log($("#myModal ul").sortable('toArray'));
 });
 
+
 $("#leftBar #pointer1").click(function(){
+  $("#fileSorter").empty();
   console.log("works");
-  $("#myModal ul").empty();
     reorder();
     $("#myModal").modal();
     $('.sortable').sortable();
@@ -55,7 +56,7 @@ function reorder(){
   console.table(files);
 
   for (var i = 0; i < files.length; i++) {
-      $("#myModal ul").append("<li>" +files[i].name);
+      $("#fileSorter").append("<li>" +files[i].name);
   }
 }
    
