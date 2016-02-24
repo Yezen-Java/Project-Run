@@ -64,8 +64,7 @@ html, body {
     width: 1098px;
     padding-left: 210px;
     float: center;
-    overflow-y: auto;
-    padding-right: 210px;
+    
 }
 
 #toursListMiddle {
