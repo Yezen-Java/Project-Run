@@ -62,9 +62,8 @@ html, body {
 #tourList { 
     margin: 10px;
     width: 1098px;
-    padding-left: 210px;
     float: center;
-    
+    overflow-y: auto;
 }
 
 #toursListMiddle {
