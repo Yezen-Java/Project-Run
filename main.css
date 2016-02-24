@@ -40,6 +40,8 @@ html, body {
 }
 #topNavbarContainer{
     position: relative;
+}
+#topNavbar{
     background-color: #ffd000;
 }
 #bottomNavbarContainer{
