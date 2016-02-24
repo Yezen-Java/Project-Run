@@ -59,10 +59,10 @@ html, body {
 #tourTextFields{
   padding-left: 50px;
 }
-#tourList {
+#tourList { 
     padding-top: 50px;
     margin: 10px;
-    padding-left: 200px;
+    padding-left: 210px;
     width: 800px;
     float: center;
     overflow-y: auto;
@@ -135,7 +135,6 @@ html, body {
 #leftBar{
   float: left;
   height: 100%;
-  padding-top: 50px;
 }
 
 #leftBarId{
