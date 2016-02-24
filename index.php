@@ -234,7 +234,7 @@ echo "Tour query passed. ";
           </script>
         </div>
         <div class="modal-footer">
-        	<button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
+          <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
         	<button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
         	<button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
         	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -6,6 +6,7 @@ $("#EditTourButton").click(function(){
 
 $("#pointer1").click(function(){
   $("#fileSorter").empty();
+  console.log("works");
     reorder();
     $("#myModal").modal();
     $('.sortable').sortable();
