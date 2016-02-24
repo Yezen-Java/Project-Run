@@ -1,63 +1,8 @@
 $(document).ready();
 $("#EditTourButton").click(function(){
-  
   console.log($("#myModal ul").sortable('toArray'));
 });
 
-$("#leftBar #pointer1").click(function(){
-  $("#fileSorter").empty();
-  console.log("works");
-    reorder();
-    $("#myModal").modal();
-    $('.sortable').sortable();
-});
-
-function Save(){
-
-var array = [];
-$('.sortable li').each(function(i, li) {
-  array.push($(li));
-});
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i].text() + i);
-};
-
-}
-
-var files = [
-  {
-    name: "file1",
-    order: 1
-  },
-
-  {
-    name: "file2",
-    order: 0
-  },
-
-  {
-    name: "file3",
-    order: 2
-  }
-];
-
-function compare(a,b) {
-  if (a.order < b.order)
-    return -1;
-  else if (a.order > b.order)
-    return 1;
-  else 
-    return 0;
-}
-
-function reorder(){
-  files.sort(compare);
-  console.table(files);
-  for (var i = 0; i < files.length; i++) 
-  {
-      $(".sortable").append("<li>" +files[i].name);
-  }
-}
    
 var myCity = new google.maps.Circle({
   center: LONG,LAT,
