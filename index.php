@@ -226,7 +226,7 @@ echo "Tour query passed. ";
 
         <script src="jquery.sortable.js"></script>
 
-          <ul class="sortable">
+          <ul class="sortable" id="fileSorter">
             <li> item1
           </ul>
 
