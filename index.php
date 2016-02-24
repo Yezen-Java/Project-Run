@@ -127,7 +127,6 @@ echo "Tour query passed. ";
       </div>
       </div>
       </div>
-      </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
     <div class=".col-xs-3 .col-sm-4 .col-md-3">
