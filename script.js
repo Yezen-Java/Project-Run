@@ -4,7 +4,7 @@ $("#EditTourButton").click(function(){
   console.log($("#myModal ul").sortable('toArray'));
 });
 
-$("#pointer1").click(function(){
+$("#leftBar #pointer1").click(function(){
   console.log("works");
   $("#myModal ul").empty();
     reorder();
