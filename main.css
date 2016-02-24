@@ -113,6 +113,7 @@ html, body {
 #tourButtonGroup{
     margin: 10px;
     padding-left: 253px;
+    padding-top: 10px;
     position: relative;
 }
 
