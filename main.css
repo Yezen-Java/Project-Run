@@ -60,14 +60,18 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
+    margin: 10px;
+    width: 1098px;
+    float: center;
+}
+#jumbotronMiddle { 
     padding-top: 50px;
     margin: 10px;
     padding-left: 210px;
-    width: 1098px;
+    position: relative;
     float: center;
     overflow-y: auto;
 }
-
 #toursListMiddle {
     position: relative;
 }
