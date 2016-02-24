@@ -62,7 +62,7 @@ html, body {
 #tourList {
     padding-top: 50px;
     margin: 10px;
-    width: 900px;
+    width: 800px;
     float: center;
     overflow-y: auto;
 }
