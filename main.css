@@ -62,13 +62,13 @@ html, body {
 #tourList { 
     margin: 10px;
     width: 1098px;
-    float: center;
+    
 }
 #jumbotronMiddle { 
     margin: 10px;
     background-color: #ffd000;
     position: relative;
-    float: center;
+    float: left;
 
 }
 
