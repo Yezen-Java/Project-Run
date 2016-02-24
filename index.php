@@ -85,7 +85,7 @@ echo "Tour query passed. ";
       tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
       should be added to the end, currently we have only one item called "Link 1"-->
       <div id="leftBar">
-        <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+        <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
           <a href= "#" id="pointer1">Pointer 1</a>
           <a href="#">Pointer 2</a>
