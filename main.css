@@ -66,10 +66,13 @@ html, body {
 #jumbotronMiddle { 
     padding-top: 50px;
     margin: 10px;
+    width: 1098px;
+    height: 400px;
     background-color: #ffd000;
     padding-left: 210px;
     position: relative;
     float: center;
+    
 }
 
 #toursListMiddle {
