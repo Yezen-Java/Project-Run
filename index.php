@@ -99,7 +99,7 @@ echo "Tour query passed. ";
             }
              ?>
           </select></a>
-          <a href="#" id="pointer1" onclick="$('#pointer1').click();" >Pointer 1</a>
+          <a href= "#" id="pointer1">Pointer 1</a>
           <a href="#">Pointer 2</a>
           <a href="#">Pointer 3</a>
           <a href="#">Pointer 4</a>
