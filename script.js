@@ -4,9 +4,9 @@ $("#EditTourButton").click(function(){
   console.log($("#myModal ul").sortable('toArray'));
 });
 
-$("#pointer1").click(function(){
-    $("#fileSorter").empty();
-    console.log("works");
+$("#leftBar #pointer1").click(function(){
+  $("#fileSorter").empty();
+  console.log("works");
     reorder();
     $("#myModal").modal();
     $('.sortable').sortable();
