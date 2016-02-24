@@ -65,19 +65,12 @@ html, body {
 #tourList { 
     padding-top: 50px;
     padding-left: 210px;
+    padding-right: 210px;
     margin: 10px;
     width: 1098px;
     position: relative;
     float: center;
     overflow-y: auto;
-}
-
-#containerOfMiddle{ 
-    position: relative;
-    left: 210px;
-    top: 50px;
-    width: 1098px;
-    right: 210px;
 }
 
 #toursListMiddle {
