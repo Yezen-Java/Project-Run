@@ -65,6 +65,9 @@ html, body {
     float: center;
     overflow-y: auto;
 }
+#jumbotronMiddle { 
+    padding-left: 210px;
+}
 
 #toursListMiddle {
     position: relative;
