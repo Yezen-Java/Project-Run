@@ -101,6 +101,7 @@ echo "Tour query passed. ";
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
       <div class=".col-xs-9 .col-sm-6 .col-md-9">
+      <div class = "jumbotron">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
@@ -121,6 +122,7 @@ echo "Tour query passed. ";
       <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
+      </div>
       </div>
       </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
