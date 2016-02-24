@@ -141,7 +141,7 @@ echo "Tour query passed. ";
 </div>
 
 <div class="container">
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" id="topNavbarDefault">
     <div class="container">
       <div class="navbar-header" id="topNavbar">
       	<div class=".col-md-9" id="topNavbarContainer">

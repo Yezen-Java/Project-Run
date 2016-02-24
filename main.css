@@ -41,7 +41,7 @@ html, body {
 #topNavbarContainer{
     position: relative;
 }
-#topNavbar{
+#topNavbarDefault{
     background-color: #ffd000;
 }
 #bottomNavbarContainer{
