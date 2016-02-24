@@ -62,7 +62,6 @@ html, body {
 #tourList { 
     margin: 10px;
     width: 1098px;
-    margin: 10px;
 }
 #jumbotronMiddle { 
     padding-top: 50px;
@@ -71,8 +70,8 @@ html, body {
     padding-left: 210px;
     position: relative;
     float: center;
-    overflow-y: auto;
 }
+
 #toursListMiddle {
     position: relative;
 }
