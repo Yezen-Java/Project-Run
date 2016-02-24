@@ -84,21 +84,9 @@ echo "Tour query passed. ";
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
       tour pointer items, when the user clicks Delete or Add, the last item should disappear or a new item
       should be added to the end, currently we have only one item called "Link 1"-->
-      <div class=".col-xs-3 .col-sm-4 .col-md-3">
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
-          <a><select class="form-control">
-            <option>Choose Location</option>
-            <?php 
-            while ($row = pg_fetch_array($locationsQuery)) {
-              $location_id = $row['locationid'];
-              $lname = $row['lname'];
-
-            echo "<option id = '$location_id' value='$location_id'>$lname</option>";
-            }
-             ?>
-          </select></a>
           <a href= "#" id="pointer1">Pointer 1</a>
           <a href="#">Pointer 2</a>
           <a href="#">Pointer 3</a>
@@ -108,7 +96,6 @@ echo "Tour query passed. ";
             <button id="addPointer" type="button" class="btn btn-success"><strong>Add</strong></button>
           </div>    
         </nav>
-      </div>
       </div>
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
@@ -210,7 +197,7 @@ echo "Tour query passed. ";
   </div>
   <!--Create tour dialogue box-->
 
-   <div class="modal fade" id="myModal" role="dialog">
+     <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -219,30 +206,28 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-body">
 
-        <h4>Or drag and drop files below</h4>
-          <div class="upload-drop-zone" id="drop-zone">
-            Just drag and drop files here
-          </div>
+          <h4>Or drag and drop files below</h4>
+            <div class="upload-drop-zone" id="drop-zone">
+              Just drag and drop files here
+            </div>
 
-        <script src="jquery.sortable.js"></script>
+          <script src="jquery.sortable.js"></script>
 
-          <ul class="sortable" id="fileSorter">
-            <li> item1
-          </ul>
+            <ul class="sortable">
+              <li> item1
+            </ul>
 
-          <script>
-          </script>
         </div>
         <div class="modal-footer">
           <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
-        	<button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
-        	<button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
-        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+          <button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
+          <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
       </div>
+      
     </div>
   </div>
-</div>
 
 </body>
 
