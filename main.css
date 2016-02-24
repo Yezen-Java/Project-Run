@@ -72,6 +72,14 @@ html, body {
     overflow-y: auto;
 }
 
+#containerOfMiddle{ 
+    position: relative;
+    left: 210px;
+    top: 50px;
+    width: 1098px;
+    right: 210px;
+}
+
 #toursListMiddle {
     position: relative;
 }
@@ -129,7 +137,6 @@ html, body {
 
 #wrapperLeft{
   display: flex;
-  position: relative;
 }
 
 #noteFieldContainer{

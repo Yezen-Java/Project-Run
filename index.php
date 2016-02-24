@@ -101,7 +101,7 @@ echo "Tour query passed. ";
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
       <div class=".col-xs-9 .col-sm-6 .col-md-9">
-      <div class = "container">
+      <div class = "container" id="containerOfMiddle">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
           <li>
