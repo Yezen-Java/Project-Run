@@ -5,6 +5,7 @@ $("#EditTourButton").click(function(){
 });
 
 $("#pointer1").click(function(){
+  console.log("works");
   $("#myModal ul").empty();
     reorder();
     $("#myModal").modal();
