@@ -67,7 +67,7 @@ html, body {
     padding-left: 210px;
     margin: 10px;
     width: 1098px;
-    position: fixed;
+    position: relative;
     float: center;
     overflow-y: auto;
 }
@@ -129,6 +129,7 @@ html, body {
 
 #wrapperLeft{
   display: flex;
+  position: relative;
 }
 
 #noteFieldContainer{
