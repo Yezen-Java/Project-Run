@@ -197,7 +197,7 @@ echo "Tour query passed. ";
   </div>
   <!--Create tour dialogue box-->
 
-     <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -223,7 +223,7 @@ echo "Tour query passed. ";
           <button type ='button' value="Show Dialog" class="btn btn-default" onclick="$('#myInput').click();">Upload</button>
           <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+        </div>
       </div>
       
     </div>
@@ -236,6 +236,61 @@ $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
+
+$("#pointer1").click(function(){
+  $("#myModal ul").empty();
+  console.log("works");
+    reorder();
+    $("#myModal").modal();
+    $('.sortable').sortable();
+});
+
+function Save(){
+
+var array = [];
+$('.sortable li').each(function(i, li) {
+  array.push($(li));
+});
+for (var i = 0; i < array.length; i++) {
+  console.log(array[i].text() + i);
+};
+
+}
+
+var files = [
+  {
+    name: "file1",
+    order: 1
+  },
+
+  {
+    name: "file2",
+    order: 0
+  },
+
+  {
+    name: "file3",
+    order: 2
+  }
+];
+
+function compare(a,b) {
+  if (a.order < b.order)
+    return -1;
+  else if (a.order > b.order)
+    return 1;
+  else 
+    return 0;
+}
+
+function reorder(){
+  files.sort(compare);
+  console.table(files);
+  for (var i = 0; i < files.length; i++) 
+  {
+      $(".sortable").append("<li>" +files[i].name);
+  }
+}
 </script>
 
 </html>
