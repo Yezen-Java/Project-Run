@@ -79,6 +79,9 @@ html, body {
 .navbar-brand{
   position: relative;
 }
+#containerMiddleButtons{
+  position: relative;
+}
 
 #buttonsListTours {
     height: 400px;
