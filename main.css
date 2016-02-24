@@ -60,16 +60,12 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
+    padding-top: 50px;
     margin: 10px;
+    padding-left: 210px;
     width: 1098px;
-    
-}
-#jumbotronMiddle { 
-    margin: 10px;
-    background-color: #ffd000;
-    position: relative;
-    float: left;
-
+    float: center;
+    overflow-y: auto;
 }
 
 #toursListMiddle {
@@ -111,7 +107,6 @@ html, body {
 #tourButtonGroup{
     margin: 10px;
     padding-left: 253px;
-    padding-top: 10px;
     position: relative;
 }
 
