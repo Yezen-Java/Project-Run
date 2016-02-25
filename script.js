@@ -68,7 +68,6 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         ul.find('li:first').clone(true).appendTo(ul);
     }
     function createTour(){
-
     }
 
     function randomStringGenerator() {
