@@ -107,7 +107,7 @@ echo "Tour query passed. ";
               $tour_id =$rows["tourid"];
               $tour_name =$rows["tour_name"];
 
-             echo "<li> <button type='button' name='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
+             echo "<li> <button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
               
               }  
               ?>
