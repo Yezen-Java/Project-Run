@@ -84,6 +84,23 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+        var tourID = $( this ).text();
+        alert(tourID);
+        $.ajax({
+              type: "Post",
+              url: "database/GetTourLocations.php",
+              data:{code: tourID},
+              success: function(data) {
+                    var obj = $.parseJSON(data);      
+                    var result = "<ul>"
+                    $.each(obj, function() {
+                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"'>"+ this['lname']+"</a>";
+                    });
+                    result = result + "</ul>"
+                    $("#pointersDiv").html(result);
+              }
+        }); 
+
     }
     function w3_close() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
@@ -113,26 +130,8 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       createTour(tourName);
     }
 
-    $(document).ready(function() {
-    $("#tourButton").click(function() {
-        var tourID = $( this ).text();
-        alert(tourID);
-        $.ajax({
-              type: "Post",
-              url: "database/GetTourLocations.php",
-              data:{code: tourID},
-              success: function(data) {
-                    var obj = $.parseJSON(data);      
-                    var result = "<ul>"
-                    $.each(obj, function() {
-                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"'>"+ this['lname']+"</a>";
-                    });
-                    result = result + "</ul>"
-                    $("#pointersDiv").html(result);
-              }
-        }); 
-    });
-});
+
+
 
 
 
