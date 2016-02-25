@@ -259,6 +259,9 @@ html, body {
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
+    }
+
+    #tourList {
         padding-left: 100px;
     }
 }
