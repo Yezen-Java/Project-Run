@@ -100,7 +100,6 @@ echo "Tour query passed. ";
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div id = "main">       
         <div class="list-group" id="tourList">
           <ul id="buttonsListTours">
            <?php
@@ -119,7 +118,6 @@ echo "Tour query passed. ";
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
         </div>
-      </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
     <div class=".col-xs-3 .col-sm-4 .col-md-3">
