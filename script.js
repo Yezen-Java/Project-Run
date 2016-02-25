@@ -86,6 +86,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
         $.post("database/GetTourLocations.php", {
          TourID: value }, function(data) {
+          alert(data);
           $("#pointersDiv").html(data);
 
 });
