@@ -7,15 +7,17 @@ $TouridCode = $_POST['TourID'];
 
 $query = pg_query("SELECT * from tour_res tr, location l  where tourid ='$TouridCode' and tr.locationid = l.locationid;");
 
-$rows = array();
+
 
 if($query){
-while($r = mysql_fetch_assoc($query)) {
-  $rows[] = $r;
+while($row = mysql_fetch_array($query)) {
+	$locationname = $row['lname'];
+
+echo "<a>$locationname </a>";
+
 }
 }else{
 	echo "No locations were added";
 }
-echo json_encode($rows);
 
 ?>

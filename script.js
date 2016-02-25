@@ -88,7 +88,8 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         $.post("database/GetTourLocations.php", {
 TourID: value
 }, function(data) {
-alert(data);
+$("#pointersDiv").html(data);
+
 });
       
 
