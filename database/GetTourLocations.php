@@ -5,21 +5,17 @@ include'Connect.php';
 $TouridCode = $_GET["p"];
 
 
-$query = pg_query("SELECT * from tour_res tr, location l  where tourid ='$TouridCode ' and tr.locationid = l.locationid;");
+$query = pg_query("SELECT * from tour_res tr, location l  where tourid ='TOR123' and tr.locationid = l.locationid;");
 
+$rows = array();
 
-$dataArray = array();
 if($query){
-	while ($row = pg_fetch_array($query)) {
-	echo  $row['lname'];
+while($r = mysql_fetch_assoc($query)) {
+  $rows[] = $r;
 }
-
-
 }else{
-
 	echo "No locations were added";
 }
-
-echo json_encode($dataArray);
+echo json_encode($rows);
 
 ?>
