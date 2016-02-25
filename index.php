@@ -87,10 +87,7 @@ echo "Tour query passed. ";
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
-          <a href= "#" id="pointer1">Pointer 1</a>
-          <a href="#">Pointer 2</a>
-          <a href="#">Pointer 3</a>
-          <a href="#">Pointer 4</a>
+         <div id="pointersDiv">hey</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
             <button id="deletePointer" type="button" class="btn btn-danger"><strong>Delete</strong></button>
             <button id="addPointer" type="button" class="btn btn-success"><strong>Add</strong></button>
@@ -107,7 +104,7 @@ echo "Tour query passed. ";
               $tour_id =$rows["tourid"];
               $tour_name =$rows["tour_name"];
 
-             echo "<li> <button type='button' class='list-group-item' id='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
+             echo "<li> <button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </li>";
               
               }  
               ?>
