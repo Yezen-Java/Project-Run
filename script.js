@@ -82,14 +82,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       document.getElementById("randomfield").value = randomstring;
     }
 
-    function w3_open(value) {
+    function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-            alert(value;
 
         $.ajax({
               type: "Post",
               url: "database/GetTourLocations.php",
-              data:{code: value},
               success: function(data) {
                     var obj = $.parseJSON(data);      
                     var result = "<ul>"
