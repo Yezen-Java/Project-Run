@@ -12,7 +12,7 @@ $dataArray = array();
 if($query){
 	while ($row = pg_fetch_array($query)) {
 	$dataArray = $row;
-
+	echo"done";
 }
 
 
