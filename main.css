@@ -109,8 +109,9 @@ html, body {
 
 #tourButtonGroup{
     margin: 10px;
-    padding-top: 500px;
-    padding-left: 253px;
+    padding-top: 600px;
+   
+    padding-right: 500px;
     position: relative;
 }
 
