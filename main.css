@@ -254,4 +254,12 @@ html, body {
         position: relative;
         margin-right: 0;
    
+   }
+
+@media (max-width: 800px) {
+    #tourList ul {
+        width: 50%
+    }
+}
+
 
