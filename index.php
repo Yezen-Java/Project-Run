@@ -100,23 +100,28 @@ echo "Tour query passed. ";
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div>
-        <div class="list-group" id="tourList">
-          <ul id="buttonsListTours">
-           <?php
-              while ($rows =pg_fetch_array($toursListQuery)) {
-              $tour_id =$rows["tourid"];
-              $tour_name =$rows["tour_name"];
+      <div id = "main">
+        <div class = "row">
+          <div class="list-group" id="tourList">
+            <ul id="buttonsListTours">
+             <?php
+                while ($rows =pg_fetch_array($toursListQuery)) {
+                $tour_id =$rows["tourid"];
+                $tour_name =$rows["tour_name"];
 
-             echo "<li> <button type='button' class='list-group-item' id='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
-              
-              }  
-              ?>
-          </ul>
+               echo "<li> <button type='button' class='list-group-item' id='$tour_id' onclick='w3_open()'>$tour_name $tour_id</button> </li>";
+                
+                }  
+                ?>
+            </ul>
+          </div>
         </div>
-        <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
-            <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
-            <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
+
+        <div class = "row">
+          <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
+              <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
+              <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
+          </div>
         </div>
       </div>
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
