@@ -108,6 +108,7 @@ padding-left: 210px;
 }
 
 #tourButtonGroup{
+    padding-left: -30px;
     margin: 10px;   
     position: relative;
 }
