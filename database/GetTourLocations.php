@@ -2,10 +2,10 @@
 
 include'Connect.php';
 
-$TouridCode = $_GET["p"];
+$TouridCode = $_POST['TourID'];
 
 
-$query = pg_query("SELECT * from tour_res tr, location l  where tourid ='TOR123' and tr.locationid = l.locationid;");
+$query = pg_query("SELECT * from tour_res tr, location l  where tourid ='$TouridCode' and tr.locationid = l.locationid;");
 
 $rows = array();
 
