@@ -256,8 +256,8 @@ html, body {
    
    }
 
-@media (max-width: 800px) {
-    #tourList ul {
+@media (max-width: 500px) {
+    #tourList li {
         width: 50%
     }
 }
