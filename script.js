@@ -116,10 +116,11 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     $(document).ready(function() {
     $("#tourButton").click(function() {
         var tourID = $( this ).text();
+        alert(tourID);
         $.ajax({
               type: "Post",
               url: "database/GetTourLocations.php",
-              data:"tourid"+tourID,
+              data:{code: tourID},
               success: function(data) {
                     var obj = $.parseJSON(data);      
                     var result = "<ul>"
