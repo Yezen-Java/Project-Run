@@ -63,8 +63,8 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
-  margin-top: 100px;
-  padding-left: 210px;
+padding-top: 100px;  
+padding-left: 210px;
     margin: 10px;
     width: 100%;
     position: relative;
@@ -108,9 +108,7 @@ html, body {
 }
 
 #tourButtonGroup{
-    margin: 10px;
-    padding-left: 210px;
-   
+    margin: 10px;   
     position: relative;
 }
 
