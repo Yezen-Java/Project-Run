@@ -117,6 +117,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
       createTour(tourName);
     }
+    
 
 
 

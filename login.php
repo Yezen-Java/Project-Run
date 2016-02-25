@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 $dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
@@ -45,89 +47,31 @@ include("database/UserLoginSession.php");
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
     <head>
-
+        <title>Hive Login</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hive Login</title>
-
+        
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="loginCss.css">
         <link rel="shortcut icon" href="assets/ico/favicon.png">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script type="text/javascript" src="script.js"></script>
         <!-- JavaScript-->
         
     </head>
-    <style type="text/css">
-      .navbar {
-         margin-bottom: 0px;
-      }
-      #createAccountContainer{
-         width: 500px;
-         padding-bottom: 100px;
-         padding-right: 200px;
-      }
 
-      #mainLogin{
-         width: 500px;
-         padding-bottom: 100px;
-         padding-right: 200px;
-      }
-
-      .carousel-caption h1{
-         font-size: 5.4em;
-         font-family: 'Pacifico', cursive;
-         padding-bottom: .4em;
-      }
-      .carousel-caption p{
-         font-size: 2em;
-      }
-
-      .slide1{
-         height: 500px;
-         background-position: center;
-      }
-      .slide2{
-         height: 500px;
-         background-position: center;
-      }
-      #navigationButtons{
-       
-      }
-      .carousel-control.left, .carousel-control.right{
-         background-image: none;
-      }
-
-
-      body{
-         background-color: #F2DF07;
-      }
-
-      #parent-name {
-  display: flex;
-    }
-     #finame-div {
-     	width: 135px;
-     	float: left;
- 
-      }
-    #laname-div {
-    float: right;
-  flex: 1;
-}
-    </style>
     <body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="database/registration.js"></script>
@@ -227,5 +171,4 @@ include("database/UserLoginSession.php");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </body>
-
 </html>
