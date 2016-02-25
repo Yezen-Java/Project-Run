@@ -64,7 +64,6 @@ html, body {
 }
 #tourList { 
     padding-top: 50px;
-    padding-left: 210px;
     margin: 10px;
     width: 1000px;
     position: relative;
@@ -247,7 +246,7 @@ html, body {
     #page-content-wrapper {
         position: relative;
         padding-top: 20px;
-		margin-bottom: 20px; 
+		    margin-bottom: 20px; 
     }
 
     #wrapper.toggled #page-content-wrapper {
