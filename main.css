@@ -262,7 +262,9 @@ html, body {
         width: 50%;
     }
 
-   
+    #tourList {
+        padding-left: 100px;
+    }
 }
 
 
