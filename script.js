@@ -115,7 +115,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
     $(document).ready(function() {
     $("#tourButton").click(function() {
-      var tourID = $(this).attr("value");
+        var tourID = $( this ).text();
         $.ajax({
               type: "Post",
               url: "database/GetTourLocations.php",
@@ -124,7 +124,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
                     var obj = $.parseJSON(data);      
                     var result = "<ul>"
                     $.each(obj, function() {
-                        result = result + "<li href= '#' id='pointer1' vlaue ='"+this['locationid']+"' >"+ this['lname']+"</li>";
+                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"'>"+ this['lname']+"</a>";
                     });
                     result = result + "</ul>"
                     $("#pointersDiv").html(result);
