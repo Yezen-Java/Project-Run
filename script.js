@@ -124,7 +124,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
                     var obj = $.parseJSON(data);      
                     var result = "<ul>"
                     $.each(obj, function() {
-                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"' >"+ this['lname']+"</a>";
+                        result = result + "<li href= '#' id='pointer1' vlaue ='"+this['locationid']+"' >"+ this['lname']+"</li>";
                     });
                     result = result + "</ul>"
                     $("#pointersDiv").html(result);
