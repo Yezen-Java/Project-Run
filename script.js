@@ -86,6 +86,19 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       alert(value);
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
 
+   $.ajax({
+   url:'database/GetTourLocations.php',
+   datatype:"application/json",
+   type:'get',
+   data: 'q='+value, 
+   success:function(data){
+      count('#pointersDiv').append(html); 
+   },
+   error:function(){
+      // code for error
+   }
+ });
+
     }
     function w3_close() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
