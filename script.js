@@ -82,22 +82,9 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       document.getElementById("randomfield").value = randomstring;
     }
 
-    function w3_open() {
+    function w3_open(value) {
+      alert(value);
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-
-        $.ajax({
-              type: "Post",
-              url: "database/GetTourLocations.php",
-              success: function(data) {
-                    var obj = $.parseJSON(data);      
-                    var result = "<ul>"
-                    $.each(obj, function() {
-                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"'>"+ this['lname']+"</a>";
-                    });
-                    result = result + "</ul>"
-                    $("#pointersDiv").html(result);
-              }
-        }); 
 
     }
     function w3_close() {
