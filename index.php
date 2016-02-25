@@ -103,9 +103,6 @@ echo "Tour query passed. ";
       <div class="container">
       <div class="list-group" id="tourList">
         <ul id="buttonsListTours">
-          <li>
-            <button type="button" class="list-group-item" id="tourOne" onclick="w3_open()">Tour One</button>
-          </li>
          <?php
             
             while ($rows =pg_fetch_array($toursListQuery)) {
