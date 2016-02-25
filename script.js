@@ -85,20 +85,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     function w3_open(value) {
       alert(value);
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-              $.ajax({
-              type: "Post",
-              url: "employee.php",
-              success: function(data) {
-                    var obj = $.parseJSON(data);      
-                    var result = "<ul>"
-                    $.each(obj, function() {
-                        result = result + "<li>"this['lname']"</li>";
-                    });
-                    result = result + "</ul>"
-                    $("#pointersDiv").html(result);
-              }
-        }); 
-
+        $.post("database/GetTourLocations.php", {
+TourID: value
+}, function(data) {
+alert(data);
+});
+      
 
     }
     function w3_close() {
