@@ -113,6 +113,29 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       createTour(tourName);
     }
 
+    $(document).ready(function() {
+    $("#tourButton").click(function() {
+      var tourID = $(this).attr("value");
+        $.ajax({
+              type: "Post",
+              url: "database/GetTourLocations.php",
+              data:"tourid"+tourID,
+              success: function(data) {
+                    var obj = $.parseJSON(data);      
+                    var result = "<ul>"
+                    $.each(obj, function() {
+                        result = result + "<a href= '#' id='pointer1' vlaue ='"+this['locationid']+"' >"+ this['lname']+"</a>";
+                    });
+                    result = result + "</ul>"
+                    $("#pointersDiv").html(result);
+              }
+        }); 
+    });
+});
+
+
+
+
 
 
 
