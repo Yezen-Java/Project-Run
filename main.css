@@ -114,6 +114,10 @@ html, body {
     position: relative;
 }
 
+#main{
+  width: 500px;
+}
+
 #demo {
     background-color: white;
 }
