@@ -63,6 +63,7 @@ html, body {
   padding-left: 50px;
 }
 #tourList { 
+  padding-left: 210px;
     padding-top: 50px;
     margin: 10px;
     width: 1000px;
