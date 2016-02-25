@@ -67,7 +67,7 @@ html, body {
     padding-left: 210px;
     margin: 10px;
     width: 1000px;
-    position: fixed;
+    position: relative;
     float: center;
     overflow-y: auto;
 }
