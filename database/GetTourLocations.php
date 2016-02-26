@@ -11,10 +11,11 @@ $query = pg_query("SELECT * from tour_res tr, location l where tourid ='$TouridC
 //}else{
 if (pg_num_rows($query ) == 0) {
 	echo "No location returned";
+		echo "<p>$TouridCode</p>";
+
 }else{
 
 	echo "<lu>";
-	echo "<p>$TouridCode</p>";
 while($row = pg_fetch_array($query)) {
 	$locationname = $row['lname'];
 	$locationId = $row['locationid'];
