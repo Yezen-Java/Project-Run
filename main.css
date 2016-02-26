@@ -26,10 +26,6 @@ html, body {
 	width: 230px;
 }
 
-#middleContainer {
-  float: middle;
-}
-
 #codeGenerateCssLi {
     margin: 5px;
     padding-top: 3px;
@@ -114,8 +110,7 @@ padding-left: 210px;
 
 #tourButtonGroup{
     padding-left: -30px;
-    margin-left: -30px;
-    padding-left:240px;
+    margin-left: -30px
     margin: 10px;   
     position: relative;
 }
