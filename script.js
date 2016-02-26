@@ -87,7 +87,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
           $(function() {
           var value1 = $('#tourButton').val();
-           $.post('db_query.php',{value:value1}, function(data){
+           $.post('GetTourLocations.php',{value:value1}, function(data){
              $("#pointersDiv").html(data);
            });
            return false;
