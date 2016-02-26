@@ -87,6 +87,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
            $.post('database/GetTourLocations.php',{value:value}, function(data){
              $("#pointersDiv").html(data);
       }
+    }
 
     function w3_close() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
