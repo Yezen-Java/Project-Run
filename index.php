@@ -72,6 +72,9 @@ echo "Tour query passed. ";
     <script src="js/CreateTour.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
+<!-- new jquery for notes  -->
+<script src="myJquery.js"></script>
+<!-- end of jquery for notes -->
 </head>
 
 <body onload="myFunction()">
@@ -118,8 +121,9 @@ echo "Tour query passed. ";
       
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
-    
-    <div id="wrapper">
+<!--  old notes area    -->
+ <!-- 
+   <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">
             <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
@@ -131,6 +135,42 @@ echo "Tour query passed. ";
         </div>
     </div>
 </div>
+ -->
+<!--  end of old notes area  -->
+
+  <!--	====================  START of new notes ======================-->
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav" id="sideBar">
+          
+              <li class="sidebar-brand" style="padding-top:10px;">
+				  
+
+	  <div id="container">
+		  <form name="form1" method="post" action ="">
+		  <input type="text" name="toDoTextArea" id="toDoTextArea" autofocus>
+		  <button type="button"  class="btn-success" name="addBtn"  id="addBtn" autofocus>Add</button>
+			  
+		  </form>
+<!--	  sortable and list-->
+		  <ul id="myList" class="sortable list">
+		  
+		  </ul>
+<!--		  paragraph to hold clear all link-->
+		  <button class="btn btn-danger " id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button></p>	  
+	  
+	  </div>
+
+
+				  
+				  
+				  
+                  
+              </li>
+          </ul>
+        </div>
+    </div>
+		  <!--	====================  END of new notes ======================-->
 
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top" id="topNavbarDefault">
