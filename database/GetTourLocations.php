@@ -9,7 +9,7 @@ $query = pg_query("SELECT * from tour_res;");
 //if(pg_num_rows($query)==0){
 //	echo "No locations found for this tour";
 //}else{
-if (pg_num_rows($query )==0) {
+if (pg_num_rows($query ) > 0) {
 	echo "No location returned";
 }else{
 
