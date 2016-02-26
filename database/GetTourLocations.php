@@ -16,7 +16,7 @@ while($row = pg_fetch_array($query)) {
 	$locationname = $row['lname'];
 	$locationId = $row['locationid'];
 
-echo "<a href ='#' id ='$locationId'>$locationname</a>";
+echo "<a href ='#' id ='pointer1' value ='$locationId'>$locationname</a>";
 }
 
 echo "</lu>";
