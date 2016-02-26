@@ -1,19 +1,20 @@
 <?php 
 
 include 'Connect.php';
-$TouridCode = $_POST['TourID'];
+$TouridCode = $_POST['value'];
 $query = pg_query("SELECT * from tour_res tr, location l where tourid ='$TouridCode' and tr.locationid = l.locationid;");
+
+if(pg_num_rows($query)==0){
+	echo "No locations found for this tour";
+}else{
 
 while($row = mysql_fetch_array($query)) {
 	$locationname = $row['lname'];
 	$locationId = $row['locationid'];
 
-echo "<lu><li>id ='$locationId'>$locationname</li></lu>";
+echo "<a href ='#' id='$locationId'>$locationname</a>";
 }
-echo "good";
+}
 
-if(!$query){
-	echo "No locations connect";
-}
 
 ?>
