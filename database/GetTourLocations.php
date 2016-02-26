@@ -8,12 +8,16 @@ if(pg_num_rows($query)==0){
 	echo "No locations found for this tour";
 }else{
 
+	echo '<lu>';
+
 while($row = mysql_fetch_array($query)) {
 	$locationname = $row['lname'];
 	$locationId = $row['locationid'];
 
-echo "<a href ='#' id='$locationId'>$locationname</a>";
+echo '<a href ="#" id='.$locationId.'>'.$locationname.'</a>';
 }
+
+echo '</lu>';
 }
 
 
