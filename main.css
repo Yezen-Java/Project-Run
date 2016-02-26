@@ -3,83 +3,6 @@ html, body {
   overflow: hidden;
 }
 
-/*code for the notes */
-.removeListXbtn hover{
-	color: red;
-	font-size: 20px;
-
-
-}
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    right: 0.5px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #e7a61a;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-	box-shadow: 10px 10px 5px #888888;
-}
-
-#addNoteButton{
-	margin: 10px 20px 10px 10px;
-	float: right;
-}
-
-#deleteNoteButton{
-  margin: 10px 20px 10px 130px;
-  float: left;
-
-}
-
-/*code for the notes*/
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
-	margin-top: 30px;    
-	width: 100%;
-    position: absolute;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-/*for the notes area*/
-ul
-{
-    list-style-type: none;
-}
-/* Sidebar Styles */
-
-/*the textbox */
-.listItem{
-	
-	margin-left: -58px;
-	margin-top: 10px;
-		width: 200px;
-	height: 120px;
-	background-color: beige;
-	-webkit-box-shadow: 13px 10px 5px -8px rgba(71,69,71,1);
--moz-box-shadow: 13px 10px 5px -8px rgba(71,69,71,1);
-box-shadow: 13px 10px 5px -8px rgba(71,69,71,1);
-	border-radius: 3px;
-	font-size: 12px;
-/*text area	*/
-	
-
-
 #sortable { 
   list-style-type: none; 
   margin: 0; 
@@ -99,9 +22,9 @@ box-shadow: 13px 10px 5px -8px rgba(71,69,71,1);
   margin-left: -1.3em; 
 }
 
-/*#notesArea {
+#notesArea {
 	width: 230px;
-}*/
+}
 
 #codeGenerateCssLi {
     margin: 5px;
@@ -195,7 +118,7 @@ padding-left: 210px;
 #demo {
     background-color: white;
 }
-/*#addNoteButton{
+#addNoteButton{
 	margin: 10px 20px 10px 10px;
 	float: right;
 }
@@ -212,7 +135,7 @@ padding-left: 210px;
 
 #noteFieldContainer{
 	padding-top: 10px;
-}*/
+}
 
 #leftBar{
   float: left;
