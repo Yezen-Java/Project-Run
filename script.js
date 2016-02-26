@@ -121,6 +121,17 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       //var tourName = document.getElementById("tourDateField").value;
       createTour(tourName);
     }
+
+    function addLocationRes(value) {
+
+     
+  $("#myModal ul").empty();
+  console.log("works");
+    reorder();
+    $("#myModal").modal();
+    $('.sortable').sortable();
+
+    }
     
 
 
