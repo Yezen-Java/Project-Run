@@ -26,6 +26,10 @@ html, body {
 	width: 230px;
 }
 
+#middleContainer {
+  float: middle;
+}
+
 #codeGenerateCssLi {
     margin: 5px;
     padding-top: 3px;

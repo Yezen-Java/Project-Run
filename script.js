@@ -87,13 +87,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
          TourID: value }, function(data) {
           alert(data);
           $("#pointersDiv").html(data);
-
-});
+        });
       }
+
     function w3_close() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
     }
-
     
     function createInput(){
       ul = $('#buttonsListTours');
@@ -114,7 +113,6 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       var tourName = document.getElementById("tourNameField").value;
       //var tourFloor = document.getElementById("tourLevelField").value;
       //var tourName = document.getElementById("tourDateField").value;
-
       createTour(tourName);
     }
     
