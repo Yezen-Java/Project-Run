@@ -2,7 +2,9 @@
 
 include 'Connect.php';
 $TouridCode = $_POST['value'];
-$query = pg_query("SELECT * from tour_res tr, location l where tourid ='$TouridCode' and tr.locationid = l.locationid;");
+
+//$query = pg_query("SELECT * from tour_res tr, location l where tourid ='$TouridCode' and tr.locationid = l.locationid;");
+$query = pg_query("SELECT * from tour_res where tourid = '$TouridCode'");
 
 //if(pg_num_rows($query)==0){
 //	echo "No locations found for this tour";
