@@ -16,6 +16,8 @@ while($row = pg_fetch_array($query)) {
 	$locationname = $row['lname'];
 	$locationId = $row['locationid'];
 
+	//this generates a list based on the number of the locations.
+
 echo "<a href ='#' onClick='addLocationRes(this.value) 'id ='pointer1' value ='$locationId'>$locationname</a>";
 }
 

@@ -121,10 +121,8 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       //var tourName = document.getElementById("tourDateField").value;
       createTour(tourName);
     }
-
+//this function open the file model for specific locations.
     function addLocationRes(value) {
-
-     
   $("#myModal ul").empty();
   console.log("works");
     reorder();
