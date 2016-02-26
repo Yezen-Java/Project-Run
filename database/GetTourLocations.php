@@ -9,6 +9,9 @@ $query = pg_query("SELECT * from tour_res where tourid = '$TouridCode'");
 //if(pg_num_rows($query)==0){
 //	echo "No locations found for this tour";
 //}else{
+if (pg_num_rows($query )==0) {
+	echo "No location returned";
+}
 
 	echo "<lu>";
 
