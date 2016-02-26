@@ -85,10 +85,13 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
           var TourIdCode=value;
 
-           $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
-             $('#pointersDiv').html(data);
+          $(function() {
+          var value1 = $('#tourButton').val();
+           $.post('db_query.php',{value:value1}, function(data){
+             $("#search_results").html(data);
            });
            return false;
+      });
       
 
     }
