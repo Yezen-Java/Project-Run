@@ -6,11 +6,7 @@ $TouridCode = $_POST['value'];
 $queryString = "SELECT * from tour_res, location where tourid ='$TouridCode' and tour_res.locationid = location.locationid";
 
 $query = pg_query($queryString);
-//$query = pg_query("SELECT * from location;");
 
-//if(pg_num_rows($query)==0){
-//	echo "No locations found for this tour";
-//}else{
 if (pg_num_rows($query ) == 0) {
 	echo "No location returned";
 }else{
@@ -24,7 +20,6 @@ echo "<a href ='#' id ='$locationId'>$locationname</a>";
 }
 
 echo "</lu>";
-//}
 }
 
 ?>
