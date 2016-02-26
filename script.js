@@ -84,13 +84,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     function w3_open(value) {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
           var TourIdCode=value;
-            $(function() {
+
            $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
              $('#pointersDiv').html(data);
            });
            return false;
-       
-      });
+      
 
     }
 
