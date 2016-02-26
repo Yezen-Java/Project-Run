@@ -88,7 +88,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
           $(function() {
           var value1 = $('#tourButton').val();
            $.post('db_query.php',{value:value1}, function(data){
-             $("#search_results").html(data);
+             $("#pointersDiv").html(data);
            });
            return false;
       });
