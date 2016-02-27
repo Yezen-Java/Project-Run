@@ -23,7 +23,7 @@ $accountInfo = $dbxClient->getAccountInfo();
 print_r($accountInfo);
 
 $f = fopen("media/sample_iPod.m4v", "rb");
-$result = $dbxClient->uploadFile("/media/sample_iPod.m4v", dbx\WriteMode::add(), $f);
+$result = $dbxClient->uploadFile("/sample_iPod.m4v", dbx\WriteMode::add(), $f);
 fclose($f);
 print_r($result);
 
