@@ -78,7 +78,6 @@ html, body {
 }
 
 #tourList { 
-  padding-right: 210px;
 padding-top: 50px;  
 padding-left: 210px;
     margin: 10px;
@@ -185,6 +184,10 @@ padding-left: 210px;
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+}
+
+#wrapper.toggled #tourList { 
+  padding-right: 210px;
 }
 
 #page-content-wrapper {
