@@ -85,6 +85,7 @@ padding-left: 210px;
     position: relative;
     float: center;
     overflow-y: auto;
+    padding-right: 210px;
 }
 
 #toursListMiddle {
