@@ -17,7 +17,7 @@ $authCode = \trim(\readline("oVh76x8K9jAAAAAAAAAACqvjS6htIDGTrx4xdsu7raKN142f6FW
 list($accessToken, $dropboxUserId) = $webAuth->finish($authCode);
 print "Access Token: " . $accessToken . "\n";
 
-$dbxClient = new dbx\Client($accessToken, "PHP-Example/1.0");
+$dbxClient = new dbx\Client($accessToken, "StroageApp/1.0");
 $accountInfo = $dbxClient->getAccountInfo();
 
 print_r($accountInfo);
@@ -30,8 +30,8 @@ print_r($result);
 $folderMetadata = $dbxClient->getMetadataWithChildren("/");
 print_r($folderMetadata);
 
-$f = fopen("working-draft.txt", "w+b");
-$fileMetadata = $dbxClient->getFile("/working-draft.txt", $f);
+$f = fopen("sample_iPod.m4v", "w+b");
+$fileMetadata = $dbxClient->getFile("/sample_iPod.m4v", $f);
 fclose($f);
 print_r($fileMetadata);
 
