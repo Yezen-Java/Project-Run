@@ -182,18 +182,35 @@ padding-left: 210px;
     box-shadow:10px 10px 5px #888888;
 }
 
-#wrapper.toggled #sidebar-wrapper {
+#wrapper {
+    padding-left: 250px;
+    float:right;
+    height: 100%
+}
+
+#wrapper.toggled {
+    padding-left: 0;
+}
+
+#sidebar-wrapper {
     width: 250px;
 }
 
+#wrapper.toggled #sidebar-wrapper {
+    width: 0;
+}
 
 #page-content-wrapper {
-	margin-top: 30px;    
-	width: 100%;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px; 
+    margin-top: 30px;    
+    width: 100%;
     position: absolute;
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
@@ -253,26 +270,7 @@ ul{
   border-color: #222;
 }
 
-    #wrapper {
-        padding-left: 250px;
-        float:right;
-        height: 100%
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #page-content-wrapper {
-        position: relative;
-        padding-top: 20px;
-		    margin-bottom: 20px; 
-    }
-
+    
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
