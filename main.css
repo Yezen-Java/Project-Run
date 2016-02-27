@@ -186,9 +186,6 @@ padding-left: 210px;
     width: 250px;
 }
 
-#wrapper.toggled #tourList { 
-  padding-right: 210px;
-}
 
 #page-content-wrapper {
 	margin-top: 30px;    
@@ -200,7 +197,7 @@ padding-left: 210px;
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    padding-right: 210px;
 }
 
 ul{
