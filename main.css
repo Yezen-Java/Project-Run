@@ -277,12 +277,6 @@ ul{
 		    margin-bottom: 20px; 
     }
 
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-   
-   }
-
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
