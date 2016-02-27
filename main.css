@@ -30,6 +30,20 @@ html, body {
     margin: 5px;
     padding-top: 3px;
 }
+
+.listItem{
+  margin-left:-58px;
+  margin-top:10px;
+  width: 200px;
+  height:120px;
+  background-color: beige;
+  -webkit-box-shadow:13px 10px 5px -8px rgba(71,69,71,1);
+  -moz-box-shadow:13px 10px 5px -8px rgba(71,69,71,1);
+  box-shadow:13px 10px 5px -8px rgba(71,69,71,1);
+  border-radius: 3px;
+  font-size:12px;
+}
+
 #sideBar {
     padding-top: 50px;
     margin: 10px;
@@ -143,6 +157,11 @@ padding-left: 210px;
   padding-top: 30px;
 }
 
+.removeListXbtn hover{
+  color:red;
+  font-size:20px;
+}
+
 #leftBarId{
   width: 250px;
 }
@@ -160,6 +179,7 @@ padding-left: 210px;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    box-shadow:10px 10px 5px #888888;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -177,6 +197,10 @@ padding-left: 210px;
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
+}
+
+ul{
+  list-style-type:none;
 }
 
 /* Sidebar Styles */

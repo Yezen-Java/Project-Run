@@ -121,12 +121,19 @@ echo "Tour query passed. ";
     
     <div id="wrapper">
         <div id="sidebar-wrapper">
-          <ul class="sidebar-nav" id="sideBar">
-            <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
-            <button type="button" class="btn btn-success" id="addNoteButton" onclick="addNoteFunc()">+</button>
-              <li class="sidebar-brand" style="padding-top:10px;">
-                  <textarea class="form-control" rows="5" id="notesArea" type="text"></textarea>
-              </li>
+          <ul class="sidebar-nav" id="sideBar">  
+              <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
+              <button type="button" class="btn btn-success" id="addNoteButton" onclick="addNoteFunc()">+</button>
+                <li class="sidebar-brand" style="padding-top:10px;">
+                  <div id="container">
+                    <form name="form1" method="post" action="">
+                      <input type="text" name="toDoTextArea" id="toDoTextArea" autofocus>
+                      <button type="button" class="btn-success" name="addBtn" id="addBtn" autofocus>Add</button>
+                    </form>
+                    <ul id="myList" class="sortable list"></ul>
+                    <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
+                  </div>
+                </li>
           </ul>
         </div>
     </div>
