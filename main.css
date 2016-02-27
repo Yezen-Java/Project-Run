@@ -253,30 +253,7 @@ ul{
   border-color: #222;
 }
 
-    #wrapper {
-        padding-left: 250px;
-        float:right;
-        height: 100%
-    }
-
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-
-    #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        position: relative;
-        padding-top: 20px;
-		    margin-bottom: 20px; 
-    }
-
+    
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
