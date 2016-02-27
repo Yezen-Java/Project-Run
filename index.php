@@ -228,7 +228,7 @@ echo "Tour query passed. ";
   </div>
 
 </body>
-
+<script src="myJquery.js"></script>
 <script>
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
