@@ -180,7 +180,7 @@ echo "Tour query passed. ";
 
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
-          <input type="text" class="form-control" id="tourLevelField" placeholder="Floor level" >
+          <input type="text" class="form-control" id="tourLevelField" placeholder="Class Level" >
           <input type="text" class="form-control" id="tourDateField" placeholder="Date">
         </div>
 

@@ -5,6 +5,7 @@ include "Connect.php";
 $tourID = $_POST['TourID'];
 $tourName = $_POST['Tourname'];
 $Tlevel = $_POST['Tlevel'];
+$tourDate = $_POST['TourDate'];
 
 
 
@@ -14,7 +15,7 @@ $TourNumberIDs = pg_num_rows($TourIDCheck);
 
 if ( $TourNumberIDs == 0) {
 
-	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$Tlevel')");
+	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$Tlevel','$tourDate')");
 
 
 
