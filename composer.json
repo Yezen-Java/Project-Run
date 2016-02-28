@@ -1,1 +1,6 @@
-{}
+{
+	"require": {
+    "script.js": "~1.1",
+    "js/CreateTour.js": "~1.1",
+  }
+}
