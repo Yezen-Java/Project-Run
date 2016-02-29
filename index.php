@@ -119,6 +119,7 @@ echo "Tour query passed. ";
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
     
+    <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
               <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
@@ -135,6 +136,7 @@ echo "Tour query passed. ";
                 </li>
           </ul>
         </div>
+    </div>
 </div>
 
 <div class="container">
@@ -230,7 +232,7 @@ echo "Tour query passed. ";
 <script>
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
-  $("#sidebar-wrapper").toggleClass("toggled");
+  $("#wrapper").toggleClass("toggled");
 });
 
 $("#pointer1").click(function(){
