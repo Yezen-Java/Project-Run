@@ -218,9 +218,10 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
-          <form>
-          <button type ="file" value="Show Dialog" class="btn btn-default">Upload</button>
-          </form action="" method ="post" enctype="multipart/form-data">
+          <form action=S3Upload.php method="post">
+          <input type ="file" id ="uploadFile" value="Show Dialog" class="btn btn-default">Upload</input>
+          <input> type="submit"> Submit file</input>
+          </form>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
