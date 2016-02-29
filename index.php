@@ -220,8 +220,8 @@ echo "Tour query passed. ";
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
           <form action="S3Upload.php" method="post">
-          <input type ="file" id ="uploadFile" value="Show Dialog" class="btn btn-default">Upload</input>
-          <button type="submit"> >Submit file</button>
+          <input type ="file" name ="file" value="Show Dialog">
+          <input type="submit" vlaue= "UploadFile">
           </form>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

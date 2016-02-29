@@ -2,7 +2,7 @@
 
 require 'start.php';
 
-	$file = $_FILES['uploadFile'];
+	$file = $_FILES['file'];
 
 	$name = $file['name'];
 	$tmp_name = $file['tmp_name'];
