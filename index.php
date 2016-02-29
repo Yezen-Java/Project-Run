@@ -5,7 +5,7 @@
 //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
-require 'S3Upload.php';
+//require 'S3Upload.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
