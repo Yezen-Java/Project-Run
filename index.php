@@ -46,9 +46,9 @@ echo "Tour query passed. ";
 
 
 
-if (isset($_FILES['file'])) {
+if (isset($_FILES['file1'])) {
 
-  $file = $_FILES['file'];
+  $file = $_FILES['file1'];
 
   $name = $file['name'];
   $tmp_name = $file['tmp_name'];
@@ -258,8 +258,8 @@ if (isset($_FILES['file'])) {
         </div>
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
-          <form action="index.php" method="post">
-          <input type ="file" name ="file" value="Show Dialog">
+          <form action="index.php" method="post" enctype="multipart/form-data">
+          <input type ="file" name ="file1" value="Show Dialog">
           <input type="submit" vlaue= "UploadFile">
           </form>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>

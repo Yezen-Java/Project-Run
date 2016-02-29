@@ -2,6 +2,9 @@
 
 require 'start.php';
 
+
+if (isset($_FILES['file'])) {
+
 	$file = $_FILES['file'];
 
 	$name = $file['name'];
@@ -34,7 +37,7 @@ require 'start.php';
     	
     }
 
-
+}
 
 
  ?>
