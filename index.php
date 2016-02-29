@@ -217,9 +217,11 @@ echo "Tour query passed. ";
 
         </div>
         <div class="modal-footer">
-          <button type ='button' class="btn btn-default" onclick = "Save()">Save</button>
-          <button type ='file' value="Show Dialog" class="btn btn-default">Upload</button>
-          <button type ='button' class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+          <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
+          <form>
+          <button type ="file" value="Show Dialog" class="btn btn-default">Upload</button>
+          </form action="" method ="post" enctype="multipart/form-data">
+          <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
