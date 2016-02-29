@@ -198,6 +198,7 @@ padding-left: 210px;
 
 #wrapper.toggled #sidebar-wrapper {
     width: 0;
+    padding-right: 210px;
 }
 
 #page-content-wrapper {
