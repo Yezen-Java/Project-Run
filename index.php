@@ -65,16 +65,8 @@ if (isset($_POST['Submit'])) {
     move_uploaded_file($tmp_name, $tmp_file_path);
 
     try {
-      $s3 ->putObject([
-        'Bucket' => $config['s3']['bucket'],
-        'Key' => "uploads/{$name}",
-        'Body'=> fopen($tmp_file_path, 'rb'),
-        'ACL' => 'public-read'
+      $s3 ->putObjectFile($tmp_name, "storage.s3.website.com", $name, S3::ACL_PUBLIC_READ);
 
-      ]);
-
-      unlink($tmp_file_path);
-      
     } catch (Exception $e) {
       die("Error, could not upload file");
       
