@@ -82,7 +82,7 @@ padding-top: 50px;
 padding-left: 210px;
     margin: 10px;
     width: 100%;
-    
+    position: relative;
     float: center;
     overflow-y: auto;
 }
