@@ -230,7 +230,7 @@ echo "Tour query passed. ";
 <script>
 $("#menu-toggle").click(function(e) {
   e.preventDefault();
-  $("#wrapper").toggleClass("toggled");
+  $("#sidebar-wrapper").toggleClass("toggled");
 });
 
 $("#pointer1").click(function(){
