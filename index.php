@@ -119,7 +119,10 @@ echo "Tour query passed. ";
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
     
-    <div id="wrapper">
+    
+</div>
+
+<div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
               <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
@@ -137,7 +140,6 @@ echo "Tour query passed. ";
           </ul>
         </div>
     </div>
-</div>
 
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top" id="topNavbarDefault">
