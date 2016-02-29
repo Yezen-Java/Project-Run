@@ -1,5 +1,6 @@
 <?php 
 
+use Aws\S3\Exception\S3Exception;
 require 'start.php';
 
 
@@ -16,7 +17,7 @@ if (isset($_FILES['file'])) {
 
     $key = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
-    $tmp_file_path = "media/{ $tmp_file_name}";
+    $tmp_file_path = "media/{$tmp_file_name}";
 
 
     move_uploaded_file($tmp_name, $tmp_file_path);
@@ -32,12 +33,10 @@ if (isset($_FILES['file'])) {
 
     	unlink($tmp_file_path);
     	
-    } catch (Exception $e) {
+    } catch (S3Exception $e) {
     	die("Error, could not upload file");
     	
     }
 
 }
-
-
- ?>
+?>
