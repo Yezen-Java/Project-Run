@@ -2,8 +2,6 @@
 
 require 'start.php';
 
-if(isset($_FILES['uploadFile'])){
-
 	$file = $_FILES['uploadFile'];
 
 	$name = $file['name'];
@@ -28,15 +26,13 @@ if(isset($_FILES['uploadFile'])){
     		'ACL' => 'public-read'
 
     	]);
+
+    	unlink($tmp_file_path);
     	
     } catch (Exception $e) {
     	die("Error, could not upload file");
     	
     }
-
-
-}
-
 
 
 
