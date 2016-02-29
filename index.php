@@ -59,7 +59,7 @@ if (isset($_POST['Submit'])) {
 
     $key = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
-    $tmp_file_path = "media/{ $tmp_file_name}";
+    $tmp_file_path = "media/";
 
 
     move_uploaded_file($tmp_name, $tmp_file_path);
