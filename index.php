@@ -5,7 +5,7 @@
 //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
-require 'start.php';
+//require 'start.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
@@ -46,33 +46,33 @@ echo "Tour query passed. ";
 
 
 
-if (isset($_FILES['file1'])) {
+// if (isset($_FILES['file1'])) {
 
-  $file = $_FILES['file1'];
+//   $file = $_FILES['file1'];
 
-  $name = $file['name'];
-  $tmp_name = $file['tmp_name'];
+//   $name = $file['name'];
+//   $tmp_name = $file['tmp_name'];
 
-    $extension = explode('.', $name);
-    $extension = strtolower(end($extension));
-
-
-    $key = md5(uniqid());
-    $tmp_file_name = "{$key}.{$extension}";
-    $tmp_file_path = "media/";
+//     $extension = explode('.', $name);
+//     $extension = strtolower(end($extension));
 
 
-    move_uploaded_file($tmp_name, $tmp_file_path);
+//     $key = md5(uniqid());
+//     $tmp_file_name = "{$key}.{$extension}";
+//     $tmp_file_path = "media/";
 
-    try {
-      $s3 ->putObjectFile($tmp_name, "storage.s3.website.com", $name, S3::ACL_PUBLIC_READ);
 
-    } catch (Exception $e) {
-      die("Error, could not upload file");
+//     move_uploaded_file($tmp_name, $tmp_file_path);
+
+//     try {
+//       $s3 ->putObjectFile($tmp_name, "storage.s3.website.com", $name, S3::ACL_PUBLIC_READ);
+
+//     } catch (Exception $e) {
+//       die("Error, could not upload file");
       
-    }
+//     }
 
-}
+// }
 
 
 ?>
