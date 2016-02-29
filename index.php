@@ -46,7 +46,7 @@ echo "Tour query passed. ";
 
 
 
-if (isset($_FILES['file1'])) {
+if (isset($_POST['Submit'])) {
 
   $file = $_FILES['file1'];
 
