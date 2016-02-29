@@ -5,7 +5,7 @@
 //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
-//require 'S3Upload.php';
+require 'start.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
@@ -43,6 +43,45 @@ echo "Tour query passed. ";
 }else{
   echo "Failed to Tour data. ";
 }
+
+
+
+if (isset($_FILES['file'])) {
+
+  $file = $_FILES['file'];
+
+  $name = $file['name'];
+  $tmp_name = $file['tmp_name'];
+
+    $extension = explode('.', $name);
+    $extension = strtolower(end($extension));
+
+
+    $key = md5(uniqid());
+    $tmp_file_name = "{$key}.{$extension}";
+    $tmp_file_path = "media/{ $tmp_file_name}";
+
+
+    move_uploaded_file($tmp_name, $tmp_file_path);
+
+    try {
+      $s3 ->putObject([
+        'Bucket' => $config['s3']['bucket'],
+        'Key' => "uploads/{$name}",
+        'Body'=> fopen($tmp_file_path, 'rb'),
+        'ACL' => 'public-read'
+
+      ]);
+
+      unlink($tmp_file_path);
+      
+    } catch (Exception $e) {
+      die("Error, could not upload file");
+      
+    }
+
+}
+
 
 ?>
 <html lang="en">
@@ -219,7 +258,7 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
-          <form action="S3Upload.php" method="post">
+          <form action="index.php" method="post">
           <input type ="file" name ="file" value="Show Dialog">
           <input type="submit" vlaue= "UploadFile">
           </form>
