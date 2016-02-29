@@ -201,6 +201,10 @@ padding-left: 210px;
     padding-right: 210px;
 }
 
+#sidebar-wrapper.toggled {
+    padding-left: 210px;
+}
+
 #page-content-wrapper {
     position: relative;
     padding-top: 20px;
