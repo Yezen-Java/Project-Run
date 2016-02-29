@@ -120,6 +120,7 @@ padding-left: 210px;
 
 #wrapper.toggled {
     padding-left: 250px;
+    padding-right: 250px;
 }
 
 #tourButtonGroup{
@@ -214,7 +215,6 @@ padding-left: 210px;
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     padding-right: 210px;
-    padding-left: 210px;
 }
 
 ul{
