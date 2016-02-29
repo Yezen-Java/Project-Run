@@ -11,3 +11,4 @@ $s3 = S3Client::factory([
 	'secret' => $config['s3']['secret']
 ]);
 
+?>
