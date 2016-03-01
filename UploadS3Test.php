@@ -26,7 +26,7 @@ if (isset($_FILES['file'])) {
     	$s3 ->putObject([
     		'Bucket' => $config['s3']['bucket'],
     		'Key' => "uploads/{$name}",
-    		'Body'=> fopen($tmp_file_path, 'r'),
+    		'Body'=> fopen($tmp_file_path, 'rb'),
     		'ACL' => 'public-read'
 
     	]);
