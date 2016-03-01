@@ -6,7 +6,7 @@
  //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
-include('image_check.php');
+require('image_check.php');
 
 //require 'start.php';
 
