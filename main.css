@@ -193,12 +193,12 @@ padding-left: 210px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250;
     padding-right: 210px;
 }
 
 #sidebar-wrapper.toggled {
     padding-left: 210px;
+    width: 210;
 }
 
 #page-content-wrapper {
