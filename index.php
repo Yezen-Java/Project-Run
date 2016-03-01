@@ -4,7 +4,7 @@
 //$dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
  //password=z3paibkPjPYeWNWib9d3nD0Pi8")
  //or die('Could not connect: ' . pg_last_error());
-
+include 'imageChecker/image_check.php';
 include 'database/Connect.php';
 
 //require 'start.php';
@@ -45,10 +45,7 @@ echo "Tour query passed. ";
 }else{
   echo "Failed to Tour data. ";
 }
-?>
 
-<?php
-include('image_check.php');
 $msg='';
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
@@ -94,6 +91,7 @@ else
 $msg = "Please select image file.";
 
 }
+
 ?>
 
 
