@@ -46,35 +46,52 @@ echo "Tour query passed. ";
 }
 
 //----------------------------
+include('image_check.php');
+$msg='';
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
 
- //if (isset($_FILES['file1'])) 
-//{
+$name = $_FILES['file']['name'];
+$size = $_FILES['file']['size'];
+$tmp = $_FILES['file']['tmp_name'];
+$ext = getExtension($name);
 
-   //$file = $_FILES['file1'];
+if(strlen($name) > 0)
+{
 
-   //$name = $file['name'];
-   //$tmp_name = $file['tmp_name'];
+if(in_array($ext,$valid_formats))
+{
+ 
+if($size<(1024*1024))
+{
+include('s3_config.php');
+//Rename image name. 
+$actual_image_name = time().".".$ext;
+if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
+{
+$msg = "S3 Upload Successful."; 
+$s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
+echo "<img src='$s3file' style='max-width:400px'/><br/>";
+echo '<b>S3 File URL:</b>'.$s3file;
 
-     //$extension = explode('.', $name);
-     //$extension = strtolower(end($extension));
+}
+else
+$msg = "S3 Upload Fail.";
 
 
-     //$key = md5(uniqid());
-     //$tmp_file_name = "{$key}.{$extension}";
-     //$tmp_file_path = "media/";
+}
+else
+$msg = "Image size Max 1 MB";
 
+}
+else
+$msg = "Invalid file, please upload image file.";
 
-     //move_uploaded_file($tmp_name, $tmp_file_path);
+}
+else
+$msg = "Please select image file.";
 
-     //try 
-     //{
-       //$s3 ->putObjectFile($tmp_name, "storage.s3.website.com", $name, S3::ACL_PUBLIC_READ);
-
-     //} catch (Exception $e) {
-       //die("Error, could not upload file");
-      
-     //}
-//}
+}
 ?>
 
 <html lang="en">
@@ -251,7 +268,7 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
-          <form action="index.php" method="post" enctype="multipart/form-data">
+          <form action="" method='post' enctype="multipart/form-data">
           <input type ="file" name ="file1" value="Show Dialog">
           <input type="submit" vlaue= "UploadFile">
           </form>
