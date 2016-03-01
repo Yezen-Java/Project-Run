@@ -47,23 +47,23 @@ echo "Tour query passed. ";
   echo "Failed to Tour data. ";
 }
 
-$msg='';
-//if($_SERVER['REQUEST_METHOD'] == "POST")
-//{
+// $msg='';
+// //if($_SERVER['REQUEST_METHOD'] == "POST")
+// //{
 
-$name = $_FILES['file']['name'];
-$size = $_FILES['file']['size'];
-$tmp = $_FILES['file']['tmp_name'];
-$ext = getExtension($name);
+// $name = $_FILES['file']['name'];
+// $size = $_FILES['file']['size'];
+// $tmp = $_FILES['file']['tmp_name'];
+// $ext = getExtension($name);
 
 
-//Rename image name. 
-$actual_image_name = time().".".$ext;
-if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
-{
-$msg = "S3 Upload Successful."; 
-$s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
-}
+// //Rename image name. 
+// $actual_image_name = time().".".$ext;
+// if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
+// {
+// $msg = "S3 Upload Successful."; 
+// $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
+// }
 
 ?>
 
