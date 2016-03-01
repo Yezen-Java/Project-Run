@@ -188,8 +188,8 @@ padding-left: 210px;
     height: 100%
 }
 
-#wrapper.toggled #sidebar-wrapper {
-    padding-right: 210px;
+#wrapper.toggled {
+    padding-left: 0;
 }
 
 #sidebar-wrapper.toggled {
