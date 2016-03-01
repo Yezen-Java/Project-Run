@@ -6,6 +6,8 @@
  //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
+include('image_check.php');
+
 //require 'start.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
@@ -46,7 +48,6 @@ echo "Tour query passed. ";
 }
 
 //----------------------------
-include('image_check.php');
 $msg='';
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
