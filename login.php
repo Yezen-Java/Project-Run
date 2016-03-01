@@ -15,7 +15,7 @@ $fname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['form-create-email'];
 $username=$_POST['form-create-username'];
-$password= sha1($_POST['form-create-password']);
+$password= $_POST['form-create-password'];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
 echo " Please Enter Vaild Email";

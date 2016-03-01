@@ -11,7 +11,7 @@ if ($result) {
 	$usernameR = $row[3];
 	$passwordR = $row[5];
 }
-if($username === $usernameR  && sha1($password) === $passwordR){
+if($username === $usernameR  && $password === $passwordR){
 	$_SESSION['username'] = $username;
 	$_SESSION['id'] = $userId;
    header('Location: index.php');
