@@ -6,7 +6,6 @@
  //or die('Could not connect: ' . pg_last_error());
 
 include 'database/Connect.php';
-require('image_check.php');
 
 //require 'start.php';
 
@@ -46,8 +45,10 @@ echo "Tour query passed. ";
 }else{
   echo "Failed to Tour data. ";
 }
+?>
 
-//----------------------------
+<?php
+include('image_check.php');
 $msg='';
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
@@ -94,6 +95,7 @@ $msg = "Please select image file.";
 
 }
 ?>
+
 
 <html lang="en">
 
