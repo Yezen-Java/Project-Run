@@ -158,10 +158,10 @@
 
                                     <div class="form-group" id="parent-name">
                                     <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname"
-                                    pattern="[A-Za-z]" title="Only letters">
+                                    pattern="[A-Za-z]{2,}" title="Only letters">
                                     </div>
                                     <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"
-                                    pattern="[A-Za-z]" title="Only letters"></div>
+                                    pattern="[A-Za-z]{2,}" title="Only letters"></div>
                                        
                                     </div>
                                     <div class="form-group">
@@ -170,7 +170,7 @@
                                     </div>
                                     <div class = "form-group">
                                        <input type="text" name="form-create-username" placeholder="Username" class="form-create-username form-control" id="form-user-css"
-                                       pattern="[A-Za-z0-9]" title="Only numbers and letters">
+                                       pattern="[A-Za-z0-9]{3,}" title="Only numbers and letters">
                                     </div>
                                     <div>
                                     <div class = "form-group">
