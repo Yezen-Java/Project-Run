@@ -1,61 +1,53 @@
 <?php
-
-$dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
- password=z3paibkPjPYeWNWib9d3nD0Pi8")
-or die('Could not connect: ' . pg_last_error());
-
-if ($dbconn ) {
-
-echo "Databse Connected";
-}
-
-if (isset($_POST['signup'])){
-
-$fname=$_POST['firstname']; 
-$lastname=$_POST['lastname'];
-$email=$_POST['form-create-email'];
-$username=$_POST['form-create-username'];
-$password= $_POST['form-create-password'];
-$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-echo " Please Enter Vaild Email";
-}else{
-$resultemail = pg_query("SELECT * FROM users WHERE Email='$email'");
-$resultuser = pg_query("SELECT * FROM users WHERE Username='$username'");
-$dataEmail = pg_num_rows($resultemail);
-$dataUsername = pg_num_rows($resultuser);
-if(($dataEmail)==0 &&($dataUsername)==0 ){
-$query = pg_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('$fname', '$lastname','$email','$username','$password')"); // Insert query
-if($query){
-echo "You have Successfully Registered";
-}else
-{
-echo "Error!!";
-}
-}else{
-echo "This email is already registered, Please try another email";
-}
-}
-pg_close ($connection);
-}
-
-if (isset($_POST['btlogin'])) {
-include("database/UserLoginSession.php");
-}
-
+  $dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
+  password=z3paibkPjPYeWNWib9d3nD0Pi8")
+  or die('Could not connect: ' . pg_last_error());
+  
+  if ($dbconn ) {
+      echo "Databse Connected";
+  }
+  if (isset($_POST['signup'])){
+      $fname=$_POST['firstname']; 
+      $lastname=$_POST['lastname'];
+      $email=$_POST['form-create-email'];
+      $username=$_POST['form-create-username'];
+      $password= $_POST['form-create-password'];
+      $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+      
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+          echo " Please Enter Vaild Email";
+      }else{
+          $resultemail = pg_query("SELECT * FROM users WHERE Email='$email'");
+          $resultuser = pg_query("SELECT * FROM users WHERE Username='$username'");
+          $dataEmail = pg_num_rows($resultemail);
+          $dataUsername = pg_num_rows($resultuser);
+          
+          if(($dataEmail)==0 &&($dataUsername)==0 ){
+              $query = pg_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('$fname', '$lastname','$email','$username','$password')"); // Insert query
+              if($query){
+                  echo "You have Successfully Registered";
+              }else{
+                  echo "Error!!";
+              }
+          }else{
+              echo "This email is already registered, Please try another email";
+          }
+      }
+      pg_close ($connection);
+  }
+  if (isset($_POST['btlogin'])) {
+    include("database/UserLoginSession.php");
+  }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
+        <title>Hive Login</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hive Login</title>
-
-        <!-- CSS -->
+        <link rel="stylesheet" href="loginNew.css">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
@@ -67,74 +59,8 @@ include("database/UserLoginSession.php");
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- JavaScript-->
-        
     </head>
-    <style type="text/css">
-      .navbar {
-         margin-bottom: 0px;
-      }
-      #createAccountContainer{
-         width: 500px;
-         padding-bottom: 100px;
-         padding-right: 200px;
-      }
-
-      #mainLogin{
-         width: 500px;
-         padding-bottom: 100px;
-         padding-right: 200px;
-      }
-
-      .carousel-caption h1{
-         font-size: 5.4em;
-         font-family: 'Pacifico', cursive;
-         padding-bottom: .4em;
-      }
-      .carousel-caption p{
-         font-size: 2em;
-      }
-
-      .slide1{
-         height: 500px;
-         background-position: center;
-      }
-      .slide2{
-         height: 500px;
-         background-position: center;
-      }
-      #navigationButtons{
-       
-      }
-      .carousel-control.left, .carousel-control.right{
-         background-image: none;
-      }
-
-
-      body{
-         background-color: #F2DF07;
-      }
-
-      #parent-name {
-  display: flex;
-    }
-     #finame-div {
-      width: 135px;
-      float: left;
- 
-      }
-    #laname-div {
-    float: right;
-  flex: 1;
-}
-    </style>
     <body>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="database/registration.js"></script>
-    <script type="text/javascript">
-
-
-    </script>
         <div class="top-content">
             <div class="inner-bg">
                 <div class="container">
@@ -220,6 +146,8 @@ include("database/UserLoginSession.php");
                </div>
             </div>
         </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="database/registration.js"></script>
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.backstretch.min.js"></script>
