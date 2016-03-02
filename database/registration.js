@@ -28,3 +28,15 @@ alert(data);
 }
 });
 });
+function checkPasswordMatch() {
+        var password = $("#form-password-css").val();
+        var repeatPassword = $("#form-password-css-repeat").val();
+
+        if (password != repeatPassword)
+          $("#divCheckPasswordMatch").html("Passwords do not match!");
+        else
+          $("#divCheckPasswordMatch").html("Passwords match.");
+    }
+    $(document).ready(function () {
+        $("#form-password-css-repeat").keyup(checkPasswordMatch);
+    });
