@@ -138,7 +138,7 @@
                                        </div>
                                        <div class="form-group">
                                           <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
-                                          pattern=".{6,}" title="Six or more characters">
+                                          pattern=".{4,}" title="Six or more characters">
                                        </div>
                                         <div class="btn-group">
                                           <button class="btn btn-primary btn-lg" name="btlogin">Sign in</button>
@@ -177,11 +177,11 @@
                                     <div>
                                     <div class = "form-group">
                                        <input type="password" name="form-create-password" placeholder="Password" class="form-create-password form-control" id="form-password-css"
-                                       pattern=".{6,}" title="Six or more characters">
+                                       pattern=".{4,}" title="Six or more characters">
                                     </div>
                                     <div class = "form-group">
                                        <input type="password" name="form-create-password2" placeholder="Repeat Password" class="form-create-password form-control" id="form-password-css" 
-                                       pattern=".{6,}" title="Six or more characters">
+                                       pattern=".{4,}" title="Six or more characters">
                                     </div>
                                     </div>
                                        <button class="btn btn-primary btn-lg" name = "signup">Create</button>
