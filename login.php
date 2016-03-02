@@ -133,7 +133,7 @@
                                  <h2><strong>Login</strong></h2>
                                     <div class="form-bottom" id="loginForm">
                                        <div class="form-group">
-                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control" >
+                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control" pattern="[A-Za-z]{3}" title="Three letter country code">
                                        </div>
                                        <div class="form-group">
                                           <input type="password" name="form-password" placeholder="Password" class="form-password form-control">
