@@ -181,7 +181,7 @@
                                     </div>
                                     <div class = "form-group">
                                        <input type="password" name="form-create-password2" placeholder="Repeat Password" class="form-create-password form-control" id="form-password-css-repeat" 
-                                       pattern=".{4,}" title="Four or more characters">
+                                       pattern=".{4,}" title="Four or more characters" onChange="checkPasswordMatch();">
 
                                     </div>
                                       <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
