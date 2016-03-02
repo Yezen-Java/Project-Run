@@ -1,0 +1,170 @@
+
+.topHeader {
+	background-color: royalblue;
+	height: 70px;
+	widows: 100px;
+	
+}
+
+.glyphicon{
+    font-size: 90px;
+	color: black;
+	
+}
+
+
+
+.topText {
+	font-size: 25px;
+	color: white;
+	margin-left: 20px;
+	padding-top: 10px;
+	
+	
+}
+
+.insideButtons {
+
+	height: 2000px;
+	width: 500px;
+	
+}
+
+.body {
+/*	//background-color:black;*/
+}
+
+.imageButtons {
+	width: 120px;
+	height: 100px;
+	margin-top: auto;
+	margin-left: auto;
+	border-radius: 5%;
+	
+	 box-shadow: 1px 1px 1px black;
+}
+
+.allButtons {
+	background-color: orange;
+	margin-left: 200px;
+	margin-top: 20px;
+	height: 130px;
+	width: 400px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+	margin-left: 370px;
+	margin-bottom: -200px;
+	margin-top: -120px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.bottomButtonText {
+	margin-left: 370px;
+	margin-bottom: -200px;
+	margin-top: -100px;
+	font-size: 20px;
+	color: dodgerblue;
+}
+
+.second {
+	margin-top: 370px;
+	
+}
+
+.three {
+	margin-top: 300px;
+}
+
+.topButtonText {
+	
+}
+
+.gallery {
+	background-color: beige;
+}
+
+
+
+
+
+
+
+.span2 {
+	margin-top: 20px;
+	
+	
+}
+
+
+
+.pageButtons {
+	background-color: #ffcc33;
+    box-shadow: 3px 2px 2px #888888;
+	height: 120px;
+}
+
+.pageButtons a:hover{
+	background-color: blue;
+   
+}
+
+.imgTextTop {
+	margin-left: 140px;
+	font-size: 30px;
+	color: black;
+	
+}
+
+.imgBottomText {
+	margin-left: 140px;
+	font-size: 20px;
+	color: grey;
+}
+
+#fitin {
+	
+    border: 1px solid black;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.myImages {
+	height: 3000px;
+	width: 300px;
+	border-radius: 30%;
+}
+
+.galleryPictures {
+	width: 200px;
+	height: 200px;
+	margin-left: 100px;
+	border-radius: 3%;
+	margin-top: 10px;
+	margin-left: 20px
+}
+
+.galleryPicturesRight {
+		width: 200px;
+	height: 200px;
+	margin-left: 100px;
+	border-radius: 3%;
+}
+
+.galleryPicturesLeft {
+		width: 200px;
+	height: 200px;
+	margin-left: 100px;
+	border-radius: 3%;
+}
+
+
+
+.topCode {
+
+}
+
+.enterTextpage {
+	
+}
