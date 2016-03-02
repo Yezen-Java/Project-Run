@@ -133,10 +133,12 @@
                                  <h2><strong>Login</strong></h2>
                                     <div class="form-bottom" id="loginForm">
                                        <div class="form-group">
-                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control">
+                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control"
+                                          pattern="[A-Za-z0-9]{3,}" title="Only numbers and letters">
                                        </div>
                                        <div class="form-group">
-                                          <input type="password" name="form-password" placeholder="Password" class="form-password form-control">
+                                          <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
+                                          pattern=".{6,}" title="Six or more characters">
                                        </div>
                                         <div class="btn-group">
                                           <button class="btn btn-primary btn-lg" name="btlogin">Sign in</button>
