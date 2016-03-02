@@ -47,6 +47,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hive Login</title>
+        <style type="text/css"></style>
         <link rel="stylesheet" type="text/css" href="loginNew.css">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="shortcut icon" href="assets/ico/favicon.png">
@@ -56,6 +57,7 @@
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     </head>
+    
 
     <body>
         <div class="top-content">
