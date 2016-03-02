@@ -5,102 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	  
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-	  <link rel="stylesheet" href="css/style.css">
-	  	  <link href="styles.css" rel="stylesheet">
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	   <style type='text/css'>
-            span {
-                text-decoration:underline;
-                color:blue;
-                cursor:pointer;
-            }
-        </style>
-<script>
-            // show the given page, hide the rest
-            function show(elementID) {
-                // try to find the requested page and alert if it's not found
-                var ele = document.getElementById(elementID);
-                if (!ele) {
-                    alert("no such element");
-                    return;
-                }
-
-                // get all pages, loop through them and hide them
-                var pages = document.getElementsByClassName('page');
-                for(var i = 0; i < pages.length; i++) {
-                    pages[i].style.display = 'none';
-                }
-
-                // then show the requested page
-                ele.style.display = 'block';
-            }
-	
-	function moveToNextPage(){
-		var myText = document.getElementById("tourText").value;
-		
-		if(myText=="1234"){
-			show('Page2')
-		}
-//		else if(myText===null){
-//			
-//		}
-
-		else{
-			alert(myText +" "+ "  is the wrong Tour Code");
-		}
-	}
-        </script>
-	  
-	    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 	  <link href="styles.css" rel="stylesheet">
-	  
+
+
   </head>
-  <body>
-	 <p>
-        Show page 
-            <button onclick="show('Page1');">Enter Number </button>
-<!--            <button onclick="show('Page2');">2</button>-->
-            <button onclick="show('Page3');">3</button>
-        </p>
-
-    <div id="Page1" class="page" style="">
-
-		<div class="container">
-    <div class="enterTextpage">
-			
-			 Enter Tour Code : <input type="text" name="fname" id="tourText">	
-			
-			</div>
-			
-				
-			
-	
-		 </div>
-		<br>
-<!--		<button onclick="show('Page2')" class="btnEnter">Enter</button>-->
-				<button onclick="moveToNextPage()" class="btnEnter">Enter</button>
-		
-    </div>
+  <body class="body">
 	  
-    <div id="Page2" class="page" style="display:none">
-		
-<!--		start of buttons page -->
+
 <!--	  creating dynamic buttons here -->
 	  <div class="topHeader">
    
-		  <div class="topCode">
-		  
-		  <p class="topText">Royal Brompton Hospital</p>
-		  
-		  
-		  </div>
-		
+		<p class="topText">Royal Brompton Hospital</p>
 
       </div>
 	  
@@ -153,34 +73,75 @@
       
     </div>
 </div>
+			
+<!--
+						<button class="allButtons" center-block><img  class="imageButtons" src="images/mriMachine.jpg" href="gallery.html"></button>
+	  					<a>Scanners</a>
+				
+						<button class="allButtons" center-block><img  class="imageButtons" src="images/stethoscope.jpg" href="gallery.html"></button>
+	  
+						<button class="allButtons" center-block><img  class="imageButtons" src="images/mriMachine.jpg" href="gallery.html"></button>
 					
-		
-<!--		end of buttons page-->
-       
-		
-		//Gallery page 
-		
-<!--		start of gallery page -->
-		<button onclick="show('Page1');">Take me to First page</button>
+						<button class="allButtons" center-block><span class="glyphicon glyphicon-envelope"></span></button>
+-->
+
+	  
+<!--
+	    <div class="span2">
+			<a class="bb btn-block" href="gallery.html"><img  class="imageButtons" img-block src="images/mriMachine.jpg" align="left"><p class="imgTextTop" align="left">This is some text</p><p align="left" class="imgBottomText">ss</p></a>
+			
 	
-<!--		end of gallery page -->
-		
-    </div>
-    <div id="Page3" class="page" style="display:none">
-        
-		
-		
-		
-		
-    </div> 
+        </div>
+-->
+<!--	  new code start -->
+
+	  
+	  
+<!--	  new code end -->
+<!--
+
+<button>Try it</button>
+-->
 
 
 	  
 	  
 	  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   
+	  
+	  
+<!--
+<script>
+myFunction();
+	
+	
+function myFunction() {
+    var x = document.createElement("input");
+    x.setAttribute("type", "button");
+	var names = ["Abdi", "John", "Kelly"];
+	for( i=0; i < names.length; i++){
+		x.setAttribute("value", names[i]);
+		    document.body.appendChild(x);
+	}
+    
+
+}
+</script>  
+-->
+
+	  
+	  	
+<!--	  	end of creating dynamic buttons -->
+	
+
+
+	  
+	  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	  <script src="jquery.js"></script> 
+	  
+
   </body>
 </html>
