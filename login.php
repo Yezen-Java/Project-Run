@@ -158,15 +158,15 @@
 
                                     <div class="form-group" id="parent-name">
                                     <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname"
-                                    pattern="[A-Za-z]{2,}" title="Only letters">
+                                    pattern="[A-Za-z0-9]{2,}" title="Only letters">
                                     </div>
                                     <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"
-                                    pattern="[A-Za-z]{2,}" title="Only letters"></div>
+                                    pattern="[A-Za-z0-9]{2,}" title="Only letters"></div>
                                        
                                     </div>
                                     <div class="form-group">
                                        <input type="text" name="form-create-email" placeholder="Email" class="form-create-email form-control" id="form-email-css"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="hint: random@test.co.uk">
                                     </div>
                                     <div class = "form-group">
                                        <input type="text" name="form-create-username" placeholder="Username" class="form-create-username form-control" id="form-user-css"
