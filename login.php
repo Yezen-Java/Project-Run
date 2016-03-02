@@ -158,10 +158,10 @@
 
                                     <div class="form-group" id="parent-name">
                                     <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname"
-                                    pattern="[A-Za-z0-9]{2,}" title="Only letters">
+                                    pattern="[A-Za-z0-9]{2,}" title="At least 2 or more letters, numbers">
                                     </div>
                                     <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"
-                                    pattern="[A-Za-z0-9]{2,}" title="Only letters"></div>
+                                    pattern="[A-Za-z0-9]{2,}" title="At least 2 or more letters, numbers"></div>
                                        
                                     </div>
                                     <div class="form-group">
