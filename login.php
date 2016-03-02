@@ -158,7 +158,7 @@
 
                                     <div class="form-group" id="parent-name">
                                     <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname"
-                                    pattern="[A-Za-z0-9]" title="Only numbers and letters">
+                                    pattern="[A-Za-z][0-9][A-Za-z0-9]" title="Only numbers and letters">
                                     </div>
                                     <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"
                                     pattern="[A-Za-z0-9]" title="Only numbers and letters"></div>
