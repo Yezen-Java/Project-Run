@@ -133,7 +133,7 @@
                                  <h2><strong>Login</strong></h2>
                                     <div class="form-bottom" id="loginForm">
                                        <div class="form-group">
-                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control" pattern="[A-Za-z]{3}" title="Three letter country code">
+                                          <input type="text" name="form-username" placeholder="Username" class="form-username form-control">
                                        </div>
                                        <div class="form-group">
                                           <input type="password" name="form-password" placeholder="Password" class="form-password form-control">
@@ -157,23 +157,29 @@
                                     <h3><strong>Create</strong> account</h3>
 
                                     <div class="form-group" id="parent-name">
-                                    <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname">
+                                    <div id="finame-div"> <input type="text" class="form-control" name="firstname" placeholder="First Name" id="Cname"
+                                    pattern="[A-Za-z0-9]" title="Invalid Name">
                                     </div>
-                                    <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"></div>
+                                    <div id="laname-div"><input type="text" class="form-control" name="lastname" placeholder="Last Name" id="Clname"
+                                    pattern="[A-Za-z0-9]" title="Invalid Surname"></div>
                                        
                                     </div>
                                     <div class="form-group">
-                                       <input type="text" name="form-create-email" placeholder="Email" class="form-create-email form-control" id="form-email-css" >
+                                       <input type="text" name="form-create-email" placeholder="Email" class="form-create-email form-control" id="form-email-css"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                     </div>
                                     <div class = "form-group">
-                                       <input type="text" name="form-create-username" placeholder="Username" class="form-create-username form-control" id="form-user-css">
+                                       <input type="text" name="form-create-username" placeholder="Username" class="form-create-username form-control" id="form-user-css"
+                                       pattern="[A-Za-z0-9]{3}" title="Invalid Username">
                                     </div>
                                     <div>
                                     <div class = "form-group">
-                                       <input type="password" name="form-create-password" placeholder="Password" class="form-create-password form-control" id="form-password-css">
+                                       <input type="password" name="form-create-password" placeholder="Password" class="form-create-password form-control" id="form-password-css"
+                                       pattern=".{6,}" title="Six or more characters">
                                     </div>
                                     <div class = "form-group">
-                                       <input type="password" name="form-create-password2" placeholder="Password" class="form-create-password form-control" id="form-password-css">
+                                       <input type="password" name="form-create-password2" placeholder="Repeat Password" class="form-create-password form-control" id="form-password-css" 
+                                       pattern=".{6,}" title="Six or more characters">
                                     </div>
                                     </div>
                                        <button class="btn btn-primary btn-lg" name = "signup">Create</button>
