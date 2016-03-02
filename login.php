@@ -180,9 +180,11 @@
                                        pattern=".{4,}" title="Four or more characters">
                                     </div>
                                     <div class = "form-group">
-                                       <input type="password" name="form-create-password2" placeholder="Repeat Password" class="form-create-password form-control" id="form-password-css" 
+                                       <input type="password" name="form-create-password2" placeholder="Repeat Password" class="form-create-password form-control" id="form-password-css-repeat" 
                                        pattern=".{4,}" title="Four or more characters">
+                                       <div class="registrationFormAlert" id="divCheckPasswordMatch">
                                     </div>
+
                                     </div>
                                        <button class="btn btn-primary btn-lg" name = "signup">Create</button>
                                  </div>  

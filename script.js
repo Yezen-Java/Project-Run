@@ -124,6 +124,19 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
       document.getElementById("randomfield").value = randomstring;
     }
 
+    function checkPasswordMatch() {
+        var password = $("#form-password-css").val();
+        var repeatPassword = $("#form-password-css-repeat").val();
+
+        if (password != repeatPassword)
+          $("#divCheckPasswordMatch").html("Passwords do not match!");
+        else
+          $("#divCheckPasswordMatch").html("Passwords match.");
+    }
+    $(document).ready(function () {
+        $("#form-password-css-repeat").keyup(checkPasswordMatch);
+    });
+
     function w3_open(value) {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
           var TourIdCode=value;
