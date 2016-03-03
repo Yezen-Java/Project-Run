@@ -23,7 +23,7 @@ if(isset($_SESSION['id'])){
 }
 
 
-$toursListQuery = pg_query("SELECT * From Tour");
+$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username ='$username' and tour = usertour.tourid = tour.tourid");
 
 if ($toursListQuery) {
 	echo "Tour query passed. ";
