@@ -151,14 +151,16 @@ echo "Tour query passed. ";
       <div class = "container" id="middleContainer">
         <div class="list-group" id="tourList">
           <ul id="buttonsListTours">
-           <?php
-              while ($rows =pg_fetch_array($toursListQuery)) {
-              $tour_id =$rows["tourid"];
-              $tour_name =$rows["tour_name"];
+          	<span class = "input-group-addon">
+           		<?php
+              		while ($rows =pg_fetch_array($toursListQuery)) {
+              		$tour_id =$rows["tourid"];
+              		$tour_name =$rows["tour_name"];
 
-           		echo "<li id='$tour_id'> <button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </li>";
-              }  
-              ?>
+           			echo "<li id='$tour_id'> <button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> <input type='radio' aria-label='...'> </li>";
+              		}  
+              	?>
+            </span>
           </ul>
         </div>
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
