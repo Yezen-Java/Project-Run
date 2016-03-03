@@ -107,6 +107,10 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         document.getElementById('notesArea').placeholder= Date();
     }
 
+    $("#deleteTour").onClick(function(){
+        $("#tour_id").remove();
+    });
+
     function addNoteFunc(){
         myFunction();
         ul = $('#sideBar');
