@@ -166,13 +166,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     }
 //this function open the file model for specific locations.
     function addLocationRes(value) {
-  $("#myModal ul").empty();
+$("#myModal ul").empty();
   console.log("works");
-    reorder();
-    $("#myModal").modal();
-    $('.sortable').sortable();
-
-    }
+  reorder();
+  $("#myModal").modal();
+  $('.sortable').sortable();
+}
     
 
 
