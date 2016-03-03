@@ -18,7 +18,7 @@ if ( $TourNumberIDs == 0) {
 
 	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$tourDate')");
 
-    $result = pg_query("INSERT INTO usertour Values('$username','$tourId')");
+    $result = pg_query("INSERT INTO usertour Values('$username','$tourID')");
 
 
 
