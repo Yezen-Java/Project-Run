@@ -5,7 +5,7 @@ include "Connect.php";
 $tourID = $_POST['TourID'];
 $tourName = $_POST['Tourname'];
 $tourDate = $_POST['TourDate'];
-
+$username = $_SESSION['username'];
 
 
 $TourIDCheck = pg_query("SELECT * from tour where tourid = '$tourID'");
