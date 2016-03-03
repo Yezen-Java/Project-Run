@@ -14,34 +14,30 @@ $TourNumberIDs = pg_num_rows($TourIDCheck);
 
 if ( $TourNumberIDs == 0) {
 
-	$stmt = $dbconn->prepare("INSERT INTO tour Values(?,?,?)");
-	$stmt->bindParam(1, $tourID);
-    $stmt->bindParam(2, $tourName);
-    $stmt->bindParam(3, $tourDate);
-    $stmt->execute();
+	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$tourDate')");
 
-    if ($stmt->execute()) {
-    	echo "Tour created";
-    }else{
-    	echo "tour faild";
-    }
+    $result = pg_prepare($dbconn, "my_query", 'INSERT into usertour values($1,$2)');
+    $result = pg_execute($dbconn, "my_query", $username, $tourid);
 
 
-    $stmtuser = $dbconn->prepare("INSERT INTO usertour Values(?,?)");
-	$stmtuser->bindParam(1, $username);
-    $stmtuser->bindParam(2, $tourid);
-    
-    if($stmtuser->execute()){
 
+
+if ($tourQuery) {
 	echo "TourCreated";
+
+
 	}else{
-		echo "Tour Was not added to the user";
+		echo "Tour Creation Failed, Try again";
 	}
 	
 }else{
 
 	echo "Tour ID already exsits";
 }
+
+
+
+
 
 
 ?>
