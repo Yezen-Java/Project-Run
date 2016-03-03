@@ -16,13 +16,11 @@ if ( $TourNumberIDs == 0) {
 
 	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$tourDate')");
 
-    $result = pg_prepare($dbconn, "my_query", 'INSERT into usertour values($1,$2)');
-    $result = pg_execute($dbconn, "my_query", $username, $tourid);
+    $result = pg_query("INSERT INTO usertour Values($username,$tourId)");
 
 
 
-
-if ($tourQuery) {
+if ($tourQuery && $result) {
 	echo "TourCreated";
 
 
