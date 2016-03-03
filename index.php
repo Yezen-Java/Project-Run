@@ -175,8 +175,6 @@ echo "Tour query passed. ";
     <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
-              <button type="button" class="btn btn-danger" id="deleteNoteButton" onclick="deleteNoteFunc()">-</button>
-              <button type="button" class="btn btn-success" id="addNoteButton" onclick="addNoteFunc()">+</button>
                 <li class="sidebar-brand" style="padding-top:10px;">
                   <div id="container">
                     <form name="form1" method="post" action="">
