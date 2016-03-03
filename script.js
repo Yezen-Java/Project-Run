@@ -108,7 +108,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     }
 
     $("#deleteTour").onClick(function(){
-        $("#tour_id").remove();
+        $tour_id.remove();
     });
 
     function addNoteFunc(){
