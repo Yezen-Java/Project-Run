@@ -1,11 +1,13 @@
 <?php 
 
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
 include "Connect.php";
 
 $tourID = $_POST['TourID'];
 $tourName = $_POST['Tourname'];
 $tourDate = $_POST['TourDate'];
-$username = $_SESSION['username'];
+$username= $_SESSION['username'];
 
 
 $TourIDCheck = pg_query("SELECT * from tour where tourid = '$tourID'");
