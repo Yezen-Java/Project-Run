@@ -52,55 +52,8 @@
         <script type="text/javascript" src="database/registration.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="loginNew.css">
     </head>
-    <style type="text/css">
-        body{
-            background-color: #F2DF07;
-        }
-        .navbar {
-            margin-bottom: 0px;
-        }
-        #createAccountContainer{
-            width: 500px;
-            padding-bottom: 100px;
-            padding-right: 200px;
-        }
-        #mainLogin{
-            width: 500px;
-            padding-bottom: 100px;
-            padding-right: 200px;
-        }
-        .carousel-caption h1{
-            font-size: 5.4em;
-            font-family: 'Pacifico', cursive;
-            padding-bottom: .4em;
-        }
-        .carousel-caption p{
-            font-size: 2em;
-        }
-        .slide1{
-            height: 500px;
-            background-position: center;
-        }
-        .slide2{
-            height: 500px;
-            background-position: center;
-        }
-        .carousel-control.left, .carousel-control.right{
-            background-image: none;
-        }
-        #parent-name {
-            display: flex;
-        }
-        #finame-div {
-            width: 135px;
-            float: left;
-        }
-        #laname-div {
-            float: right;
-            flex: 1;
-        }
-    </style>
     <body>
         <div class="top-content">
             <div class="inner-bg">
