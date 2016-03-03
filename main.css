@@ -8,18 +8,18 @@ html, body {
 	border-radius: 50%;
 	height: auto;
 	width: auto;
-	background-color: yellow;
+	background-color: antiquewhite;
+
 
 }
 .circleButtonX:hover{
 	
 	background-color: red;
 
+
+
 }
-
-
 /*circle button code end */
-
 
 #sortable { 
   list-style-type: none; 
