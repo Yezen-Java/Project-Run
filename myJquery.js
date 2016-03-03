@@ -17,7 +17,7 @@
 			
 			//handle is used to move the list items ie dragging 
 		newListItem = 
-		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl " + timeAndDate  + '">  </textarea>              <a class="removeListXbtn" style="display: none;" href="#"> x </a> </li>'//a link to remove the items ie the x button;
+		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl " + timeAndDate  + '">  </textarea>              <a class="removeListXbtn" style="display: none;" href="#"><a><button class="circleButtonX">x</button></a></a> </li>'//a link to remove the items ie the x button;
 			newNotesList = true;
 			
 		} else {

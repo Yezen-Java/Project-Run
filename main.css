@@ -3,6 +3,24 @@ html, body {
   overflow: hidden;
 }
 
+/*circle x button code start*/
+.circleButtonX {
+	border-radius: 50%;
+	height: auto;
+	width: auto;
+	background-color: yellow;
+
+}
+.circleButtonX:hover{
+	
+	background-color: red;
+
+}
+
+
+/*circle button code end */
+
+
 #sortable { 
   list-style-type: none; 
   margin: 0; 
@@ -30,6 +48,7 @@ html, body {
     margin: 5px;
     padding-top: 3px;
 }
+
 
 .listItem{
   margin-left:-58px;
