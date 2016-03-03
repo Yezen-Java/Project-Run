@@ -158,7 +158,7 @@ echo "Tour query passed. ";
               		$tour_name =$rows["tour_name"];
 
            			echo "<li id='$tour_id'> 
-           					<div class='col-lg-6'> <div class='input-group'> <span class='input-group-addon'> <input type='checkbox' aria-label='...'> </span><button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </div> </li>";
+           					<div class='input-group'> <span class='input-group-addon'> <input type='checkbox' aria-label='...'> </span><button type='button' id='tourButton' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
               		}  
               	?>
           
