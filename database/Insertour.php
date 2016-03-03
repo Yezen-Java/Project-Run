@@ -27,7 +27,7 @@ if ($tourQuery && $result) {
 
 
 	}else{
-		echo "Tour Creation Failed, Try again";
+		echo $username;
 	}
 	
 }else{
