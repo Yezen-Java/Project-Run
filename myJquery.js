@@ -16,8 +16,8 @@
 			var timeAndDate =  new Date();
 			
 			//handle is used to move the list items ie dragging 
-		newListItem = 
-		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl " + timeAndDate  + '">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><a><button class="circleButtonX">x</button></a></a> </li>'//a link to remove the items ie the x button;
+			newListItem = 
+		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl " + timeAndDate  + '">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
 			newNotesList = true;
 			
 		} else {
@@ -143,7 +143,7 @@
 				$('.sortable').sortable({
 				handle: '.handle'
 						
-					});
+				});
 			  }
 		  }
 	
