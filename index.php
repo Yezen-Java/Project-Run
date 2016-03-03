@@ -207,7 +207,6 @@ echo "Tour query passed. ";
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#" id="EditTourButton">Edit Tour</a></li>
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
