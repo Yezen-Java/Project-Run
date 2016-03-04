@@ -182,6 +182,22 @@ $("#myModal ul").empty();
   $("#myModal").modal();
   $('.sortable').sortable();
 }
+
+
+function addmedia(){
+
+  var fileName = document.getElementById("file").value;
+
+$(function() {
+
+           $.post('lib/amazonS3/S3UploadFunction.php',{ file:fileName }, function(data){
+             $("#sortable").append(data);
+           });
+           return false;
+      });
+      
+
+}
     
 
 
