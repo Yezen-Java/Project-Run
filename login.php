@@ -153,6 +153,9 @@
                </div>
             </div>
         </div>
+        <!--QUnit test results are displayed here!-->
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
     </body>
 
 </html>
