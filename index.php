@@ -125,6 +125,8 @@ echo "Tour query passed. ";
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
     <script src="js/CreateTour.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
+    <script src="tests.js"></script>
 
 </head>
 

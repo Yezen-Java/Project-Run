@@ -53,6 +53,8 @@
         <script type="text/javascript" src="database/registration.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
+        <script src="tests.js"></script>
         <link rel="stylesheet" type="text/css" href="loginNew.css">
     </head>
     <body>
