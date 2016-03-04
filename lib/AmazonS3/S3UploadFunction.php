@@ -1,8 +1,7 @@
 <?php
 include('image_check.php');
 $msg='';
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
+
 
 $name = $_FILES['file']['name'];
 $size = $_FILES['file']['size'];
@@ -44,6 +43,6 @@ $msg = "Invalid file, please upload image file.";
 else
 $msg = "Please select image file.";
 
-}
+
 
 ?>
