@@ -112,6 +112,10 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
     $('#value').remove();
 
     }
+  // $('#trashBox').onClick(function(function(){
+  //     $()
+  // });
+
 
     function addNoteFunc(){
         myFunction();
