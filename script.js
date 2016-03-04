@@ -186,7 +186,7 @@ $("#myModal ul").empty();
 
 function addmedia(){
 
-  var fileName = document.getElementById("file").value;
+  var fileName = document.getElementById("#fileUpload").value;
 
 $(function() {
 
