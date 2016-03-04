@@ -186,11 +186,11 @@ $("#myModal ul").empty();
 
 function addmedia(){
 
-  var fileName = document.getElementById("fileUpload").value;
+  var fileName = document.getElementById("#fileUpload").value;
 
 $(function() {
 
-           $.post('lib/amazonS3/S3UploadFunction.php',{ file:fileName }, function(data){
+           $.post('lib/amazon/S3UploadFunction.php',{ file:fileName }, function(data){
              $("#sortable").append(data);
            });
            return false;
