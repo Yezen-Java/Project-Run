@@ -268,10 +268,9 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-footer">
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
-          <form action="" method='post' enctype="multipart/form-data">
-          <input type ="file" name ="file1" value="Show Dialog">
-          <input type="submit" vlaue= "UploadFile">
-          </form>
+          <input type ="file" name ="file" value="Show Dialog" class="btn btn-default">
+          <input type="submit" class="btn btn-default" vlaue= "UploadFile">
+         
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
