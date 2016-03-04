@@ -161,7 +161,7 @@ echo "Tour query passed. ";
            					<div class='input-group'> 
                     <span class='input-group-addon'> 
                       <button class='glyphicon glyphicon-trash' value ='$tour_id' id='trashBox' onclick='deleteTourLi(this.value)'></button> 
-                    </span> <button type='button' class='list-group-item' id ='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
+                    </span> <button type='button' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
               		}  
               	?>
           
