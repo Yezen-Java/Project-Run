@@ -107,6 +107,12 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
         document.getElementById('notesArea').placeholder= Date();
     }
 
+    function deleteTourLi(value){
+
+    $('#value').remove();
+
+    }
+
     function addNoteFunc(){
         myFunction();
         ul = $('#sideBar');
