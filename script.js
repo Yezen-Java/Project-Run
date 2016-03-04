@@ -109,7 +109,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
     function deleteTourLi(value){
 
-    $('#value').remove();
+    $(value).remove();
 
     }
   // $('#trashBox').onClick(function(function(){
