@@ -181,7 +181,7 @@ var input = document.getElementById('filesToUpload');
 $.ajax({
 url: "uploadscript.php",
 type: "POST",
-data: {file:input.files[x]},
+data: {file:input},
 contentType: false,
 cache: false,
 processData:false,
