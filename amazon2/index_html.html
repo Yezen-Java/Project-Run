@@ -8,6 +8,7 @@
 <script type="text/javascript">
 	
 $(document).ready(function (e){
+	//var fileName = document.getElementById("file").value;
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
@@ -18,7 +19,7 @@ contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-//$("#targetLayer").html(data);
+$("#targetLayer").html(data);
 },
 error: function(){} 	        
 });
