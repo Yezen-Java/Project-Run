@@ -44,5 +44,4 @@ else
 $msg = "Please select image file.";
 
 
-
 ?>
