@@ -185,7 +185,7 @@ $("#myModal ul").empty();
 
 
 $(document).ready(function (e){
-$("#uploadForm").on('submit',(function(e){
+$("#Upload Image'").on('click',(function(e){
 e.preventDefault();
 $.ajax({
 url: "lib/amazon/S3UploadFunction.php",
@@ -195,7 +195,8 @@ contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-//$("#targetLayer").html(data);
+alert(data);
+
 },
 error: function(){}           
 });
