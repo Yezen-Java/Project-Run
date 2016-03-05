@@ -176,12 +176,12 @@ function function_name() {
 var input = document.getElementById('filesToUpload');
 
 //for every file...
-for (var x = 0; x < input.files.length; x++) {
+//for (var x = 0; x < input.files.length; x++) {
 
 $.ajax({
 url: "uploadscript.php",
 type: "POST",
-data: input.files[x].value,
+data: {file:input.files[x]},
 contentType: false,
 cache: false,
 processData:false,
@@ -196,7 +196,7 @@ alert("error");
 
 
 
-}
+//}
 
 }
 
