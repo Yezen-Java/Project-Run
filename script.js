@@ -149,62 +149,57 @@ function addLocationRes(value) {
 
 
 
-$(document).ready(function (e){
-$("#uploadForm").on('submit',(function(e){
+// $(document).ready(function (e){
+// $("#uploadForm").on('submit',(function(e){
+// e.preventDefault();
+// $.ajax({
+// url: "uploadscript.php",
+// type: "POST",
+// data: new FormData(this),
+// contentType: false,
+// cache: false,
+// processData:false,
+// success: function(data){
+// alert(data)
+// },
+// error: function(){
+// alert("error");
+
+// }           
+// });
+// }));
+// });
+
+function function_name() {
+  // body...
+
+var input = document.getElementById('filesToUpload');
+
+//for every file...
+for (var x = 0; x < input.files.length; x++) {
+
 e.preventDefault();
 $.ajax({
 url: "uploadscript.php",
 type: "POST",
-data: new FormData(this),
+data: input.files[x].name,
 contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-alert(data)
+alert(data);
 },
 error: function(){
 alert("error");
 
 }           
 });
-}));
-});
-
-(function() {
-   
-   var container = $('#container');
-
-   var myUploadr = {
-      uploadify : function() {
-         $('#file_upload').uploadify({
-             'uploader'  : 'uploadify/uploadify.swf',
-             'script'    : 'uploadify/uploadify.php',
-             'cancelImg' : 'uploadify/cancel.png',
-             'folder'    : 'uploads/',
-             'auto'      : true,
-             'multi'     : true,
-             'wmode'     : 'transparent',
-             'buttonText': 'Send to S3',
-             'sizeLimit' : 20971520, // 20 megs
-             'onAllComplete' : function() {
-               // all files have finished uploading
-               location = 'index.php?uploads=complete';
-             },
-             'onOpen' : function() {
-               // hide overlay
-             }
-            
-         });         
-      } 
-   };
-
-   myUploadr.uploadify();
-
-})();
 
 
 
+}
 
+}
 
 
 
