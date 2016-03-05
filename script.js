@@ -153,7 +153,7 @@ $(document).ready(function (e){
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
-url: "WebApplication/lib/amazon/index.php",
+url: "lib/amazon/index.php",
 type: "POST",
 data: new FormData(this),
 contentType: false,
