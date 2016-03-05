@@ -266,16 +266,10 @@ echo "Tour query passed. ";
           <h4 class="modal-title">Modal Header</h4>
         </div>
         <div class="modal-body">
-
           <h4>Or drag and drop files below</h4>
-            <div class="upload-drop-zone" id="drop-zone">
-              Just drag and drop files here
-            </div>
-
             <ul class="sortable">
               <li> item1
             </ul>
-
         </div>
         <div class="modal-footer">
           <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button>
