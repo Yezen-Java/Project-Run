@@ -259,16 +259,33 @@ echo "Tour query passed. ";
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-        <div class="modal-body">
-          <h4>Or drag and drop files below</h4>
-            <ul class="sortable">
-              <li> item1
-            </ul>
-        </div>
+    	<div class="modal-body">
+			<div id="container"> 
+      			<h1>Upload a File </h1>
+				<form action="" method="post" enctype="multipart/form-data">
+  					<input name="theFile" type="file" id="file_upload" />
+				</form>
+				<?php if ( !empty($files_arr) ) : ?>
+  				<div class="overlay">
+     					<h2> Links to Uploaded Files</h2>
+     			<ul>
+        			<?php foreach( $files_arr as $name => $path ) : ?>
+        			<li>
+           				<a target="_blank" href="<?php echo $path; ?>"> <?php echo $name; ?> </a>
+        			</li>
+        			<?php endforeach; ?>
+     			</ul>
+  				</div>
+					<?php endif; ?>
+      		</div>
+        	<ul class="sortable">
+          		<li> item1
+        	</ul>
+    	</div>
         <div class="modal-footer">
           <!-- <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button> -->
           <form id = 'uploadForm' method="post">
-          <<input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
+          <input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
           </form>
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>

@@ -170,6 +170,38 @@ alert("error");
 }));
 });
 
+(function() {
+   
+   var container = $('#container');
+
+   var myUploadr = {
+      uploadify : function() {
+         $('#file_upload').uploadify({
+             'uploader'  : 'uploadify/uploadify.swf',
+             'script'    : 'uploadify/uploadify.php',
+             'cancelImg' : 'uploadify/cancel.png',
+             'folder'    : 'uploads/',
+             'auto'      : true,
+             'multi'     : true,
+             'wmode'     : 'transparent',
+             'buttonText': 'Send to S3',
+             'sizeLimit' : 20971520, // 20 megs
+             'onAllComplete' : function() {
+               // all files have finished uploading
+               location = 'index.php?uploads=complete';
+             },
+             'onOpen' : function() {
+               // hide overlay
+             }
+            
+         });         
+      } 
+   };
+
+   myUploadr.uploadify();
+
+})();
+
 
 
 
