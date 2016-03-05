@@ -150,7 +150,6 @@ function addLocationRes(value) {
 
 
 $(document).ready(function (e){
-  var fileName = document.getElementById("file").value;
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
