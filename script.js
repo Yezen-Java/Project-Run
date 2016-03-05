@@ -107,6 +107,7 @@ function w3_open(value) {
       var value1 = $('#tourButton').val();
        $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
          $("#pointersDiv").html(data);
+         alert(data);
        });
        return false;
   });
@@ -153,7 +154,7 @@ $(document).ready(function (e){
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
-  
+
 url: "lib/amazon/index.php",
 type: "POST",
 data: new FormData(this),
