@@ -111,6 +111,8 @@ echo "Tour query passed. ";
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="uploadify/swfobject.js"></script> 
+     <script src="uploadify/jquery.uploadify.v2.1.4.min.js"></script> 
 
     <!--CSS LINK-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
