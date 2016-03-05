@@ -175,7 +175,7 @@ echo "Tour query passed. ";
         </div>
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
-          <button id="addTour" type="button" class="btn btn-success" data-toggle="#addTourModal" data-target="#createTourDialogue"><strong>Add</strong></button>
+          <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
         </div>
       </div>
       
@@ -228,7 +228,7 @@ echo "Tour query passed. ";
   </div>
 
   <!--Create tour dialogue box-->
-  <div class="modal fade" id="createTourDialogue" role="dialog" id="addTourModal">
+  <div class="modal fade" id="createTourDialogue" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
