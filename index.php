@@ -137,6 +137,8 @@ echo "Tour query passed. ";
 
 </head>
 
+<body onload="myFunction()">
+
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
 

@@ -1,6 +1,4 @@
-$(document).ready(function(){
-   document.getElementById('notesArea').placeholder= Date();
-});
+$(document).ready();
 
 $("#EditTourButton").click(function(){
   console.log($("#myModal ul").sortable('toArray'));
@@ -66,6 +64,10 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
   alert('The file API works on this browser.')
 }else{
   alert('The File API is is not fully supported in this browser.')
+}
+
+function myFunction() {
+  document.getElementById('notesArea').placeholder= Date();
 }
 
 function deleteTourLi(value){
