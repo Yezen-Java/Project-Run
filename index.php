@@ -123,7 +123,6 @@ echo "Tour query passed. ";
     <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=ABeeZee">
     
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.22.0.css">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
     
     <script src="jquery.sortable.js"></script>
