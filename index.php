@@ -127,12 +127,14 @@ echo "Tour query passed. ";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
-
+    
+    <script src="jquery.sortable.js"></script>
     <script src="js/CreateTour.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <script src="tests.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="myJquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 
 </head>
 
@@ -271,8 +273,6 @@ echo "Tour query passed. ";
               Just drag and drop files here
             </div>
 
-          <script src="jquery.sortable.js"></script>
-
             <ul class="sortable">
               <li> item1
             </ul>
@@ -297,61 +297,6 @@ $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
-
-$("#pointer1").click(function(){
-  $("#myModal ul").empty();
-  console.log("works");
-    reorder();
-    $("#myModal").modal();
-    $('.sortable').sortable();
-});
-
-function Save(){
-
-var array = [];
-$('.sortable li').each(function(i, li) {
-  array.push($(li));
-});
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i].text() + i);
-};
-
-}
-
-var files = [
-  {
-    name: "file1",
-    order: 1
-  },
-
-  {
-    name: "file2",
-    order: 0
-  },
-
-  {
-    name: "file3",
-    order: 2
-  }
-];
-
-function compare(a,b) {
-  if (a.order < b.order)
-    return -1;
-  else if (a.order > b.order)
-    return 1;
-  else 
-    return 0;
-}
-
-function reorder(){
-  files.sort(compare);
-  console.table(files);
-  for (var i = 0; i < files.length; i++) 
-  {
-      $(".sortable").append("<li>" +files[i].name);
-  }
-}
 </script>
 
 </html>
