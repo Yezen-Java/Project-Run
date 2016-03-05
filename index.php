@@ -280,11 +280,4 @@ echo "Tour query passed. ";
   	<div id="qunit"></div>
     <div id="qunit-fixture"></div>
 </body>
-<script>
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#wrapper").toggleClass("toggled");
-});
-</script>
-
 </html>

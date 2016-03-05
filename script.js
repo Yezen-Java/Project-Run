@@ -5,8 +5,9 @@ $(document).ready(function(){
     });
 });
 
-$("#EditTourButton").click(function(){
-  console.log($("#myModal ul").sortable('toArray'));
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
 });
 
 $("#pointer1").click(function(){
