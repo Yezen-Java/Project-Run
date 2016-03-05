@@ -1,4 +1,14 @@
-$(document).ready();
+$(document).ready(function(){
+    $("#addTour").click(function(){
+        console.log("button");
+        $("#createTourDialogue").modal();
+    });
+});
+
+$("#addTour").click(function(){
+    console.log("button1");
+    $("#createTourDialogue").modal();
+});
 
 $("#EditTourButton").click(function(){
   console.log($("#myModal ul").sortable('toArray'));
