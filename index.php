@@ -131,8 +131,6 @@ echo "Tour query passed. ";
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="myJquery.js"></script>
     <script type="text/javascript" src="script.js"></script>
-
-
 </head>
 
 <body onload="myFunction()">
@@ -177,7 +175,7 @@ echo "Tour query passed. ";
         </div>
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
-          <button id="addTour" type="button" class="btn btn-success" data-toggle="modal" data-target="#createTourDialogue"><strong>Add</strong></button>
+          <button id="addTour" type="button" class="btn btn-success" data-toggle="#addTourModal" data-target="#createTourDialogue"><strong>Add</strong></button>
         </div>
       </div>
       
@@ -229,9 +227,8 @@ echo "Tour query passed. ";
   </nav>
   </div>
 
-  <div class="container">
   <!--Create tour dialogue box-->
-  <div class="modal fade" id="createTourDialogue" role="dialog">
+  <div class="modal fade" id="createTourDialogue" role="dialog" id="addTourModal">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
@@ -252,7 +249,6 @@ echo "Tour query passed. ";
         </div>
       </div>
     </div>
-  </div>
   </div>
   <!--Create tour dialogue box-->
 
