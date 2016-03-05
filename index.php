@@ -273,6 +273,7 @@ echo "Tour query passed. ";
 <!--           <input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
  -->          
  
+  <input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
 
  </form>
           <button type ="button" class="btn btn-default" onclick = "function_name()">Save</button>
