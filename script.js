@@ -184,24 +184,21 @@ $("#myModal ul").empty();
 }
 
 
-$(document).ready(function (e){
-$("#Upload Image'").on('click',(function(e){
-e.preventDefault();
-$.ajax({
-url: "lib/amazon/S3UploadFunction.php",
-type: "POST",
-data: new FormData(this),
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
-alert(data);
+function addmedia(){
 
-},
-error: function(){}           
-});
-}));
-});
+  var fileName = document.getElementById("file").value;
+
+$(function() {
+
+           $.post('lib/amazon/S3UploadFunction.php',{ file:fileName }, function(data){
+             $("#sortable").append(data);
+           });
+           return false;
+      });
+      
+
+}
+    
 
 
 
