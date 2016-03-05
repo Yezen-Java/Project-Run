@@ -178,7 +178,6 @@ var input = document.getElementById('filesToUpload');
 //for every file...
 for (var x = 0; x < input.files.length; x++) {
 
-e.preventDefault();
 $.ajax({
 url: "uploadscript.php",
 type: "POST",
