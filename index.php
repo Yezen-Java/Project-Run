@@ -266,7 +266,7 @@ echo "Tour query passed. ";
         </div>
         <div class="modal-footer">
           <!-- <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button> -->
-          <form id = 'uploadForm'>
+          <form id = 'uploadForm' method="post">
           <div><input type='file' name='file'/> <input type ='submit' class="btn btn-default" value='Upload Image'/>
           </div>
           </form>
