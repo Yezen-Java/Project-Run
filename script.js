@@ -1,14 +1,16 @@
 $(document).ready(function(){
     $("#addTour").click(function(){
-        console.log("button");
         $("#createTourDialogue").modal('show');
+    });
+
+    $("#menu-toggle").click(function(e) {
+      console.log("button");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
     });
 });
 
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#wrapper").toggleClass("toggled");
-});
+
 
 $("#pointer1").click(function(){
   reorder();
