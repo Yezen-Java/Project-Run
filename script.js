@@ -149,27 +149,26 @@ function addLocationRes(value) {
 
 
 
-// $(document).ready(function (e){
-// $("#uploadForm").on('submit',(function(e){
-// e.preventDefault();
-// $.ajax({
-// url: "lib/amazon/index.php",
-// type: "POST",
-// data: new FormData(this),
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
-// alert(data)
-// },
-// error: function(){
-// alert("error");
+$(document).ready(function (e){
+$("#uploadForm").on('submit',(function(e){
+e.preventDefault();
+$.ajax({
+url: "uploadscript.php",
+type: "POST",
+data: new FormData(this),
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+alert(data)
+},
+error: function(){
+alert("error");
 
-// }           
-// });
-// }));
-// });
-    
+}           
+});
+}));
+});
 
 
 

@@ -111,7 +111,6 @@ echo "Tour query passed. ";
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <!--CSS LINK-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -131,29 +130,7 @@ echo "Tour query passed. ";
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="myJquery.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript">
-      
-$(document).ready(function (e){
-$("#uploadForm").on('submit',(function(e){
-e.preventDefault();
-$.ajax({
-url: 'lib/amazon/uploadscript.php',
-type: 'POST',
-data: new FormData(this),
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
-//alert(data)
-},
-error: function(){
-alert("error");
 
-}           
-});
-}));
-});
-    </script>
 </head>
 
 <body onload="myFunction()">
