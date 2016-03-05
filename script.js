@@ -181,7 +181,7 @@ for (var x = 0; x < input.files.length; x++) {
 $.ajax({
 url: "uploadscript.php",
 type: "POST",
-data: input.files[x],
+data: input.files[x].value,
 contentType: false,
 cache: false,
 processData:false,
