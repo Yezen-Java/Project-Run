@@ -149,13 +149,13 @@ function addLocationRes(value) {
 
 
 $(document).ready(function (e){
-  //var fileName = document.getElementById("file").value;
+  var fileName = document.getElementById("file").value;
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
 url: "index.php",
 type: "POST",
-data: new FormData(this),
+data: fileName,
 contentType: false,
 cache: false,
 processData:false,
