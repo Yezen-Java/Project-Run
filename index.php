@@ -132,18 +132,19 @@ echo "Tour query passed. ";
     <script src="myJquery.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
-      $(document).ready(function (e){
+      
+$(document).ready(function (e){
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
 url: "lib/amazon/index.php",
 type: "POST",
-data: new FormData(this),
+data: '{"file":"'+ new FormData(this)+'"}',
 contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-alert(data)
+//alert(data)
 },
 error: function(){
 alert("error");
