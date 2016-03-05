@@ -21,11 +21,10 @@ include('s3_config.php');
 $actual_image_name = time().".".$ext;
 if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
 {
+
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
-echo "<img src='$s3file' style='max-width:400px'/><br/>";
-echo '<b>S3 File URL:</b>'.$s3file;
-
+echo $s3file;
 }
 else
 $msg = "S3 Upload Fail.";
