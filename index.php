@@ -262,24 +262,7 @@ echo "Tour query passed. ";
           <h4 class="modal-title">Modal Header</h4>
         </div>
     	<div class="modal-body">
-			<div id="container"> 
-      			<h1>Upload a File </h1>
-				<form action="" method="post" enctype="multipart/form-data">
-  					<input name="theFile" type="file" id="file_upload" />
-				</form>
-				<?php if ( !empty($files_arr) ) : ?>
-  				<div class="overlay">
-     					<h2> Links to Uploaded Files</h2>
-     			<ul>
-        			<?php foreach( $files_arr as $name => $path ) : ?>
-        			<li>
-           				<a target="_blank" href="<?php echo $path; ?>"> <?php echo $name; ?> </a>
-        			</li>
-        			<?php endforeach; ?>
-     			</ul>
-  				</div>
-					<?php endif; ?>
-      		</div>
+			<h1>Upload Files</h1>
         	<ul class="sortable">
           		<li> item1
         	</ul>
