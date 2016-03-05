@@ -117,7 +117,6 @@ echo "Tour query passed. ";
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
 
     <link rel="icon" href="http://www.hongkiat.com/blog/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=ABeeZee">
@@ -137,8 +136,6 @@ echo "Tour query passed. ";
 
 
 </head>
-
-<body onload="myFunction()">
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
