@@ -1,9 +1,10 @@
 
 .topHeader {
-	background-color: royalblue;
-	height: 70px;
+	background-color: darkslateblue;
+	height: 60px;
 	widows: 100px;
-	
+	border-style: hidden;
+	border-bottom-color: yellow;
 }
 
 .glyphicon{
@@ -12,6 +13,14 @@
 	
 }
 
+.span2 p{
+	
+
+	 text-decoration: underline;
+	text-decoration-color: ghostwhite;
+	
+	
+}
 
 
 .topText {
@@ -19,6 +28,7 @@
 	color: white;
 	margin-left: 20px;
 	padding-top: 10px;
+
 	
 	
 }
@@ -31,6 +41,7 @@
 }
 
 .body {
+background-image: url(images/backgroundImages/niceGreyBackground.jpg);*/
 /*	//background-color:black;*/
 }
 
@@ -50,7 +61,7 @@
 	margin-top: 20px;
 	height: 130px;
 	width: 400px;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow: 5px 5px 5px #572323;
 }
 
 	margin-left: 370px;
@@ -100,21 +111,25 @@
 
 
 .pageButtons {
-	background-color: #ffcc33;
-    box-shadow: 3px 2px 2px #888888;
+	background-color: #f5e145;
+    box-shadow: 3px 2px 2px #000;
 	height: 120px;
+	
+
+
 }
 
-.pageButtons a:hover{
-	background-color: blue;
-   
+.pageButtons:hover{
+background-color: #ffffff;
+  opacity: 2;
 }
 
 .imgTextTop {
-	margin-left: 140px;
+
 	font-size: 30px;
 	color: black;
-	
+	margin-left: 140px;
+
 }
 
 .imgBottomText {
@@ -137,12 +152,14 @@
 }
 
 .galleryPictures {
+	resize: both;
 	width: 200px;
 	height: 200px;
-	margin-left: 100px;
-	border-radius: 3%;
 	margin-top: 10px;
-	margin-left: 20px
+	margin-bottom: 10px;
+	margin-left: 10px;
+	 box-shadow: 3px 3px 2px #000;
+	
 }
 
 .galleryPicturesRight {
@@ -167,4 +184,103 @@
 
 .enterTextpage {
 	
+}
+
+.circleButtonX {
+	border-radius: 50%;
+	background-color: yellow;
+}
+
+.listOfPictures {
+	
+	margin-bottom: 60px;
+
+}
+
+.galleryTopText {
+font-size: 30px;
+	color: lightgrey;
+}
+
+.mainGalleryBackground {
+/*	background-image: url(images/backgroundImages/darkGreyWoodenBackgroud.png);*/
+	margin-left: -40px;
+}
+
+.insideBodyButtons {
+/*	background-image: url(images/backgroundImages/darkGreyWoodenBackgroud.png);*/
+	
+	margin-top: 1px;
+	
+
+}
+
+.firstPageMainArea {
+/*	background-image: url(images/backgroundImages/metalicBlackBackground.jpg);*/
+	height: 200px;
+	margin-top: 200px;
+	background-image: url(images/backgroundImages/niceGreyBackground.jpg) ;
+	border-radius: 1%;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.justTheYellowButtons {
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+
+}
+
+.SelectARoomText {
+	font-size: 25px;
+	color: white;
+}
+
+.firstInputBox {
+	background-color: darkgrey;
+	height: 200px;
+	widows: 200px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 130px;
+	border-radius: 1%;
+}
+
+.tourInput {
+	margin-top: 70px;
+	width: 300px;
+	height: 50px;
+	border-radius: 4%;
+}
+
+.tourText {
+	color: white;
+	font-size: 20px;
+}
+
+.userNameText {
+	color: white;
+}
+
+.btnEnterTourCode {
+	margin-top: 10px;
+	width: 100px;
+	height: 40px;
+
+}
+.btn{
+	margin-top: 10px;
+	height: 40px;
+	width: 90px;
+}
+.centeredEnterTourCodeText {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.topHospitalNameText {
+	color: white;
+	font-size: 25px;
+	margin-top: 10px;
 }

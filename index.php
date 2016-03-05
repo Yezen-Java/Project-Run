@@ -265,7 +265,11 @@ echo "Tour query passed. ";
             </ul>
         </div>
         <div class="modal-footer">
-          <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button>
+          <!-- <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button> -->
+          <form id = 'uploadForm'>
+          <div><input type='file' name='file'/> <input type ='submit' class="btn btn-default" value='Upload Image'/>
+          </div>
+          </form>
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

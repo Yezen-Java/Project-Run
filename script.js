@@ -147,20 +147,26 @@ function addLocationRes(value) {
 }
 
 
-function addmedia(){
 
-  var fileName = document.getElementById("file").value;
-
-$(function() {
-
-           $.post('lib/amazon/S3UploadFunction.php',{ file:fileName }, function(data){
-             $("#sortable").append(data);
-           });
-           return false;
-      });
-      
-
-}
+$(document).ready(function (e){
+  //var fileName = document.getElementById("file").value;
+$("#uploadForm").on('submit',(function(e){
+e.preventDefault();
+$.ajax({
+url: "index.php",
+type: "POST",
+data: new FormData(this),
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+//$("#targetLayer").html(data);
+alert(data)
+},
+error: function(){}           
+});
+}));
+});
     
 
 
