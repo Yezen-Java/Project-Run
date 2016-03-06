@@ -19,7 +19,7 @@ contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-$("#targetLayer").html(data);
+$("#targetLayer").append(data);
 },
 error: function(){} 	        
 });
@@ -34,7 +34,7 @@ error: function(){}
 
 <h3>Upload image file here</h3><br/>
 <form id = 'uploadForm'>
-<div style='margin:10px'><input type='file'  name='file'/> <input type ='submit' value='Upload Image'/>
+<div style='margin:10px'><input type='file'  name='file[]' multiple="" /> <input type ='submit' value='Upload Image'/>
 </div>
 </form>
 
