@@ -1,9 +1,9 @@
 <?php
 include('image_check.php');
-include 'Connect.php';
-$msg='';
-
+include('Connect.php');
 include('s3_config.php');
+
+$msg='';
 //Rename image name. 
 
 
@@ -23,11 +23,12 @@ $ext = getExtension($name);
 if($s3->putObjectFile($tmp, $bucket,$name, S3::ACL_PUBLIC_READ) ){
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$name;
+$strValName = (string)$$name;
+$strValLink = (string)$s3file;
+$result = pg_query("INSERT into media(media_name,link) values('$strValName','$strValLink')");
 echo   "<div class='col-md-3 col-sm-4 col-xs-6'>
               <img src='$s3file' alt='Mountain View' style='width:100px;height:150px;'>
             </div>";
-
-$result = pg_query("INSERT into media (media_name,link) values ('$name','$name')");
 
 if(!$result){
 	echo "fail";
