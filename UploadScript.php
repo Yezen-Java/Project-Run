@@ -41,6 +41,8 @@ else{
 
   }
 
+  sleep(3);
+
 }
 
 // else{
