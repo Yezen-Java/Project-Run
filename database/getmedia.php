@@ -17,7 +17,7 @@ while ($rows =pg_fetch_array($mediaResults)) {
 	$name = $rows['media_name'];
 
 	echo "<div class='col-md-3 col-sm-4 col-xs-6'>
-              <img src='' alt='$name' style='width:100px;height:150px;'>
+              <img src='$link' alt='$name' style='width:100px;height:150px;'>
             </div>";
 }
 
