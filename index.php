@@ -265,6 +265,11 @@ echo "Tour query passed. ";
         </div>
 
         <div class="modal-body">
+          <div class=".col-md-4">
+              <h1>YEZEN</h1>
+               <h1>SEDAR</h1>
+               <h1>MY GUY HASSAN</h1>
+          </div>
          
         </div>
 
