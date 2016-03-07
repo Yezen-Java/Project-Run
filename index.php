@@ -285,7 +285,7 @@ echo "Tour query passed. ";
 
         <div class="modal-footer">
         <form id = 'uploadForm'>
-<div style='margin:10px'><input type='file'  name='file[]' multiple="" /> <input type ='submit' value='Upload Image'/>
+<div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/>
 </div>
 </form>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
