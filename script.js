@@ -173,30 +173,49 @@ function addLocationRes(value) {
 function function_name() {
   // body...
 
-var input = document.getElementById('filesToUpload');
+// var input = document.getElementById('filesToUpload');
 
-//for every file...
-//for (var x = 0; x < input.files.length; x++) {
+// //for every file...
+// //for (var x = 0; x < input.files.length; x++) {
 
+// $.ajax({
+// url: "uploadscript.php",
+// type: "POST",
+// data: {file:input},
+// contentType: false,
+// cache: false,
+// processData:false,
+// success: function(data){
+// alert(data);
+// },
+// error: function(){
+// alert("error");
+
+// }           
+// });
+
+
+
+// //}
+
+$(document).ready(function (e){
+  //var fileName = document.getElementById("file").value;
+$("#uploadForm").on('submit',(function(e){
+e.preventDefault();
 $.ajax({
-url: "uploadscript.php",
+url: "upload.php",
 type: "POST",
-data: {file:input},
+data: new FormData(this),
 contentType: false,
 cache: false,
 processData:false,
 success: function(data){
 alert(data);
 },
-error: function(){
-alert("error");
-
-}           
+error: function(){}           
 });
-
-
-
-//}
+}));
+});
 
 }
 
