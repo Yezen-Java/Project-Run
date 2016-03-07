@@ -221,7 +221,7 @@ echo "Tour query passed. ";
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
-          <li><a href="#" id="file-manager">File Manager</a></li>
+          <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
         </ul>

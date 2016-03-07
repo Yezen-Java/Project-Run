@@ -10,9 +10,9 @@ $(document).ready(function(){
     });
 });
 
-$("#file-manager").click(function(){
-        $("#file_manager_dialogue").modal('show');
-    });
+// $("#file-manager").click(function(){
+//         $("#file_manager_dialogue").modal('show');
+//     });
 
 
 $("#pointer1").click(function(){
