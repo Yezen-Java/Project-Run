@@ -47,6 +47,10 @@ echo "Tour query passed. ";
   echo "Failed to Tour data. ";
 }
 
+
+$mediaResults = pg_query("SELECT * from media");
+
+
 ?>
 
 
@@ -220,6 +224,16 @@ echo "Tour query passed. ";
         <div id= "targetLayer" class="modal-body">
         <div class="container col-md-12">
             <div id= "fileManagerDiv" class="row ">
+<?php    while ($rows =pg_fetch_array($mediaResults)) {
+
+  $link = $rows['link'];
+  $name = $rows['media_name'];
+
+  echo "<div class='col-md-3 col-sm-4 col-xs-6'>
+              <img src='' alt='$name' style='width:100px;height:150px;'>
+            </div>";
+}
+?>
             </div>
           </div> 
      
