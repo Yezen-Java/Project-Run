@@ -132,25 +132,6 @@ echo "Tour query passed. ";
     <script src="myJquery.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
-      
-//       $(document).ready(function (e){
-// $("#uploadForm").on('submit',(function(e){
-//   e.preventDefault();
-// $.ajax({
-// url: "UploadScript.php",
-// type: "POST",
-// data: new FormData,
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
-// //$("#targetLayer").append(data);
-// alert(data);
-// },
-// error: function(){}           
-// });
-// }));
-// });
 
     </script>
 
@@ -335,13 +316,13 @@ echo "Tour query passed. ";
     	</div>
         <div class="modal-footer">
           <!-- <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button> -->
-          <form id = 'uploadForm' method="post">
-<!--           <input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
+<!--           <form id = 'uploadForm' method="post">
+ --><!--           <input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
  -->          
  
-  <input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
+<!--   <input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
 
- </form>
+ </form> -->
           <button type ="button" class="btn btn-default" onclick = "function_name()">Save</button>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
