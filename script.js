@@ -158,12 +158,11 @@ $("#uploadForm").on('submit',(function(e){
 $.ajax({
 url: "UploadScript.php",
 type: "POST",
-data: new FormData,
+data: new FormData(this),
 contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-//$("#targetLayer").append(data);
 alert(data);
 },
 error: function(){}           
