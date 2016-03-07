@@ -133,24 +133,24 @@ echo "Tour query passed. ";
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
       
-      $(document).ready(function (e){
-$("#uploadForm").on('submit',(function(e){
-  e.preventDefault();
-$.ajax({
-url: "UploadScript.php",
-type: "POST",
-data: new FormData,
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
-//$("#targetLayer").append(data);
-alert(data);
-},
-error: function(){}           
-});
-}));
-});
+//       $(document).ready(function (e){
+// $("#uploadForm").on('submit',(function(e){
+//   e.preventDefault();
+// $.ajax({
+// url: "UploadScript.php",
+// type: "POST",
+// data: new FormData,
+// contentType: false,
+// cache: false,
+// processData:false,
+// success: function(data){
+// //$("#targetLayer").append(data);
+// alert(data);
+// },
+// error: function(){}           
+// });
+// }));
+// });
 
     </script>
 
