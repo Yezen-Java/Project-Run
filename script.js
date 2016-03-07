@@ -200,27 +200,25 @@ function function_name() {
 
 
 // //}
-
+}
 $(document).ready(function (e){
   //var fileName = document.getElementById("file").value;
 $("#uploadForm").on('submit',(function(e){
 e.preventDefault();
 $.ajax({
-url: "upload.php",
+url: "UploadScript.php",
 type: "POST",
 data: new FormData(this),
 contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-alert(data);
+$("#targetLayer").append(data);
 },
 error: function(){}           
 });
 }));
 });
-
-}
 
 
 

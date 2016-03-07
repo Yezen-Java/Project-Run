@@ -264,8 +264,8 @@ echo "Tour query passed. ";
           <h4 class="modal-title">File Manager</h4>
         </div>
 
-        <div class="modal-body">
-          <div class="container col-md-12">
+        <div id= "targetLayer" class="modal-body">
+    <!--       <div class="container col-md-12">
             <div class="row">
             <div class="col-md-4">
               1st col 3
@@ -278,12 +278,16 @@ echo "Tour query passed. ";
             </div>
 
             </div>
-          </div>
+          </div> -->
      
          
         </div>
 
         <div class="modal-footer">
+        <form id = 'uploadForm'>
+<div style='margin:10px'><input type='file'  name='file[]' multiple="" /> <input type ='submit' value='Upload Image'/>
+</div>
+</form>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
