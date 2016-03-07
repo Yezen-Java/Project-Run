@@ -23,7 +23,7 @@ $ext = getExtension($name);
 if($s3->putObjectFile($tmp, $bucket,$name, S3::ACL_PUBLIC_READ) ){
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$name;
-$strValName = (string)$$name;
+$strValName = (string)$name;
 $strValLink = (string)$s3file;
 $result = pg_query("INSERT into media(media_name,link) values('$strValName','$strValLink')");
 echo   "<div class='col-md-3 col-sm-4 col-xs-6'>
