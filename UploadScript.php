@@ -15,8 +15,7 @@ $len = count($_FILES['file']['name']);
 
 //echo "number "+$len;
 
-for ($i = 0; $i < $len; $i++)
- {
+for ($i = 0; $i < $len; $i++){
 $tmp = $_FILES['file']['tmp_name'][$i];
 $name = $_FILES['file']['name'][$i];
 $ext = getExtension($name);
@@ -25,7 +24,10 @@ if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
 
-$result = pg_execute($dbconn,"query", array($name,$s3file));
+$nameData = $name;
+$nameLink = $s3file;
+
+$result = pg_execute($dbconn,"query", array($nameData,$nameLink));
 
 if($result){
 
