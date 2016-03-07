@@ -8,8 +8,10 @@ $msg='';
 //Rename image name. 
 
 
-$query = "INSERT into media (media_name,link) values ($1,$2)";
-$result = pg_prepare($dbconn,"query", $query);
+// $query = "INSERT into media (media_name,link) values ($1,$2)";
+// $result = pg_prepare($dbconn,"query", $query);
+// $result = pg_execute($dbconn,"query",  array($nameData,$nameLink));
+
 
 $len = count($_FILES['file']['name']);
 
@@ -23,11 +25,9 @@ $actual_media_name = time().".".$ext;
 if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
-
+$result = pg_query("INSERT into media (media_name,link) values ('$name','$s3file')");
 $nameData = $name;
 $nameLink = $s3file;
-
-$result = pg_execute($dbconn,"query",  array($nameData,$nameLink));
 
 if($result){
 
