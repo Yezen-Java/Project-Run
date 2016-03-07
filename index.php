@@ -113,8 +113,7 @@ echo "Tour query passed. ";
       list group-->
       <div class = "container" id="middleContainer">
         <div class="list-group" id="tourList">
-          <ul id="buttonsListTours">
-          	
+          <ul id="buttonsListTours"> 	
            		<?php
               		while ($rows =pg_fetch_array($toursListQuery)) {
               		$tour_id =$rows["tourid"];
@@ -127,7 +126,6 @@ echo "Tour query passed. ";
                     </span> <button type='button' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
               		}  
               	?>
-          
           </ul>
         </div>
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
@@ -222,9 +220,6 @@ echo "Tour query passed. ";
         <div id= "targetLayer" class="modal-body">
         <div class="container col-md-12">
             <div id= "fileManagerDiv" class="row ">
-            <div class="col-md-3 col-sm-4 col-xs-6">
-              1st col 3
-            </div>
             </div>
           </div> 
      
@@ -257,14 +252,7 @@ echo "Tour query passed. ";
         	</ul>
     	</div>
         <div class="modal-footer">
-          <!-- <input type='file' id='file'/> <button id='UploadImage' class="btn btn-default" value='Upload Image' onclick="addmedia()">Upload Image</button> -->
-<!--           <form id = 'uploadForm' method="post">
- --><!--           <input type='file' name='file'/> <input type ='submit' value='Upload Image'/>
- -->          
- 
-<!--   <input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
 
- </form> -->
           <button type ="button" class="btn btn-default" onclick = "function_name()">Save</button>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
