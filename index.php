@@ -221,7 +221,7 @@ echo "Tour query passed. ";
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
-          <li><a href="#" id="menu-toggle">File Manager</a></li>
+          <li><a href="#" id="file-manager">File Manager</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
         </ul>
@@ -254,6 +254,27 @@ echo "Tour query passed. ";
     </div>
   </div>
   <!--Create tour dialogue box-->
+
+  <!--File Manager dialogue box-->
+  <div class="modal fade" id="file_manager_dialogue" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">File Manager</h4>
+        </div>
+
+        <div class="modal-body">
+         
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--File manager dialogue box-->
 
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
