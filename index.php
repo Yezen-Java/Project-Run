@@ -221,21 +221,10 @@ echo "Tour query passed. ";
 
         <div id= "targetLayer" class="modal-body">
         <div class="container col-md-12">
-            <div class="row ">
+            <div id= "fileManagerDiv" class="row ">
             <div class="col-md-3 col-sm-4 col-xs-6">
               1st col 3
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-              1st col 3
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-              1st col 3
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-              1st col 3
-            </div>
-           
-
             </div>
           </div> 
      

@@ -163,7 +163,8 @@ contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-alert(data);
+
+  $('#fileManagerDiv').append(data);
 },
 error: function(){}           
 });
