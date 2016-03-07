@@ -135,9 +135,8 @@ echo "Tour query passed. ";
     <script type="text/javascript">
       
       $(document).ready(function (e){
-  //var fileName = document.getElementById("file").value;
 $("#uploadForm").on('submit',(function(e){
-e.preventDefault();
+  e.preventDefault();
 $.ajax({
 url: "UploadScript.php",
 type: "POST",
@@ -146,7 +145,8 @@ contentType: false,
 cache: false,
 processData:false,
 success: function(data){
-$("#targetLayer").append(data);
+//$("#targetLayer").append(data);
+alert(data);
 },
 error: function(){}           
 });
