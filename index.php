@@ -267,15 +267,16 @@ echo "Tour query passed. ";
         <div class="modal-body">
           <div class="container col-md-12">
             <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
               1st col 3
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               1st col 2
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               1st col 1
             </div>
+
             </div>
           </div>
      
