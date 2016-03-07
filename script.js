@@ -152,55 +152,24 @@ function addLocationRes(value) {
 
 
 
-// $(document).ready(function (e){
-// $("#uploadForm").on('submit',(function(e){
-// e.preventDefault();
-// $.ajax({
-// url: "uploadscript.php",
-// type: "POST",
-// data: new FormData(this),
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
-// alert(data)
-// },
-// error: function(){
-// alert("error");
-
-// }           
-// });
-// }));
-// });
-
-function function_name() {
-  // body...
-
-// var input = document.getElementById('filesToUpload');
-
-// //for every file...
-// //for (var x = 0; x < input.files.length; x++) {
-
-// $.ajax({
-// url: "uploadscript.php",
-// type: "POST",
-// data: {file:input},
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
-// alert(data);
-// },
-// error: function(){
-// alert("error");
-
-// }           
-// });
-
-
-
-// //}
-}
+$(document).ready(function (e){
+$("#uploadForm").on('submit',(function(e){
+  e.preventDefault();
+$.ajax({
+url: "UploadScript.php",
+type: "POST",
+data: new FormData,
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+//$("#targetLayer").append(data);
+alert(data);
+},
+error: function(){}           
+});
+}));
+});
 
 
 

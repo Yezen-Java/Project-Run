@@ -139,7 +139,7 @@ $("#uploadForm").on('submit',(function(e){
 $.ajax({
 url: "UploadScript.php",
 type: "POST",
-data: new FormData(this),
+data: new FormData,
 contentType: false,
 cache: false,
 processData:false,
