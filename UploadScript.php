@@ -27,7 +27,7 @@ $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
 $nameData = $name;
 $nameLink = $s3file;
 
-$result = pg_execute($dbconn,"query", array($nameData,$nameLink));
+$result = pg_execute($dbconn,"query",  array($nameData,$nameLink));
 
 if($result){
 
