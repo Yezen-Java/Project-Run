@@ -53,6 +53,4 @@ if ( isset($_GET['uploads']) ) {
    }
 }
 
-include 'index.php';
-
 ?>
