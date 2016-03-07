@@ -21,7 +21,7 @@ if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
 //echo '<b>S3 File URL:</b>'.$s3file;
-$msg = $msg + "<img src='$s3file' style='width:100px;height:150px;'>";
+echo "<img src='$s3file' style='width:100px;height:150px;'>";
 }
 
 else{
@@ -29,7 +29,7 @@ else{
 
   }
 
-  echo $msg;
+   
 
 
 }
