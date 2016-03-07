@@ -7,7 +7,7 @@ include('s3_config.php');
 //Rename image name. 
 
 
-$query = "INSERT into media (media_name,link) values ($1,$2,$3);";
+$query = "INSERT into media (media_name,link) values ($1,$2)";
 $result = pg_prepare($dbconn,"query", $query);
 
 $len = count($_FILES['file']['name']);
