@@ -265,11 +265,13 @@ echo "Tour query passed. ";
         </div>
 
         <div class="modal-body">
+        <div class="container">
         <div class="row">
             <div class=".col-sm-4"><h1>SEDAR OLMEZ</h1></div>
             <div class=".col-sm-4"><h1>HASSAN MINHAS</h1></div>
             <div class=".col-sm-4"><h1>YEMEN ALNEFEI</h1></div>
-          </div>
+        </div>
+        </div>
          
         </div>
 
