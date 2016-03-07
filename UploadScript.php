@@ -34,7 +34,7 @@ if($s3->putObjectFile($tmp, $bucket , $actual_image_name, S3::ACL_PUBLIC_READ) )
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_image_name;
 echo   "<div class='col-md-3 col-sm-4 col-xs-6'>
-              <img src='pic_mountain.jpg' alt='Mountain View' style='width:100px;height:150px;'>
+              <img src='$s3file' alt='Mountain View' style='width:100px;height:150px;'>
             </div>";
 //echo '<b>S3 File URL:</b>'.$s3file;
 
