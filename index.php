@@ -221,9 +221,7 @@ $mediaResults = pg_query("SELECT * from media");
           <h4 class="modal-title">File Manager</h4>
         </div>
 
-        <div id= "targetLayer" class="modal-body">
-        <div id= "fileManagerDiv"  class="container col-md-12">
-
+        <div id= "fileManagerDiv" class="modal-body">
         <?php    while ($rows =pg_fetch_array($mediaResults)) {
 
   $link = $rows['link'];
@@ -234,10 +232,6 @@ $mediaResults = pg_query("SELECT * from media");
             </div>";
 }
 ?>
-            
-
-        </div> 
-     
          
         </div>
 
