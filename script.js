@@ -1,14 +1,4 @@
-$(document).ready(function(){
-    $("#addTour").click(function(){
-        $("#createTourDialogue").modal('show');
-    });
 
-    $("#menu-toggle").click(function(e) {
-      console.log("button");
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-});
 
 // $("#file-manager").click(function(){
 //         $("#file_manager_dialogue").modal('show');
@@ -172,6 +162,16 @@ success: function(data){
 error: function(){}           
 });
 }));
+
+$("#addTour").click(function(){
+        $("#createTourDialogue").modal('show');
+    });
+
+    $("#menu-toggle").click(function(e) {
+      console.log("button");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
 });
 
 // function addLocationTour(){
