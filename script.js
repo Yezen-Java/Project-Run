@@ -161,7 +161,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
  $(function() {
        $.post('database/addLocationScript.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
-        var addLocationsHtml = $("<li id="+selectedTourId+">"+selectedText+"</li");
+        var $addLocationsHtml = $("<li id="+selectedTourId+">"+selectedText+"</li");
         $addLocationsHtml.appendTo($("#pointersDiv"));
 
        });
