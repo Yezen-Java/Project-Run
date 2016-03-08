@@ -174,17 +174,17 @@ error: function(){}
 }));
 });
 
-function addLocationTour(){
+// function addLocationTour(){
 
-  var tourId = tourIdLocation;
-  var locationid = $('#cardtype').val();
+//   var tourId = tourIdLocation;
+//   var locationid = $('#cardtype').val();
 
-$.post('database/addLocation.php',{TourID:TourIdCode,LocationId:locationid}, function(data){
-         pointersDiv
-         $('#pointersDiv').append(data);
-       });
-       return false;
-  });
+// $.post('database/addLocation.php',{TourID:TourIdCode,LocationId:locationid}, function(data){
+//          pointersDiv
+//          $('#pointersDiv').append(data);
+//        });
+//        return false;
+//   });
 
 
 
