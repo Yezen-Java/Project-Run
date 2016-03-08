@@ -1,4 +1,14 @@
+$(document).ready(function(){
+    $("#addTour").click(function(){
+        $("#createTourDialogue").modal('show');
+    });
 
+    $("#menu-toggle").click(function(e) {
+      console.log("button");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+});
 
 // $("#file-manager").click(function(){
 //         $("#file_manager_dialogue").modal('show');
@@ -92,18 +102,15 @@ function randomStringGenerator() {
   document.getElementById("randomfield").value = randomstring;
 }
 
-var tourIdLocation = "";
-
 function w3_open(value) {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
       var TourIdCode=value;
-      tourIdLocation = value;
-
 
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
          $("#pointersDiv").html(data);
+         alert(data);
        });
        return false;
   });
@@ -162,35 +169,7 @@ success: function(data){
 error: function(){}           
 });
 }));
-
-$("#addTour").click(function(){
-        $("#createTourDialogue").modal('show');
-    });
-
-    $("#menu-toggle").click(function(e) {
-      console.log("button");
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
 });
-
-// function addLocationTour(){
-
-//   var tourId = tourIdLocation;
-//   var locationid = $('#cardtype').val();
-
-// $.post('database/addLocation.php',{TourID:TourIdCode,LocationId:locationid}, function(data){
-//          pointersDiv
-//          $('#pointersDiv').append(data);
-//        });
-//        return false;
-//   });
-
-
-
-
-
-}
 
 
 
