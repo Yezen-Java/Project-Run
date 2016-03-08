@@ -166,9 +166,8 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
  $(function() {
        $.post('database/addLocationScript.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
         alert(data);
-        var addLocationsHtml = $("<li id="+selectedTourId+">"+selectedText+"</li>");
-      $("#pointersDiv").append(addLocationsHtml);
-
+        var addLocationsHtml = $("<a id="+selectedTourId+">"+selectedText+"</a>");
+      $("#roomlist").append(addLocationsHtml);
        });
        return false;
   });
