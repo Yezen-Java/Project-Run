@@ -187,7 +187,7 @@ $mediaResults = pg_query("SELECT * from media");
           <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="locationManagerModel">Edit Locations</a></li>
+            <li><a href="#locationManagerModel" data-toggle="modal">Edit Locations</a></li>
             <li><a href="#">File Manager</a></li>
           </ul>
         </li>
@@ -302,12 +302,10 @@ $mediaResults = pg_query("SELECT * from media");
          }
          echo"</ul>";
           ?>
-
-        
+ 
       </div>
         <div class="modal-footer">
-          <button type ="button" class="btn btn-default" onclick = "function_name()">Save</button>
-          <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+          <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete All</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
