@@ -102,9 +102,12 @@ function randomStringGenerator() {
   document.getElementById("randomfield").value = randomstring;
 }
 
+var TourCodeSelected ="";
+
 function w3_open(value) {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
       var TourIdCode=value;
+      TourCodeSelected = value;
 
       $(function() {
       var value1 = $('#tourButton').val();
@@ -147,6 +150,25 @@ function addLocationRes(value) {
   reorder();
   $("#myModal").modal();
   $('.sortable').sortable();
+}
+
+
+function addLocations(){
+var  selectedTourId = TourCodeSelected;
+var selectList = $('#selectLocation').val();
+var skillsSelect = document.getElementById("selectLocation");
+var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+
+ $(function() {
+       $.post('database/addLocationScript.php.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
+        var addLocationsHtml = $("<li id="+selectedTourId+">"+selectedText+"</li");
+        $addLocationsHtml.appendTo($("#pointersDiv"));
+
+       });
+       return false;
+  });
+
+
 }
 
 

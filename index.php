@@ -100,28 +100,20 @@ $mediaResults = pg_query("SELECT * from media");
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
-         <div id="pointersDiv">Locations</div>
          <div>
          <?php 
-
-         echo"<select>";
-
+         echo"<select id ='selectLocation' class='form-control'>";
          while($rows = pg_fetch_array($locationsQuery)){
           $id = $rows['locationid'];
           $name = $rows['lname'];
-
-          echo"<option id='$id'>$name</option>";
-
+          echo"<option value='$id'>$name</option>";
          }
-
-
          echo"</select>";
-
           ?>
-
           </div>
+          <div id="pointersDiv">Locations</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
-            <button id="addPointer" type="button" class="btn btn-success"><strong>Add</strong></button>
+            <button id="addPointer" type="button" class="btn btn-success" onclick="addLocations()"><strong>Add</strong></button>
           </div>    
         </nav>
       </div>
