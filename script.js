@@ -159,6 +159,10 @@ var selectList = $('#selectLocation').val();
 var skillsSelect = document.getElementById("selectLocation");
 var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
+      console.log(selectedTourId);
+      console.log(selectList);
+      console.log(selectedText);
+
  $(function() {
        $.post('database/addLocationScript.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
         var $addLocationsHtml = $("<li id="+selectedTourId+">"+selectedText+"</li");
