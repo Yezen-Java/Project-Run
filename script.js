@@ -110,7 +110,6 @@ function w3_open(value) {
       var value1 = $('#tourButton').val();
        $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
          $("#pointersDiv").html(data);
-         alert(data);
        });
        return false;
   });
@@ -149,6 +148,8 @@ function addLocationRes(value) {
   $("#myModal").modal();
   $('.sortable').sortable();
 }
+
+
 
 
 
