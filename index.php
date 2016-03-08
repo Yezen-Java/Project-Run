@@ -32,6 +32,7 @@ if (isset($_POST['buttonR'])) {
 
 
 $locationsQuery = pg_query("SELECT * From location");
+$locationsQuery2 = pg_query("SELECT * From location");
 
 if ($locationsQuery) {
 
@@ -294,8 +295,8 @@ $mediaResults = pg_query("SELECT * from media");
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-         echo"<ul id ='selectLocationModel'>";
-         while($rows = pg_fetch_array($locationsQuery)){
+         echo"<ul>";
+         while($rows = pg_fetch_array($locationsQuery2)){
           $id = $rows['locationid'];
           $name = $rows['lname'];
           echo"<li value='$id'>$name</li>";
