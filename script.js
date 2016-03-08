@@ -167,7 +167,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
        $.post('database/addLocationScript.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
         alert(data);
         var addLocationsHtml = $("<a id="+selectedTourId+">"+selectedText+"</a>");
-      $("#roomlist").append(addLocationsHtml);
+      $("#pointersDiv").append(addLocationsHtml);
        });
        return false;
   });
@@ -175,6 +175,20 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 }
 
+
+function deleteLocationFromTour(){
+
+}
+
+
+function deteleLocationFromManager(){
+
+}
+
+
+function deteleMeidaFromManager(){
+
+}
 
 $(document).ready(function (e){
 $("#uploadForm").on('submit',(function(e){
