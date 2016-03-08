@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-
 <?php
-include 'database/Connect.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
+
+include 'database/Connect.php';
+
+
 
 if(isset($_SESSION['id'])){
     $userId= $_SESSION['id'];
@@ -45,7 +46,7 @@ $mediaResults = pg_query("SELECT * from media");
 
 
 ?>
-
+<!DOCTYPE html>
 
 <html lang="en">
 
