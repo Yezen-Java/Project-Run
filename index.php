@@ -294,7 +294,7 @@ $mediaResults = pg_query("SELECT * from media");
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-         echo"<ul id ='selectLocationModel'";
+         echo"<ul id ='selectLocationModel'>";
          while($rows = pg_fetch_array($locationsQuery)){
           $id = $rows['locationid'];
           $name = $rows['lname'];
