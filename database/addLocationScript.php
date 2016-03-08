@@ -15,7 +15,7 @@ $addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
 
 if ($addLocationQuery) {
 
-$addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($nameData,$nameLink));
+$addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($tourId,$locationId));
 
 if ($addLocationQueryt) {
 
