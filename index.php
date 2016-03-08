@@ -103,6 +103,7 @@ $mediaResults = pg_query("SELECT * from media");
          <div>
          <?php 
          echo"<select id ='selectLocation' class='form-control'>";
+         echo"<option>Choose Room To Add:</option>";
          while($rows = pg_fetch_array($locationsQuery)){
           $id = $rows['locationid'];
           $name = $rows['lname'];
@@ -186,7 +187,7 @@ $mediaResults = pg_query("SELECT * from media");
           <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Edit Locations</a></li>
+            <li><a href="#" data-toggle="locationManagerModel">Edit Locations</a></li>
             <li><a href="#">File Manager</a></li>
           </ul>
         </li>
@@ -282,6 +283,40 @@ $mediaResults = pg_query("SELECT * from media");
       
     </div>
   </div>
+
+<div class="modal fade" id="locationManagerModel" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Locations</h4>
+        </div>
+      <div class="modal-body">
+      <h1>Edit Locations</h1>
+      <?php 
+         echo"<ul id ='selectLocationModel' class='form-control'>";
+         while($rows = pg_fetch_array($locationsQuery)){
+          $id = $rows['locationid'];
+          $name = $rows['lname'];
+          echo"<li value='$id'>$name</li>";
+         }
+         echo"</ul>";
+          ?>
+
+        
+      </div>
+        <div class="modal-footer">
+          <button type ="button" class="btn btn-default" onclick = "function_name()">Save</button>
+          <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
   <!--QUnit test results are displayed here!-->
   	<div id="qunit"></div>
     <div id="qunit-fixture"></div>
