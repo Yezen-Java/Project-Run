@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$getArrayMedia = $_REQUEST['ArrayMedia'];
+$getArrayMedia = json_decode(stripslashes($_POST['ArrayMedia']));
 $i = count($getArrayMedia);
 
 echo $i;
