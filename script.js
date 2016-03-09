@@ -176,8 +176,18 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 }
 
 $(function(){
+  
+  var check = false;
+
   $("#deleteCheckedItems").click(function(){
-    $(".displayCheckBoxSpan").show("slow");
+
+    if (check == false){
+      $(".displayCheckBoxSpan").show("slow");
+      check = true;
+    }else{
+      $(".displayCheckBoxSpan").hide("slow");
+      check = false;
+    }
   });
 });
 
