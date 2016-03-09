@@ -178,6 +178,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 $(function(){
   
   var check = false;
+  var Arrayofvlaues = new Array();
 
   $("#deleteCheckedItems").click(function(){
     var array = getCheckedBoxes();
@@ -189,9 +190,11 @@ $(function(){
       check = false;
     } else {
 
+
       for (var i = 0; i < array.length; i++) {
-        console.log(array[i].value);
+        Arrayofvlaues.push(array[i].value);
       };
+      console.log(Arrayofvlaues);
     }
   });
 });
