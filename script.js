@@ -197,7 +197,7 @@ $(function(){
       console.log(stringBuldier);
       console.log(Arrayofvlaues);
 
- $.post('database/addLocationScript.php',{Array:stringBuldier}, function(data){
+ $.post('database/DeleteMedia.php',{Array:stringBuldier}, function(data){
         alert(data);
        
        });
