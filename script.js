@@ -198,9 +198,12 @@ $(function(){
       console.log(Arrayofvlaues);
      
     $.ajax({
-type: "POST",
 url: "/database/DeleteMedia.php",
+type: "POST",
 data: {ArrayMedia:Arrayofvlaues},
+contentType: false,
+cache: false,
+processData:false,
 success: function(data){
 
 alert(data);
