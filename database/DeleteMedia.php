@@ -12,8 +12,9 @@ $result = pg_prepare($dbconn,"query1", $query);
 for ($i=0; $i < $i; $i++) { 
 
 if ($s3->deleteObject($bucket,$getArrayMedia[$i])) {
-        echo 'deleted';
 $result = pg_execute($dbconn,"query1",  array($getArrayMedia[$i]));
+
+        echo 'deleted';
 
 }
 
