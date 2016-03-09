@@ -20,12 +20,17 @@ html, body {
 
 }
 /*circle button code end */
+
+#fileContent{
+  width: 80%;
+}
+
 #modalc{
   height: 60%;
   position: relative;
   float: center;
   overflow-y: auto;
-  width: 80%;
+  width: 100%;
 }
 
 #sortable { 
