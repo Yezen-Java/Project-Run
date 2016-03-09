@@ -189,7 +189,7 @@ $(function(){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
     } else {
-      var stringBuldier ="";
+      var stringBuldier ="45";
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
 
@@ -200,7 +200,7 @@ $(function(){
     $.ajax({
 url: "/database/DeleteMedia.php",
 type: "POST",
-data: Arrayofvlaues,
+data: {Array:stringBuldier},
 contentType: false,
 cache: false,
 processData:false,

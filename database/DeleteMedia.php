@@ -3,23 +3,19 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$stringBuilder = $_POST['Arrayofvlaues']; 
-//$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
-//$stringBuilder=explode(",", $_POST['ArrayMedia']);
+$stringBuilder = $_POST['Array']; 
 
-echo $stringBuilder+ " test";
+echo $stringBuilder;
 
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
 
-$e = count($stringBuilder);
+//$e = count($stringBuilder);
 
-echo $e;
-for ($i=0; $i < 1; $i++) { 
+//for ($i=0; $i < 1; $i++) { 
 
-$id = '46';
 
-$mediaObject = pg_query("SELECT * From media where mediaid = $id");
+$mediaObject = pg_query("SELECT * From media where mediaid = stringBuilder");
 
 if ($mediaObject) {
 	
@@ -35,7 +31,7 @@ $result = pg_execute($dbconn,"query1",  array($stringBuilder[$i]));
 }else{
 	echo "error";
 }
-}
+//}
 
 sleep(2);
 }
