@@ -15,7 +15,7 @@ $result = pg_prepare($dbconn,"query1", $query);
 //for ($i=0; $i < 1; $i++) { 
 
 
-$mediaObject = pg_query("SELECT * From media where mediaid = stringBuilder");
+$mediaObject = pg_query("SELECT * From media where mediaid = $stringBuilder");
 
 if ($mediaObject) {
 	
