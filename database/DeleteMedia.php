@@ -4,6 +4,7 @@ include 's3_config.php';
 include 'Connect.php';
 
 $stringBuilder = $_POST['Array']; 
+$stringBuilder = 45;
 
 echo $stringBuilder;
 

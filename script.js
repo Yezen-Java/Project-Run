@@ -197,26 +197,26 @@ $(function(){
       console.log(stringBuldier);
       console.log(Arrayofvlaues);
 
- $.post('database/DeleteMedia.php',{Array:stringBuldier}, function(data){
-        alert(data);
+ // $.post('database/DeleteMedia.php',{Array:stringBuldier}, function(data){
+ //        alert(data);
        
-       });
+ //       });
 
      
-//     $.ajax({
-// url: "/database/DeleteMedia.php",
-// type: "POST",
-// data: {Array:stringBuldier},
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
+    $.ajax({
+url: "/database/DeleteMedia.php",
+type: "POST",
+data: false,
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
 
-// alert(data);
+alert(data);
 
-// },
-// error: function(){}           
-// });
+},
+error: function(){}           
+});
 
     }
   });
