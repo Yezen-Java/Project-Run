@@ -6,6 +6,8 @@ include 'Connect.php';
 $getArrayMedia = $_REQUEST['ArrayMedia'];
 $i = count($getArrayMedia);
 
+echo $i;
+
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
 
