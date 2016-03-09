@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$getArrayMedia = $_POST['ArrayMedia'];
+$getArrayMedia = $_REQUEST['ArrayMedia'];
 $i = count($getArrayMedia);
 
 $query = "DELETE From media where mediaid = $1";
