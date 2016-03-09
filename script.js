@@ -178,21 +178,17 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 $(function(){
   
   var check = false;
-  var Arrayofvlaues = new Array();
 
   $("#deleteCheckedItems").click(function(){
+    var Arrayofvlaues = new Array();
     var array = getCheckedBoxes();
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
-      array = getCheckedBoxes();
     }else if (check == true && array.length == 0){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
-      array = getCheckedBoxes();
     } else {
-
-
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
       };
