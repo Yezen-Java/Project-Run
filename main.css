@@ -20,6 +20,10 @@ html, body {
 
 }
 /*circle button code end */
+#file_manager_dialogue{
+  width: 80%;
+  height: 60%;
+}
 
 #sortable { 
   list-style-type: none; 
