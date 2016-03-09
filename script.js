@@ -180,7 +180,7 @@ $(function(){
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
-    var Arrayofvlaues = [];
+    var Arrayofvlaues = new Array();;
     var array = getCheckedBoxes();
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
