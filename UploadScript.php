@@ -31,9 +31,10 @@ $nameLink = $s3file;
 
 if($result){
 
- echo "<div class='col-md-3 col-sm-4 col-xs-6'>
-              <img src='$s3file' alt='Mountain View' style='width:100px;height:150px;'>
-            </div>";
+  echo "<div class='col-md-4 portfolio-item' id='temp'>
+    <img class='img-responsive' src='$nameLink'>
+    <h3>$nameData</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p></div>";
 }
 }
 else{
