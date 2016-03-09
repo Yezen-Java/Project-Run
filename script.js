@@ -175,6 +175,10 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 }
 
+$("#deleteCheckedItems").click(function(){
+        $("#checkBoxDeleteSpan").toggle();
+});
+
 
 function deleteLocationFromTour(){
 

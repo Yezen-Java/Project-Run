@@ -231,7 +231,6 @@ $mediaResults = pg_query("SELECT * from media");
     <div class="modal-dialog" id="fileContent">
       <div class="modal-content" >
         <div class="modal-header">
-          <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">File Manager</h4>
         </div>
@@ -262,6 +261,7 @@ $mediaResults = pg_query("SELECT * from media");
 <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/>
 </div>
 </form>
+          <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
