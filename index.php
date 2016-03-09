@@ -248,7 +248,7 @@ $mediaResults = pg_query("SELECT * from media");
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     <span class='input-group-addon' id='checkBoxDeleteSpan'>
-        <input type='checkbox' id='checkBoxesDelete' display='none'>
+        <input type='checkbox' id='checkBoxesDelete'>
       </span></div>";
 }
 ?>

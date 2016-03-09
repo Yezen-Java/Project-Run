@@ -27,6 +27,7 @@ html, body {
 
 #checkBoxDeleteSpan{
   margin:5px;
+  display:none;
 }
 
 #modalc{
