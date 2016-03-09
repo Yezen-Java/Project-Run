@@ -11,7 +11,13 @@ $result = pg_prepare($dbconn,"query1", $query);
 
 for ($i=0; $i < $i; $i++) { 
 
-if ($s3->deleteObject($bucket,$getArrayMedia[$i])) {
+$mediaObject = pg_query("SELECT * From media where mediaid = $getArrayMedia[$i]");
+
+if ($mediaObject) {
+	
+$rows = pg_fetch_array($mediaObject);
+
+if ($s3->deleteObject($bucket,$rows['media_name'])) {
 $result = pg_execute($dbconn,"query1",  array($getArrayMedia[$i]));
 
         echo 'deleted';
@@ -20,5 +26,8 @@ $result = pg_execute($dbconn,"query1",  array($getArrayMedia[$i]));
 
 sleep(2);
 }
+
+}
+
 
 ?>
