@@ -24,7 +24,7 @@ $rows = pg_fetch_array($mediaObject);
 
 echo $rows['media_name'];
 
-if ($s3->deleteObject($bucket,$rows['media_name'])) {
+if ($s3->deleteObject($bucket,'1457534870.jpg')) {
 $result = pg_execute($dbconn,"query1",  array($stringBuilder[$i]));
 
         echo 'Deleted';
