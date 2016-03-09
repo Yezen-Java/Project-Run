@@ -197,10 +197,21 @@ stringBuldier = stringBuldier+array[i].value+",";
       };
       console.log(stringBuldier);
       console.log(Arrayofvlaues);
-        
-    $.post('database/DeleteMedia.php',{ArrayMedia:stringBuldier}, function(data){
-        alert(data);
-       });
+
+    $.ajax({
+url: "/database/DeleteMEIDA.php",
+type: "POST",
+data: {data:stringBuldier},
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+
+alert(data);
+
+},
+error: function(){}           
+});
 
     }
   });

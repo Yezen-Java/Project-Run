@@ -9,7 +9,6 @@ $stringBuilder=explode(",", $_POST['ArrayMedia']);
 
 echo $getMedia;
 
-
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
 
@@ -17,7 +16,9 @@ $e = count($stringBuilder);
 
 for ($i=0; $i < $e; $i++) { 
 
-$mediaObject = pg_query("SELECT * From media where mediaid = $1");
+$id = $stringBuilder[$i];
+
+$mediaObject = pg_query("SELECT * From media where mediaid = $id");
 
 if ($mediaObject) {
 	
@@ -28,7 +29,7 @@ echo $rows['media_name'];
 if ($s3->deleteObject($bucket,$rows['media_name'])) {
 $result = pg_execute($dbconn,"query1",  array($stringBuilder[$i]));
 
-        echo 'deleted';
+        echo 'Deleted';
 
 }
 }
