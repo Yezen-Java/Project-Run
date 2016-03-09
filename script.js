@@ -243,7 +243,7 @@ function deleteLocationFromManager(){
 // }
 
 function getCheckedBoxes() {
-  var checkboxes = document.getElementsByName("checkboxmedia");
+  var checkboxes = document.getElementsByName("checkboxmedia[]");
   var checkboxesChecked = [];
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
