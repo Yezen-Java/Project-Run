@@ -194,10 +194,12 @@ $(function(){
       };
       console.log(Arrayofvlaues);
 
+var stringed = JSON.stringify(Arrayofvlaues);
+
       $.ajax({
 url: "/database/DeleteMedia.php",
 type: "POST",
-data: {"ArrayMedia[]":Arrayofvlaues},
+data: {ArrayMedia:stringed},
 contentType: false,
 cache: false,
 processData:false,
