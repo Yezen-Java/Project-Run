@@ -228,6 +228,7 @@ $mediaResults = pg_query("SELECT * from media");
 
   <!--File Manager dialogue box-->
   <div class="modal fade" id="file_manager_dialogue" role="dialog">
+  <div class = "container" id="modalc">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -236,6 +237,7 @@ $mediaResults = pg_query("SELECT * from media");
         </div>
 
         <div id= "fileManagerDiv" class="modal-body">
+          
         <?php    while ($rows =pg_fetch_array($mediaResults)) {
 
   $link = $rows['link'];
@@ -247,7 +249,6 @@ $mediaResults = pg_query("SELECT * from media");
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p></div>";
 }
 ?>
-         
         </div>
 
         <div class="modal-footer">
@@ -259,6 +260,7 @@ $mediaResults = pg_query("SELECT * from media");
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!--File manager dialogue box-->
 
