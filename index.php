@@ -234,7 +234,7 @@ $mediaResults = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">File Manager</h4>
         </div>
-
+<form id="deleteImage">
         <div id= "fileManagerDiv" class="modal-body">
             <div class = "list-group" id="modalc">
 
@@ -250,21 +250,21 @@ $mediaResults = pg_query("SELECT * from media");
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     <div class='displayCheckBoxSpan'>
     <span class='input-group-addon' id='checkBoxDeleteSpan'>
-        <input type='checkbox' name='checkboxmedia' value ='$mediaid'>
+        <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
       </span></div></div>";
 }
 ?>
         </div>
           </div>
-
-
+<input type="submit" class="btn btn-warning" id="deleteCheckedItems" value"Delete"/>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</form>
         <div class="modal-footer">
         <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
 <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/>
 </div>
 </form>
-          <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
         </div>
       </div>
     </div>
