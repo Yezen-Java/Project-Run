@@ -180,7 +180,7 @@ $(function(){
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
-    var Arrayofvlaues = new Array();
+    var Arrayofvlaues = [];
     var array = getCheckedBoxes();
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
@@ -198,7 +198,7 @@ $(function(){
       $.ajax({
      url: "/database/DeleteMedia.php",
      type: "POST",
-data: {ArrayMedia:Arrayofvlaues},
+data: {'ArrayMedia[]':Arrayofvlaues},
 contentType: false,
 cache: false,
 processData:false,

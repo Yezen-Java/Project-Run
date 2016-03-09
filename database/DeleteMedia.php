@@ -22,6 +22,8 @@ if ($mediaObject) {
 	
 $rows = pg_fetch_array($mediaObject);
 
+echo $rows['media_name'];
+
 if ($s3->deleteObject($bucket,$rows['media_name'])) {
 $result = pg_execute($dbconn,"query1",  array($getArrayMedia[$i]));
 
