@@ -195,20 +195,12 @@ $(function(){
 stringBuldier = stringBuldier+","+array[i].value;
 
       };
+      console.log(stringBuldier);
       console.log(Arrayofvlaues);
-        $.ajax({
-     url: "/database/DeleteMedia.php",
-     type: "POST",
-     data:stringBuldier,
-     contentType: false,
-    cache: false,
-    processData:false,
-success: function(data){
-alert(data);
-},
-error: function(){}           
-});
-
+        
+    $.post('database/DeleteMedia.php',{ArrayMedia:stringBuldier}, function(data){
+        alert(data);
+       });
 
     }
   });

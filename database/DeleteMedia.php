@@ -3,9 +3,9 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$getMedia = $_POST['stringBuldier']; 
+$getMedia = $_POST['ArrayMedia']; 
 //$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
-$stringBuilder=explode(",", $_POST['stringBuldier']);
+$stringBuilder=explode(",", $_POST['ArrayMedia']);
 
 echo $getMedia;
 
