@@ -195,7 +195,7 @@ $(function(){
         $.ajax({
      url: "/database/DeleteMedia.php",
      type: "POST",
-     data: ArrayMedia:valueChecked,
+     data: {ArrayMedia:valueChecked},
      contentType: false,
     cache: false,
     processData:false,
