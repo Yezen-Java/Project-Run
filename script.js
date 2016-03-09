@@ -191,22 +191,22 @@ $(function(){
     } else {
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
-      };
-      console.log(Arrayofvlaues);
-
-
-      $.ajax({
+        var valueChecked= array[i].value;
+        $.ajax({
      url: "/database/DeleteMedia.php",
      type: "POST",
-data: {ArrayMedia:Arrayofvlaues},
-contentType: false,
-cache: false,
-processData:false,
+     data: ArrayMedia:valueChecked,
+     contentType: false,
+    cache: false,
+    processData:false,
 success: function(data){
 alert(data);
 },
 error: function(){}           
 });
+      };
+      console.log(Arrayofvlaues);
+
 
 
     }
