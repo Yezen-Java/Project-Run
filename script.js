@@ -185,9 +185,11 @@ $(function(){
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
+      array = getCheckedBoxes();
     }else if (check == true && array.length == 0){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
+      array = getCheckedBoxes();
     } else {
 
 
