@@ -35,7 +35,7 @@ if($result){
     <img class='img-responsive' src='$nameLink'>
     <h3>$nameData</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p>
-    <span class='input-group-addon' id='checkBoxDeleteSpan' visibility='hidden'>
+    <span class='input-group-addon' id='checkBoxDeleteSpan'>
         <input type='checkbox' id='checkBoxesDelete'>
       </span></div>";
 }
