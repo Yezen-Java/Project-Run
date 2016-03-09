@@ -21,8 +21,11 @@ html, body {
 }
 /*circle button code end */
 #modalc{
-  width: 80%;
   height: 60%;
+  position: relative;
+  float: center;
+  overflow-y: auto;
+  width: 80%;
 }
 
 #sortable { 

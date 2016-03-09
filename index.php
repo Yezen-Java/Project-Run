@@ -236,7 +236,7 @@ $mediaResults = pg_query("SELECT * from media");
         </div>
 
         <div id= "fileManagerDiv" class="modal-body">
-            <div class = "container" id="modalc">
+            <div class = "list-group" id="modalc">
 
         <?php    while ($rows =pg_fetch_array($mediaResults)) {
 
