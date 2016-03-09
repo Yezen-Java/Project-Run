@@ -177,7 +177,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 $(function(){
   $("#deleteCheckedItems").click(function(){
-    $(".input-group-addon").show("slow");
+    $(".displayCheckBoxSpan").show("slow");
   });
 });
 
