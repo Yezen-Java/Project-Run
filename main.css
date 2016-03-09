@@ -27,7 +27,7 @@ html, body {
 
 #checkBoxesDelete{
   margin:5px;
-  display:none;
+  visibility: hidden;
 }
 
 #modalc{
