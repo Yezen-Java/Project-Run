@@ -241,9 +241,10 @@ $mediaResults = pg_query("SELECT * from media");
   $link = $rows['link'];
   $name = $rows['media_name'];
 
-  echo "<div class='col-md-3 col-sm-4 col-xs-6'>
-              <img src='$link' alt='$name' style='width:100px;height:150px;'>
-            </div>";
+  echo "<div class='col-md-4 portfolio-item' id='temp'>
+    <img class='img-responsive' src='$link'>
+    <h3>$name</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p></div>";
 }
 ?>
          
