@@ -27,7 +27,7 @@ html, body {
 
 .input-group-addon{
   margin:5px;
-  visibility: hidden;
+  display:none;
 }
 
 #modalc{
