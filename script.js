@@ -203,20 +203,20 @@ $(function(){
  //       });
 
      
-    $.ajax({
-url: "DeleteMedia.php",
-type: "POST",
-data: false,
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
+//     $.ajax({
+// url: "DeleteMedia.php",
+// type: "POST",
+// data: false,
+// contentType: false,
+// cache: false,
+// processData:false,
+// success: function(data){
 
-alert(data);
+// alert(data);
 
-},
-error: function(){}           
-});
+// },
+// error: function(){}           
+// });
 
     }
   });
@@ -276,6 +276,25 @@ error: function(){}
 }));
 });
 
+
+$(document).ready(function (e){
+$("#deleteImage").on('submit',(function(e){
+  e.preventDefault();
+$.ajax({
+url: "DeleteMedia.php",
+type: "POST",
+data: new FormData(this),
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+
+  $('#modalc').append(data);
+},
+error: function(){}           
+});
+}));
+});
 
 
 
