@@ -9,12 +9,13 @@ $stringBuilder=explode(",", $_POST['ArrayMedia']);
 
 echo $getMedia;
 
+
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
 
-$i = count($stringBuilder);
+$e = count($stringBuilder);
 
-for ($i=0; $i < $i; $i++) { 
+for ($i=0; $i < $e; $i++) { 
 
 $mediaObject = pg_query("SELECT * From media where mediaid = $1");
 
