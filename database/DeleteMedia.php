@@ -15,9 +15,9 @@ $result = pg_prepare($dbconn,"query1", $query);
 $e = count($stringBuilder);
 
 echo $e;
-for ($i=0; $i < $e; $i++) { 
+for ($i=0; $i < 1; $i++) { 
 
-$id = $stringBuilder[$i];
+$id = '46';
 
 $mediaObject = pg_query("SELECT * From media where mediaid = $id");
 
