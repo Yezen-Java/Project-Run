@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$getArrayMedia = $_POST['ArrayMedia']; 
+$getArrayMedia = $_REQUEST['activitiesArray']; 
 //$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
 //explode(",", $_POST['data']);
 
