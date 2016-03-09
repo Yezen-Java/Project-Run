@@ -189,13 +189,17 @@ $(function(){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
     } else {
+      var stringBuldier ="";
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
-        var valueChecked= array[i].value;
+stringBuldier = stringBuldier+","+array[i].value;
+
+      };
+      console.log(Arrayofvlaues);
         $.ajax({
      url: "/database/DeleteMedia.php",
      type: "POST",
-     data: valueChecked,
+     data:{ ArrayMedia:stringBuldier },
      contentType: false,
     cache: false,
     processData:false,
@@ -204,9 +208,6 @@ alert(data);
 },
 error: function(){}           
 });
-      };
-      console.log(Arrayofvlaues);
-
 
 
     }
