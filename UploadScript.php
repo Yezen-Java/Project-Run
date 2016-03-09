@@ -25,7 +25,7 @@ $actual_media_name = time().".".$ext;
 if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
 $msg = "S3 Upload Successful.";	
 $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
-$result = pg_query("INSERT into media (media_name,link) values ('$name','$s3file')");
+$result = pg_query("INSERT into media (media_name,link,ext_name) values ('$name','$s3file','$actual_media_name')");
 $nameData = $name;
 $nameLink = $s3file;
 
@@ -37,7 +37,7 @@ if($result){
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p>
     <div id='displayCheckBoxSpan'>
     <span class='input-group-addon' id='checkBoxDeleteSpan'>
-        <input type='checkbox' id='checkBoxesDelete'>
+        <input type='checkbox' id='checkBoxesDelete' name='checkBoxesDelete[]'>
       </span></div></div>";
 }
 }
