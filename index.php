@@ -243,7 +243,13 @@ $mediaResults = pg_query("SELECT * from media");
   $link = $rows['link'];
   $name = $rows['media_name'];
 
-  echo "<div class='col-md-4 portfolio-item' id='temp'>
+  <div class="checkbox">
+  <label><input type="checkbox" value="">Option 1</label>
+</div>
+
+  echo "<span class='input-group-addon'>
+        <input type='checkbox'>
+      </span> <div class='col-md-4 portfolio-item' id='temp'>
     <img class='img-responsive' src='$link'>
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p></div>";
