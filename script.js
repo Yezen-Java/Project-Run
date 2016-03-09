@@ -192,7 +192,7 @@ $(function(){
       var stringBuldier ="";
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
-stringBuldier = stringBuldier+","+array[i].value;
+stringBuldier = stringBuldier+array[i].value+",";
 
       };
       console.log(stringBuldier);
