@@ -7,7 +7,7 @@ $stringBuilder = $_REQUEST['ArrayMedia'];
 //$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
 //$stringBuilder=explode(",", $_POST['ArrayMedia']);
 
-echo $stringBuilder;
+echo $stringBuilder+ " test";
 
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
