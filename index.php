@@ -228,8 +228,8 @@ $mediaResults = pg_query("SELECT * from media");
 
   <!--File Manager dialogue box-->
   <div class="modal fade" id="file_manager_dialogue" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
+    <div class="modal-dialog" id="fileContent">
+      <div class="modal-content" >
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">File Manager</h4>
