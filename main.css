@@ -25,7 +25,7 @@ html, body {
   width: 80%;
 }
 
-#checkBoxesDelete{
+.input-group-addon{
   margin:5px;
   visibility: hidden;
 }
