@@ -180,13 +180,15 @@ $(function(){
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
-var array = getCheckedBoxes;
+    var array = getCheckedBoxes();
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
-    }else{
+    }else if (check == true && array.length == 0){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
+    } else {
+      console.log(array);
     }
   });
 });
@@ -221,7 +223,6 @@ function getCheckedBoxes() {
         checkboxesChecked.push(checkboxes[i]);
      }
   }
-  console.log(checkboxesChecked);
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
