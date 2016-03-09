@@ -25,6 +25,10 @@ html, body {
   width: 80%;
 }
 
+#checkBoxes{
+  margin: 10px;
+}
+
 #modalc{
   height: 60%;
   position: relative;

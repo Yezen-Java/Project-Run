@@ -247,9 +247,9 @@ $mediaResults = pg_query("SELECT * from media");
     <img class='img-responsive' src='$link'>
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div> <span class='input-group-addon'>
+    <span class='input-group-addon' id = 'checkBoxes'>
         <input type='checkbox'>
-      </span>";
+      </span></div>";
 }
 ?>
         </div>

@@ -35,9 +35,9 @@ if($result){
     <img class='img-responsive' src='$nameLink'>
     <h3>$nameData</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p>
-    </div><span class='input-group-addon'>
+    <span class='input-group-addon' id ='checkBoxes'>
         <input type='checkbox'>
-      </span>";
+      </span></div>";
 }
 }
 else{
