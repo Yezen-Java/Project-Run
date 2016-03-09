@@ -199,7 +199,7 @@ stringBuldier = stringBuldier+","+array[i].value;
         $.ajax({
      url: "/database/DeleteMedia.php",
      type: "POST",
-     data:{ ArrayMedia:stringBuldier },
+     data:stringBuldier,
      contentType: false,
     cache: false,
     processData:false,
