@@ -26,9 +26,8 @@ html, body {
 }
 
 #checkBoxesDelete{
-  margin: 10px;
-  padding: 10px;
-  
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #modalc{
@@ -67,7 +66,7 @@ html, body {
     padding-top: 3px;
 }
 #temp {
-    margin: 10px;
+    padding: 10px;
 }
 
 .listItem{
