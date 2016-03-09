@@ -198,12 +198,10 @@ stringBuldier = stringBuldier+array[i].value+",";
       console.log(stringBuldier);
       console.log(Arrayofvlaues);
 
-$(function() {
+
        $.post('database/DeleteMedia.php',{ArrayMedia:Arrayofvlaues}, function(data){
         alert(data);
        });
-       return false;
-  });
 
 
 //     $.ajax({
