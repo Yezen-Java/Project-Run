@@ -180,7 +180,7 @@ $(function(){
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
-
+var array = getCheckedBoxes;
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
@@ -196,14 +196,36 @@ function deleteLocationFromTour(){
 }
 
 
-function deteleLocationFromManager(){
+function deleteLocationFromManager(){
 
 }
 
 
-function deteleMeidaFromManager(){
+// function deleteMediaFromManager(value){
 
+//   var selected = new Array();
+
+//   $("input:checkbox[name=type]:checked").each(function() {
+//        selected.push($(this).val());
+//   });
+
+// }
+
+function getCheckedBoxes() {
+  var checkboxes = document.getElementsByName("checkboxmedia");
+  var checkboxesChecked = [];
+  // loop over them all
+  for (var i=0; i<checkboxes.length; i++) {
+     // And stick the checked ones onto an array...
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i]);
+     }
+  }
+  console.log(checkboxesChecked);
+  // Return the array if it is non-empty, or null
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
+
 
 $(document).ready(function (e){
 $("#uploadForm").on('submit',(function(e){
@@ -223,7 +245,6 @@ error: function(){}
 });
 }));
 });
-
 
 
 
