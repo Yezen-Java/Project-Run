@@ -200,7 +200,7 @@ $(function(){
     $.ajax({
 url: "/database/DeleteMedia.php",
 type: "POST",
-data: {'ArrayMedia[]':Arrayofvlaues},
+data: Arrayofvlaues,
 contentType: false,
 cache: false,
 processData:false,
