@@ -204,7 +204,7 @@ $(function(){
 
      
     $.ajax({
-url: "/database/DeleteMedia.php",
+url: "DeleteMedia.php",
 type: "POST",
 data: false,
 contentType: false,
