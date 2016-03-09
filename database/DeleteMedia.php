@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$stringBuilder = $_POST['ArrayMedia']; 
+$stringBuilder = $_REQUEST['ArrayMedia']; 
 //$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
 //$stringBuilder=explode(",", $_POST['ArrayMedia']);
 
@@ -32,6 +32,8 @@ $result = pg_execute($dbconn,"query1",  array($stringBuilder[$i]));
 
         echo 'Deleted';
 
+}else{
+	echo "error";
 }
 }
 
