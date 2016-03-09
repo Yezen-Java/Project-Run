@@ -193,6 +193,20 @@ $(function(){
         Arrayofvlaues.push(array[i].value);
       };
       console.log(Arrayofvlaues);
+      $.ajax({
+url: "/database/DeleteMedia.php",
+type: "POST",
+data: {ArrayMedia:Arrayofvlaues},
+contentType: false,
+cache: false,
+processData:false,
+success: function(data){
+alert(data);
+},
+error: function(){}           
+});
+
+
     }
   });
 });
