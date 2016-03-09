@@ -198,20 +198,28 @@ stringBuldier = stringBuldier+array[i].value+",";
       console.log(stringBuldier);
       console.log(Arrayofvlaues);
 
-    $.ajax({
-url: "/database/DeleteMedia.php",
-type: "POST",
-data: {data:stringBuldier},
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
+$(function() {
+       $.post('database/DeleteMedia.php',{data:stringBuldier}, function(data){
+        alert(data);
+       });
+       return false;
+  });
 
-alert(data);
 
-},
-error: function(){}           
-});
+//     $.ajax({
+// url: "/database/DeleteMedia.php",
+// type: "POST",
+// data: {data:stringBuldier},
+// contentType: false,
+// cache: false,
+// processData:false,
+// success: function(data){
+
+// alert(data);
+
+// },
+// error: function(){}           
+// });
 
     }
   });
