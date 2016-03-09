@@ -3,17 +3,18 @@
 include 's3_config.php';
 include 'Connect.php';
 
-$getMedia = $_POST['ArrayMedia']; 
+$stringBuilder = $_POST['ArrayMedia']; 
 //$getArrayMedia = json_decode(str_replace('\\', '', $_POST['ArrayMedia']));
-$stringBuilder=explode(",", $_POST['ArrayMedia']);
+//$stringBuilder=explode(",", $_POST['ArrayMedia']);
 
-echo $getMedia;
+echo $stringBuilder;
 
 $query = "DELETE From media where mediaid = $1";
 $result = pg_prepare($dbconn,"query1", $query);
 
 $e = count($stringBuilder);
 
+echo $e;
 for ($i=0; $i < $e; $i++) { 
 
 $id = $stringBuilder[$i];

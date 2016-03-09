@@ -199,7 +199,7 @@ stringBuldier = stringBuldier+array[i].value+",";
       console.log(Arrayofvlaues);
 
 $(function() {
-       $.post('database/DeleteMedia.php',{ArrayMedia:stringBuldier}, function(data){
+       $.post('database/DeleteMedia.php',{ArrayMedia:Arrayofvlaues}, function(data){
         alert(data);
        });
        return false;
