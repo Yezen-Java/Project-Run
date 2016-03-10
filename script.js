@@ -16,10 +16,27 @@ $(document).ready(function(){
 
 
 $("#pointer1").click(function(){
+  reorder();
   $("#myModal").modal('show');
   $('.sortable').sortable();
 });
 
+var files = [
+  {
+    name: "file1",
+    order: 2
+  },
+  
+  {
+    name: "file2",
+    order: 1  
+  },
+  
+  {
+    name: "file3",
+    order: 3
+  }
+];
 
 function compare (a,b){
   if(a.order < b.order)
@@ -163,7 +180,7 @@ $(function(){
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
-    var Arrayofvlaues = new Array();;
+    var Arrayofvlaues = [];
     var array = getCheckedBoxes();
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
@@ -172,34 +189,25 @@ $(function(){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
     } else {
-      var stringBuldier ="45";
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
-
+        var valueChecked= array[i].value;
+        $.ajax({
+     url: "/database/DeleteMedia.php",
+     type: "POST",
+     data: valueChecked,
+     contentType: false,
+    cache: false,
+    processData:false,
+success: function(data){
+alert(data);
+},
+error: function(){}           
+});
       };
-      console.log(stringBuldier);
       console.log(Arrayofvlaues);
 
- // $.post('database/DeleteMedia.php',{Array:stringBuldier}, function(data){
- //        alert(data);
-       
- //       });
 
-     
-//     $.ajax({
-// url: "DeleteMedia.php",
-// type: "POST",
-// data: false,
-// contentType: false,
-// cache: false,
-// processData:false,
-// success: function(data){
-
-// alert(data);
-
-// },
-// error: function(){}           
-// });
 
     }
   });
@@ -226,7 +234,7 @@ function deleteLocationFromManager(){
 // }
 
 function getCheckedBoxes() {
-  var checkboxes = document.getElementsByName("checkboxmedia[]");
+  var checkboxes = document.getElementsByName("checkboxmedia");
   var checkboxesChecked = [];
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
@@ -259,25 +267,6 @@ error: function(){}
 }));
 });
 
-
-$(document).ready(function (e){
-$("#deleteImage").on('submit',(function(e){
-  e.preventDefault();
-$.ajax({
-url: "DeleteMedia.php",
-type: "POST",
-data: new FormData(this),
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
-
-  $('#modalc').append(data);
-},
-error: function(){}           
-});
-}));
-});
 
 
 
