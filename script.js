@@ -246,9 +246,11 @@ function appendMediaToLocaiton(value){
 var locationID = value;
 console.log("test "+locationID)
   $(function() {
+
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
 
         $("#listMedia").append(data);
+
         alert(data);
 
 
@@ -265,7 +267,7 @@ function addmeidaFromSelectList(){
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
     var selectedText = selectBox.options[selectBox.selectedIndex].text;
 
-    $('#listMedia').append('<li value='+selectedValue+'>'+selectedText+'</li>');
+    $('#listMedia').append('<button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <li value='+selectedValue+'>'+selectedText+'</li>');
 
 
 
