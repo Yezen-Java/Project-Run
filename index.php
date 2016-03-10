@@ -193,7 +193,7 @@ $MediaSelect = pg_query("SELECT * from media");
               <li><a href="#locationManagerModel" data-toggle="modal">Edit Locations</a></li>
             </ul>
           </li>
-          <li><a id="fileMangerNav">File Manager</a></li>
+          <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
         </ul>
