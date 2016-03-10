@@ -4,6 +4,7 @@ include 'Connect.php';
 
 $getLocationId = $_POST['LocationId'];
 
+echo $getLocationId ;
 
 $getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = $getLocationId and location_res.mediaid = media.mediaid;");
 
@@ -11,7 +12,6 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
 $rowsNumber = pg_num_rows($getLocationMedia);
 
 
-if ($getLocationMedia) {
 
 	if($rowsNumber>0){
 
@@ -27,8 +27,6 @@ if ($getLocationMedia) {
 	echo "No Media";
 }
 
-
-}
 
 
 
