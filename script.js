@@ -8,6 +8,8 @@ $(document).ready(function(){
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    $("#tourList").removeClass('hidden');
+    $("#middleContainer").add("#tourList");
 });
 
 // $("#file-manager").click(function(){
