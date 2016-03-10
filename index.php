@@ -279,7 +279,7 @@ $MediaSelect = pg_query("SELECT * from media");
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
-          <?php
+<!--           <?php
 
           echo "<select>";
           while ($rows=pg_fetch_array($MediaSelect)) {
@@ -292,7 +292,7 @@ $MediaSelect = pg_query("SELECT * from media");
          echo "</select>";
 
 
-          ?>
+          ?> -->
 
         </div>
     	<div class="modal-body">
