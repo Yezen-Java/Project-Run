@@ -12,7 +12,8 @@ $(document).ready(function(){
 
     $("#fileMangerNav").click(function(){
         console.log("clicked");
-        $("#middleContainer").empty();
+        $("#middleContainer").empty("#tourList");
+        $("#file_manager").removeClass('hidden');
         $("#middleContainer").add("#file_manager");
     });
 
