@@ -146,7 +146,6 @@ $MediaSelect = pg_query("SELECT * from media");
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
         </div>
-  </div>
       
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
@@ -168,11 +167,6 @@ $MediaSelect = pg_query("SELECT * from media");
         </div>
     </div>
 </div>
-
-
-  <div id="file_manger">
-    <h2>File Manager</h2>
-  </div>
 
 <div class="container">
   <nav class="navbar navbar-default navbar-fixed-top" id="topNavbarDefault">
@@ -233,7 +227,7 @@ $MediaSelect = pg_query("SELECT * from media");
   </div>
   <!--Create tour dialogue box-->
 
-<!--   
+  
   <div class="modal fade" id="file_manager_dialogue" role="dialog">
     <div class="modal-dialog" id="fileContent">
       <div class="modal-content" >
@@ -277,7 +271,7 @@ $MediaSelect = pg_query("SELECT * from media");
         </div>
       </div>
     </div>
-  </div> -->
+  </div> 
   <!--File manager dialogue box-->
 
   <div class="modal fade" id="myModal" role="dialog">
