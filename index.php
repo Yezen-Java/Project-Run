@@ -280,8 +280,9 @@ $MediaSelect = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-    	<div class="modal-body">
+    	<div id="bodyLocations" class="modal-body">
 			<h1>Upload Files</h1>
+
         	<ul class="sortable">
           		<li> item1
         	</ul>

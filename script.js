@@ -145,11 +145,14 @@ function createTourDetails(){
 }
 //this function open the file model for specific locations.
 function addLocationRes(value) {
+  var value1 = value;
   $("#myModal ul").empty();
   console.log("works");
   reorder();
   $("#myModal").modal();
   $('.sortable').sortable();
+
+  appendMediaToLocaiton(value1);
 }
 
 
@@ -213,7 +216,18 @@ error: function(){}
   });
 });
 
-function deleteLocationFromTour(){
+function appendMediaToLocaiton(value){
+var locationID = value;
+  $(function() {
+      var value1 = $('#tourButton').val();
+       $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
+
+        $("#bodyLocations ul").html(data);
+
+
+       });
+       return false;
+  });
 
 }
 
