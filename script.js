@@ -236,7 +236,7 @@ function addmeidaFromSelectList(){
 
    var selectBox = document.getElementById("MediaSelectId");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    var selectedText = selectBox.options[selectBox.selectedIndex].Text;
+    var selectedText = selectBox.options[selectBox.selectedIndex].text;
 
     $('#listMeida').append('<li value='+selectedValue+'>'+selectedText+'</li>');
 
