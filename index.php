@@ -10,7 +10,6 @@ include 'database/Connect.php';
 if(isset($_SESSION['id'])){
     $userId= $_SESSION['id'];
     $username= $_SESSION['username'];
-
 }else{
     header('location: login.php');
     die();
@@ -35,9 +34,7 @@ $locationsQuery = pg_query("SELECT * From location");
 $locationsQuery2 = pg_query("SELECT * From location");
 
 if ($locationsQuery) {
-
-echo "Tour location passed. ";
-
+	echo "Tour location passed. ";
 }else{
   echo "Failed to Tour data. ";
 }
@@ -248,13 +245,15 @@ $MediaSelect = $mediaResults;
   $mediaid = $rows['mediaid'];
 
   echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
-    <img class='img-responsive' src='$link'>
+    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     <div class='displayCheckBoxSpan'>
     <span class='input-group-addon' id='checkBoxDeleteSpan'>
         <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
       </span></div></div>";
+
+     
 }
 ?>
         </div>
@@ -291,9 +290,8 @@ $MediaSelect = $mediaResults;
           echo "</select>";
           ?>
         </div>
-    	<div id="bodyLocations" class="modal-body">
+    	<div class="modal-body">
 			<h1>Upload Files</h1>
-
         	<ul class="sortable">
           		<li> item1
         	</ul>
