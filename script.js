@@ -248,7 +248,7 @@ console.log("test "+locationID)
   $(function() {
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
 
-        $("#listMedia").html(data);
+        $("#listMedia").append(data);
         alert(data);
 
 
@@ -265,7 +265,7 @@ function addmeidaFromSelectList(){
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
     var selectedText = selectBox.options[selectBox.selectedIndex].text;
 
-    $('#listMeida').append('<li value='+selectedValue+'>'+selectedText+'</li>');
+    $('#listMedia').append('<li value='+selectedValue+'>'+selectedText+'</li>');
 
 
 
