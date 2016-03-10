@@ -10,6 +10,7 @@ $(document).ready(function(){
     });
 
     $("#fileMangerNav").click(function(){
+        console.log("clicked");
         $("#middleContainer").empty();
     });
 
