@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     $("#fileMangerNav").click(function(){
         console.log("clicked");
-        $("#middleContainer").empty("#tourList");
+        $("#middleContainer").empty();
         $("#middleContainer").add("#file_manager");
     });
 
