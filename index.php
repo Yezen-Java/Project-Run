@@ -123,23 +123,7 @@ $MediaSelect = pg_query("SELECT * from media");
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
       <div class = "container" id="middleContainer">
-        <div class="list-group" id="tourList">
-          <ul id="buttonsListTours">  
-      <?php
-          while ($rows =pg_fetch_array($toursListQuery)) {
-          $tour_id =$rows["tourid"];
-          $tour_name =$rows["tour_name"];
-
-        echo "<li id='$tour_id'> 
-            <div class='input-group'> 
-            <span class='input-group-addon'> 
-              <button class='glyphicon glyphicon-trash' value ='$tour_id' id='trashBox' onclick='deleteTourLi(this.value)'></button> 
-            </span> <button type='button' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
-          }  
-        ?>
-        </ul>
-        </div>
-      </div>
+        
         
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
@@ -167,6 +151,24 @@ $MediaSelect = pg_query("SELECT * from media");
         </div>
     </div>
 </div>
+
+<div class="list-group" id="tourList">
+      <ul id="buttonsListTours">  
+  <?php
+      while ($rows =pg_fetch_array($toursListQuery)) {
+      $tour_id =$rows["tourid"];
+      $tour_name =$rows["tour_name"];
+
+    echo "<li id='$tour_id'> 
+        <div class='input-group'> 
+        <span class='input-group-addon'> 
+          <button class='glyphicon glyphicon-trash' value ='$tour_id' id='trashBox' onclick='deleteTourLi(this.value)'></button> 
+        </span> <button type='button' class='list-group-item' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
+      }  
+    ?>
+    </ul>
+    </div>
+  </div>
 
 
 

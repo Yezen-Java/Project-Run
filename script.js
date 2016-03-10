@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $("#middleContainer").add("#tourList");
+
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
     });
@@ -11,7 +13,8 @@ $(document).ready(function(){
 
     $("#fileMangerNav").click(function(){
         console.log("clicked");
-        $("#middleContainer").empty();
+        $("#middleContainer").remove("#tourList");
+
     });
 
     
