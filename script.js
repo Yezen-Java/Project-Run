@@ -268,7 +268,7 @@ function addmeidaFromSelectList(){
     var selectedText = selectBox.options[selectBox.selectedIndex].text;
 
     $('#listMedia').append('<div id = "container"> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> 
-      <li value='+selectedValue+'>'+selectedText+'</li>'+'</div>');
+      <li value='+selectedValue+'>'+selectedText+'</li></div>');
 
 
 

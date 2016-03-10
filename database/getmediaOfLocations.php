@@ -19,7 +19,7 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
                $media_name = $rows['media_name'];
 
 
-        echo "<div id='container'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <li> $media_name</li></div>";
+        echo "<div id='container'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <li> $media_name</li> </div>";
 
 
 	}
