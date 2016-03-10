@@ -73,15 +73,15 @@ function compare (a,b){
     return 0;
 }
 
-function reorder(){
-  files.sort(compare);
-  console.table(files);
+// function reorder(){
+//   //files.sort(compare);
+//  // console.table(files);
 
-  for (var i = 0; i < files.length;i++){
-    console.log(files[i].name);
-    $("#myModal ul").append("<li>" +files[i].name);
-  }
-}
+//   for (var i = 0; i < files.length;i++){
+//     console.log(files[i].name);
+//     $("#myModal ul").append("<li>" +files[i].name);
+//   }
+// }
 
 
 function Save(){
@@ -174,7 +174,7 @@ function addLocationRes(value) {
   console.log("test value "+ value);
   $("#myModal ul").empty();
   console.log("works");
-  reorder();
+ // reorder();
   $("#myModal").modal();
   $('.sortable').sortable();
 
