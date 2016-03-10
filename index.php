@@ -45,7 +45,8 @@ echo "Tour location passed. ";
 
 $mediaResults = pg_query("SELECT * from media");
 
-$MediaSelect = pg_query("SELECT * from media");
+$MediaSelect = $mediaResults;
+//pg_query("SELECT * from media");
 
 
 ?>
@@ -279,6 +280,16 @@ $MediaSelect = pg_query("SELECT * from media");
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
+          <?php
+          echo "<select id='MediaSelectId' class='form-control'>";
+          while($rows = pg_fetch_array($MediaSelect)){
+           $mediaid = $rows['meidaid'];
+           $mediaName = $rows['media_name'];
+           echo "<option id='option' value='$mediaid'>$mediaName</option>";
+
+          }
+          echo "</select>";
+          ?>
         </div>
     	<div id="bodyLocations" class="modal-body">
 			<h1>Upload Files</h1>
