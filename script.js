@@ -8,8 +8,12 @@ $(document).ready(function(){
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+
+    $("#fileMangerNav").click(function(){
+        $("#middleContainer").empty();
+    });
+
     
-    $("#middleContainer").add("#tourList");
 });
 
 // $("#file-manager").click(function(){
