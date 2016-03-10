@@ -16,27 +16,10 @@ $(document).ready(function(){
 
 
 $("#pointer1").click(function(){
-  reorder();
   $("#myModal").modal('show');
   $('.sortable').sortable();
 });
 
-var files = [
-  {
-    name: "file1",
-    order: 2
-  },
-  
-  {
-    name: "file2",
-    order: 1  
-  },
-  
-  {
-    name: "file3",
-    order: 3
-  }
-];
 
 function compare (a,b){
   if(a.order < b.order)
