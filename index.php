@@ -122,7 +122,7 @@ $MediaSelect = pg_query("SELECT * from media");
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div class = "container" id="middleContainer">
+      <div id="middleContainer"></div>
         
         
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
@@ -152,7 +152,7 @@ $MediaSelect = pg_query("SELECT * from media");
     </div>
 </div>
 
-<div class="list-group" id="tourList">
+<div class="list-group container" id="tourList">
       <ul id="buttonsListTours">  
   <?php
       while ($rows =pg_fetch_array($toursListQuery)) {
