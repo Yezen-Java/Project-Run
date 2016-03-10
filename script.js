@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
     });

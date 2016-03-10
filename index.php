@@ -147,6 +147,11 @@ $MediaSelect = pg_query("SELECT * from media");
           <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
         </div>
   </div>
+
+  <div id="file_manger">
+    <h2>File Manager</h2>
+  </div>
+
       
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
@@ -168,12 +173,6 @@ $MediaSelect = pg_query("SELECT * from media");
         </div>
     </div>
 </div>
-
-<div id="file_manger">
-  <h2>File Manager</h2>
-</div>
-
-
 
 
 
@@ -197,15 +196,15 @@ $MediaSelect = pg_query("SELECT * from media");
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#locationManagerModel" data-toggle="modal">Edit Locations</a></li>
-          </ul>
-        </li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#locationManagerModel" data-toggle="modal">Edit Locations</a></li>
+            </ul>
+          </li>
           <li><a id="fileMangerNav">File Manager</a></li>
           <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
           <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
-           </ul>
+        </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
