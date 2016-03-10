@@ -3,26 +3,26 @@
 $getLocationId = $_POST['LocationId'];
 
 
-$getLocationMeida = pg_query("SELECT * From location_res, media where locationid = $getLocationId");
+$getLocationMedia = pg_query("SELECT * From location_res, media where locationid = $getLocationId");
 
 
-$rowsNumber = pg_num_rows($getLocationMeida);
+$rowsNumber = pg_num_rows($getLocationMedia);
 
 
-if ($getLocationMeida) {
+if ($getLocationMedia) {
 
 	if($rowsNumber>0){
 
 	    while ($rows = pg_fetch_array($getLocationMeida)) {
-		       $meidaId = $rows['mediaid'];
-               $meida_name = $rows['media_name'];
+		       $mediaId = $rows['mediaid'];
+               $media_name = $rows['media_name'];
 
-        echo "<li id='$meidaId'>$meida_name</li>";
+        echo "<li id='$mediaId'>$media_name</li>";
 
 
 	}
 }else{
-	echo "No Meida";
+	echo "No Media";
 }
 
 

@@ -299,8 +299,7 @@ $MediaSelect = pg_query("SELECT * from media");
         </div>
     	<div class="modal-body">
 			<h1>Upload Files</h1>
-        	<ul id ="listMeida" class="sortable">
-          		<li> item1
+        	<ul id ="listMedia" class="sortable">
         	</ul>
     	</div>
         <div class="modal-footer">

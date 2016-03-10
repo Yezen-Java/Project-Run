@@ -47,22 +47,22 @@ $("#pointer1").click(function(){
   $('.sortable').sortable();
 });
 
-var files = [
-  {
-    name: "file1",
-    order: 2
-  },
+// var files = [
+//   {
+//     name: "file1",
+//     order: 2
+//   },
   
-  {
-    name: "file2",
-    order: 1  
-  },
+//   {
+//     name: "file2",
+//     order: 1  
+//   },
   
-  {
-    name: "file3",
-    order: 3
-  }
-];
+//   {
+//     name: "file3",
+//     order: 3
+//   }
+// ];
 
 function compare (a,b){
   if(a.order < b.order)
@@ -246,10 +246,10 @@ function appendMediaToLocaiton(value){
 var locationID = value;
 console.log("test "+locationID)
   $(function() {
-      var value1 = $('#tourButton').val();
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
 
-        $("#listMeida").html(data);
+        $("#listMedia").html(data);
+        alert(data);
 
 
        });
