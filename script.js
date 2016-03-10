@@ -243,7 +243,7 @@ error: function(){}
   });
 });
 
-function appendMediaToLocaiton(value1){
+function appendMediaToLocaiton(value){
 var locationID = value;
 console.log("test "+locationID)
   $(function() {
