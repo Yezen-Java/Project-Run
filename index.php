@@ -244,13 +244,15 @@ $MediaSelect = pg_query("SELECT * from media");
   $mediaid = $rows['mediaid'];
 
   echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
-    <img class='img-responsive' src='$link' width='200px' height='100px'>
+    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     <div class='displayCheckBoxSpan'>
     <span class='input-group-addon' id='checkBoxDeleteSpan'>
         <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
       </span></div></div>";
+
+     
 }
 ?>
         </div>
