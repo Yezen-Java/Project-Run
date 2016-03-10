@@ -218,11 +218,12 @@ error: function(){}
 
 function appendMediaToLocaiton(value){
 var locationID = value;
+console.log("test "+locationID)
   $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
 
-        $("#bodyLocations ul").html(data);
+        $("#listMeida").html(data);
 
 
        });
