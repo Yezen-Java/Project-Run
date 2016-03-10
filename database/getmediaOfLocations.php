@@ -16,7 +16,7 @@ if ($getLocationMedia) {
 	if($rowsNumber>0){
 
 	    while ($rows = pg_fetch_array($getLocationMeida)) {
-		       $mediaId = $rows['mediaid'];
+		       //$mediaId = $rows['mediaid'];
                $media_name = $rows['media_name'];
 
         echo "<li id='$mediaId'>$media_name</li>";
