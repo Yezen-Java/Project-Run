@@ -17,6 +17,22 @@ $(document).ready(function(){
 
     });
 
+    $("#uploadForm").on('submit',(function(e){
+      e.preventDefault();
+      $.ajax({
+        url: "UploadScript.php",
+        type: "POST",
+        data: new FormData(this),
+        contentType: false,
+        cache: false,
+        processData:false,
+        success: function(data){
+
+          $('#modalc').append(data);
+        },
+        error: function(){}           
+      });
+    }));
     
 });
 
@@ -285,26 +301,6 @@ function getCheckedBoxes() {
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
-
-
-$(document).ready(function (e){
-$("#uploadForm").on('submit',(function(e){
-  e.preventDefault();
-$.ajax({
-url: "UploadScript.php",
-type: "POST",
-data: new FormData(this),
-contentType: false,
-cache: false,
-processData:false,
-success: function(data){
-
-  $('#modalc').append(data);
-},
-error: function(){}           
-});
-}));
-});
 
 
 
