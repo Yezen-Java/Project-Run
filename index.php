@@ -10,7 +10,6 @@ include 'database/Connect.php';
 if(isset($_SESSION['id'])){
     $userId= $_SESSION['id'];
     $username= $_SESSION['username'];
-
 }else{
     header('location: login.php');
     die();
@@ -35,9 +34,7 @@ $locationsQuery = pg_query("SELECT * From location");
 $locationsQuery2 = pg_query("SELECT * From location");
 
 if ($locationsQuery) {
-
-echo "Tour location passed. ";
-
+	echo "Tour location passed. ";
 }else{
   echo "Failed to Tour data. ";
 }
@@ -247,7 +244,7 @@ $MediaSelect = pg_query("SELECT * from media");
   $mediaid = $rows['mediaid'];
 
   echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
-    <img class='img-responsive' src='$link'>
+    <img class='img-responsive' src='$link' width='200px' height='100px'>
     <h3>$name</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     <div class='displayCheckBoxSpan'>
@@ -280,9 +277,8 @@ $MediaSelect = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
-    	<div id="bodyLocations" class="modal-body">
+    	<div class="modal-body">
 			<h1>Upload Files</h1>
-
         	<ul class="sortable">
           		<li> item1
         	</ul>

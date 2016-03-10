@@ -32,7 +32,7 @@ $nameLink = $s3file;
 if($result){
 
   echo "<div class='col-md-4 portfolio-item' id='temp'>
-    <img class='img-responsive' src='$nameLink'>
+    <img class='img-responsive' src='$nameLink' width='200px' height='100px'>
     <h3>$nameData</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p>
     <div id='displayCheckBoxSpan'>
