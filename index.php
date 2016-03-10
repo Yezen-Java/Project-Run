@@ -122,8 +122,8 @@ $MediaSelect = pg_query("SELECT * from media");
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
       list group-->
-      <div id="middleContainer">
-        <div class="list-group container" id="tourList">
+      <div id="middleContainer" class="container">
+        <div class="list-group" id="tourList">
             <ul id="buttonsListTours">  
         <?php
             while ($rows =pg_fetch_array($toursListQuery)) {
@@ -146,7 +146,7 @@ $MediaSelect = pg_query("SELECT * from media");
           <button id="deleteTour" type="button" class="btn btn-danger"><strong>Delete</strong></button>
           <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
         </div>
-      </div>
+  </div>
       
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
@@ -167,6 +167,10 @@ $MediaSelect = pg_query("SELECT * from media");
           </ul>
         </div>
     </div>
+</div>
+
+<div id="file_manger">
+  <h2>File Manager</h2>
 </div>
 
 
