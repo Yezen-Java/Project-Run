@@ -279,21 +279,6 @@ $MediaSelect = pg_query("SELECT * from media");
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
-<!--           <?php
-
-          echo "<select>";
-          while ($rows=pg_fetch_array($MediaSelect)) {
-            $mediaidSelect = $rows['mediaid'];
-            $medianameSelect = $rows['media_name'];
-
-            echo "<option value='$mediaidSelect'>$medianameSelect</option>";
-
-        }
-         echo "</select>";
-
-
-          ?> -->
-
         </div>
     	<div class="modal-body">
 			<h1>Upload Files</h1>
