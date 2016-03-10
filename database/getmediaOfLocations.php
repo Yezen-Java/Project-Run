@@ -18,7 +18,7 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
 		       //$mediaId = $rows['mediaid'];
                $media_name = $rows['media_name'];
 
-        echo "<li id='$mediaId'>$media_name</li>";
+        echo "<li>$media_name</li>";
 
 
 	}
