@@ -288,9 +288,6 @@ $MediaSelect = $mediaResults;
 
             echo "<option vlaue='$mediaidSelect'>$medianameSelect</option>";
 
-
-          echo "";
-
         }
          echo "</select>";
 
