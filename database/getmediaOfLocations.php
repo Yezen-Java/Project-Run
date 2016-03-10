@@ -19,6 +19,7 @@ if ($getLocationMeida) {
 
         echo "<li id='$meidaId'>$meida_name</li>";
 
+
 	}
 }else{
 	echo "No Meida";
