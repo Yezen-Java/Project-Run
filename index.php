@@ -42,8 +42,8 @@ if ($locationsQuery) {
 
 $mediaResults = pg_query("SELECT * from media");
 
-$MediaSelect = $mediaResults;
-//pg_query("SELECT * from media");
+$MediaSelect = pg_query("SELECT * from media");
+
 
 
 ?>
