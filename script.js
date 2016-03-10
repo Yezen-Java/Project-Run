@@ -145,6 +145,7 @@ function createTourDetails(){
 }
 //this function open the file model for specific locations.
 function addLocationRes(value) {
+  console.log("test value "+ value);
   var value1 = value;
   $("#myModal ul").empty();
   console.log("works");
@@ -216,7 +217,7 @@ error: function(){}
   });
 });
 
-function appendMediaToLocaiton(value){
+function appendMediaToLocaiton(value1){
 var locationID = value;
 console.log("test "+locationID)
   $(function() {

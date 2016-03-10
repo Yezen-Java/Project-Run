@@ -18,7 +18,7 @@ while($row = pg_fetch_array($query)) {
 
 	//this generates a list based on the number of the locations.
 
-echo "<a href ='#' onClick='addLocationRes(this.value)'id ='pointer1' value ='$locationId'>$locationname</a>
+echo "<a href ='#'id ='pointer1' value ='$locationId' onClick='addLocationRes(this.value)'>$locationname</a>
 <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
           <span class='glyphicon glyphicon-trash'></span> Trash 
         </button>";
