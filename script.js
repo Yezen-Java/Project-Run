@@ -172,14 +172,13 @@ function createTourDetails(){
 //this function open the file model for specific locations.
 function addLocationRes(value) {
   console.log("test value "+ value);
-  var value1 = value;
   $("#myModal ul").empty();
   console.log("works");
   reorder();
   $("#myModal").modal();
   $('.sortable').sortable();
 
-  appendMediaToLocaiton(value1);
+  appendMediaToLocaiton(value);
 }
 
 
