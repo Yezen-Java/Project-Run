@@ -1,5 +1,7 @@
 <?php 
 
+include 'Connect.php';
+
 $getLocationId = $_POST['LocationId'];
 
 
