@@ -19,7 +19,7 @@ foreach ($mediaid as $number) {
 	$amazonQuery = pg_execute($dbconn,"query2",  array($number));
 	$rows = pg_fetch_array($amazonQuery);
 	$mediaExt = $rows['ext_name'];
-
+	
 	if ($s3->deleteObject($bucket,$mediaExt)) {
 	 $result = pg_execute($dbconn,"query",  array($number));
 
