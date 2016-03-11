@@ -3,38 +3,35 @@
 include 's3_config.php';
 include 'database/Connect.php';
 
-$stringBuilder = $_GET['checkBoxesDelete']; 
+$mediaid = $_POST['checkBoxesDelete']; 
 
-
-echo $stringBuilder;
+echo count($mediaid);
 
 $query = "DELETE From media where mediaid = $1";
-$result = pg_prepare($dbconn,"query1", $query);
+$query2 = "SELECT * From media where mediaid = $1";
 
-$e = count($stringBuilder);
-for ($i=0; $i < $e; $i++) { 
-	# code...
-$id = $stringBuilder[$i];
-$mediaObject = pg_query("SELECT * From media where mediaid = $id");
+$result = pg_prepare($dbconn,"query", $query);
+$amazonQuery = pg_prepare($dbconn,"query2", $query2);
 
-if ($mediaObject) {
-	
-$rows = pg_fetch_array($mediaObject);
 
-echo $rows['ext_name'];
+foreach ($mediaid as $number) {
 
-if ($s3->deleteObject($bucket,$rows['ext_name'])) {
-$result = pg_execute($dbconn,"query1",  array($stringBuilder[$i]));
+	$amazonQuery = pg_execute($dbconn,"query2",  array($number));
+	$rows = pg_fetch_array($amazonQuery);
+	$mediaExt = $rows['ext_name'];
 
-        echo 'Deleted';
+	if ($s3->deleteObject($bucket,$mediaExt)) {
+	 $result = pg_execute($dbconn,"query",  array($number));
 
-}else{
-	echo "error";
+        	echo 'Deleted';
+
+	}else{
+		echo "error";
 }
-//}
 
-sleep(2);
-}
+
+sleep(1);
+
 }
 
 

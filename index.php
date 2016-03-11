@@ -235,7 +235,7 @@ $MediaSelect = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">File Manager</h4>
         </div>
-<form id="deleteImage">
+<form id="deleteImage" method="post">
         <div id= "fileManagerDiv" class="modal-body">
             <div class = "list-group" id="modalc">
 
