@@ -111,13 +111,13 @@ function deleteTourLi(tourId){
   
   console.log(tourId);
 
-  $(".tourButtons").each(function(i) {
+  // $(".tourButtons").each(function(i) {
 
-    if ($(".tourButtons").get(i).value == tourId) {
-      console.log($(".tourButtons").get(i).value);
-      $(".tourButtons").get(i).remove();
-    }  
-  });
+  //   if ($(".tourButtons").get(i).value == tourId) {
+  //     console.log($(".tourButtons").get(i).value);
+  //     $(".tourButtons").get(i).remove();
+  //   }  
+  // });
 
   $(".tourButtonsList").each(function(i) {
     if ($(".tourButtonsList").get(i).value == tourId) {
