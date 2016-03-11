@@ -114,17 +114,19 @@ function deleteTourLi(tourId){
   $(".tourButtons").each(function(i) {
     if ($(".tourButtons").get(i).value == tourId) {
 
-      var listItems = $("#buttonsListTours li");
-      listItems.each(function(idx, li) {
-         
-         console.log($(li).value);
-         if($(li).value == tourId){
-          $(li).remove();
+
+    var list = document.getElementById ("buttonsListTours");
+    var liTags = list.getElementsByTagName ("li");
+    for (var i = 0; i < liTags.length; i++) {
+        console.log(liTags[i].value);
+         if(liTags[i].value == tourId){
+          liTags[i].remove();
          }
+    }
+    
+         
           
 
-    // and the rest of your code
-      });
       // $(".tourButtons").get(i).remove();
       // $(this).remove();
     }  
