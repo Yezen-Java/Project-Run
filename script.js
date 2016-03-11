@@ -116,6 +116,7 @@ function deleteTourLi(tourId){
     if ($(".tourButtons").get(i).value == tourId) {
       console.log($(".tourButtons").get(i).value);
       $(".tourButtons").get(i).remove();
+      $("#tour_id").remove();
     }  
   });
 
