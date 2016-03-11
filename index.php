@@ -130,7 +130,7 @@ $MediaSelect = pg_query("SELECT * from media");
             $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
 
-          echo "<li class='tourButtonsList' value='$tour_id'> 
+          echo "<li value='$tour_id'> 
               <div class='input-group'> 
               <span class='input-group-addon'> 
                 <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id, this)'></button> 
