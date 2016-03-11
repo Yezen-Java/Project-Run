@@ -110,11 +110,8 @@ function myFunction() {
 function deleteTourLi(tourId){
   
   console.log(tourId);
-
-  $(".tourButtons").each(function(i) {
-    if ($(".tourButtons").get(i).value == tourId) {
-    
     var list = document.getElementById("buttonsListTours");
+    console.log(list);
     var liTags = list.getElementsByTagName ("li");
     for (var x = 0; x < liTags.length; x++) {
         console.log(liTags[x].value);
@@ -122,19 +119,8 @@ function deleteTourLi(tourId){
           liTags[x].remove();
          }
     }
-
-    
-    
-         
-          
-
       // $(".tourButtons").get(i).remove();
       // $(this).remove();
-    }  
-  });
-
-
-
 }
 
 function addNoteFunc(){
