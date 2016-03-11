@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'database/Connect.php';
 
-$mediaid = $_POST['checkBoxesDelete']; 
+$mediaid = $_POST['checkboxmedia']; 
 
 echo count($mediaid);
 
