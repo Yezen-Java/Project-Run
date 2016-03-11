@@ -107,8 +107,8 @@ function myFunction() {
   document.getElementById('notesArea').placeholder= Date();
 }
 
-function deleteTourLi(value){
-  $(value).remove();
+function deleteTourLi(tourId){
+  console.log($(tourId).value());
 }
 
 function addNoteFunc(){
