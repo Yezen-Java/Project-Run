@@ -8,12 +8,11 @@ session_start();
 function getTourList(){
 
 $username= $_SESSION['username'];
-
-$queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usertour.tourid = tour.tourid";
-
-$toursListQuery =pg_prepare($dbconn, "toursListQuery1", $queryTour);
-//$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '$username' and usertour.tourid = tour.tourid");
- $toursListQuery = pg_execute($dbconn,"toursListQuery1", array($username));
+//$queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usertour.tourid = tour.tourid";
+//$toursListQuery =pg_prepare($dbconn, "toursListQuery1", $queryTour);
+$escape = pg_escape_string($username);
+$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '$escape' and usertour.tourid = tour.tourid");
+ //$toursListQuery = pg_execute($dbconn,"toursListQuery1", array($username));
 if (pg_num_rows($toursListQuery)>0) {
  	    while ($rows =pg_fetch_array($toursListQuery)) {
             $tour_id =$rows["tourid"];
