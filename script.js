@@ -115,11 +115,15 @@ function deleteTourLi(tourId){
 
     if ($(".tourButtons").get(i).value == tourId) {
       console.log($(".tourButtons").get(i).value);
-      //$(".tourButtons").get(i).remove();
-      $("li #tour_id").remove();
+      $(".tourButtons").get(i).remove();
     }  
   });
 
+  $(".tourButtonsList").each(function(i) {
+    if ($(".tourButtonsList").get(i).value == tourId) {
+      $(".tourButtonsList").get(i).remove();
+    }  
+  });
 }
 
 function addNoteFunc(){
