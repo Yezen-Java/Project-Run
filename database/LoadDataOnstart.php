@@ -1,6 +1,6 @@
 <?php
 
-include 'database/Connect.php';
+include 'Connect.php';
 
 
 function getTourList(){
