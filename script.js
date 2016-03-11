@@ -117,10 +117,10 @@ function deleteTourLi(tourId){
 
     var list = document.getElementById ("buttonsListTours");
     var liTags = list.getElementsByTagName ("li");
-    for (var i = 0; i < liTags.length; i++) {
-        console.log(liTags[i].value);
-         if(liTags[i].value == tourId){
-          liTags[i].remove();
+    for (var x = 0; x < liTags.length; x++) {
+        console.log(liTags[x].value);
+         if(liTags[x].value == tourId){
+          liTags[x].remove();
          }
     }
     
