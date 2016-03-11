@@ -116,9 +116,9 @@ function deleteTourLi(tourId){
 
       var listItems = $("#buttonsListTours li");
       listItems.each(function(idx, li) {
-         var lis = $(li);
-         console.log(lis.value);
-         if(lis.value == tourId){
+         
+         console.log($(li).value);
+         if($(li).value == tourId){
           $(li).remove();
          }
           
