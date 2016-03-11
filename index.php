@@ -11,7 +11,6 @@ if(isset($_SESSION['id'])){
     header('location: login.php');
     die();
 }
-
 include 'database/Connect.php';
 include 'database/LoadDataOnstart.php';
 
