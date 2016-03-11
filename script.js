@@ -116,7 +116,14 @@ function deleteTourLi(tourId){
         console.log(item);
         console.log(item.id);
          if(item.id == tourId){
-          item.remove();
+          $(function() {
+       $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
+        alert(data);
+        item.remove();
+       });
+       return false;
+  });
+
          }
     }
       // $(".tourButtons").get(i).remove();
