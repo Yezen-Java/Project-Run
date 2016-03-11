@@ -109,6 +109,16 @@ function myFunction() {
 
 function deleteTourLi(tourId){
   console.log(tourId);
+
+  for (var i = 0; i < Things.length; i++) {
+    Things[i]
+  };
+
+  $(".tourButtons").each(function(i) {
+    if (this.value == tourId) {
+      $(".tourButtons").remove(this);
+    }  
+  });
 }
 
 function addNoteFunc(){
