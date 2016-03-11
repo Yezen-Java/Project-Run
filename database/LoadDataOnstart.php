@@ -9,7 +9,7 @@ $queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usert
 
 $toursListQuery =pg_prepare($dbconn, "toursListQuery", $queryTour);
 
-if ($toursListQuery) {
+//if ($toursListQuery) {
 
     $toursListQuery = pg_execute($dbconn,"toursListQuery", array($username));
 
@@ -23,9 +23,10 @@ if ($toursListQuery) {
                 <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
               </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
             }  
-}else{
-	echo "No Data Found";
-}
+// }
+// else{
+// 	echo "No Data Found";
+// }
 
 }
 
