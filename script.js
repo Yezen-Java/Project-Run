@@ -111,12 +111,11 @@ function deleteTourLi(tourId){
   
   console.log(tourId);
     var list = document.getElementById("buttonsListTours");
-    var liTags = list.getElementsByTagName ("li");
-    console.log(liTags);
-    for (var x = 0; x < liTags.length; x++) {
-        console.log(liTags[x].value);
-         if(liTags[x].value == tourId){
-          liTags[x].remove();
+    console.log(list);
+    for (var x = 0; x < list.length; x++) {
+        console.log(list[x].value);
+         if(list[x].value == tourId){
+          list[x].remove();
          }
     }
       // $(".tourButtons").get(i).remove();
