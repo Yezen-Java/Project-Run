@@ -133,7 +133,7 @@ $MediaSelect = pg_query("SELECT * from media");
           echo "<li class='tourButtonsList' value='$tour_id'> 
               <div class='input-group'> 
               <span class='input-group-addon'> 
-                <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
+                <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id, this)'></button> 
               </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
             }  
           ?>

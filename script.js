@@ -107,23 +107,18 @@ function myFunction() {
   document.getElementById('notesArea').placeholder= Date();
 }
 
-function deleteTourLi(tourId){
+function deleteTourLi(tourId, this){
   
   console.log(tourId);
 
-  // $(".tourButtons").each(function(i) {
-
-  //   if ($(".tourButtons").get(i).value == tourId) {
-  //     console.log($(".tourButtons").get(i).value);
-  //     $(".tourButtons").get(i).remove();
-  //   }  
-  // });
-
-  $(".tourButtonsList").each(function(i) {
-    if ($(".tourButtonsList").get(i).value == tourId) {
-      $(".tourButtonsList").get(i).remove();
+  $(".tourButtons").each(function(i) {
+    if ($(".tourButtons").get(i).value == tourId) {
+      console.log($(".tourButtons").get(i).value);
+      $(".tourButtons").get(i).remove();
+      $(this).remove();
     }  
   });
+
 }
 
 function addNoteFunc(){
