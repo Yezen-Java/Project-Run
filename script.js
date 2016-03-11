@@ -111,8 +111,8 @@ function deleteTourLi(tourId){
   
   console.log(tourId);
     var list = document.getElementById("buttonsListTours");
-    console.log(list);
     var liTags = list.getElementsByTagName ("li");
+    console.log(liTags);
     for (var x = 0; x < liTags.length; x++) {
         console.log(liTags[x].value);
          if(liTags[x].value == tourId){
