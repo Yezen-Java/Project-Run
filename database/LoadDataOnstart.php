@@ -7,11 +7,12 @@ function getTourList(){
 
 $queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usertour.tourid = tour.tourid";
 
-$toursListQuery =pg_prepare($dbconn, "toursListQuery", $queryTour);
+//$toursListQuery =pg_prepare($dbconn, "toursListQuery1", $queryTour);
+$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '$username' and usertour.tourid = tour.tourid")
 
-//if ($toursListQuery) {
+if ($toursListQuery) {
 
-    $toursListQuery = pg_execute($dbconn,"toursListQuery", array($username));
+    //$toursListQuery = pg_execute($dbconn,"toursListQuery1", array($username));
 
  	    while ($rows =pg_fetch_array($toursListQuery)) {
             $tour_id =$rows["tourid"];
@@ -23,10 +24,10 @@ $toursListQuery =pg_prepare($dbconn, "toursListQuery", $queryTour);
                 <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
               </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
             }  
-// }
-// else{
-// 	echo "No Data Found";
-// }
+}
+else{
+	echo "No Data Found";
+}
 
 }
 
