@@ -113,7 +113,7 @@ function deleteTourLi(tourId){
     for (var x = 0; x < 6; x++) {
         var item = $('#buttonsListTours').children('li').get(x);
         console.log(item);
-        console.log(item.val());
+        console.log(item.data('value'));
          if(item.value == tourId){
           item.remove();
          }
