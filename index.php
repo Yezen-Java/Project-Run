@@ -6,6 +6,7 @@ session_start();
 if(isset($_SESSION['id'])){
     $userId= $_SESSION['id'];
     $username= $_SESSION['username'];
+    echo "Please Wait ...";
 }else{
     header('location: login.php');
     die();
