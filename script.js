@@ -113,11 +113,11 @@ function deleteTourLi(tourId){
 
   $(".tourButtons").each(function(i) {
     if ($(".tourButtons").get(i).value == tourId) {
-      console.log($(".tourButtons").get(i).value);
 
       var listItems = $("#buttonsListTours li");
       listItems.each(function(idx, li) {
          var lis = $(li);
+         console.log(lis.value);
          if(lis.value == tourId){
           $(li).remove();
          }
