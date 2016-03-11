@@ -111,7 +111,9 @@ function deleteTourLi(tourId){
   
   console.log(tourId);
     var list = document.getElementById("buttonsListTours");
-    console.log(list);
+    
+
+    console.log($("buttonsListTours").children());
     for (var x = 0; x < list.length; x++) {
         console.log(list[x].value);
          if(list[x].value == tourId){
