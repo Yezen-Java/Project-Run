@@ -107,7 +107,7 @@ function myFunction() {
   document.getElementById('notesArea').placeholder= Date();
 }
 
-function deleteTourLi(tourId, this){
+function deleteTourLi(tourId){
   
   console.log(tourId);
 
