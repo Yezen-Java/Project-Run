@@ -112,12 +112,13 @@ function deleteTourLi(tourId){
   console.log(tourId);
 
   $(".tourButtons").each(function(i) {
-    if ($(this).value == tourId) {
-      console.log($(this));
-      console.log($(this).value);
+
+    if ($(".tourButtons").get(i).value == tourId) {
+      console.log($(".tourButtons").get(i).value);
       $(".tourButtons").remove($(this));
     }  
   });
+
 }
 
 function addNoteFunc(){
