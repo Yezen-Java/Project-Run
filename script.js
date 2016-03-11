@@ -109,12 +109,11 @@ function myFunction() {
 
 function deleteTourLi(tourId){
   
-  console.log(tourId);
+
     var list = document.getElementById("buttonsListTours");
     
-
-    console.log($("buttonsListTours").children());
     for (var x = 0; x < list.length; x++) {
+        console.log($('buttonsListTours').children('li').get(x));
         console.log(list[x].value);
          if(list[x].value == tourId){
           list[x].remove();
