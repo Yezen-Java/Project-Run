@@ -108,7 +108,7 @@ function myFunction() {
 }
 
 function deleteTourLi(tourId){
-  console.log(tourId.value());
+  console.log(tourId.value);
   console.log(tourId.val());
 }
 
