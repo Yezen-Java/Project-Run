@@ -109,8 +109,9 @@ function myFunction() {
 
 function deleteTourLi(tourId){
     var list = document.getElementById("buttonsListTours");
-    
-    for (var x = 0; x < 6; x++) {
+    var size = $("#buttonsListTours li").length;
+    console.log(size);
+    for (var x = 0; x < size; x++) {
         var item = $('#buttonsListTours').children('li').get(x);
         console.log(item);
         console.log(item.id);
