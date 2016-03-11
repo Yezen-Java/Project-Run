@@ -111,10 +111,9 @@ function deleteTourLi(tourId){
     var list = document.getElementById("buttonsListTours");
     
     for (var x = 0; x < 6; x++) {
-        console.log($('#buttonsListTours').children('li').get(x));
-        console.log(list[x].value);
-         if(list[x].value == tourId){
-          list[x].remove();
+        var item = $('#buttonsListTours').children('li').get(x);
+         if(item.value == tourId){
+          item.remove();
          }
     }
       // $(".tourButtons").get(i).remove();
