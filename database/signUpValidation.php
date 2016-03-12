@@ -17,16 +17,17 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
               $query = "INSERT into users (Firstname, Lastname,Email,Username, Password) values ($1,$2,$3,$4,$5)";
               $result = pg_prepare($dbconn,"insertQuery",$query);
               if($result){
-              	$result = pg_execute($dbconn,"delete_query", array($firstName, $lastName, $email, $username, $password));
+              	$result = pg_execute($dbconn,"insertQuery", array($firstName, $lastName, $email, $username, $password));
                   echo "You have Successfully Registered";
               }else{
                   echo "Error!!";
               }
-          }else{
-              echo "This email is already registered, Please try another email";
-          }
-      }
+
       pg_close ($connection);
+    }else{
+      echo "Username or email already exists";
+    }
+  }
 }
 
 function chechInput($usernameInput, $emailInput){
