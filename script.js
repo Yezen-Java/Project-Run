@@ -34,16 +34,16 @@ $(document).ready(function(){
       });
     }));
 
-    $("#descriptionBox").keypress(function(e) {
+    $("#mediaid").keypress(function(e) {
 
-      var descriptionBox = document.getElementById("descriptionBox").value;
-      
+      var descriptionBox = document.getElementById("#mediaid");
+
       var readOnly = false;
 
       console.log(descriptionBox);
     
       if (e.keyCode == 13 && readOnly == false) {
-        $("#descriptionBox").attr("readonly", "readonly");
+        $("#mediaid").attr("readonly", "readonly");
         readOnly = true;
       }
 
