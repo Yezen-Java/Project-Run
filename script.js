@@ -361,7 +361,7 @@ function getCheckedBoxes() {
 
         console.log(item);
 
-          if (readOnly == false && item == name) {
+          if (readOnly == false && name == idOfDescriptionBox) {
             $(item).attr("readonly", "readonly");
             readOnly = true;
           }else{
