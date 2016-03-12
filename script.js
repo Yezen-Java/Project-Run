@@ -358,14 +358,14 @@ function getCheckedBoxes() {
 
         var item = $('#descriptionBoxUl').children('textarea').get(x);
         var name = $('#descriptionBox').attr("name");
-        
+
         console.log(name);
 
         console.log(item);
 
-          if (readOnly == false ) {
-            $(item).attr("readonly", "readonly");
-            readOnly = true;
+          if (readOnly == false && item == name) {
+            $(name).attr("readonly", "readonly");
+            //readOnly = true;
           }else{
             console.log("FUCK");
           }
