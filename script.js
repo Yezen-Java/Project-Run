@@ -342,14 +342,13 @@ function getCheckedBoxes() {
 
 /*
     The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
-    it should automatically make that specific text area readonly, problem is the html is saying the method is undefined,
-    awkward error - by Sedar 
+    it should automatically make that specific text area readonly - by Sedar 
     */
     function descriptionBoxEdit(idOfDescriptionBox){
 
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $("#descriptionBoxUl textarea").length;
-      var name = $('#descriptionBox').attr(idOfDescriptionBox);
+      var name = $('#descriptionBox').attr("value");
       var readOnly = false;
       //console.log(size);
 
