@@ -15,13 +15,8 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
           	if(chechInput($email,$username)){
               $query = "INSERT into users (Firstname, Lastname,Email,Username, Password) values ($1,$2,$3,$4,$5)";
               $result = pg_prepare($dbconn,"insertQuery",$query);
-              if($result){
               	$result = pg_execute($dbconn,"insertQuery", array($firstName, $lastName, $email, $username, $password));
                   echo "You have Successfully Registered";
-              }else{
-                  echo "Error!!";
-              }
-
       pg_close ($connection);
     }else{
       echo "Username or email already exists";
@@ -34,8 +29,8 @@ function chechInput($usernameInput, $emailInput){
 	$Query = "SELECT * FROM users WHERE $1=$2";
 	$results= pg_prepare($dbconn,"queryCheck",$Query);
   if($results){
-	$resultUser = pg_execute($dbconn, "queryCheck", array("email",$usernameInput));
-	$resultemail = pg_execute($dbconn,"queryCheck",array("username",$emailInput));
+	$resultUser = pg_execute($dbconn, "queryCheck", array("email",$emailInput));
+	$resultemail = pg_execute($dbconn,"queryCheck",array("username",$usernameInput));
    }else{
   echo "Could not access data, try again later";
 }
