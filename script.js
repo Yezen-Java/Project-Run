@@ -35,14 +35,13 @@ $(document).ready(function(){
     }));
 
     function descriptionBoxValue(){
-
       var descriptionBox = getElementById("descriptionBox").value;
+      var readOnly = false;
 
       console.log(descriptionBox);
 
     $(descriptionBox).keypress(function(e) {
-      var readOnly = false;
-
+    
       if (e.keyCode == 13 && readOnly == false) {
         $(descriptionBox).attr("readonly", "readonly");
         readOnly = true;
