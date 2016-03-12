@@ -356,9 +356,9 @@ function getCheckedBoxes() {
 
       for(var x = 0; x < size; x++){
 
-        var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+        var item = $('#descriptionBoxUl').children('li').get(x);
 
-        //console.log(item.id);
+        console.log(item.id);
 
           if (readOnly == false) {
             $(item.id).attr("readonly", "readonly");
