@@ -17,7 +17,7 @@ for ($i = 0; $i < $len; $i++){
   $ext = getExtension($name);
   $actual_media_name = time().".".$ext;
 
-  if($name>0){
+  if(strlen($name) > 0){
 
     if(in_array($ext, $valid_formats)){
 
