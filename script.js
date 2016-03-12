@@ -360,7 +360,7 @@ function getCheckedBoxes() {
 
         console.log(item.id);
 
-          if (readOnly == false && item.id == idOfDescriptionBox) {
+          if (readOnly == false) {
             $(item.id).attr("readonly", "readonly");
             readOnly = true;
           }else{
