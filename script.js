@@ -349,19 +349,19 @@ function getCheckedBoxes() {
 
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $("#descriptionBoxUl textarea").length;
+      var name = $('#descriptionBox').attr("name");
       var readOnly = false;
       //console.log(size);
 
       for(var x = 0; x < size; x++){
 
         var item = $('#descriptionBoxUl').children('textarea').get(x);
-        var name = $('#descriptionBox').attr("name").get(x);
 
-        console.log(name);
+        //console.log(name);
+        console.log(idOfDescriptionBox);
+        console.log(item);
 
-        //console.log(item);
-
-          if (readOnly == false && name == idOfDescriptionBox) {
+          if (readOnly == false && item == idOfDescriptionBox) {
             $(item).attr("readonly", "readonly");
             readOnly = true;
           }else{
