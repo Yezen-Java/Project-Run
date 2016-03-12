@@ -352,8 +352,6 @@ function getCheckedBoxes() {
       var readOnly = false;
       //console.log(size);
 
-      console.log(idOfDescriptionBox);
-      console.log(size);
       for(var x = 0; x < size; x++){
 
         var item = $('#descriptionBoxUl').children('textarea').get(x);
@@ -364,8 +362,8 @@ function getCheckedBoxes() {
         console.log(item);
 
           if (readOnly == false && item == name) {
-            $(name).attr("readonly", "readonly");
-            //readOnly = true;
+            $(item).attr("readonly", "readonly");
+            readOnly = true;
           }else{
             console.log("FUCK");
           }
