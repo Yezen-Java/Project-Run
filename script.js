@@ -33,35 +33,6 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
-
-    /*
-    The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
-    it should automatically make that specific text area readonly, problem is the html is saying the method is undefined,
-    awkward error - by Sedar 
-    */
-    function descriptionBoxEdit(idOfDescriptionBox){
-
-      //var descriptionBox = document.getElementById("descriptionBox");
-      var size = $("#descriptionBoxUl li").length;
-      var readOnly = false;
-      //console.log(size);
-
-      console.log(idOfDescriptionBox);
-
-      // for(var x = 0; x < size; x++){
-
-      //   var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
-
-      //     if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
-      //       $(item.id).attr("readonly", "readonly");
-      //       readOnly = true;
-      //     }else{
-      //       console.log("FUCK");
-      //     }
-      
-      // }
-    }
-    
   
 
     $("#deleteImage").on('submit',(function(e){
@@ -368,6 +339,34 @@ function getCheckedBoxes() {
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
+
+/*
+    The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
+    it should automatically make that specific text area readonly, problem is the html is saying the method is undefined,
+    awkward error - by Sedar 
+    */
+    function descriptionBoxEdit(idOfDescriptionBox){
+
+      //var descriptionBox = document.getElementById("descriptionBox");
+      var size = $("#descriptionBoxUl li").length;
+      var readOnly = false;
+      //console.log(size);
+
+      console.log(idOfDescriptionBox);
+
+      // for(var x = 0; x < size; x++){
+
+      //   var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+
+      //     if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
+      //       $(item.id).attr("readonly", "readonly");
+      //       readOnly = true;
+      //     }else{
+      //       console.log("FUCK");
+      //     }
+      
+      // }
+    }
 
 
 
