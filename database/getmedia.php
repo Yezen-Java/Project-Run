@@ -18,12 +18,8 @@ while ($rows =pg_fetch_array($mediaResults)) {
 
 	echo "<div class='col-md-3 col-sm-4 col-xs-6'>
               <img src='$link' alt='$name' style='width:100px;height:150px;'>
-            </div>";
+         </div>";
 }
 
 }
-
-
-
-
  ?>

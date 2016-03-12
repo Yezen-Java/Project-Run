@@ -87,8 +87,14 @@ if ($mediaResults) {
 	  echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
 	    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
 	    <h3>$name</h3>
-	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-	    <div class='displayCheckBoxSpan'>
+
+      <div class='form-group'>
+        <label for='comment'>Description:</label>
+        <textarea class='form-control' rows='5' value ='$mediaid' id='descriptionBox'></textarea> 
+        <button type='button' class='btn btn-secondary'>Save Description</button>
+      </div>
+
+      <div class='displayCheckBoxSpan'>
 	    <span class='input-group-addon' id='checkBoxDeleteSpan'>
 	        <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
 	      </span></div></div>";
