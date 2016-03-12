@@ -34,15 +34,20 @@ $(document).ready(function(){
       });
     }));
 
-    $("mediaid").keypress(function(e) {
+    function descriptionBoxValue(idOfDescription){
+
+      var descriptionBox = getElementById(idOfDescription);
+
+    $(descriptionBox).keypress(function(e) {
       var readOnly = false;
-      console.log($(mediaid));
+
       if (e.keyCode == 13 && readOnly == false) {
-        $("mediaid").attr("readonly", "readonly");
+        $(descriptionBox).attr("readonly", "readonly");
         readOnly = true;
       }
 
     });
+  }
 
     $("#deleteImage").on('submit',(function(e){
       e.preventDefault();
