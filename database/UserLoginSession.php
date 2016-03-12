@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
+include 'Connect.php';
 $username = $_POST['form-username'];
 $password = $_POST['form-password'];
 $result = pg_query("SELECT * FROM users WHERE Username='$username'");

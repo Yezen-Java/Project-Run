@@ -1,40 +1,7 @@
 <?php
-  $dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
-  password=z3paibkPjPYeWNWib9d3nD0Pi8")
-  or die('Could not connect: ' . pg_last_error());
+
+   include'signUpValidation.php';
   
-  if ($dbconn ) {
-      echo "Databse Connected";
-  }
-  if (isset($_POST['signup'])){
-      $fname=$_POST['firstname']; 
-      $lastname=$_POST['lastname'];
-      $email=$_POST['form-create-email'];
-      $username=$_POST['form-create-username'];
-      $password= $_POST['form-create-password'];
-      $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-      
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-          echo " Please Enter Vaild Email";
-      }else{
-          $resultemail = pg_query("SELECT * FROM users WHERE Email='$email'");
-          $resultuser = pg_query("SELECT * FROM users WHERE Username='$username'");
-          $dataEmail = pg_num_rows($resultemail);
-          $dataUsername = pg_num_rows($resultuser);
-          
-          if(($dataEmail)==0 &&($dataUsername)==0 ){
-              $query = pg_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('$fname', '$lastname','$email','$username','$password')"); // Insert query
-              if($query){
-                  echo "You have Successfully Registered";
-              }else{
-                  echo "Error!!";
-              }
-          }else{
-              echo "This email is already registered, Please try another email";
-          }
-      }
-      pg_close ($connection);
-  }
   if (isset($_POST['btlogin'])) {
     include("database/UserLoginSession.php");
   }
