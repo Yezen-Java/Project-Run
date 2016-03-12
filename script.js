@@ -44,20 +44,22 @@ $(document).ready(function(){
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $("#descriptionBoxUl li").length;
       var readOnly = false;
-      console.log(size);
+      //console.log(size);
 
-      for(var x = 0; x < size; x++){
+      console.log(idOfDescriptionBox);
 
-        var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+      // for(var x = 0; x < size; x++){
 
-          if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
-            $(item.id).attr("readonly", "readonly");
-            readOnly = true;
-          }else{
-            console.log("FUCK");
-          }
+      //   var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+
+      //     if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
+      //       $(item.id).attr("readonly", "readonly");
+      //       readOnly = true;
+      //     }else{
+      //       console.log("FUCK");
+      //     }
       
-      }
+      // }
     }
     
   

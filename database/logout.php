@@ -5,7 +5,7 @@ session_destroy();
 
 ?>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Loged Out</title>
