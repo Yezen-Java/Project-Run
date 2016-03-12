@@ -349,7 +349,7 @@ function getCheckedBoxes() {
 
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $("#descriptionBoxUl textarea").length;
-      var name = $('#descriptionBox').attr("name");
+      var name = $('#descriptionBox').attr("value");
       var readOnly = false;
       //console.log(size);
 
