@@ -12,12 +12,12 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
           echo " Please Enter Vaild Email";
       	}else{		
 
-          	if(chechInput($email,$username)){
+          	if(chechInput($username,$email)){
               $query = "INSERT into users (Firstname, Lastname,Email,Username, Password) values ($1,$2,$3,$4,$5)";
               $result = pg_prepare($dbconn,"insertQuery",$query);
-              	$result = pg_execute($dbconn,"insertQuery", array($firstName, $lastName, $email, $username, $password));
-                  echo "You have Successfully Registered";
-      pg_close ($connection);
+              $result = pg_execute($dbconn,"insertQuery", array($firstName, $lastName, $email, $username, $password));
+              echo "You have Successfully Registered";
+              pg_close ($connection);
     }else{
       echo "Username or email already exists";
     }
@@ -40,10 +40,6 @@ $userS = pg_escape_string($usernameInput);
 
 		return false;
 	}
-}else{
-
-  echo "Error, try Again later !";
-
 }
 
 }
