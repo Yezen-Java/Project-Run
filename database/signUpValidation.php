@@ -28,12 +28,9 @@ function chechInput($usernameInput, $emailInput){
 
 	$Query = "SELECT * FROM users WHERE $1=$2";
 	$results= pg_prepare($dbconn,"queryCheck",$Query);
-  if($results){
 	$resultUser = pg_execute($dbconn, "queryCheck", array("email",$emailInput));
 	$resultemail = pg_execute($dbconn,"queryCheck",array("username",$usernameInput));
-   }else{
-  echo "Could not access data, try again later";
-}
+
 	if (pg_num_rows($resultUser) == 0&& pg_num_rows($resultemail)==0) {
 		return true;
 	}else{
