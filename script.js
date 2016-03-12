@@ -34,10 +34,14 @@ $(document).ready(function(){
       });
     }));
 
-    $("#descriptionBox").keypress(function(e) {
-      if (e.keyCode == 13) {
-        $("#descriptionBox").attr("readonly", "readonly");
+    $(".descriptionBox").keypress(function(e) {
+      var readOnly = false;
+
+      if (e.keyCode == 13 && readOnly == false) {
+        $(".descriptionBox").attr("readonly", "readonly");
+        readOnly = true;
       }
+      
     });
 
     $("#deleteImage").on('submit',(function(e){
