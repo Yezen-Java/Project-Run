@@ -1,16 +1,13 @@
 <?php
 include('image_check.php');
 include('database/Connect.php');
+include('s3_config.php');
 
-
+$len = count($_FILES['file']['name']);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name) values ($1,$2,$3)";
 $result = pg_prepare($dbconn,"query", $query);
 $sizeLimit = 2097152;
-
-
-$len = count($_FILES['file']['name']);
-
 for ($i = 0; $i < $len; $i++){
 
   $tmp = $_FILES['file']['tmp_name'][$i];
