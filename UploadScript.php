@@ -39,7 +39,7 @@ for ($i = 0; $i < $len; $i++){
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio</p>
                   <div id='displayCheckBoxSpan'>
                   <span class='input-group-addon' id='checkBoxDeleteSpan'>
-                      <input type='checkbox' id='checkBoxesDelete' name='checkBoxesDelete[]'>
+                      <input type='checkbox' id='checkBoxesDelete' name='checkboxmedia[]'>
                     </span></div></div>";
               }else{
                 echo "Faild To access database";
