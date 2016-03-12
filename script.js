@@ -36,8 +36,8 @@ $(document).ready(function(){
 
     $("#descriptionBox").keypress(function(e) {
 
-      var descriptionBox = getElementById("descriptionBox").value;
-
+      var descriptionBox = document.getElementById("descriptionBox").value;
+      
       var readOnly = false;
 
       console.log(descriptionBox);
