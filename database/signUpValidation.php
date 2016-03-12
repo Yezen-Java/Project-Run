@@ -41,7 +41,6 @@ function chechInput($usernameInput, $emailInput){
 		return false;
 	}
 
-
 }
 
 
