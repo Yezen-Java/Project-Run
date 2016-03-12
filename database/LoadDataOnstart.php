@@ -91,7 +91,6 @@ if ($mediaResults) {
       <div class='form-group'>
         <label for='comment'>Description:</label>
         <textarea class='form-control' rows='5' value ='$mediaid' id='descriptionBox'></textarea> 
-        <button type='button' class='btn btn-secondary'>Save Description</button>
       </div>
 
       <div class='displayCheckBoxSpan'>

@@ -34,6 +34,12 @@ $(document).ready(function(){
       });
     }));
 
+    $("#descriptionBox").keypress(function(e) {
+      if (e.keyCode == 13) {
+        $("#descriptionBox").attr("readonly", "readonly");
+      }
+    });
+
     $("#deleteImage").on('submit',(function(e){
       e.preventDefault();
       $.ajax({
