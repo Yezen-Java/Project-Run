@@ -90,8 +90,8 @@ if ($mediaResults) {
 
       <div class='form-group'>
         <label for='comment'>Description:</label>
-        <textarea class='form-control' rows='5' value ='$mediaid' id='$mediaid'></textarea>
-        <button type='button' class='btn btn-success' onclick='descriptionBoxValue($mediaid)'>Save</button>
+        <textarea class='form-control' rows='5' value ='$mediaid' id='descriptionBox'></textarea>
+        <button type='button' class='btn btn-success' onclick='descriptionBoxValue()'>Save</button>
       </div>
 
       <div class='displayCheckBoxSpan'>

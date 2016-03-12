@@ -34,9 +34,11 @@ $(document).ready(function(){
       });
     }));
 
-    function descriptionBoxValue(idOfDescription){
+    function descriptionBoxValue(){
 
-      var descriptionBox = getElementById(idOfDescription);
+      var descriptionBox = getElementById("descriptionBox").value;
+
+      console.log(descriptionBox);
 
     $(descriptionBox).keypress(function(e) {
       var readOnly = false;
