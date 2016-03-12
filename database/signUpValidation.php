@@ -7,18 +7,6 @@ if ($dbconn ) {
   }
 
 
-if (isset($_POST['signup'])){
-
-	    $fname=$_POST['firstname']; 
-      $lastname=$_POST['lastname'];
-      $email1=$_POST['form-create-email'];
-      $username=$_POST['form-create-username'];
-      $password= $_POST['form-create-password'];
-      createUserAccount($fname, $lastname,$email1,$username,$password);
-      echo "";
-}
-
-
 function createUserAccount($firstName, $lastName, $email, $username, $password){
      
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
