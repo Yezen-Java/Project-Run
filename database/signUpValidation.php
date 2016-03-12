@@ -14,9 +14,7 @@ if (isset($_POST['signup'])){
       $email1=$_POST['form-create-email'];
       $username=$_POST['form-create-username'];
       $password= $_POST['form-create-password'];
-      $email = filter_var($email1, FILTER_SANITIZE_EMAIL);
-
-      createUserAccount($fname, $lastname,$email,$username,$password);
+      createUserAccount($fname, $lastname,$email1,$username,$password);
 }
 
 
@@ -30,11 +28,8 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
               $query = "INSERT into users (Firstname, Lastname,Email,Username, Password) values ($1,$2,$3,$4,$5)";
               $result = pg_prepare($dbconn,"insertQuery",$query);
               if($result){
-              	if($result = pg_execute($dbconn,"delete_query", array($firstName, $lastName, $email, $username, $password))){
+              	$result = pg_execute($dbconn,"delete_query", array($firstName, $lastName, $email, $username, $password));
                   echo "You have Successfully Registered";
-              	}else{
-              		echo "Error!!";
-              	}
               }else{
                   echo "Error!!";
               }
@@ -43,18 +38,20 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
           }
       }
       pg_close ($connection);
-
 }
 
 function chechInput($usernameInput, $emailInput){
 
 	$Query = "SELECT * FROM users WHERE Email=$1";
 
-	pg_prepare($dbconn,"queryCheck",$Query);
+	$results= pg_prepare($dbconn,"queryCheck",$Query);
 
+  if($results){
 	$resultUser = pg_execute($dbconn, "queryCheck", array($usernameInput));
 	$resultemail = pg_execute($dbconn,"queryCheck",array($emailInput));
-
+}else{
+  echo "Couldn't not access data, try again later";
+}
 	if (pg_num_rows($resultUser) == 0&& pg_num_rows($resultemail)==0) {
 		return true;
 	}else{
