@@ -9,6 +9,6 @@ function getExtension($str)
          return $ext;
 }
 
-$valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP");
+$valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
 
 ?>

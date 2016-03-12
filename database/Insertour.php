@@ -9,18 +9,18 @@ $tourName = $_POST['Tourname'];
 $tourDate = $_POST['TourDate'];
 $username= $_SESSION['username'];
 
+$escapeTourid = pg_escape_string($tourID);
+$escapeTName = pg_escape_string($tourName);
+$escapeTD = pg_escape_string($tourDate);
+$escapeUser = pg_escape_string($username);
 
-$TourIDCheck = pg_query("SELECT * from tour where tourid = '$tourID'");
+$TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
 
 $TourNumberIDs = pg_num_rows($TourIDCheck);
 
 if ( $TourNumberIDs == 0) {
-
-	$tourQuery = pg_query("INSERT INTO tour Values('$tourID', '$tourName','$tourDate')");
-
-    $result = pg_query("INSERT INTO usertour Values('$username','$tourID')");
-
-
+	$tourQuery = pg_query("INSERT INTO tour Values('$escapeTourid', '$escapeTName','$escapeTD')");
+    $result = pg_query("INSERT INTO usertour Values('$escapeUser','$escapeTourid')");
 
 if ($tourQuery && $result) {
 	echo "TourCreated";

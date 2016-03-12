@@ -3,48 +3,16 @@
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 
-include 'database/Connect.php';
-
-
-
 if(isset($_SESSION['id'])){
     $userId= $_SESSION['id'];
     $username= $_SESSION['username'];
+    echo "Please Wait ...";
 }else{
     header('location: login.php');
     die();
 }
-
-
-$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username ='$username' and usertour.tourid = tour.tourid");
-
-if ($toursListQuery) {
-	echo "Tour query passed. ";
-}else{
-  	echo "Failed to Tour data. ";
-}
-
-if (isset($_POST['buttonR'])) {
-  $TouridFromList = $_POST['tourSelector'];
-  $NodesSelectQuery = pg_query("SELECT * From");
-}
-
-
-$locationsQuery = pg_query("SELECT * From location");
-$locationsQuery2 = pg_query("SELECT * From location");
-
-if ($locationsQuery) {
-	echo "Tour location passed. ";
-}else{
-  echo "Failed to Tour data. ";
-}
-
-
-$mediaResults = pg_query("SELECT * from media");
-
-$MediaSelect = pg_query("SELECT * from media");
-
-
+include 'database/Connect.php';
+include 'database/LoadDataOnstart.php';
 
 ?>
 <!DOCTYPE html>
@@ -102,16 +70,7 @@ $MediaSelect = pg_query("SELECT * from media");
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
          <div>
-         <?php 
-         echo"<select id ='selectLocation' class='form-control'>";
-         echo"<option>Choose Room To Add:</option>";
-         while($rows = pg_fetch_array($locationsQuery)){
-          $id = $rows['locationid'];
-          $name = $rows['lname'];
-          echo"<option value='$id'>$name</option>";
-         }
-         echo"</select>";
-          ?>
+         <?php GetLocationQuery();?>
           </div>
           <div id="pointersDiv">Locations</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
@@ -126,16 +85,7 @@ $MediaSelect = pg_query("SELECT * from media");
         <div class="list-group" id="tourList">
             <ul id="buttonsListTours">  
         <?php
-            while ($rows =pg_fetch_array($toursListQuery)) {
-            $tour_id =$rows["tourid"];
-            $tour_name =$rows["tour_name"];
-
-          echo "<li id='$tour_id'> 
-              <div class='input-group'> 
-              <span class='input-group-addon'> 
-                <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
-              </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
-            }  
+             getTourList();
           ?>
           </ul>
           </div>
@@ -235,28 +185,12 @@ $MediaSelect = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">File Manager</h4>
         </div>
-<form id="deleteImage">
+<form id="deleteImage" method="post">
         <div id= "fileManagerDiv" class="modal-body">
             <div class = "list-group" id="modalc">
-
-        <?php    while ($rows =pg_fetch_array($mediaResults)) {
-
-  $link = $rows['link'];
-  $name = $rows['media_name'];
-  $mediaid = $rows['mediaid'];
-
-  echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
-    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
-    <h3>$name</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    <div class='displayCheckBoxSpan'>
-    <span class='input-group-addon' id='checkBoxDeleteSpan'>
-        <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
-      </span></div></div>";
-
-     
-}
-?>
+        <?php  
+           mediaResultsFucntion();
+        ?>
         </div>
           </div>
 <input type="submit" class="btn btn-warning" id="deleteCheckedItems" value"Delete"/>
@@ -281,14 +215,7 @@ $MediaSelect = pg_query("SELECT * from media");
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
           <?php
-          echo "<select id='MediaSelectId' class='form-control' onchange='addmeidaFromSelectList();'>";
-          while($rows = pg_fetch_array($MediaSelect)){
-           $mediaid = $rows['meidaid'];
-           $mediaName = $rows['media_name'];
-           echo "<option id='option' value='$mediaid'>$mediaName</option>";
-
-          }
-          echo "</select>";
+          MediaSelectFucntion();
           ?>
         </div>
     	<div class="modal-body">
@@ -317,13 +244,7 @@ $MediaSelect = pg_query("SELECT * from media");
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-         echo"<ul>";
-         while($rows = pg_fetch_array($locationsQuery2)){
-          $id = $rows['locationid'];
-          $name = $rows['lname'];
-          echo"<li value='$id'>$name</li>";
-         }
-         echo"</ul>";
+      getLocationList();
           ?>
  
       </div>
