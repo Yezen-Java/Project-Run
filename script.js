@@ -34,9 +34,13 @@ $(document).ready(function(){
       });
     }));
 
+    /*
+    The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
+    it should automatically make that specific text area readonly, problem is the html is saying the method is undefined,
+    awkward error - by Sedar 
+    */
     function descriptionBoxEdit(idOfDescriptionBox){
 
-     
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $("#descriptionBoxUl li").length;
       var readOnly = false;
@@ -46,12 +50,13 @@ $(document).ready(function(){
 
         var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
 
-        $(item.id).keypress(function(e) {
           if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
             $(item.id).attr("readonly", "readonly");
             readOnly = true;
+          }else{
+            console.log("FUCK");
           }
-        });
+      
       }
     }
     

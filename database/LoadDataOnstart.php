@@ -84,6 +84,7 @@ if ($mediaResults) {
 	  $name = $rows['media_name'];
 	  $mediaid = $rows['mediaid'];
 
+    //ON LINE 98 ONCLICK ERROR STATING THAT DESCRIPTIONBOXEDIT() IS NOT DEFINED, NEEDS FIX :\
 	  echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
 	    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
 	    <h3>$name</h3>
@@ -93,6 +94,7 @@ if ($mediaResults) {
         <li>
           <label for='comment'>Description:</label>
           <textarea class='form-control' rows='5' value ='$mediaid' id='descriptionBox'></textarea>
+
           <button type='button' class='btn btn-info' id ='$mediaid' onclick=\"descriptionBoxEdit('this.id')\">Test</button>
         </li>
       </ul>
