@@ -34,21 +34,21 @@ $(document).ready(function(){
       });
     }));
 
-    function descriptionBoxValue(){
+    $("#descriptionBox").keypress(function(e) {
+
       var descriptionBox = getElementById("descriptionBox").value;
+
       var readOnly = false;
 
       console.log(descriptionBox);
-
-    $(descriptionBox).keypress(function(e) {
     
       if (e.keyCode == 13 && readOnly == false) {
-        $(descriptionBox).attr("readonly", "readonly");
+        $("#descriptionBox").attr("readonly", "readonly");
         readOnly = true;
       }
 
     });
-  }
+  
 
     $("#deleteImage").on('submit',(function(e){
       e.preventDefault();
