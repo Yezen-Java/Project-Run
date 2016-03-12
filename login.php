@@ -12,7 +12,8 @@ if (isset($_POST['signup'])){
       $email1=$_POST['form-create-email'];
       $username=$_POST['form-create-username'];
       $password= $_POST['form-create-password'];
-      include'signUpValidation.php';
+      
+      include'database/signUpValidation.php';
 
       createUserAccount($fname, $lastname,$email1,$username,$password);
       echo "working";
