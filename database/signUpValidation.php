@@ -26,25 +26,33 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
 
 function chechInput($usernameInput, $emailInput){
 
-	$Query = "SELECT * FROM users WHERE $1=$2";
-	$results= pg_prepare($dbconn,"queryCheck",$Query);
-	$resultUser = pg_execute($dbconn, "queryCheck", array("email",$emailInput));
-	$resultemail = pg_execute($dbconn,"queryCheck",array("username",$usernameInput));
+$emailS = pg_escape_string($emailInput);
+$userS = pg_escape_string($usernameInput);
 
-	if (pg_num_rows($resultUser) == 0&& pg_num_rows($resultemail)==0) {
+  $resultemail = pg_query("SELECT * FROM users WHERE Email='$emailS'");
+  $resultuser = pg_query("SELECT * FROM users WHERE Username='$userS'");
+
+  if($resultemail && $resultuser){
+
+	if (pg_num_rows($resultUser) == 0 && pg_num_rows($resultemail)==0) {
 		return true;
 	}else{
 
 		return false;
 	}
+}else{
+
+  echo "Error, try Again later !";
 
 }
 
+}
 
+  // $Query = "SELECT * FROM users WHERE $1=$2";
+  // $results= pg_prepare($dbconn,"queryCheck",$Query);
+  // $resultUser = pg_execute($dbconn, "queryCheck", array("email",$emailInput));
+  // $resultemail = pg_execute($dbconn,"queryCheck",array("username",$usernameInput));
 
-
-     // $resultemail = pg_query("SELECT * FROM users WHERE Email='$email'");
-          // $resultuser = pg_query("SELECT * FROM users WHERE Username='$username'");
           // $dataEmail = pg_num_rows($resultemail);
           // $dataUsername = pg_num_rows($resultuser);
 
