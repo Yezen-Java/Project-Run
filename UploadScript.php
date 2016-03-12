@@ -8,6 +8,7 @@ $msg='';
 $query = "INSERT into media (media_name,link,ext_name) values ($1,$2,$3)";
 $result = pg_prepare($dbconn,"query", $query);
 $sizeLimit = 2097152;
+
 for ($i = 0; $i < $len; $i++){
 
   $tmp = $_FILES['file']['tmp_name'][$i];
@@ -16,7 +17,7 @@ for ($i = 0; $i < $len; $i++){
   $ext = getExtension($name);
   $actual_media_name = time().".".$ext;
 
-  if( $name>0){
+  if($name>0){
 
     if(in_array($ext, $valid_formats)){
 
@@ -44,8 +45,8 @@ for ($i = 0; $i < $len; $i++){
                 echo "Faild To access database";
               }
         }
-else{
- $msg = "S3 Upload Fail.";
+  else{
+    echo "S3 Upload Fail.";
 
   }
 
@@ -60,25 +61,26 @@ else{
 
 }
 
-  sleep(3);
 }else{
   echo "error, not valid file name";
 }
 
+ sleep(3);
+
 }
 
 
-function getExtension($str) 
-{
-         $i = strrpos($str,".");
-         if (!$i) { return ""; } 
+// function getExtension($str) 
+// {
+//          $i = strrpos($str,".");
+//          if (!$i) { return ""; } 
 
-         $l = strlen($str) - $i;
-         $ext = substr($str,$i+1,$l);
-         return $ext;
-}
+//          $l = strlen($str) - $i;
+//          $ext = substr($str,$i+1,$l);
+//          return $ext;
+// }
 
-$valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
+// $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
 
 
 
