@@ -90,7 +90,7 @@ if ($mediaResults) {
 
       <div class='form-group'>
         <label for='comment'>Description:</label>
-        <textarea class='form-control descriptionBox' rows='5' value ='$mediaid' id='textAreaDescription'></textarea> 
+        <textarea class='form-control' rows='5' id='$mediaid'></textarea> 
       </div>
 
       <div class='displayCheckBoxSpan'>
