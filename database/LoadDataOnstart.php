@@ -89,8 +89,13 @@ if ($mediaResults) {
 	    <h3>$name</h3>
 
       <div class='form-group'>
-        <label for='comment'>Description:</label>
-        <textarea class='form-control' rows='5' id='$mediaid'></textarea>
+      <ul id='descriptionBoxUl'>
+        <li>
+          <label for='comment'>Description:</label>
+          <textarea class='form-control' rows='5' value ='$mediaid' id='descriptionBox'></textarea>
+          <button type='button' class='btn btn-info' id ='$mediaid' onclick=\"descriptionBoxEdit('this.id')\">Test</button>
+        </li>
+      </ul>
       </div>
 
       <div class='displayCheckBoxSpan'>

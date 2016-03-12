@@ -34,20 +34,27 @@ $(document).ready(function(){
       });
     }));
 
-    $("#mediaid").keypress(function(e) {
+    function descriptionBoxEdit(idOfDescriptionBox){
 
-      var descriptionBox = document.getElementById("#mediaid");
-
+     
+      //var descriptionBox = document.getElementById("descriptionBox");
+      var size = $("#descriptionBoxUl li").length;
       var readOnly = false;
+      console.log(size);
 
-      console.log(descriptionBox);
-    
-      if (e.keyCode == 13 && readOnly == false) {
-        $("#mediaid").attr("readonly", "readonly");
-        readOnly = true;
+      for(var x = 0; x < size; x++){
+
+        var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+
+        $(item.id).keypress(function(e) {
+          if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
+            $(item.id).attr("readonly", "readonly");
+            readOnly = true;
+          }
+        });
       }
-
-    });
+    }
+    
   
 
     $("#deleteImage").on('submit',(function(e){
