@@ -15,6 +15,7 @@ if (isset($_POST['signup'])){
       $username=$_POST['form-create-username'];
       $password= $_POST['form-create-password'];
       createUserAccount($fname, $lastname,$email1,$username,$password);
+      echo "";
 }
 
 
@@ -42,15 +43,13 @@ function createUserAccount($firstName, $lastName, $email, $username, $password){
 
 function chechInput($usernameInput, $emailInput){
 
-	$Query = "SELECT * FROM users WHERE Email=$1";
-
+	$Query = "SELECT * FROM users WHERE $1=$2";
 	$results= pg_prepare($dbconn,"queryCheck",$Query);
-
   if($results){
-	$resultUser = pg_execute($dbconn, "queryCheck", array($usernameInput));
-	$resultemail = pg_execute($dbconn,"queryCheck",array($emailInput));
-}else{
-  echo "Couldn't not access data, try again later";
+	$resultUser = pg_execute($dbconn, "queryCheck", array("email",$usernameInput));
+	$resultemail = pg_execute($dbconn,"queryCheck",array("username",$emailInput));
+   }else{
+  echo "Could not access data, try again later";
 }
 	if (pg_num_rows($resultUser) == 0&& pg_num_rows($resultemail)==0) {
 		return true;
