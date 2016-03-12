@@ -354,18 +354,18 @@ function getCheckedBoxes() {
 
       console.log(idOfDescriptionBox);
 
-      // for(var x = 0; x < size; x++){
+      for(var x = 0; x < size; x++){
 
-      //   var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
+        var item = $('#descriptionBoxUl').children('li').children('textarea').get(x);
 
-      //     if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
-      //       $(item.id).attr("readonly", "readonly");
-      //       readOnly = true;
-      //     }else{
-      //       console.log("FUCK");
-      //     }
+          if (e.keyCode == 13 && readOnly == false && item.id == idOfDescriptionBox) {
+            $(item.id).attr("readonly", "readonly");
+            readOnly = true;
+          }else{
+            console.log("FUCK");
+          }
       
-      // }
+      }
     }
 
 
