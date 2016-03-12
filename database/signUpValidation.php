@@ -6,7 +6,6 @@ if ($dbconn ) {
       echo "Databse Connected";
   }
 
-
 function createUserAccount($firstName, $lastName, $email, $username, $password){
      
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)){

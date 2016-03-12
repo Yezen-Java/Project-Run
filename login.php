@@ -1,6 +1,5 @@
 <?php
 
-   include'signUpValidation.php';
   
   if (isset($_POST['btlogin'])) {
     include("database/UserLoginSession.php");
@@ -13,6 +12,8 @@ if (isset($_POST['signup'])){
       $email1=$_POST['form-create-email'];
       $username=$_POST['form-create-username'];
       $password= $_POST['form-create-password'];
+      include'signUpValidation.php';
+
       createUserAccount($fname, $lastname,$email1,$username,$password);
       echo "working";
 }
@@ -83,7 +84,7 @@ if (isset($_POST['signup'])){
                            <div class="slide2"></div>
                             <div class="carousel-caption">
                               <div class="col-sm-6 col-sm-offset-3 form-box">
-                              <form method="post">
+                              <form method="post" action="">
                                  <div class="container" id="createAccountContainer">
                                     <h3><strong>Create</strong> account</h3>
 
