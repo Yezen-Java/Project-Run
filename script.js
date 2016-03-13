@@ -385,7 +385,7 @@ function getCheckedBoxes() {
         if ($(obj).attr('id') == currentValue){
           $(obj).removeAttr('readonly');
         }               
-      };
+      });
     }
 
 
