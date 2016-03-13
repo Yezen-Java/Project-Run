@@ -110,7 +110,7 @@ var arrayList = new Array();
   array.push($(li));
 });
 for (var i = 0; i < array.length; i++) {
-  console.log(array[i].value() + i);
+  console.log(array[i].value + i);
   arrayList.push(array[i].value());
 };
 
