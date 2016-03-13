@@ -366,7 +366,6 @@ function getCheckedBoxes() {
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $(".textAreas").length;
       var name = $('#descriptionBox').attr("value");
-      var readOnly = false;
       
       //console.log(size);
 
@@ -378,7 +377,11 @@ function getCheckedBoxes() {
             currentValue = $(obj).attr('name');
             console.log(currentValue);
             $(obj).attr("readonly", "readonly");
-            readOnly = true;
+            $("button").each(function(i,obj){
+              if ($(obj).id == currentValue){
+                $(obj).removeAttr('readonly');
+              }               
+            };
             return false;
           }
       });
@@ -394,6 +397,9 @@ function getCheckedBoxes() {
        
       }
     }
+
+
+
 
 
 
