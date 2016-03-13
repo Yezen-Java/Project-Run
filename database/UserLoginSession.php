@@ -9,10 +9,9 @@ $password = $_POST['form-password'];
 
 function loginUserSession(){
 
-$query = "SELECT * FROM users WHERE Username=$1";
+$query = "SELECT * FROM users WHERE username=$1";
 
 $result = pg_prepare($dbconn, "query",$query);
-
 $result = pg_execute($dbconn, "query", array($username));
 	
 if(pg_num_rows($result)>0){
