@@ -382,14 +382,17 @@ function getCheckedBoxes() {
           }
       });
 
-      $("button").each(function(i,obj){
-        if ($(obj).attr('id') == currentValue && isClicked){
-          console.log($(obj));
-          $(obj).removeAttr('readonly');
-          console.log($(obj));
-          isClicked = false;
-        }             
-      });
+      if (isClicked){
+        console.log(isClicked);
+        $("button").each(function(i,obj){
+          if ($(obj).attr('id') == currentValue) {
+            console.log($(obj));
+            $(obj).removeAttr('readonly');
+            console.log($(obj));
+            isClicked = false;  
+          }
+        });
+      }
     }
 
 
