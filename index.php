@@ -14,6 +14,10 @@ if(isset($_SESSION['id'])){
 include 'database/Connect.php';
 include 'database/LoadDataOnstart.php';
 
+
+$LoadOnStart = new LoadOnStart();
+
+
 ?>
 <!DOCTYPE html>
 
@@ -70,7 +74,7 @@ include 'database/LoadDataOnstart.php';
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
          <div>
-         <?php GetLocationQuery();?>
+         <?php $LoadOnStart->GetLocationQuery();?>
           </div>
           <div id="pointersDiv">Locations</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
@@ -85,7 +89,7 @@ include 'database/LoadDataOnstart.php';
         <div class="list-group" id="tourList">
             <ul id="buttonsListTours">  
         <?php
-             getTourList();
+             $LoadOnStart->getTourList();
           ?>
           </ul>
           </div>
@@ -189,7 +193,7 @@ include 'database/LoadDataOnstart.php';
         <div id= "fileManagerDiv" class="modal-body">
             <div class = "list-group" id="modalc">
         <?php  
-           mediaResultsFucntion();
+           $LoadOnStart->mediaResultsFucntion();
         ?>
         </div>
           </div>
@@ -215,7 +219,7 @@ include 'database/LoadDataOnstart.php';
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
           <?php
-          MediaSelectFucntion();
+          $LoadOnStart -> MediaSelectFucntion();
           ?>
         </div>
     	<div class="modal-body">
@@ -244,7 +248,7 @@ include 'database/LoadDataOnstart.php';
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-      getLocationList();
+     $LoadOnStart->getLocationList();
           ?>
  
       </div>

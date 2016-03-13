@@ -5,13 +5,16 @@ include 'Connect.php';
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 
-function getTourList(){
+
+class LoadOnStart{
+
+public function getTourList(){
 
 $username= $_SESSION['username'];
 //$queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usertour.tourid = tour.tourid";
 //$toursListQuery =pg_prepare($dbconn, "toursListQuery1", $queryTour);
 $escape = pg_escape_string($username);
-$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '$escape' and usertour.tourid = tour.tourid");
+$toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '{$escape}' and usertour.tourid = tour.tourid");
  //$toursListQuery = pg_execute($dbconn,"toursListQuery1", array($username));
 if (pg_num_rows($toursListQuery)>0) {
  	    while ($rows =pg_fetch_array($toursListQuery)) {
@@ -32,7 +35,7 @@ else{
 }
 
 
-function GetLocationQuery(){
+public function GetLocationQuery(){
 
 
 $locationsQuery = pg_query("SELECT * From location");
@@ -55,7 +58,7 @@ echo"<select id ='selectLocation' class='form-control'>";
 
 
 
-function getLocationList(){
+public function getLocationList(){
 
 $locationsQuery2 = pg_query("SELECT * From location");
 
@@ -72,7 +75,7 @@ if ($locationsQuery2) {
 }
 }
 
-function mediaResultsFucntion(){
+public function mediaResultsFucntion(){
 
 $mediaResults = pg_query("SELECT * from media");
 
@@ -111,10 +114,10 @@ if ($mediaResults) {
 
 }
 
-function MediaSelectFucntion(){
+public function MediaSelectFucntion(){
 $MediaSelect = pg_query("SELECT * from media");
 
-if (condition) {
+if ($MediaSelect) {
 	# code...
 	echo "<select id='MediaSelectId' class='form-control' onchange='addmeidaFromSelectList();'>";
         while($rows = pg_fetch_array($MediaSelect)){
@@ -125,6 +128,8 @@ if (condition) {
     }
     echo "</select>";
 }
+}
+
 }
 
 ?>
