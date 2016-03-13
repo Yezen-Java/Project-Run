@@ -105,12 +105,17 @@ function compare (a,b){
 function Save(){
 
 var array = [];
-$('.sortable li').each(function(i, li) {
-  array.push($(li));
+// $('.sortable li').each(function(i, li) {
+//   array.push($(li));
+// });
+// for (var i = 0; i < array.length; i++) {
+//   console.log(array[i].text() + i);
+// };
+
+$("#listMedia").children("li").each(function()
+{
+    array.push($(this).value;
 });
-for (var i = 0; i < array.length; i++) {
-  console.log(array[i].text() + i);
-};
 
 
 $.ajax({

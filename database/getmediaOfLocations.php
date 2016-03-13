@@ -15,11 +15,11 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
 	if($getLocationMedia){
 
 	    while ($rows = pg_fetch_array($getLocationMedia)) {
-		       //$mediaId = $rows['mediaid'];
+		       $mediaId = $rows['mediaid'];
                $media_name = $rows['media_name'];
 
 
-        echo " <li><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
+        echo "<li value ='mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
 
 
 	}
