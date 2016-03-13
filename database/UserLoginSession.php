@@ -16,7 +16,7 @@ function loginUserSession(){
 
 	$result = pg_query("SELECT * FROM users WHERE username='{$escaped}'");
 	
-if(pg_num_rows($result)>0){
+if($result){
 	$row = pg_fetch_row($result);
 	$userId = $row[0];
 	$usernameR = $row[3];
