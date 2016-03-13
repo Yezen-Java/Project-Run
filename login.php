@@ -8,7 +8,7 @@
 
 if (isset($_POST['signup'])){
       include'database/signUpValidation.php';
-      createAccount();
+      userPass();
     }
 
 ?>
