@@ -377,7 +377,7 @@ function getCheckedBoxes() {
           if($(obj).attr('name') == idOfDescriptionBox){
             currentValue = $(obj).attr('name');
             console.log(currentValue);
-            break;
+            return false;
           }
       });
 
