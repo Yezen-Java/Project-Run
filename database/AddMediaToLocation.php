@@ -20,8 +20,8 @@ for ($i=0; $i < $le;$i++) {
 	$result = pg_execute($dbconn,"query",  array($location,$liarray[$i]));
 	$cmdtuples = pg_affected_rows($result);
 	if ($cmdtuples > 0) {
-			
-		echo"MeidaId $meidaId been added to LocationId $location";
+		$mediaid = $liarray[$i];
+		echo"MeidaId $mediaid been added to LocationId $location";
 
 	}else{
 
