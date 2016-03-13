@@ -15,9 +15,9 @@ function loginUserSession(){
 $query = ("SELECT * FROM users WHERE Username=$1");
 
 $result = pg_prepare($dbconn, "loginQuery",$query);
+$result = pg_execute($dbconn, "loginQuery", array($username));
 
 if ($result) {
-	$result = pg_execute($dbconn, "loginQuery", array($username));
 	if($row = pg_fetch_row($result)>0){
 	$userId = $row[0];
 	$usernameR = $row[3];
