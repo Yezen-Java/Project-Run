@@ -107,11 +107,10 @@ function Save(){
 var array = [];
 var arrayList = new Array();
  $('.sortable li').each(function(i, li) {
-  array.push($(li));
+  array.push($(li).value);
 });
 for (var i = 0; i < array.length; i++) {
-  console.log(array[i].value + i);
-  arrayList.push(array[i].value());
+  console.log(array[i].text() + i);
 };
 
 // $("#listMedia").children("li").each(function()
