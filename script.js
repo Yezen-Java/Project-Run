@@ -376,7 +376,7 @@ function getCheckedBoxes() {
       $(".textAreas").each(function(i,obj){
           //currentValue = this.value; 
           var item = $('.textAreas').get(i);
-          console.log(item.attr('name'));
+          console.log($(item).attr('name'));
           if(currentValue == idOfDescriptionBox){
             //console.log(currentValue);
           }
