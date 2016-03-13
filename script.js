@@ -273,8 +273,6 @@ error: function(){}
       };
       console.log(Arrayofvlaues);
 
-
-
     }
   });
 });
