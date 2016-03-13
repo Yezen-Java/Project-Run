@@ -17,12 +17,13 @@ echo "working";
 global $le;
 global $liarray;
 global $location;
+global $dbconn;
 
-    $query = "INSERT into location_res(locationid,mediaid) values ($1,$2)";
+    $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
 
 	$result = pg_prepare($dbconn,"query", $query);
 
-for ($i=0; $i < $le ; $i++) { 
+for ($i=0; $i < $le;$i++) { 
 	# code...
 	$result = pg_execute($dbconn,"query",  array($location,$liarray[$i]));
 
