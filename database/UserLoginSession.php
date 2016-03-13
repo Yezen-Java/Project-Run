@@ -9,10 +9,12 @@ $password = $_POST['form-password'];
 
 function loginUserSession(){
 
-$query = "SELECT * FROM users WHERE username=$1";
+//$query = "SELECT * FROM users WHERE username=$1";
+// $result = pg_prepare($dbconn, "query",$query);
+// $result = pg_execute($dbconn, "query", array($username));
+	$escaped = pg_escape_string($username);
 
-$result = pg_prepare($dbconn, "query",$query);
-$result = pg_execute($dbconn, "query", array($username));
+	$result = pg_query("SELECT * FROM users WHERE username='{$escaped}'");
 	
 if(pg_num_rows($result)>0){
 	$row = pg_fetch_row($result);
