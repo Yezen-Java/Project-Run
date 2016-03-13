@@ -380,7 +380,7 @@ function getCheckedBoxes() {
             console.log(currentValue);
             $(obj).attr("readonly", "readonly");
             isClicked = true;
-            return false;
+            return;
           }
       });
 
