@@ -23,28 +23,17 @@ if($username === $usernameR  && $password === $passwordR){
 	$_SESSION['username'] = $username;
 	$_SESSION['id'] = $userId;
 	pg_close();
+    header('Location: index.php');
    return true;
 }else{
-		return false;
+	echo"Invalid Username or password";
+    return false;
 
 }
 
 }
 
 
-
-function userPass(){
-
-if(loginUserSession()){
-   
-   header('Location: index.php');
-
-}else{
-	echo " Incorrect Username or Password";
-
-}
-
-}
 
 
 ?>
