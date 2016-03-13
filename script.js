@@ -385,17 +385,6 @@ function getCheckedBoxes() {
             return false;
           }
       });
-
-
-      for(var x = 0; x < size; x++){
-
-        //var item = $('.textAreas').children("textarea").get(x);
-
-        //console.log(item);
-        //console.log(idOfDescriptionBox);
-        //console.log(name);
-       
-      }
     }
 
 
