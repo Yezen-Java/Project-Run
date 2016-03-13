@@ -374,11 +374,10 @@ function getCheckedBoxes() {
       var currentValue = null;
 
       $(".textAreas").each(function(i,obj){
-          //currentValue = this.value; 
-          //var item = $('.textAreas').get(i);
-          console.log($(obj).attr('name'));
-          if(currentValue == idOfDescriptionBox){
-            //console.log(currentValue);
+          if($(obj).attr('name') == idOfDescriptionBox){
+            currentValue = $(obj).attr('name');
+            console.log(currentValue);
+            break;
           }
       });
 
