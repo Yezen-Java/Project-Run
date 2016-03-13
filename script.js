@@ -110,7 +110,7 @@ var arrayList = new Array();
   array.push($(li).value);
 });
 for (var i = 0; i < array.length; i++) {
-  console.log(array[i].text() + i);
+  console.log(array[i]+ i);
 };
 
 // $("#listMedia").children("li").each(function()
