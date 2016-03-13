@@ -107,7 +107,7 @@ function Save(){
 var array = [];
 var arrayList = new Array();
  $('.sortable li').each(function(i, li) {
-  array.push($(li).value);
+  array.push($(li).attr('value'));
 });
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
