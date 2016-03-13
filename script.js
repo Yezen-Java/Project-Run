@@ -371,22 +371,23 @@ function getCheckedBoxes() {
       //console.log(size);
 
       var selectedBox = null;
+      var currentValue = null;
+
+      $(".textAreas textarea").each(function(){
+          currentValue = this.value;
+          console.log(this.value);
+          if(currentValue == idOfDescriptionBox){
+            console.log(currentValue);
+          }
+      });
+
 
       for(var x = 0; x < size; x++){
 
-        var item = $('.textAreas').children("textarea").get(x);
+        //var item = $('.textAreas').children("textarea").get(x);
 
-        console.log(item);
-        console.log(idOfDescriptionBox);
-
-        $(".textAreas textarea").each(function(){
-          currentValue = this.value ;
-        });
-
-        
-
-        
-
+        //console.log(item);
+        //console.log(idOfDescriptionBox);
         //console.log(name);
        
       }
