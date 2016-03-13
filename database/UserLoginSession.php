@@ -3,36 +3,34 @@ error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 include 'Connect.php';
 
-$username = $_POST['form-username'];
-$password = $_POST['form-password'];
-
 
 function loginUserSession(){
 
-//$query = "SELECT * FROM users WHERE username=$1";
-// $result = pg_prepare($dbconn, "query",$query);
-// $result = pg_execute($dbconn, "query", array($username));
-	$escaped = pg_escape_string($username);
+$username = $_POST['form-username'];
+$password = $_POST['form-password'];
 
-	$result = pg_query("SELECT * FROM users WHERE username='$escaped'");
-	
-if($result){
+$escape = pg_escape_string($username);
+$result = pg_query("SELECT * FROM users WHERE Username='{$escape}'");
+
+if ($result) {
 	$row = pg_fetch_row($result);
 	$userId = $row[0];
 	$usernameR = $row[3];
 	$passwordR = $row[5];
-
-		if($username === $usernameR  && $password === $passwordR){
-			$_SESSION['username'] = $username;
-			$_SESSION['id'] = $userId;
-		   header('Location: index.php');
-		}else{
-			echo " Incorrect Username or Password";
-	}
+}
+if($username === $usernameR  && $password === $passwordR){
+	$_SESSION['username'] = $username;
+	$_SESSION['id'] = $userId;
+   header('Location: index.php');
 }else{
-	echo " Incorrect Username or Password2";
+	echo " Incorrect Username or Password";
 }
 
 }
+
+
+//$query = "SELECT * FROM users WHERE username=$1";
+// $result = pg_prepare($dbconn, "query",$query);
+// $result = pg_execute($dbconn, "query", array($username));
 
 ?>
