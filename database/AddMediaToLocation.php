@@ -8,7 +8,7 @@ $liarray = explode("::", $lis);
 
 foreach ($liarray as $key) {
 
-	echo $key;
+	echo "Test --- "+$key;
 }
 
 
