@@ -14,6 +14,10 @@ echo "number $le and location number $location ";
 function functionName(){
 echo "working";
 
+global $le;
+global $liarray;
+global $location;
+
 for ($i=0; $i < $le ; $i++) { 
 	# code...
 	$query = "INSERT into location_res(locationid,mediaid) values ($1,$2)";
