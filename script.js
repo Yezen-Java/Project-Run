@@ -364,7 +364,7 @@ function getCheckedBoxes() {
     function descriptionBoxEdit(idOfDescriptionBox){
 
       //var descriptionBox = document.getElementById("descriptionBox");
-      var size = $("#descriptionBoxUl textarea").length;
+      var size = $(".textAreas").length;
       var name = $('#descriptionBox').attr("value");
       var readOnly = false;
       
@@ -376,6 +376,9 @@ function getCheckedBoxes() {
 
         var item = $('.textAreas').children("textarea").get(x);
 
+        console.log(item);
+        console.log(idOfDescriptionBox);
+        
         if(item.attr("value") == idOfDescriptionBox){
           selectedBox = item;
           console.log(selectedBox);
