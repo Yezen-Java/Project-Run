@@ -122,8 +122,8 @@ $.ajax({
     url: "/database/AddMediaToLocation.php",
     type: "POST",
     data: { items: array.join("::") },
-    success: function(data) { 
-      alert(data); 
+    success: function(response) { 
+      alert(response); 
     }
 });
 
