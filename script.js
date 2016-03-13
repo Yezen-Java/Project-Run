@@ -105,7 +105,7 @@ function compare (a,b){
 function Save(){
 
 var array = [];
-$('.sortable li').each(function(i, li) {
+$("#listMedia li").each(function(i, li) {
   array.push($(li));
 });
 for (var i = 0; i < array.length; i++) {
