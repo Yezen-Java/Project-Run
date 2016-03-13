@@ -105,7 +105,6 @@ function compare (a,b){
 function Save(){
 
 var array = [];
-var arrayList = new Array();
  $('.sortable li').each(function(i, li) {
   array.push($(li).attr('value'));
 });
@@ -122,7 +121,7 @@ for (var i = 0; i < array.length; i++) {
 $.ajax({
     url: "/database/AddMediaToLocation.php",
     type: "POST",
-    data: { items: arrayList.join("::") },
+    data: { items: array.join("::") },
     success: function(data) { 
       alert(data); 
     }
