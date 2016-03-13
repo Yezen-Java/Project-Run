@@ -378,15 +378,16 @@ function getCheckedBoxes() {
             selectedTextArea = $(obj);
             currentValue = $(obj).attr('name');
             console.log(currentValue);
-            $(obj).attr("readonly", "readonly");
+            selectedTextArea.removeAttr("readonly",true);
             isClicked = true;
             return;
           } else {
+
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
                 console.log($(obj).attr('id'));
                 isClicked = false;  
-                selectedTextArea.removeAttr("readonly");
+                selectedTextArea.removeAttr("readonly",false);
               }
             });
           }
