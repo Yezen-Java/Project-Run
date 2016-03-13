@@ -366,25 +366,27 @@ function getCheckedBoxes() {
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $(".textAreas").length;
       var name = $('#descriptionBox').attr("value");
-      
+      var isClicked = false;
       //console.log(size);
 
       var selectedBox = null;
       var currentValue = null;
 
       $(".textAreas").each(function(i,obj){
-          if($(obj).attr('name') == idOfDescriptionBox){
+          if($(obj).attr('name') == idOfDescriptionBox && !isClicked){
             currentValue = $(obj).attr('name');
             console.log(currentValue);
             $(obj).attr("readonly", "readonly");
+            isClicked = true;
             return false;
           }
       });
 
       $("button").each(function(i,obj){
-        if ($(obj).attr('id') == currentValue){
+        if ($(obj).attr('id') == currentValue && isClicked){
           $(obj).removeAttr('readonly');
-        }               
+          isClicked = false;
+        }             
       });
     }
 
