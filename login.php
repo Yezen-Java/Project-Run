@@ -3,6 +3,7 @@
   
   if (isset($_POST['btlogin'])) {
     include("database/UserLoginSession.php");
+    loginUserSession();
   }
 
 if (isset($_POST['signup'])){
