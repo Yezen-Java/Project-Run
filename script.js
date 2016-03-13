@@ -377,14 +377,15 @@ function getCheckedBoxes() {
             currentValue = $(obj).attr('name');
             console.log(currentValue);
             $(obj).attr("readonly", "readonly");
-            $("button").each(function(i,obj){
-              if ($(obj).attr('id') == currentValue){
-                $(obj).removeAttr('readonly');
-              }               
-            };
             return false;
           }
       });
+
+      $("button").each(function(i,obj){
+        if ($(obj).attr('id') == currentValue){
+          $(obj).removeAttr('readonly');
+        }               
+      };
     }
 
 
