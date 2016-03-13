@@ -112,10 +112,10 @@ var array = [];
 //   console.log(array[i].text() + i);
 // };
 
-$("#listMedia").children("li").each(function()
-{
-    array.push($(this).value;
-});
+// $("#listMedia").children("li").each(function()
+// {
+//     array.push($(this).value;
+// });
 
 
 $.ajax({
