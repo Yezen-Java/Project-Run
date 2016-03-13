@@ -29,7 +29,7 @@ if(pg_num_rows($result)>0){
 			echo " Incorrect Username or Password";
 	}
 }else{
-	echo " Incorrect Username or Password";
+	echo " Incorrect Username or Password2";
 }
 
 }
