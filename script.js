@@ -101,6 +101,7 @@ function compare (a,b){
 //   }
 // }
 
+var LocationIdNumber ='';
 
 function Save(){
 
@@ -118,14 +119,25 @@ for (var i = 0; i < array.length; i++) {
 // });
 
 
-$.ajax({
-    url: "/database/AddMediaToLocation.php",
-    type: "POST",
-    data: { items: array.join("::") },
-    success: function(response) { 
-      alert(response); 
-    }
-});
+// $.ajax({
+//     url: "/database/AddMediaToLocation.php",
+//     type: "POST",
+//     data: { items: array.join("::"), locationNo:LocationIdNumber },
+//     success: function(response) { 
+//       alert(response); 
+//     }
+// });
+
+      $(function() {
+      var value1 = $('#tourButton').val();
+       $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
+         alert(data);
+       });
+       return false;
+  });
+
+
+
 
 
 }
@@ -224,6 +236,7 @@ function createTourDetails(){
 }
 //this function open the file model for specific locations.
 function addLocationRes(value) {
+   LocationIdNumber = value;
   console.log("test value "+ value);
   $("#myModal ul").empty();
   console.log("works");
