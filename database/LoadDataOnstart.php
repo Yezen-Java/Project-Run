@@ -118,7 +118,7 @@ if (condition) {
 	# code...
 	echo "<select id='MediaSelectId' class='form-control' onchange='addmeidaFromSelectList();'>";
         while($rows = pg_fetch_array($MediaSelect)){
-        $mediaid = $rows['meidaid'];
+        $mediaid = $rows['mediaid'];
         $mediaName = $rows['media_name'];
         echo "<option id='option' value='$mediaid'>$mediaName</option>";
 
