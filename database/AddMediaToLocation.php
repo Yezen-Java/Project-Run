@@ -7,7 +7,14 @@ $lis = $_POST['items'];
 $liarray = explode("::", $lis);
 
 
-	echo $liarray[1];
+$le = count($liarray);
+echo $le;
+
+for ($i=0; $i <$le; $i++) { 
+
+echo $liarray[$i];	
+
+}
 
 
 
