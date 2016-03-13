@@ -383,8 +383,8 @@ function getCheckedBoxes() {
       });
 
       $("button").each(function(i,obj){
-        console.log($(obj).attr('id'));
         if ($(obj).attr('id') == currentValue && isClicked){
+          console.log($(obj).attr('id'));
           $(obj).removeAttr('readonly');
           isClicked = false;
         }             
