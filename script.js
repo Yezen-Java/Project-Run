@@ -373,7 +373,7 @@ function getCheckedBoxes() {
       var selectedBox = null;
       var currentValue = null;
 
-      $(".textAreas textarea").each(function(){
+      $(".textAreas").each(function(){
           currentValue = this.value;
           console.log(this.value);
           if(currentValue == idOfDescriptionBox){
