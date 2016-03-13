@@ -377,7 +377,7 @@ function getCheckedBoxes() {
           currentValue = this.value;
           console.log(this.value);
           if(currentValue == idOfDescriptionBox){
-            console.log(currentValue);
+            //console.log(currentValue);
           }
       });
 
