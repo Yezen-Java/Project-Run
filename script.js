@@ -163,12 +163,12 @@ function deleteTourLi(tourId){
         console.log(item.id);
          if(item.id == tourId){
           item.remove();
-$(function() {
-       $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
-        alert(data);
-       });
+          $(function() {
+          $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
+            alert(data);
+          });
        return false;
-  });
+    });
 
          }
     }
@@ -367,25 +367,54 @@ function getCheckedBoxes() {
       var size = $("#descriptionBoxUl textarea").length;
       var name = $('#descriptionBox').attr("value");
       var readOnly = false;
+      
       //console.log(size);
+
+      var selectedBox = null;
 
       for(var x = 0; x < size; x++){
 
-        var item = $('#descriptionBoxUl').children('textarea').get(x);
+        var item = $('.textAreas').children("textarea").get(x);
+
+        if(item.attr("value") == idOfDescriptionBox){
+          selectedBox = item;
+          console.log(selectedBox);
+          break;
+        }
 
         //console.log(name);
-        console.log(idOfDescriptionBox);
-        console.log(name);
-
-          if (readOnly == false && name == idOfDescriptionBox) {
-            $(item).attr("readonly", "readonly");
-            readOnly = true;
-          }else{
-            //console.log("FUCK");
-          }
-      
+       
       }
+      // if (readOnly == false && name == idOfDescriptionBox) {
+      //       $(item).attr("readonly", "readonly");
+      //       readOnly = true;
+      //     }else{
+      //       //console.log("FUCK");
+      //     }
     }
+
+    // function deleteTourLi(tourId){
+    // var list = document.getElementById("buttonsListTours");
+    // var size = $("#buttonsListTours li").length;
+    // console.log(size);
+    // for (var x = 0; x < size; x++) {
+    //     var item = $('#buttonsListTours').children('li').get(x);
+    //     console.log(item);
+    //     console.log(item.id);
+    //      if(item.id == tourId){
+    //       item.remove();
+    //       $(function() {
+    //       $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
+    //         alert(data);
+    //       });
+    //    return false;
+    // });
+
+    //      }
+    // }
+      // $(".tourButtons").get(i).remove();
+      // $(this).remove();
+}
 
 
 
