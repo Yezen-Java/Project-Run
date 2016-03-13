@@ -17,6 +17,7 @@ if ($result) {
 	$userId = $row[0];
 	$usernameR = $row[3];
 	$passwordR = $row[5];
+	return true;
 }
 if($username === $usernameR  && $password === $passwordR){
 	$_SESSION['username'] = $username;
@@ -25,6 +26,8 @@ if($username === $usernameR  && $password === $passwordR){
    header('Location: index.php');
 }else{
 	echo " Incorrect Username or Password";
+		return false;
+
 }
 
 }
