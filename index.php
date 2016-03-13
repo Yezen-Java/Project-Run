@@ -225,7 +225,7 @@ include 'database/LoadDataOnstart.php';
     	</div>
         <div class="modal-footer">
 
-          <button type ="button" class="btn btn-default" onclick = "save()">Save</button>
+          <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
           <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
