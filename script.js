@@ -377,6 +377,8 @@ function getCheckedBoxes() {
           if($(obj).attr('name') == idOfDescriptionBox){
             currentValue = $(obj).attr('name');
             console.log(currentValue);
+            $(obj).attr("readonly", "readonly");
+            readOnly = true;
             return false;
           }
       });
@@ -391,12 +393,6 @@ function getCheckedBoxes() {
         //console.log(name);
        
       }
-      // if (readOnly == false && name == idOfDescriptionBox) {
-      //       $(item).attr("readonly", "readonly");
-      //       readOnly = true;
-      //     }else{
-      //       //console.log("FUCK");
-      //     }
     }
 
 
