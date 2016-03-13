@@ -112,6 +112,17 @@ for (var i = 0; i < array.length; i++) {
   console.log(array[i].text() + i);
 };
 
+
+$.ajax({
+    url: "/database/AddMediaToLocation.php",
+    type: "POST",
+    data: { items: array.join("::") },
+    success: function(data) { 
+      alert(data); 
+    }
+});
+
+
 }
 
 

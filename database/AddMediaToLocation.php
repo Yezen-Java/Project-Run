@@ -2,6 +2,16 @@
 
 include 'Connect.php';
 
+
+$lis = $_POST['items'];
+$liarray = explode("::", $lis);
+
+echo $liarray;
+
+
+
+ function FunctionName(){
+
 $meidaId = $_POST['MeidaID'];
 $location = $_POST['LocationID'];
 
@@ -21,10 +31,7 @@ echo "Faild";
 
 }
 
-
-
-
 sleep(1);
-
+}
 
 ?>
