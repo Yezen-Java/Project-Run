@@ -124,7 +124,6 @@ if ($MediaSelect) {
         $mediaid = $rows['mediaid'];
         $mediaName = $rows['media_name'];
         echo "<option id='option' value='$mediaid'>$mediaName</option>";
-
     }
     echo "</select>";
 }
