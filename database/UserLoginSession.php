@@ -2,23 +2,41 @@
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 include 'Connect.php';
+
+
+
+
 $username = $_POST['form-username'];
 $password = $_POST['form-password'];
-$result = pg_query("SELECT * FROM users WHERE Username='$username'");
+
+loginUserSession();
+
+function loginUserSession(){
+$query = ("SELECT * FROM users WHERE Username=$1");
+
+$result = pg_prepare($dbconn, "loginQuery",$query);
 
 if ($result) {
-	$row = pg_fetch_row($result);
+	$result = pg_execute($dbconn, "loginQuery", $query);
+	if($row = pg_fetch_row($result)>0){
 	$userId = $row[0];
 	$usernameR = $row[3];
 	$passwordR = $row[5];
+
+		if($username === $usernameR  && $password === $passwordR){
+			$_SESSION['username'] = $username;
+			$_SESSION['id'] = $userId;
+		   header('Location: index.php');
+		}else{
+			echo " Incorrect Username or Password";
+	}
+}else{
+	echo " Incorrect Username or Password";
 }
-if($username === $usernameR  && $password === $passwordR){
-	$_SESSION['username'] = $username;
-	$_SESSION['id'] = $userId;
-   header('Location: index.php');
 }else{
 	echo " Incorrect Username or Password";
 }
 
+}
 
 ?>
