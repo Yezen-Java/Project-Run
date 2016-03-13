@@ -105,8 +105,13 @@ function compare (a,b){
 function Save(){
 
 var array = [];
-$("#listMedia li").each(function(i, li) {
-  array.push($(li));
+// $("#listMedia li").each(function(i, li) {
+//   array.push($(li));
+// });
+
+$("#listMedia").children("li").each(function()
+{
+    array.push($(this).value;
 });
 for (var i = 0; i < array.length; i++) {
   console.log(array[i].text() + i);
