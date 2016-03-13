@@ -314,6 +314,7 @@ console.log("test "+locationID)
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
 
         $("#listMedia").append(data);
+        $('.sortable').sortable();
        });
        return false;
   });
@@ -331,7 +332,7 @@ function addmeidaFromSelectList(){
     console.log(selectedText);
 
     $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
-
+    $('.sortable').sortable();
 
 
 }
