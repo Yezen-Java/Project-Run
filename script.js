@@ -381,7 +381,7 @@ function getCheckedBoxes() {
             $(obj).attr("readonly", "readonly");
             isClicked = true;
             return;
-          } else if (isClicked) {
+          } else {
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
                 console.log($(obj).attr('id'));
