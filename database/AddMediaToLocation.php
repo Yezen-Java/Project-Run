@@ -18,12 +18,12 @@ global $le;
 global $liarray;
 global $location;
 
-for ($i=0; $i < $le ; $i++) { 
-	# code...
-	$query = "INSERT into location_res(locationid,mediaid) values ($1,$2)";
+    $query = "INSERT into location_res(locationid,mediaid) values ($1,$2)";
 
 	$result = pg_prepare($dbconn,"query", $query);
 
+for ($i=0; $i < $le ; $i++) { 
+	# code...
 	$result = pg_execute($dbconn,"query",  array($location,$liarray[$i]));
 
 	$cmdtuples = pg_affected_rows($result);
@@ -37,7 +37,6 @@ for ($i=0; $i < $le ; $i++) {
 		echo "Faild";
 	}
 
-	sleep(1);
 }
 
 }
