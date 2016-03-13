@@ -381,19 +381,16 @@ function getCheckedBoxes() {
             $(obj).attr("readonly", "readonly");
             isClicked = true;
             return;
+          } else if (isClicked) {
+            $("button").each(function(i,obj){
+              if ($(obj).attr('id') == currentValue) {
+                console.log($(obj).attr('id'));
+                isClicked = false;  
+                selectedTextArea.removeAttr("readonly");
+              }
+            });
           }
       });
-
-      if (isClicked){
-        console.log(isClicked);
-        $("button").each(function(i,obj){
-          if ($(obj).attr('id') == currentValue) {
-            console.log($(obj).attr('id'));
-            isClicked = false;  
-            selectedTextArea.removeAttr("readonly");
-          }
-        });
-      }
     }
 
 
