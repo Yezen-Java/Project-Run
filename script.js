@@ -310,16 +310,6 @@ function deleteLocationFromManager(){
 }
 
 
-// function deleteMediaFromManager(value){
-
-//   var selected = new Array();
-
-//   $("input:checkbox[name=type]:checked").each(function() {
-//        selected.push($(this).val());
-//   });
-
-// }
-
 function getCheckedBoxes() {
   var checkboxes = document.getElementsByName("checkboxmedia");
   var checkboxesChecked = [];

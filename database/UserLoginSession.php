@@ -17,7 +17,6 @@ if ($result) {
 	$userId = $row[0];
 	$usernameR = $row[3];
 	$passwordR = $row[5];
-	
 }
 if($username === $usernameR  && $password === $passwordR){
 	$_SESSION['username'] = $username;
