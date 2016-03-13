@@ -6,10 +6,9 @@ include 'Connect.php';
 $lis = $_POST['items'];
 $liarray = explode("::", $lis);
 
-foreach ($liarray as $key) {
 
-	echo "Test --- "+$key;
-}
+	echo "Test --- ";
+
 
 
 
