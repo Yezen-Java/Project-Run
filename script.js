@@ -105,11 +105,13 @@ function compare (a,b){
 function Save(){
 
 var array = [];
+var arrayList = new Array();
  $('.sortable li').each(function(i, li) {
   array.push($(li));
 });
 for (var i = 0; i < array.length; i++) {
-  console.log(array[i].text() + i);
+  console.log(array[i].value() + i);
+  arrayList.push(array[i].value());
 };
 
 // $("#listMedia").children("li").each(function()
@@ -121,7 +123,7 @@ for (var i = 0; i < array.length; i++) {
 $.ajax({
     url: "/database/AddMediaToLocation.php",
     type: "POST",
-    data: { items: array.join("::") },
+    data: { items: arrayList.join("::") },
     success: function(data) { 
       alert(data); 
     }
