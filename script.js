@@ -374,11 +374,11 @@ function getCheckedBoxes() {
 
       for(var x = 0; x < size; x++){
 
-        var item = $('.textAreas').children("textarea").get(x);
+        var item = $('.containerOfDescription').children("textarea").get(x);
 
         console.log(item);
         console.log(idOfDescriptionBox);
-        
+
         if(item.attr("value") == idOfDescriptionBox){
           selectedBox = item;
           console.log(selectedBox);
