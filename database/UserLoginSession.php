@@ -21,6 +21,7 @@ if ($result) {
 if($username === $usernameR  && $password === $passwordR){
 	$_SESSION['username'] = $username;
 	$_SESSION['id'] = $userId;
+	pg_close();
    header('Location: index.php');
 }else{
 	echo " Incorrect Username or Password";
@@ -28,9 +29,5 @@ if($username === $usernameR  && $password === $passwordR){
 
 }
 
-
-//$query = "SELECT * FROM users WHERE username=$1";
-// $result = pg_prepare($dbconn, "query",$query);
-// $result = pg_execute($dbconn, "query", array($username));
 
 ?>
