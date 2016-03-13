@@ -393,28 +393,6 @@ function getCheckedBoxes() {
       //     }
     }
 
-    // function deleteTourLi(tourId){
-    // var list = document.getElementById("buttonsListTours");
-    // var size = $("#buttonsListTours li").length;
-    // console.log(size);
-    // for (var x = 0; x < size; x++) {
-    //     var item = $('#buttonsListTours').children('li').get(x);
-    //     console.log(item);
-    //     console.log(item.id);
-    //      if(item.id == tourId){
-    //       item.remove();
-    //       $(function() {
-    //       $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
-    //         alert(data);
-    //       });
-    //    return false;
-    // });
-
-    //      }
-    // }
-      // $(".tourButtons").get(i).remove();
-      // $(this).remove();
-}
 
 
 
