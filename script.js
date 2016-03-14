@@ -339,7 +339,7 @@ function saveLocations(){
   $('.checkLocation').change(function(i,obj) {
     if ( ! this.checked) {
       //console.log("Unchecked " + $(this).attr('value'));
-      unchecked.push((this).attr('value'));
+      unchecked.push($(this).attr('value'));
     }
   });
 
