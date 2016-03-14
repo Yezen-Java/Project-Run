@@ -340,10 +340,11 @@ function saveLocations(){
     if ( ! this.checked) {
       //console.log("Unchecked " + $(this).attr('value'));
       unchecked.push($(this).attr('value'));
+      console.log(unchecked);
+
     }
   });
 
-  console.log(unchecked);
 }
 
 function deleteLocationFromManager(){
