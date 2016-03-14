@@ -88,7 +88,7 @@ class AddLocations
 
 	for ($i=0; $i < $le; $i++) { 
 
-	$addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($tourId,$liarray[$i]));
+	$addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($this->tourId,$liarray[$i]));
    
     }
 
