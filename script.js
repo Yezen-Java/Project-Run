@@ -329,6 +329,15 @@ function addmeidaFromSelectList(){
 }
 
 function saveLocations(){
+
+    $(function() {
+
+       $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
+        alert(data);
+       });
+       return false;
+  });
+    
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
   var array = [];
@@ -346,14 +355,6 @@ function saveLocations(){
 //        },
 //         });
 
-
-  $(function() {
-
-       $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
-        alert(data);
-       });
-       return false;
-  });
 
 
 
