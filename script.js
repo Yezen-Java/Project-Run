@@ -379,17 +379,21 @@ function getCheckedBoxes() {
             currentValue = $(obj).attr('name');
             console.log(currentValue);
             $(obj).attr("readonly", true);
-            isClicked = true;
-          } else if (isClicked) {
+          } else {
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
                 console.log($(obj).attr('id'));
-                isClicked = false;  
                 selectedTextArea.attr("readonly",false);
               }
             });
           }
       });
+
+      if(isClicked){
+        isClicked = false;
+      } else {
+        isClicked = true;
+      }
     }
 
 
