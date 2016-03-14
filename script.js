@@ -331,12 +331,14 @@ function addmeidaFromSelectList(){
 function saveLocations(){
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
+  var array = [];
   for (var i = 0; i < checked.length; i++) {
     console.log("Checked "+checked[i].value);
+    array.push(checked[i].value);
   }
 
   $(function() {
-       $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
+       $.post('database/addLocationScript.php',{TourID:TourCodeSelected,LocationId:array.join("::")}, function(data){
         console.log(data);
        });
        return false;
