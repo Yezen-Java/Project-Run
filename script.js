@@ -334,7 +334,7 @@ function saveLocations(){
 
   //console.log(array);
   for (var i = 0; i < array.length; i++) {
-    $(array[i].value).change(function() {
+    $('.checkLocation').change(function(i,obj) {
 
      if ( ! this.checked) {
          // It is not checked, show your div...
