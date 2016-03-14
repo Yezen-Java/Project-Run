@@ -362,7 +362,6 @@ function getCheckedBoxes() {
     it should automatically make that specific text area readonly - by Sedar 
     */
     function descriptionBoxEdit(idOfDescriptionBox){
-      var isClicked = false;
 
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $(".textAreas").length;
@@ -398,13 +397,7 @@ function getCheckedBoxes() {
           }
       });
 
-      if(isClicked){
-        isClicked = false;
-      } else {
-        isClicked = true;
-      }
-
-      console.log(isClicked);
+  
     }
 
 
