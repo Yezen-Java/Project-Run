@@ -338,7 +338,7 @@ function saveLocations(){
 
      if ( ! this.checked) {
          // It is not checked, show your div...
-        console.log("Unchecked " + array[i].value);
+        console.log("Unchecked " + $(obj).value);
      }
 
   });
