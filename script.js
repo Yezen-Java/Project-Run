@@ -330,9 +330,9 @@ function addmeidaFromSelectList(){
 
 function saveLocations(){
   var array = getCheckedBoxes("checkboxlocation");
-  //console.log(array);
+  console.log(array);
   for (var i = 0; i < array.length; i++) {
-    console.log(array[i].id);
+    //console.log(array[i].id);
   };
 }
 
