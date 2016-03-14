@@ -353,42 +353,27 @@ function getCheckedBoxes() {
     it should automatically make that specific text area readonly - by Sedar 
     */
     function descriptionBoxEdit(idOfDescriptionBox){
+      var currentValue = null;
 
-      //var descriptionBox = document.getElementById("descriptionBox");
-      var size = $(".textAreas").length;
-      var name = $('#descriptionBox').attr("value");
-      var readOnly = false;
-      
-      //console.log(size);
-
-      var selectedBox = null;
-
-      for(var x = 0; x < size; x++){
-
-        var item = $('.textAreas').children("textarea").get(x);
-
-        console.log(item);
-        console.log(idOfDescriptionBox);
-
-        $(".textAreas textarea").each(function(){
-          currentValue = this.value ;
-        });
-
-        
-
-        //console.log(name);
-       
-      }
-      // if (readOnly == false && name == idOfDescriptionBox) {
-      //       $(item).attr("readonly", "readonly");
-      //       readOnly = true;
-      //     }else{
-      //       //console.log("FUCK");
-      //     }
-    }
+      $(".textAreas").each(function(i,obj){
+        if($(obj).attr('name') == idOfDescriptionBox){
+          currentValue = $(obj).attr('name');
+          $(obj).toggle( function (){ 
+            $("button").each(function(i,bobj){
+              if ($(bobj).attr('id') == currentValue ) {
+                if($(bobj).text() == "Save"){
+                  $(bobj).text("Edit");
+                } else {
+                  $(bobj).text("Save");
+                }
+              }
+            });
+          });
+        }
+      });
 
 
-
+}
 
 
 
