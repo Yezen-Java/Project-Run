@@ -355,8 +355,9 @@ function getCheckedBoxes() {
   }
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
-}
+}       
 
+var isClicked = false;
 /*
     The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
     it should automatically make that specific text area readonly - by Sedar 
@@ -366,7 +367,6 @@ function getCheckedBoxes() {
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $(".textAreas").length;
       var name = $('#descriptionBox').attr("value");
-      var isClicked = false;
       //console.log(size);
 
       var selectedBox = null;
@@ -377,12 +377,10 @@ function getCheckedBoxes() {
           if($(obj).attr('name') == idOfDescriptionBox && !isClicked){
             selectedTextArea = $(obj);
             currentValue = $(obj).attr('name');
-            console.log(currentValue);
             $(obj).attr("readonly", true);
           } else {
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
-                console.log($(obj).attr('id'));
                 selectedTextArea.attr("readonly",false);
               }
             });
@@ -394,6 +392,8 @@ function getCheckedBoxes() {
       } else {
         isClicked = true;
       }
+
+      console.log(isClicked);
     }
 
 
