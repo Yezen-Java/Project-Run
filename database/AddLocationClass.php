@@ -6,6 +6,9 @@ $tourId = $_POST['TourID'];
 
 $locationIdArray = $_POST['LocationId'];
 
+global $tourId;
+global $locationIdArray;
+
 $ClassName = new ClassName($tourId,$locationIdArray,$dbconn);
 
 $ClassName-> insertLocation();
