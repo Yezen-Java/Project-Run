@@ -336,7 +336,6 @@ function saveLocations(){
     console.log("Checked "+checked[i].value);
   }
 
-
 //   $.getJSON('/database/addLocationScript.php', function(data) {
 //     console.log(data);
 // });
