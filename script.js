@@ -276,7 +276,7 @@ $(function(){
 
   $("#deleteCheckedItems").click(function(){
     var Arrayofvlaues = [];
-    var array = getCheckedBoxes();
+    var array = getCheckedBoxes("checkboxmedia");
     console.log(array);
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
@@ -328,14 +328,18 @@ function addmeidaFromSelectList(){
 
 }
 
+function SaveLocations(){
+  var array = getCheckedBoxes("checkboxlocation");
+  console.log(array);
+}
 
 function deleteLocationFromManager(){
 
-}
+} 
 
 
-function getCheckedBoxes() {
-  var checkboxes = document.getElementsByName("checkboxmedia");
+function getCheckedBoxes(element) {
+  var checkboxes = document.getElementsByName(element);
   var checkboxesChecked = [];
   // loop over them all
   for (var i=0; i<checkboxes.length; i++) {
