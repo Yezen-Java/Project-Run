@@ -384,7 +384,14 @@ function getCheckedBoxes() {
           //       $(selectedTextArea).attr("readonly","");
           //     }
           //   });
-          $(obj).toggle("slow");
+          $(obj).toggle( function (){ 
+            $("button").each(function(i,bobj){
+              console.log($(bobj).html);
+              if ($(bobj).attr('id') == currentValue && $(bobj).html == "Save") {
+
+              }
+            });
+          });
           }
       });
 
