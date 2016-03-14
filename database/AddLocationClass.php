@@ -8,6 +8,8 @@ $locationIdArray = $_POST['LocationId'];
 
 $ClassName = new ClassName($tourId,$locationIdArray);
 
+$ClassName-> insertLocation();
+
 /**
 * 
 */
