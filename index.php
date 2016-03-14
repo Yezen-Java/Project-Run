@@ -78,7 +78,7 @@ $LoadOnStart = new LoadOnStart();
           </div>
           <div id="pointersDiv">Locations</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
-            <button id="addPointer" type="button" class="btn btn-success" data-toggle="locationManagerModel"><strong>Add</strong></button>
+            <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#locationManagerModel"><strong>Add</strong></button>
           </div>    
         </nav>
       </div>
