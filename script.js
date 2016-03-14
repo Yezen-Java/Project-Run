@@ -336,17 +336,20 @@ function saveLocations(){
     console.log("Checked "+checked[i].value);
   }
 
-  // $('.checkLocation').each(function(i,obj) {
-  //   $(obj).change(function(){
-  //     if ( ! this.checked) {
-  //     //console.log("Unchecked " + $(this).attr('value'));
-  //     unchecked.push($(this).attr('value'));
-  //     console.log(unchecked);
-  //     }
-  //   });
-  // });
 
-  // console.log(unchecked);
+//   $.getJSON('/database/addLocationScript.php', function(data) {
+//     console.log(data);
+// });
+
+  $(function() {
+       $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
+        console.log(data);
+       });
+       return false;
+  });
+
+
+
 }
 
 function deleteLocationFromManager(){
