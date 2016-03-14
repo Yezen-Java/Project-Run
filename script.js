@@ -337,10 +337,9 @@ function saveLocations(){
     array.push(checked[i].value);
   }
 $.ajax({
-            type: 'POST',
-            url: '/database/addLocationScript.php',
-            data: 'id=testdata',
-            dataType: 'json',
+            type: "POST",
+            url: "/database/addLocationScript.php",
+            dataType: "json",
             cache: false,
             success: function(result) {
               console.log(result[0]);
