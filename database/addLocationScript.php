@@ -10,7 +10,7 @@ $uncheckedboxs = $_POST['Unchecked'];
 
 
 
-$locationClass = new AddLocations($tourId,$locationId,$uncheckedboxs);
+//$locationClass = new AddLocations($tourId,$locationId,$uncheckedboxs);
 
 echo $locationClass->getLocation();
 
