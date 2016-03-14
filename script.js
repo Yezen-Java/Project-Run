@@ -381,7 +381,7 @@ var isClicked = false;
           } else {
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
-                selectedTextArea.attr("readonly",false);
+                $(selectedTextArea).attr("readonly",false);
               }
             });
           }
