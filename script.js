@@ -336,15 +336,24 @@ function saveLocations(){
     console.log("Checked "+checked[i].value);
     array.push(checked[i].value);
   }
-$.ajax({
-            type: "POST",
-            url: "/database/addLocationScript.php",
-            dataType: "json",
-            cache: false,
-            success: function(result) {
-              console.log(result[0]);
-       },
-        });
+// $.ajax({
+//             type: "POST",
+//             url: "/database/addLocationScript.php",
+//             dataType: "json",
+//             cache: false,
+//             success: function(result) {
+//               console.log(result[0]);
+//        },
+//         });
+
+
+  $(function() {
+
+       $.post('database/addLocationScrpit.php',{TourID:TourCodeSelected}, function(data){
+        alert(data);
+       });
+       return false;
+  });
 
 
 

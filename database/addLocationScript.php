@@ -1,7 +1,7 @@
 <?php 
 
 
-// $tourId = $_POST['TourID'];
+$tourId = $_POST['TourID'];
 
 // $locationId = $_POST['LocationID'];
 
@@ -36,9 +36,10 @@ echo getLocation();
 
 	function getLocation(){
 		global $dbconn;
+		global $tourId;
 
 		$query= "SELECT * from tour_res where tourid = $1"; 
-		$results =pg_prepare($dbconn, "selectquery",$query);
+		$results =pg_prepare($dbconn, "selectquery",$tourId);
 
 		$results =pg_execute($dbconn,"selectquery",array("TOR124"));
 
