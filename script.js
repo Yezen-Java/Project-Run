@@ -337,7 +337,6 @@ function saveLocations(){
   }
 
   $('.checkLocation').each(function(i,obj) {
-    console.log($(obj));
     $(obj).change(function(){
       if ( ! this.checked) {
       //console.log("Unchecked " + $(this).attr('value'));
