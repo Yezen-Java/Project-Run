@@ -7,7 +7,7 @@ $tourId = $_POST['TourID'];
 
 // //$uncheckedboxs = $_POST['Unchecked'];
 
-echo $tourid;
+
 
 
 // $locationClass = new AddLocations($tourId,$locationId,$dbconn);
