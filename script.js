@@ -375,7 +375,7 @@ function getCheckedBoxes() {
       $(".textAreas").each(function(i,obj){
           if($(obj).attr('name') == idOfDescriptionBox){
           //   selectedTextArea = $(obj);
-          //   currentValue = $(obj).attr('name');
+            currentValue = $(obj).attr('name');
           //   $(obj).attr("readonly", "readonly");
           // } else {
           //   $("button").each(function(i,obj){
@@ -383,18 +383,18 @@ function getCheckedBoxes() {
           //       $(selectedTextArea).attr("readonly","");
           //     }
           //   });
-          $(obj).toggle( function (){ 
-            $("button").each(function(i,bobj){
-              if ($(bobj).attr('id') == currentValue ) {
-                console.log($(bobj).text());
-                if($(bobj).text() == "Save"){
-                  $(bobj).text("Edit");
-                } else {
-                  $(bobj).text("Save");
+            $(obj).toggle( function (){ 
+              $("button").each(function(i,bobj){
+                if ($(bobj).attr('id') == currentValue ) {
+                  console.log($(bobj).text());
+                  if($(bobj).text() == "Save"){
+                    $(bobj).text("Edit");
+                  } else {
+                    $(bobj).text("Save");
+                  }
                 }
-              }
+              });
             });
-          });
           }
       });
 
