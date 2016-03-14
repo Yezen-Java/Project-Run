@@ -386,9 +386,12 @@ function getCheckedBoxes() {
           //   });
           $(obj).toggle( function (){ 
             $("button").each(function(i,bobj){
-              console.log($(bobj).text());
-              if ($(bobj).attr('id') == currentValue && $(bobj).html == "Save") {
-
+              if ($(bobj).attr('id') == currentValue ) {
+                if($(bobj).text() == "Save"){
+                  $(bobj).text("Edit");
+                } else {
+                  $(bobj).text("Save");
+                }
               }
             });
           });
