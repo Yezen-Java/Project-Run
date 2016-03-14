@@ -386,7 +386,7 @@ function getCheckedBoxes() {
           //   });
           $(obj).toggle( function (){ 
             $("button").each(function(i,bobj){
-              console.log($(bobj).html);
+              console.log($(bobj).text);
               if ($(bobj).attr('id') == currentValue && $(bobj).html == "Save") {
 
               }
