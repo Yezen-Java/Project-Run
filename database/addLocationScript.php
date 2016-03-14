@@ -14,7 +14,7 @@ $locationClass = new AddLocations($tourId,$locationId,$uncheckedboxs);
 
 echo $locationClass->getLocation();
 
-
+echo "working";
 global $dbconn;
 
 class AddLocations
