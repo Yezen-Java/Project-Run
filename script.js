@@ -377,11 +377,11 @@ var isClicked = false;
           if($(obj).attr('name') == idOfDescriptionBox && !isClicked){
             selectedTextArea = $(obj);
             currentValue = $(obj).attr('name');
-            $(obj).attr("readonly", true);
+            $(obj).attr("readonly", "readonly");
           } else {
             $("button").each(function(i,obj){
               if ($(obj).attr('id') == currentValue) {
-                $(selectedTextArea).attr("readonly",false);
+                $(selectedTextArea).attr("readonly","");
               }
             });
           }
