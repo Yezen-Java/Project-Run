@@ -386,6 +386,7 @@ function getCheckedBoxes() {
           $(obj).toggle( function (){ 
             $("button").each(function(i,bobj){
               if ($(bobj).attr('id') == currentValue ) {
+                console.log($(bobj).text());
                 if($(bobj).text() == "Save"){
                   $(bobj).text("Edit");
                 } else {
