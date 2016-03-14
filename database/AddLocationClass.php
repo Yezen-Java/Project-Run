@@ -1,6 +1,6 @@
 <?php 
 
-Include'Connect.php';
+include'Connect.php';
 
 $tourId = $_POST['TourID'];
 
@@ -25,6 +25,7 @@ echo getLocation();
 	        $menu[] = array($row['id']);
 	  
         }
+
         return json_encode($menu);
 
 	} 
