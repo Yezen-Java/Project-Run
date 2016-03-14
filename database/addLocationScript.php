@@ -10,12 +10,11 @@ $locationId = $_POST['LocationID'];
 
 
 
-$locationClass = new AddLocations($tourId,$locationId);
+$locationClass = new AddLocations($tourId,$locationId,$dbconn);
 
 echo $locationClass->getLocation();
 
 echo "working";
-global $dbconn;
 
 class AddLocations
 
@@ -24,30 +23,31 @@ class AddLocations
 	private $tourId;
 	private $locationId;
 	private $unchckedLocations;
+	private $databaseConnection;
 
    function __construct($tourid,$locationId) {
-   	$tourId = $tourid;
-   	$locationIdArray = $locationId;
+   	$this->tourId = $tourid;
+   	$this->locationIdArray = $locationId;
    	//$unchckedLocations = $unchecked;
-
+   	$this->databaseConnection = $dbconn;
    }
 
-	// function getLocation(){
+	function getLocation(){
+		global $dbconn;
 
-	// 	$query= "SELECT * from tour_res where tourid = $1"; 
-	// 	$results =pg_prepare($dbconn, "selectquery",$query);
+		$query= "SELECT * from tour_res where tourid = $1"; 
+		$results =pg_prepare($dbconn, "selectquery",$query);
 
-	// 	$results =pg_execute($dbconn,"selectquery",array($this->TourId));
+		$results =pg_execute($dbconn,"selectquery",array($this->TourId));
 
-	//     $menu = array();
- //        while ($row = mysql_fetch_array($query)) {
-	//         $menu[] = array(
-	//         "id" => $row['id']);
+	    $menu = array();
+        while ($row = mysql_fetch_array($query)) {
+	        $menu[] = array($row['id']);
 	  
- //        }
- //        return json_encode($menu);
+        }
+        return json_encode($menu);
 
-	// } 
+	} 
 
 	// function deleteFromUnchecked(){
 
@@ -77,28 +77,28 @@ class AddLocations
 	// }
 
 
-	function insertLocation(){
+	// function insertLocation(){
 
+	// 	global $tourid;
+	// $addLocationTourQ = "INSERT into tour_res values ($1,$2)";
+	// $addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
 
-	$addLocationTourQ = "INSERT into tour_res values ($1,$2)";
-	$addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
+ //    $liarray = explode("::", $this->locationId);
+	// $le = count($liarray);
 
-    $liarray = explode("::", $this->locationId);
-	$le = count($liarray);
+	// for ($i=0; $i < $le; $i++) { 
 
-	for ($i=0; $i < $le; $i++) { 
-
-	$addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($this->tourId,$liarray[$i]));
+	// $addLocationQueryt = pg_execute($dbconn,"addLocationQuery",  array($this->tourId,$liarray[$i]));
    
-    }
+ //    }
 
-	if (pg_affected_rows($addLocationQueryt)) {
-		echo"Locations has been addded";
-	 return true;
-	}
-	return false;
+	// if (pg_affected_rows($addLocationQueryt)) {
+	// 	echo"Locations has been addded";
+	//  return true;
+	// }
+	// return false;
 
-	}
+	// }
 	
 }
 

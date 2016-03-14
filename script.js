@@ -336,11 +336,16 @@ function saveLocations(){
     console.log("Checked "+checked[i].value);
     array.push(checked[i].value);
   }
-
-       $.post('/database/addLocationScript.php',{TourID:TourCodeSelected,LocationId:array.join("::")}, function(data){
-        console.log(data);
-       });
-
+$.ajax({
+            type: 'POST',
+            url: '/database/addLocationScript.php',
+            data: 'id=testdata',
+            dataType: 'json',
+            cache: false,
+            success: function(result) {
+              console.log(result[0]);
+       },
+        });
 
 
 
