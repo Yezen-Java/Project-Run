@@ -368,25 +368,14 @@ function getCheckedBoxes() {
       var name = $('#descriptionBox').attr("value");
       //console.log(size);
 
-      var selectedBox = null;
       var currentValue = null;
-      var selectedTextArea = null;
 
       $(".textAreas").each(function(i,obj){
           if($(obj).attr('name') == idOfDescriptionBox){
-          //   selectedTextArea = $(obj);
             currentValue = $(obj).attr('name');
-          //   $(obj).attr("readonly", "readonly");
-          // } else {
-          //   $("button").each(function(i,obj){
-          //     if ($(obj).attr('id') == currentValue) {
-          //       $(selectedTextArea).attr("readonly","");
-          //     }
-          //   });
             $(obj).toggle( function (){ 
               $("button").each(function(i,bobj){
                 if ($(bobj).attr('id') == currentValue ) {
-                  console.log($(bobj).text());
                   if($(bobj).text() == "Save"){
                     $(bobj).text("Edit");
                   } else {
