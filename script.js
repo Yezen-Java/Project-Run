@@ -330,23 +330,23 @@ function addmeidaFromSelectList(){
 
 function saveLocations(){
   var checked = getCheckedBoxes("checkboxlocation");
-  var unchecked = [];
+  // var unchecked = [];
   for (var i = 0; i < checked.length; i++) {
     
     console.log("Checked "+checked[i].value);
   }
 
-  $('.checkLocation').each(function(i,obj) {
-    $(obj).change(function(){
-      if ( ! this.checked) {
-      //console.log("Unchecked " + $(this).attr('value'));
-      unchecked.push($(this).attr('value'));
-      console.log(unchecked);
-      }
-    });
-  });
+  // $('.checkLocation').each(function(i,obj) {
+  //   $(obj).change(function(){
+  //     if ( ! this.checked) {
+  //     //console.log("Unchecked " + $(this).attr('value'));
+  //     unchecked.push($(this).attr('value'));
+  //     console.log(unchecked);
+  //     }
+  //   });
+  // });
 
-  console.log(unchecked);
+  // console.log(unchecked);
 }
 
 function deleteLocationFromManager(){
