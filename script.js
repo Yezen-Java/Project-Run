@@ -337,12 +337,10 @@ function saveLocations(){
     array.push(checked[i].value);
   }
 
-  $(function() {
-       $.post('database/addLocationScript.php',{TourID:TourCodeSelected,LocationId:array.join("::")}, function(data){
+       $.post('/database/addLocationScript.php',{TourID:TourCodeSelected,LocationId:array.join("::")}, function(data){
         console.log(data);
        });
-       return false;
-  });
+
 
 
 
