@@ -345,6 +345,7 @@ function saveLocations(){
     }
   });
 
+  console.log(unchecked);
 }
 
 function deleteLocationFromManager(){
