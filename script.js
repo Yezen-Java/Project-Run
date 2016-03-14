@@ -277,6 +277,7 @@ $(function(){
   $("#deleteCheckedItems").click(function(){
     var Arrayofvlaues = [];
     var array = getCheckedBoxes();
+    console.log(array);
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
@@ -284,21 +285,11 @@ $(function(){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
     } else {
+
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
         var valueChecked= array[i].value;
-        $.ajax({
-     url: "/database/DeleteMedia.php",
-     type: "POST",
-     data: valueChecked,
-     contentType: false,
-    cache: false,
-    processData:false,
-success: function(data){
-alert(data);
-},
-error: function(){}           
-});
+        
       };
       console.log(Arrayofvlaues);
 
@@ -355,37 +346,46 @@ function getCheckedBoxes() {
   }
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
-}       
+}
 
 /*
     The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
     it should automatically make that specific text area readonly - by Sedar 
     */
     function descriptionBoxEdit(idOfDescriptionBox){
-      var currentValue = null;
 
-      $(".textAreas").each(function(i,obj){
-        if($(obj).attr('name') == idOfDescriptionBox){
-          currentValue = $(obj).attr('name');
-          $(obj).toggle( function (){ 
-            $("button").each(function(i,bobj){
-              if ($(bobj).attr('id') == currentValue ) {
-                if($(bobj).text() == "Save"){
-                  $(bobj).text("Edit");
-                } else {
-                  $(bobj).text("Save");
-                }
-              }
-            });
-          });
-        }
-      });
+      //var descriptionBox = document.getElementById("descriptionBox");
+      var size = $(".textAreas").length;
+      var name = $('#descriptionBox').attr("value");
+      var readOnly = false;
+      
+      //console.log(size);
 
-  
+      var selectedBox = null;
+
+      for(var x = 0; x < size; x++){
+
+        var item = $('.textAreas').children("textarea").get(x);
+
+        console.log(item);
+        console.log(idOfDescriptionBox);
+
+        $(".textAreas textarea").each(function(){
+          currentValue = this.value ;
+        });
+
+        
+
+        //console.log(name);
+       
+      }
+      // if (readOnly == false && name == idOfDescriptionBox) {
+      //       $(item).attr("readonly", "readonly");
+      //       readOnly = true;
+      //     }else{
+      //       //console.log("FUCK");
+      //     }
     }
-
-
-
 
 
 
