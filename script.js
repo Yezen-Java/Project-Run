@@ -330,13 +330,19 @@ function addmeidaFromSelectList(){
 
 function saveLocations(){
   var array = getCheckedBoxes("checkboxlocation");
-  var checkedValues = $('input:checkbox:checked').map(function() {
-    console.log(this.value);
-    return this.value;
-  }).get();
+  
+
   //console.log(array);
   for (var i = 0; i < array.length; i++) {
-    console.log(array[i].value);
+    $(array[i].value).change(function() {
+
+     if ( ! this.checked) {
+         // It is not checked, show your div...
+        console.log("Unchecked " + array[i].value);
+     }
+
+  });
+    console.log("Checked "+array[i].value);
   };
 }
 
