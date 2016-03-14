@@ -357,12 +357,12 @@ function getCheckedBoxes() {
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }       
 
-var isClicked = false;
 /*
     The descriptionBoxEdit method is meant to find the unique descriptionBox and when the user clicks the Test button
     it should automatically make that specific text area readonly - by Sedar 
     */
     function descriptionBoxEdit(idOfDescriptionBox){
+      var isClicked = false;
 
       //var descriptionBox = document.getElementById("descriptionBox");
       var size = $(".textAreas").length;
