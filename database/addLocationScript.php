@@ -1,36 +1,38 @@
 <?php 
 
 
-$tourId = $_POST['TourID'];
+// $tourId = $_POST['TourID'];
 
-$locationId = $_POST['LocationID'];
+// $locationId = $_POST['LocationID'];
 
-//$uncheckedboxs = $_POST['Unchecked'];
-
-
+// //$uncheckedboxs = $_POST['Unchecked'];
 
 
-$locationClass = new AddLocations($tourId,$locationId,$dbconn);
 
-echo $locationClass->getLocation();
 
-echo "working";
+// $locationClass = new AddLocations($tourId,$locationId,$dbconn);
 
-class AddLocations
+// echo $locationClass->getLocation();
 
-{
+// echo "working";
 
-	private $tourId;
-	private $locationId;
-	private $unchckedLocations;
-	private $databaseConnection;
+// class AddLocations
 
-   function __construct($tourid,$locationId) {
-   	$this->tourId = $tourid;
-   	$this->locationIdArray = $locationId;
-   	//$unchckedLocations = $unchecked;
-   	$this->databaseConnection = $dbconn;
-   }
+// {
+
+// 	private $tourId;
+// 	private $locationId;
+// 	private $unchckedLocations;
+// 	private $databaseConnection;
+
+//    function __construct($tourid,$locationId) {
+//    	$this->tourId = $tourid;
+//    	$this->locationIdArray = $locationId;
+//    	//$unchckedLocations = $unchecked;
+//    	$this->databaseConnection = $dbconn;
+//    }
+
+echo getLocation();
 
 	function getLocation(){
 		global $dbconn;
@@ -38,7 +40,7 @@ class AddLocations
 		$query= "SELECT * from tour_res where tourid = $1"; 
 		$results =pg_prepare($dbconn, "selectquery",$query);
 
-		$results =pg_execute($dbconn,"selectquery",array($this->TourId));
+		$results =pg_execute($dbconn,"selectquery",array("TOR124"));
 
 	    $menu = array();
         while ($row = mysql_fetch_array($query)) {
