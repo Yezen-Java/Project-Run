@@ -332,14 +332,8 @@ function saveLocations(){
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
   for (var i = 0; i < checked.length; i++) {
-    
     console.log("Checked "+checked[i].value);
   }
-
-
-//   $.getJSON('/database/addLocationScript.php', function(data) {
-//     console.log(data);
-// });
 
   $(function() {
        $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
