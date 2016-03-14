@@ -6,7 +6,7 @@ $tourId = $_POST['TourID'];
 
 $locationIdArray = $_POST['LocationId'];
 
-$ClassName = new ClassName($tourId,$locationIdArray);
+$ClassName = new ClassName($tourId,$locationIdArray,$dbconn);
 
 $ClassName-> insertLocation();
 
@@ -17,12 +17,14 @@ class ClassName{
 
 	private $tourId;
 	private $locationId;
+	private $connection;
 	
-	function __construct($tourid, $Locations)
+	function __construct($tourid, $Locations,$Connect)
 	{
 
 		$this->tourid = $tourid;
 		$this->locationId = $Locations;
+		$this->$connection = $Connect;
 	}
 
 
