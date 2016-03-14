@@ -374,16 +374,17 @@ function getCheckedBoxes() {
       var selectedTextArea = null;
 
       $(".textAreas").each(function(i,obj){
-          if($(obj).attr('name') == idOfDescriptionBox && !isClicked){
-            selectedTextArea = $(obj);
-            currentValue = $(obj).attr('name');
-            $(obj).attr("readonly", "readonly");
-          } else {
-            $("button").each(function(i,obj){
-              if ($(obj).attr('id') == currentValue) {
-                $(selectedTextArea).attr("readonly","");
-              }
-            });
+          if($(obj).attr('name') == idOfDescriptionBox){
+          //   selectedTextArea = $(obj);
+          //   currentValue = $(obj).attr('name');
+          //   $(obj).attr("readonly", "readonly");
+          // } else {
+          //   $("button").each(function(i,obj){
+          //     if ($(obj).attr('id') == currentValue) {
+          //       $(selectedTextArea).attr("readonly","");
+          //     }
+          //   });
+          $(obj).toggle();
           }
       });
 
