@@ -329,15 +329,21 @@ function addmeidaFromSelectList(){
 }
 
 function saveLocations(){
-  var array = getCheckedBoxes("checkboxlocation");
-  for (var i = 0; i < array.length; i++) {
-    $('.checkLocation').change(function(i,obj) {
-      if ( ! this.checked) {
-        console.log("Unchecked " + $(this).attr('value'));
-      }
-    });
-    console.log("Checked "+array[i].value);
+  var checked = getCheckedBoxes("checkboxlocation");
+  var unchecked = new Array();
+  for (var i = 0; i < checked.length; i++) {
+    
+    console.log("Checked "+checked[i].value);
   };
+
+  $('.checkLocation').change(function(i,obj) {
+    if ( ! this.checked) {
+      //console.log("Unchecked " + $(this).attr('value'));
+      unchecked.push((this).attr('value'));
+    }
+  });
+
+  console.log(unchecked);
 }
 
 function deleteLocationFromManager(){
