@@ -384,7 +384,7 @@ function getCheckedBoxes() {
           //       $(selectedTextArea).attr("readonly","");
           //     }
           //   });
-          $(obj).toggle();
+          $(obj).toggle("slow");
           }
       });
 
