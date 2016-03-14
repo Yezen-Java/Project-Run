@@ -349,7 +349,7 @@ function saveLocations(){
 
   $(function() {
 
-       $.post('database/addLocationScrpit.php',{TourID:TourCodeSelected}, function(data){
+       $.post('database/addLocationScript.php',{TourID:TourCodeSelected}, function(data){
         alert(data);
        });
        return false;
