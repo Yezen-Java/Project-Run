@@ -310,7 +310,6 @@ ul{
   width: 260px;
   max-height: 200px;
   height: 200px;
-  break-inside: avoid-column;
 }
 
 .textAreas{
