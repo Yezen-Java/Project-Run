@@ -341,7 +341,8 @@ function saveLocations(){
     //     }
   var selectedID = [];
   $(".previousLocations").each(function(index,obj){
-    selectedID.push($(obj).value);
+    console.log(obj);
+    selectedID.push($(obj).attr('value'));
   });
 
   console.log(selectedID);
