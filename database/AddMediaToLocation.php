@@ -11,7 +11,7 @@ $le = count($liarray);
 
 
 $Addmedia = new Addmedia();
-echo $Addmedia-> functionName($le,$liarray,$location,$dbconn);
+$Addmedia-> addLocationTour($le,$liarray,$location,$dbconn);
 
 /**
 * 
@@ -19,7 +19,7 @@ echo $Addmedia-> functionName($le,$liarray,$location,$dbconn);
 class Addmedia 
 {
 
-public function functionName($le,$liarray,$location,$dbconn){
+public function addLocationTour($le,$liarray,$location,$dbconn){
 
     $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
 	$result = pg_prepare($dbconn,"query", $query);
