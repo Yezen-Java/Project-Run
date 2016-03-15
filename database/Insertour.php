@@ -16,8 +16,6 @@ $escapeTD = pg_escape_string($tourDate);
 $escapeUser = pg_escape_string($username);
 
 
-
-
 $tourClass = new TourCLass();
 
 $message = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);

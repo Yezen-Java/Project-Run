@@ -59,9 +59,6 @@ class TourClass
 
 		return false;
 
-
-
-
 	}
 
 
