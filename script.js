@@ -341,11 +341,20 @@ function saveLocations(){
     //     }
   var selectedID = [];
   $(".previousLocations").each(function(index,obj){
-    console.log(obj);
     selectedID.push($(obj).attr('value'));
   });
 
   console.log(selectedID);
+
+  var checkboxes = document.getElementsByName('checkboxlocation');
+  var checkboxesChecked = [];
+  // loop over them all
+  for (var i=0; i<checkboxes.length; i++) {
+     // And stick the checked ones onto an array...
+     if(checkboxes[i].indexOf(selectedID)){
+        checkboxes[i].prop('checked', true);
+     }
+  }
 
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
@@ -354,15 +363,8 @@ function saveLocations(){
     console.log("Checked "+checked[i].value);
     array.push(checked[i].value);
   }
-// $.ajax({
-//             type: "POST",
-//             url: "/database/addLocationScript.php",
-//             dataType: "json",
-//             cache: false,
-//             success: function(result) {
-//               console.log(result[0]);
-//        },
-//         });
+
+
 var touridSelected = TourCodeSelected;
 
     $(function() {
