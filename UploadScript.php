@@ -3,10 +3,7 @@ include('image_check.php');
 include('database/Connect.php');
 include('s3_config.php');
 
-$_FILES['file'];
-
-
-$len = count($_FILES['file']);
+$len = count($_FILES['file']['name']);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name) values ($1,$2,$3)";
 $result = pg_prepare($dbconn,"query", $query);
@@ -27,8 +24,10 @@ for ($i = 0; $i < $len; $i++){
       if($size<=$sizeLimit){
 
           if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
-            $msg = "S3 Upload Successful.";	
+            $msg = "S3 Upload Successful."; 
             $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
+            //$result = pg_query("INSERT into media (media_name,link,ext_name) values ('$name','$s3file','$actual_media_name')");
+            // pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name));
             $nameData = $name;
             $nameLink = $s3file;
 
@@ -69,6 +68,21 @@ for ($i = 0; $i < $len; $i++){
  sleep(3);
 
 }
+
+
+// function getExtension($str) 
+// {
+//          $i = strrpos($str,".");
+//          if (!$i) { return ""; } 
+
+//          $l = strlen($str) - $i;
+//          $ext = substr($str,$i+1,$l);
+//          return $ext;
+// }
+
+// $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
+
+
 
 ?>
 
