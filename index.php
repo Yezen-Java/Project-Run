@@ -191,7 +191,7 @@ $LoadOnStart = new LoadOnStart();
         </div>
             <form id="deleteImage" method="post">
                 <div id= "fileManagerDiv" class="modal-body">
-                    <div class = "row" id="modalc">
+                    <div class = "list-group" id="modalc">
                         <?php  
                           $LoadOnStart->mediaResultsFucntion();
                         ?>
