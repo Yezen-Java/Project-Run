@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-require "Connect.php";
+require 'Connect.php';
 include 'TourClass.php';
 
 $tourID = $_POST['TourID'];
@@ -16,13 +16,15 @@ $escapeTD = pg_escape_string($tourDate);
 $escapeUser = pg_escape_string($username);
 
 
-$tourClass = new TourCLass();
 
 global $tourClass;
 
-echo $tourClas->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
+$tourClass = new TourCLass();
 
 
+$message = $tourClas::insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
+
+echo $message;
 
 
 // $TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
