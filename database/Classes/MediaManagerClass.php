@@ -36,7 +36,7 @@ public function addLocationTour($le,$liarray,$location,$dbconn){
 public function deleteMeida($arrayMedia){
 
 	global $dbconn;
-	global $s3;
+	//global $s3;
 	$checkDelete = 0;
 
 $query = "DELETE From media where mediaid = $1";

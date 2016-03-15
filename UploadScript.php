@@ -3,7 +3,20 @@ include('image_check.php');
 include('database/Connect.php');
 include('database/s3_config.php');
 
-$len = count($_FILES['file']['name']);
+$files = $_FILES['file'];
+
+
+
+
+/**
+* 
+*/
+class MediaUploadClass{
+  
+public function uploadMeida($files){
+
+global $s3;
+$len = count($files);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name) values ($1,$2,$3)";
 $result = pg_prepare($dbconn,"query", $query);
@@ -11,9 +24,9 @@ $sizeLimit = 2097152;
 
 for ($i = 0; $i < $len; $i++){
 
-  $tmp = $_FILES['file']['tmp_name'][$i];
-  $name = $_FILES['file']['name'][$i];
-  $size = $_FILES['file']['size'][$i];
+  $tmp = $files['file']['tmp_name'][$i];
+  $name = $files['file']['name'][$i];
+  $size = $files['file']['size'][$i];
   $ext = getExtension($name);
   $actual_media_name = time().".".$ext;
 
@@ -81,8 +94,11 @@ for ($i = 0; $i < $len; $i++){
 // }
 
 // $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
+}
+}
 
-
+$mediaUplaod = new MediaUploadClass();
+$mediaUplaod-> uploadMeida($files);
 
 ?>
 
