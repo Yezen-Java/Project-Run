@@ -297,15 +297,15 @@ ul{
 }
 
 .portfolio-item{
-  max-width: 200px;
-  width: 200px;
-  max-height: 400px;
-  height: 400px;
+  max-width: 300px;
+  width: 300px;
+  max-height: 450px;
+  height: 450px;
 }
 .img-responsive{
   max-width: 100%;
-  max-height:100px;
-  height:100px;
+  max-height:150px;
+  height:150px;
 
 }
 
