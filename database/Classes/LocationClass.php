@@ -47,7 +47,7 @@ class LocationClass
 	$DelereQuery = pg_prepare($dbconn,"deletequery", $queryDelere);
 	$DelereQuery = pg_execute($dbconn,"deletequery", array($tourId));
 
-	if(pg_affected_rows($DelereQuery)==0){
+	if(pg_affected_rows($DelereQuery)<0){
 
 		return false;
      }else{
