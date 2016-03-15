@@ -414,7 +414,8 @@ function getCheckedBoxes(element) {
           currentValue = $(obj).attr('name');
           $(obj).prop('disabled', function(i,v) {
             return !v;
-            $("button").each(function(i,bobj){
+          });
+          $("button").each(function(i,bobj){
               if ($(bobj).attr('id') == currentValue ) {
                 if($(bobj).text() == "Save"){
                   $(bobj).text("Edit");
@@ -423,20 +424,9 @@ function getCheckedBoxes(element) {
                 }
               }
             });
-          });
         }
       });
     }
-
-// $("button").each(function(i,bobj){
-//               if ($(bobj).attr('id') == currentValue ) {
-//                 if($(bobj).text() == "Save"){
-//                   $(bobj).text("Edit");
-//                 } else {
-//                   $(bobj).text("Save");
-//                 }
-//               }
-//             });
 
 
 
