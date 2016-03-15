@@ -300,7 +300,7 @@ ul{
   max-width: 280px;
   width: 280px;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .img-responsive{
@@ -309,6 +309,12 @@ ul{
   max-height: 200px;
   height: 200px;
 }
+
+.textAreas{
+  margin-top: 5px;
+}
+
+
 
 @media (max-width: 500px) {
     #tourList li {
