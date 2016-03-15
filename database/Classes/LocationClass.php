@@ -47,10 +47,6 @@ class LocationClass
 	$DelereQuery = pg_prepare($dbconn,"deletequery", $queryDelere);
 	$DelereQuery = pg_execute($dbconn,"deletequery", array($tourId));
 
-	if(pg_affected_rows($DelereQuery)==0){
-
-		return false;
-     }else{
 	$le = count($liarray);
 	$addLocationTourQ = "INSERT into tour_res values ($1,$2)";
 	$addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
@@ -65,11 +61,8 @@ class LocationClass
 		return true;
 
 	}
-}
 
 	return false;
-
-
 
 	}
 
