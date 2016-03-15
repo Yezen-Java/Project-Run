@@ -49,6 +49,8 @@ class LocationClass
 
 	public function insertLocations($tourId,$liarray){
 
+		global $dbconn;
+
 	$le = count($liarray);
 	$addLocationTourQ = "INSERT into tour_res values ($1,$2)";
 	$addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
