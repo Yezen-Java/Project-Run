@@ -301,9 +301,12 @@ ul{
   width: 300px;
   max-height: 400px;
   height: 400px;
-  display: block;
-  padding-top: 30px;
 }
+
+.saveButtonContainer{
+  padding-bottom: 20px;
+}
+
 .img-responsive{
   max-width: 280px;
   width: 280px;
