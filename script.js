@@ -412,7 +412,18 @@ function getCheckedBoxes(element) {
       $(".textAreas").each(function(i,obj){
         if($(obj).attr('name') == idOfDescriptionBox){
           currentValue = $(obj).attr('name');
-          $(obj).prop('disabled', function(i,v) {return !v;});
+          $(obj).prop('disabled', function(i,v) {
+            return !v;
+            $("button").each(function(i,bobj){
+              if ($(bobj).attr('id') == currentValue ) {
+                if($(bobj).text() == "Save"){
+                  $(bobj).text("Edit");
+                } else {
+                  $(bobj).text("Save");
+                }
+              }
+            });
+          });
         }
       });
     }
