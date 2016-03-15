@@ -206,7 +206,7 @@ function w3_open(value) {
       var value1 = $('#tourButton').val();
        $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
 
-        var htmlTag ="<lu id="+"roomlist"+">"+data+"</ul>";
+        var htmlTag ="<ul class='previousLocations'id="+"roomlist"+">"+data+"</ul>";
          $("#pointersDiv").html(htmlTag);
        });
        return false;
@@ -334,7 +334,7 @@ function addmeidaFromSelectList(){
 
 function saveLocations(){
   var selectedID = [];
-  $("#listMedia").children("li").each(function(){
+  $("#previousLocations").each(function(index,obj){
     selectedID.push($(this).value);
   });
 
