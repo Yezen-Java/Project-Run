@@ -59,7 +59,7 @@ echo $locationIdArray;
 	}
 
 
-
+insertLocation();
 
 
 ?>
