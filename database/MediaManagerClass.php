@@ -10,7 +10,6 @@ class Addmedia
 {
 
 public function addLocationTour($le,$liarray,$location,$dbconn){
-	global $dbconn;
 
     $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
 	$result = pg_prepare($dbconn,"query", $query);
@@ -44,7 +43,7 @@ $result = pg_prepare($dbconn,"query", $query);
 $amazonQuery = pg_prepare($dbconn,"query2", $query2);
 
 
-foreach ($arrayMedia as $number) {
+foreach ($mediaid as $number) {
 
 	$amazonQuery = pg_execute($dbconn,"query2",  array($number));
 	$rows = pg_fetch_array($amazonQuery);
