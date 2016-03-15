@@ -37,6 +37,28 @@ class TourClass
 
 
 			return $msg;
+	}
+
+
+
+	public function deleteTour($GetTourID){
+
+		global $dbconn;
+		$msg='';
+		$query = "DELETE FROM tour where tourid =$1";
+		$result = pg_prepare($dbconn,"delete_query", $query);
+		if ($result) {
+			$result = pg_execute($dbconn,"delete_query", array($GetTourID));
+			$msg= "Tour Deleted Successfully";
+
+			return true;
+
+		}else{
+			$msg= "delete faild";
+		}
+
+		return false;
+
 
 
 
