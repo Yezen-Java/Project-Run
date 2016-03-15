@@ -35,7 +35,7 @@ html, body {
 
 #modalc{
   height: 60%;
-  
+  position: relative;
   float: center;
   overflow-y: auto;
   width: 100%;
@@ -302,7 +302,7 @@ ul{
   max-width: 280px;
   width: 280px;
   height: auto;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 .img-responsive{
