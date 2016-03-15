@@ -17,15 +17,14 @@ $escapeUser = pg_escape_string($username);
 
 
 
-global $tourClass;
 
 $tourClass = new TourCLass();
-
 
 $message = $tourClas::insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
 
 echo $message;
 
+echo "work";
 
 // $TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
 
