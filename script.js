@@ -332,13 +332,14 @@ function addmeidaFromSelectList(){
 
 }
 
-function saveLocations(){
+$('#locationManagerModel').on('show.bs.modal', function () {
 
     // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
     // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
     //           <span class='glyphicon glyphicon-trash'></span> Trash 
     //         </button>";
     //     }
+  
   var selectedID = [];
   $(".previousLocations").each(function(index,obj){
     selectedID.push($(obj).attr('value'));
@@ -354,7 +355,9 @@ function saveLocations(){
      if(checkboxes[i].indexOf(selectedID)){
         checkboxes[i].prop('checked', true);
      }
-  }
+  }});
+
+function saveLocations(){
 
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
