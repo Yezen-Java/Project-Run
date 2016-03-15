@@ -4,15 +4,11 @@ include'Connect.php';
 
 $tourId = $_POST['TourID'];
 
-$locationIdArray = $_POST['LocationId'];
+$locationIdArray = $_POST['items'];
 
 $liarray = explode("::", $locationIdArray);
 $le = count($liarray);
 
-	function insertLocation(){
-		global $tourId;
-        global $liarray;
-        global $dbconn;
 
 	$addLocationTourQ = "INSERT into tour_res values ($1,$2)";
 	$addLocationQueryt = pg_prepare($dbconn,"addLocationQuery", $addLocationTourQ);
@@ -23,16 +19,10 @@ $le = count($liarray);
    
     }
 
-	if (pg_affected_rows($addLocationQueryt)) {
+	if (pg_affected_rows($addLocationQueryt)>0) {
 		echo"Locations has been addded";
 
 	}
-
-
-}
-
-
-insertLocation();
 
 
 ?>
