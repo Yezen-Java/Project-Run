@@ -51,6 +51,33 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
+
+      $('#locationManagerModel').on('show.bs.modal', function () {
+
+    // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
+    // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
+    //           <span class='glyphicon glyphicon-trash'></span> Trash 
+    //         </button>";
+    //     }
+      
+        var selectedID = [];
+        $(".previousLocations").each(function(index,obj){
+          selectedID.push($(obj).attr('value'));
+        });
+
+        console.log(selectedID);
+
+        var checkboxes = document.getElementsByName('checkboxlocation');
+        var checkboxesChecked = [];
+        // loop over them all
+        for (var i=0; i<checkboxes.length; i++) {
+           // And stick the checked ones onto an array...
+           if(checkboxes[i].indexOf(selectedID)){
+              checkboxes[i].prop('checked', true);
+           }
+        }
+      });
+
     
 });
 
@@ -332,30 +359,6 @@ function addmeidaFromSelectList(){
 
 }
 
-$('#locationManagerModel').on('show.bs.modal', function () {
-
-    // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
-    // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
-    //           <span class='glyphicon glyphicon-trash'></span> Trash 
-    //         </button>";
-    //     }
-  
-  var selectedID = [];
-  $(".previousLocations").each(function(index,obj){
-    selectedID.push($(obj).attr('value'));
-  });
-
-  console.log(selectedID);
-
-  var checkboxes = document.getElementsByName('checkboxlocation');
-  var checkboxesChecked = [];
-  // loop over them all
-  for (var i=0; i<checkboxes.length; i++) {
-     // And stick the checked ones onto an array...
-     if(checkboxes[i].indexOf(selectedID)){
-        checkboxes[i].prop('checked', true);
-     }
-  }});
 
 function saveLocations(){
 
