@@ -52,7 +52,7 @@ foreach ($arrayMedia as $number) {
 	$rows = pg_fetch_array($amazonQuery);
 	$mediaExt = $rows['ext_name'];
 	
-	if ($this->s3->deleteObject($bucket,$mediaExt)) {
+	if ($s3->deleteObject($bucket,$mediaExt)) {
 	 $result = pg_execute($dbconn,"query",  array($number));
 
 	 $checkDelete++;

@@ -1,6 +1,5 @@
 <?php
 
-include 's3_config.php';
 include 'Connect.php';
 include 'database/Classes/MediaManagerClass.php';
 
