@@ -304,7 +304,9 @@ ul{
 }
 .img-responsive{
   max-width: 100%;
-  height: auto;
+  max-height:200px;
+  height:200px;
+  
 }
 
     
