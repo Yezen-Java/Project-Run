@@ -299,16 +299,15 @@ ul{
 .portfolio-item{
   max-width: 280px;
   width: 280px;
-  max-height: 370px;
-  height: 370px;
+  height: auto;
   padding-bottom: 50px;
 }
 
 .img-responsive{
   max-width: 260px;
   width: 260px;
-  max-height: 300px;
-  height: 300px;
+  max-height: 200px;
+  height: 200px;
 }
 
 @media (max-width: 500px) {
