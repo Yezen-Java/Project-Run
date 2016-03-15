@@ -89,8 +89,8 @@ if ($mediaResults) {
 	  $link = $rows['link'];
 	  $name = $rows['media_name'];
 	  $mediaid = $rows['mediaid'];
-    
-	  echo "<div class='col-md-4 portfolio-item' id='$mediaid'>
+
+	  echo "<div class='col-md-3 col-sm-3 portfolio-item' id='$mediaid'>
 	    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
 	    <h3>$name</h3>
 
