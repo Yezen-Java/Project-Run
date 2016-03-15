@@ -162,10 +162,13 @@ function deleteTourLi(tourId){
         console.log(item);
         console.log(item.id);
          if(item.id == tourId){
-          item.remove();
+          var idOfItem = item.id;
           $(function() {
           $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
             alert(data);
+            item.id = idOfItem;
+            item.remove();
+
           });
        return false;
     });
