@@ -337,7 +337,7 @@ function saveLocations(){
 
   var selectedID = [];
   $(".previousLocations").each(function(index,obj){
-    selectedID.push($(obj).id);
+    selectedID.push(obj.id);
   });
 
   console.log(selectedID);
