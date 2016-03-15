@@ -335,7 +335,7 @@ function addmeidaFromSelectList(){
 function saveLocations(){
   var selectedID = [];
   $("#previousLocations").each(function(index,obj){
-    selectedID.push($(this).value);
+    selectedID.push($(this).id);
   });
 
   console.log(selectedID);
