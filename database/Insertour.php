@@ -20,7 +20,7 @@ $escapeUser = pg_escape_string($username);
 
 $tourClass = new TourCLass();
 
-$message = $tourClas::insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
+$message = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
 
 echo $message;
 
