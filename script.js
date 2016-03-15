@@ -203,7 +203,9 @@ function w3_open(value) {
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/GetTourLocations.php',{value:TourIdCode}, function(data){
-         $("#pointersDiv").html(data);
+
+        var htmlTag ="<lu id="+"roomlist"+">"+data+"</ul>";
+         $("#pointersDiv").html(htmlTag);
        });
        return false;
   });
