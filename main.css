@@ -296,6 +296,13 @@ ul{
   margin-bottom: 20px;
 }
 
+.portfolio-item{
+  max-width: 300px;
+  width: 300px;
+  max-height: 600px;
+  height: 600px;
+}
+
     
 @media (max-width: 500px) {
     #tourList li {

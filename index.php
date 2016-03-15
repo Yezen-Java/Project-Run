@@ -186,27 +186,25 @@ $LoadOnStart = new LoadOnStart();
     <div class="modal-dialog" id="fileContent">
       <div class="modal-content" >
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">File Manager</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">File Manager</h4>
         </div>
-<form id="deleteImage" method="post">
-        <div id= "fileManagerDiv" class="modal-body">
-            <div class = "list-group" id="modalc">
-        <?php  
-           $LoadOnStart->mediaResultsFucntion();
-        ?>
-        </div>
-          </div>
-<input type="submit" class="btn btn-warning" id="deleteCheckedItems" value"Delete"/>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-</form>
-        <div class="modal-footer">
-        <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
-<div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/>
-</div>
-</form>
-        
-        </div>
+            <form id="deleteImage" method="post">
+                <div id= "fileManagerDiv" class="modal-body">
+                    <div class = "list-group" id="modalc">
+                        <?php  
+                          $LoadOnStart->mediaResultsFucntion();
+                        ?>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-warning" id="deleteCheckedItems" value"Delete"/>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </form>
+            <div class="modal-footer">
+              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
+                  <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/></div>
+              </form>
+            </div>
       </div>
     </div>
   </div> 
