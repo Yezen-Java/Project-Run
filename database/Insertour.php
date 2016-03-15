@@ -3,7 +3,7 @@
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 require 'Connect.php';
-include 'TourClass.php';
+include 'Classes/TourClass.php';
 
 $tourID = $_POST['TourID'];
 $tourName = $_POST['Tourname'];
@@ -23,33 +23,5 @@ $tourClass = new TourCLass();
 $message = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
 
 echo $message;
-
-echo "work";
-
-// $TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
-
-// $TourNumberIDs = pg_num_rows($TourIDCheck);
-
-// if ( $TourNumberIDs == 0) {
-// 	$tourQuery = pg_query("INSERT INTO tour Values('$escapeTourid', '$escapeTName','$escapeTD')");
-//     $result = pg_query("INSERT INTO usertour Values('$escapeUser','$escapeTourid')");
-
-// if ($tourQuery && $result) {
-// 	echo "TourCreated";
-
-
-// 	}else{
-// 		echo $username;
-// 	}
-	
-// }else{
-
-// 	echo "Tour ID already exsits";
-// }
-
-
-
-
-
 
 ?>
