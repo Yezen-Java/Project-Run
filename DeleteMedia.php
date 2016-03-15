@@ -2,13 +2,13 @@
 
 include 's3_config.php';
 include 'database/Connect.php';
-include
+include 'Classes/MediaManagerCLass.php';
 
 $mediaid = $_POST['checkboxmedia'];
 
-$MediaManager = new MediaManager();
+$mediaManager = new MediaManager();
 
-$GetDeletedNumber = $MediaManager->deleteMeida($mediaid); 
+$GetDeletedNumber = $mediaManager->deleteMeida($mediaid); 
 
 echo $GetDeletedNumber;
 

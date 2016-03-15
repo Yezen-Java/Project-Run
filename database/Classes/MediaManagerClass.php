@@ -3,7 +3,7 @@
 
 include 's3_config.php';
 include 'Connect.php';
-include('image_check.php');
+include'image_check.php';
 
 
 class MediaManager 
