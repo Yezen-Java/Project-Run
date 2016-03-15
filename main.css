@@ -301,8 +301,8 @@ ul{
   width: 300px;
   max-height: 400px;
   height: 400px;
-  margin-top: 40px;
-
+  display: block;
+  padding-top: 30px;
 }
 .img-responsive{
   max-width: 280px;
