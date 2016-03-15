@@ -11,12 +11,7 @@ $tourClass = new TourCLass();
 
 $message = $tourClass->deleteTour($GetTourID);
 
-if($message){
-
-	echo "deleted";
-}else{
-	echo "faild";
-}
+echo $message;
 
 
 
