@@ -7,7 +7,7 @@ $TouridCode = $_POST['value'];
 
 $locationClass = new LocationClass();
 
-$geetLocations = $locationClass->getLocation();
+$geetLocations = $locationClass->getLocation($TouridCode);
 
 echo $geetLocations;
 
