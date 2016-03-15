@@ -19,7 +19,7 @@ $Addmedia-> functionName($le,$liarray,$location,$dbconn);
 class Addmedia 
 {
 
-function functionName($le,$liarray,$location,$dbconn){
+public function functionName($le,$liarray,$location,$dbconn){
 // global $le;
 // global $liarray;
 // global $location;
