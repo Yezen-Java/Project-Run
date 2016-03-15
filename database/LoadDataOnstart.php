@@ -23,9 +23,7 @@ if (pg_num_rows($toursListQuery)>0) {
 
           echo "<li id='$tour_id'> 
               <div class='input-group'> 
-              <span class='input-group-addon'> 
-                <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
-              </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
+              <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
             }  
 }
 else{
@@ -35,26 +33,26 @@ else{
 }
 
 
-public function GetLocationQuery(){
+// public function GetLocationQuery(){
 
 
-$locationsQuery = pg_query("SELECT * From location");
+// $locationsQuery = pg_query("SELECT * From location");
 
-if ($locationsQuery) {
+// if ($locationsQuery) {
 	
 
-echo"<select id ='selectLocation' class='form-control'>";
-         echo"<option>Choose Room To Add:</option>";
-         while($rows = pg_fetch_array($locationsQuery)){
-          $id = $rows['locationid'];
-          $name = $rows['lname'];
-          echo"<option value='$id'>$name</option>";
-         }
-         echo"</select>";
-}else{
-	echo "No Location where Found";
-}
-}
+// echo"<select id ='selectLocation' class='form-control'>";
+//          echo"<option>Choose Room To Add:</option>";
+//          while($rows = pg_fetch_array($locationsQuery)){
+//           $id = $rows['locationid'];
+//           $name = $rows['lname'];
+//           echo"<option value='$id'>$name</option>";
+//          }
+//          echo"</select>";
+// }else{
+// 	echo "No Location where Found";
+// }
+// }
 
 
 
