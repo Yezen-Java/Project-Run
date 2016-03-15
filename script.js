@@ -68,12 +68,11 @@ $(document).ready(function(){
       console.log(selectedID);
 
       var checkboxes = document.getElementsByName('checkboxlocation');
-      console.log(checkboxes);
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
          if(selectedID.indexOf(checkboxes[i])){
-            checkboxes[i].prop('checked', true);
+            $(checkboxes[i]).prop('checked', true);
          }
       }
     }); 
