@@ -91,10 +91,10 @@ if ($mediaResults) {
 	  $mediaid = $rows['mediaid'];
 
 	  echo "<div class='col-md-3 col-sm-3 portfolio-item' id='$mediaid'>
-	    <img class='img-responsive' src='$link' max-width='100%' height='auto'>
+	    <img class='img-responsive' src='$link'>
 	    <h3>$name</h3>
 
-      <div class='form-group'>
+      <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
           <textarea class='form-control textAreas' rows='5' name ='$mediaid' id='descriptionBox'></textarea>
           <button type='button' class='btn btn-info' id ='$mediaid' onclick='descriptionBoxEdit(this.id)'>Save</button>

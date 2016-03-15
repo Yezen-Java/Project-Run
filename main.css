@@ -301,10 +301,7 @@ ul{
   width: 300px;
   max-height: 400px;
   height: 400px;
-}
-
-.saveButtonContainer{
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .img-responsive{
@@ -314,6 +311,8 @@ ul{
   height:200px;
 
 }
+
+
 
     
 @media (max-width: 500px) {
