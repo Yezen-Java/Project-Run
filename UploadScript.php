@@ -1,7 +1,7 @@
 <?php
 include('image_check.php');
 include('database/Connect.php');
-include('s3_config.php');
+include('database/s3_config.php');
 
 $len = count($_FILES['file']['name']);
 $msg='';

@@ -9,6 +9,7 @@ include'image_check.php';
 class MediaManager 
 {
 
+
 public function addLocationTour($le,$liarray,$location,$dbconn){
 
     $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
