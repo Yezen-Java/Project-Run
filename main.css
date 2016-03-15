@@ -316,8 +316,6 @@ ul{
   margin-bottom: 5px;
 }
 
-
-
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
