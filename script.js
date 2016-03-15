@@ -68,13 +68,13 @@ $(document).ready(function(){
       console.log(selectedID);
 
       var checkboxes = document.getElementsByName('checkboxlocation');
-      var checkboxesChecked = [];
+      console.log(checkboxes);
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
-         // if(checkboxes[i].indexOf(selectedID)){
-         //    checkboxes[i].prop('checked', true);
-         // }
+         if(selectedID.indexOf(checkboxes[i])){
+            checkboxes[i].prop('checked', true);
+         }
       }
     }); 
 });
