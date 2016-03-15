@@ -43,9 +43,6 @@ class LocationClass
 	public function DeleteLocation(){
 
 	
-		return ;
-
-
 
 	}
 	

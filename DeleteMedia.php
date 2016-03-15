@@ -2,37 +2,15 @@
 
 include 's3_config.php';
 include 'database/Connect.php';
+include
 
-$mediaid = $_POST['checkboxmedia']; 
+$mediaid = $_POST['checkboxmedia'];
 
-echo count($mediaid);
+$MediaManager = new MediaManager();
 
-$query = "DELETE From media where mediaid = $1";
-$query2 = "SELECT * From media where mediaid = $1";
+$GetDeletedNumber = $MediaManager->deleteMeida($mediaid); 
 
-$result = pg_prepare($dbconn,"query", $query);
-$amazonQuery = pg_prepare($dbconn,"query2", $query2);
-
-
-foreach ($mediaid as $number) {
-
-	$amazonQuery = pg_execute($dbconn,"query2",  array($number));
-	$rows = pg_fetch_array($amazonQuery);
-	$mediaExt = $rows['ext_name'];
-	
-	if ($s3->deleteObject($bucket,$mediaExt)) {
-	 $result = pg_execute($dbconn,"query",  array($number));
-
-        	echo 'Deleted';
-
-	}else{
-		echo "error";
-}
-
-
-sleep(1);
-
-}
+echo $GetDeletedNumber;
 
 
 ?>

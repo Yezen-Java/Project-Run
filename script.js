@@ -162,10 +162,10 @@ function deleteTourLi(tourId){
         console.log(item);
         console.log(item.id);
          if(item.id == tourId){
+          item.remove();
           $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
             if (data==true) {
               alert("TourDeleted");
-            item.remove();
           }else{
             alert("Deleteing tour falid");
           }
