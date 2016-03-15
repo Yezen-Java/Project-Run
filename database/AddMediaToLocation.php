@@ -8,11 +8,22 @@ $lis = $_POST['items'];
 $liarray = explode("::", $lis);
 $le = count($liarray);
 
-function functionName(){
-global $le;
-global $liarray;
-global $location;
-global $dbconn;
+
+
+$Addmedia = new Addmedia();
+$Addmedia-> functionName($le,$liarray,$location,$dbconn);
+
+/**
+* 
+*/
+class Addmedia 
+{
+
+function functionName($le,$liarray,$location,$dbconn){
+// global $le;
+// global $liarray;
+// global $location;
+// global $dbconn;
     $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
 	$result = pg_prepare($dbconn,"query", $query);
 for ($i=0; $i < $le;$i++) { 
@@ -32,7 +43,7 @@ for ($i=0; $i < $le;$i++) {
 
 }
 
-functionName();
+}
 
 
 
