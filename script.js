@@ -335,7 +335,7 @@ function addmeidaFromSelectList(){
 function saveLocations(){
   var selectedID = [];
   $("#listMedia").children("li").each(function(){
-    selectedID.push($(this).value;
+    selectedID.push($(this).value);
   });
 
   console.log(selectedID);
