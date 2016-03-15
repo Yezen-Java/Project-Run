@@ -13,9 +13,7 @@ $le = count($liarray);
 $Addmedia = new Addmedia();
 $Addmedia-> addLocationTour($le,$liarray,$location,$dbconn);
 
-/**
-* 
-*/
+
 class Addmedia 
 {
 

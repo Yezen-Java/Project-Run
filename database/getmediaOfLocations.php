@@ -8,10 +8,6 @@ $getLocationId = $_POST['LocationId'];
 $getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = $getLocationId and location_res.mediaid = media.mediaid;");
 
 
-//$rowsNumber = pg_num_rows($getLocationMedia);
-
-
-
 	if($getLocationMedia){
 
 	    while ($rows = pg_fetch_array($getLocationMedia)) {
@@ -26,9 +22,6 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
 }else{
 	echo "No Media";
 }
-
-
-
 
 
 ?>
