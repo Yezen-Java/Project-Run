@@ -1,7 +1,7 @@
 <?php 
 
 include'Connect.php';
-include'Classes/LocationsClass.php';
+include'Classes/LocationClass.php';
 
 $tourId = $_POST['TourID'];
 
