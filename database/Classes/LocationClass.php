@@ -43,11 +43,11 @@ class LocationClass
 	public function insertLocations($tourId,$liarray){
 
 	global $dbconn;
-	$queryDelere = "DELETE FROM location_res where tourid = $1";
+	$queryDelere = "DELETE FROM tour_res where tourid = $1";
 	$DelereQuery = pg_prepare($dbconn,"deletequery", $queryDelere);
 	$DelereQuery = pg_execute($dbconn,"deletequery", array($tourId));
 
-	if(pg_affected_rows($DelereQuery)<0){
+	if(pg_affected_rows($DelereQuery)==0){
 
 		return false;
      }else{
