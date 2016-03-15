@@ -3,18 +3,9 @@ include('image_check.php');
 include('database/Connect.php');
 include('database/s3_config.php');
 
-$files = $_FILES['file'];
+$_FILES['file'];
 
 
-
-
-/**
-* 
-*/
-  
-function uploadMeida($files){
-
-global $s3;
 $len = count($files);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name) values ($1,$2,$3)";
@@ -23,9 +14,9 @@ $sizeLimit = 2097152;
 
 for ($i = 0; $i < $len; $i++){
 
-  $tmp = $files['file']['tmp_name'][$i];
-  $name = $files['file']['name'][$i];
-  $size = $files['file']['size'][$i];
+  $tmp = $_FILES['file']['tmp_name'][$i];
+  $name = $_FILES['file']['name'][$i];
+  $size = $_FILES['file']['size'][$i];
   $ext = getExtension($name);
   $actual_media_name = time().".".$ext;
 
@@ -80,23 +71,6 @@ for ($i = 0; $i < $len; $i++){
  sleep(3);
 
 }
-
-
-// function getExtension($str) 
-// {
-//          $i = strrpos($str,".");
-//          if (!$i) { return ""; } 
-
-//          $l = strlen($str) - $i;
-//          $ext = substr($str,$i+1,$l);
-//          return $ext;
-// }
-
-// $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
-}
-
-
-uploadMeida($files);
 
 ?>
 
