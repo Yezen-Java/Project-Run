@@ -26,8 +26,7 @@ class LocationClass
 
 			//this generates a list based on the number of the locations.
 
-		$getLocations =  $getLocations."<a href ='#'id ='pointer1' class='previousLocations' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>"
-		
+		$getLocations =  $getLocations."<a href ='#'id ='pointer1' class='previousLocations' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>";
 		    }
 
 		}
