@@ -297,24 +297,18 @@ ul{
 }
 
 .portfolio-item{
-  max-width: 300px;
-  width: 300px;
-  max-height: 400px;
-  height: 400px;
+  max-width: 250px;
+  width: 250px;
+  max-height: 350px;
+  height: 350px;
   padding-bottom: 50px;
 }
 
 .img-responsive{
-  max-width: 280px;
-  width: 280px;
-  max-height:200px;
-  height:200px;
-
+  max-width: 100%;
+  height:auto;
 }
 
-
-
-    
 @media (max-width: 500px) {
     #tourList li {
         width: 50%;
