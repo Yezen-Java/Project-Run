@@ -11,9 +11,8 @@ $files = $_FILES['file'];
 /**
 * 
 */
-class MediaUploadClass{
   
-public function uploadMeida($files){
+function uploadMeida($files){
 
 global $s3;
 $len = count($files);
@@ -95,10 +94,9 @@ for ($i = 0; $i < $len; $i++){
 
 // $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF","BMP","txt","mp4","mp3","m4v","DICOM");
 }
-}
 
-$mediaUplaod = new MediaUploadClass();
-$mediaUplaod-> uploadMeida($files);
+
+uploadMeida($files);
 
 ?>
 
