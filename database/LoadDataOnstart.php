@@ -91,6 +91,13 @@ if ($mediaResults) {
 	  $mediaid = $rows['mediaid'];
 
 	  echo "<div class='col-md-3 portfolio-item' id='$mediaid'>
+
+      <div class='displayCheckBoxSpan'>
+          <span class='input-group-addon' id='checkBoxDeleteSpan'>
+            <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
+          </span>
+      </div>
+
 	    <img class='img-responsive' src='$link'>
 	    <h3>$name</h3>
 
@@ -100,10 +107,7 @@ if ($mediaResults) {
           <button type='button' class='btn btn-info' id ='$mediaid' onclick='descriptionBoxEdit(this.id)'>Save</button>
       </div>
 
-      <div class='displayCheckBoxSpan'>
-	    <span class='input-group-addon' id='checkBoxDeleteSpan'>
-	        <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
-	      </span></div></div>";
+      </div>";
 }
      
 }else{
