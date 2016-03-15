@@ -71,7 +71,7 @@ $(document).ready(function(){
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
-         if(selectedID.indexOf(checkboxes[i]) > 0){
+         if(selectedID.indexOf($(checkboxes[i]).value) > 0){
             $(checkboxes[i]).prop('checked', true);
          }
       }
