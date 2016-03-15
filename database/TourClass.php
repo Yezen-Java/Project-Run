@@ -10,8 +10,9 @@ include 'Connect.php';
 class TourClass
 {
 	public function insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser){
+
 		global $dbconn;
-		$msg ='';
+		$msg ='work';
 
 		$TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
 
