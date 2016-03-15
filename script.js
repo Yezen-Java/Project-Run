@@ -357,7 +357,11 @@ var touridSelected = TourCodeSelected;
     $(function() {
 
        $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
-        alert(data);
+        if(data == true){
+          alert("locations Added successfully");
+        }else{
+          alert("SomeThing went wrong");
+        }
        });
        return false;
   });
