@@ -333,11 +333,15 @@ function addmeidaFromSelectList(){
 }
 
 function saveLocations(){
-  //var htmlTag ="<ul class='previousLocations' id="+"roomlist"+">"+data+"</ul>";
 
+    // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
+    // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
+    //           <span class='glyphicon glyphicon-trash'></span> Trash 
+    //         </button>";
+    //     }
   var selectedID = [];
   $(".previousLocations").each(function(index,obj){
-    selectedID.push(obj.id);
+    selectedID.push(obj.value);
   });
 
   console.log(selectedID);
