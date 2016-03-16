@@ -15,9 +15,6 @@ html, body {
 .circleButtonX:hover{
 	
 	background-color: red;
-
-
-
 }
 /*circle button code end */
 
@@ -324,6 +321,21 @@ ul{
     #tourList {
         padding-left: 100px;
     }
+}
+
+.ui-widget-header{
+  background: #cedc98;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-weight:bold;
+}
+
+.progress-label{
+  position:absolute;
+  left:50%;
+  top:13px;
+  font-weight: bold;
+  text-shadow:1px 1px 0 #fff;
 }
 
 
