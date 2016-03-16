@@ -20,13 +20,12 @@ if (pg_num_rows($toursListQuery)>0) {
  	    while ($rows =pg_fetch_array($toursListQuery)) {
             $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
-
-          echo "<li id='$tour_id'> 
-              <div class='input-group'> 
-              <span class='input-group-addon'> 
-              <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
-              </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
-            }  
+        echo "<li id='$tour_id'> 
+        <div class='input-group'> 
+        <span class='input-group-addon'> 
+        <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
+        </span> <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button> </div> </li>";
+      }  
 }
 else{
 	echo "No Data Found";
