@@ -76,6 +76,41 @@ $(document).ready(function(){
          }
       }
     }); 
+
+    var check = false;
+
+  $("#deleteCheckedItems").click(function(){
+    var Arrayofvlaues = [];
+    var array = getCheckedBoxes('checkboxmedia');
+    if (check == false){
+      $(".displayCheckBoxSpan").show("slow");
+      check = true;
+      return;
+    }else if (check == true && array == null){
+      console.log("works");
+      $(".displayCheckBoxSpan").hide("slow");
+      check = false;
+      return;
+    } else {
+      for (var i = 0; i < array.length; i++) {
+        Arrayofvlaues.push(array[i].value);
+        var valueChecked = array[i].value;   
+      }
+
+      // $.ajax({
+      //   url: "DeleteMedia.php",
+      //   type: "POST",
+      //   data: {items:Arrayofvlaues.join("::")},
+      //   contentType: false,
+      //   cache: false,
+      //   processData:false,
+      //   success: function(data){
+      //     alert(data);
+      //   },
+      //   error: function(){}           
+      // });
+    }
+  });
 });
 
 // $("#file-manager").click(function(){
@@ -287,40 +322,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 }
 
-  var check = false;
-
-  $("#deleteCheckedItems").click(function(){
-    var Arrayofvlaues = [];
-    var array = getCheckedBoxes('checkboxmedia');
-    if (check == false){
-      $(".displayCheckBoxSpan").show("slow");
-      check = true;
-      return;
-    }else if (check == true && array == null){
-      console.log("works");
-      $(".displayCheckBoxSpan").hide("slow");
-      check = false;
-      return;
-    } else {
-      for (var i = 0; i < array.length; i++) {
-        Arrayofvlaues.push(array[i].value);
-        var valueChecked = array[i].value;   
-      }
-
-      // $.ajax({
-      //   url: "DeleteMedia.php",
-      //   type: "POST",
-      //   data: {items:Arrayofvlaues.join("::")},
-      //   contentType: false,
-      //   cache: false,
-      //   processData:false,
-      //   success: function(data){
-      //     alert(data);
-      //   },
-      //   error: function(){}           
-      // });
-    }
-  });
+  
 
 function appendMediaToLocaiton(value){
 var locationID = value;
