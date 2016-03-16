@@ -305,6 +305,7 @@ function deleteSelected(){
     }else if (check == true && array == null){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
+      console.log("works");
     
     } else {
 
