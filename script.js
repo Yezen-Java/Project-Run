@@ -307,7 +307,7 @@ function deleteSelected(){
     } else {
 
       for (var i = 0; i < array.length; i++) {
-        Arrayofvlaues.push(array[i].value);
+        array.push(array[i].value);
         var valueChecked = array[i].value;    
       };
 
