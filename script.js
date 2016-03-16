@@ -294,22 +294,17 @@ function deleteSelected(){
   $("#deleteCheckedItems").click(function(){
     var Arrayofvlaues = [];
     var array = getCheckedBoxes('checkboxmedia');
-
-
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
-
-    }else if (check == true && array.length == 0){
+    }else if (check == true && array == null){
+      console.log("works");
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
-    
     } else {
-
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
         var valueChecked = array[i].value;   
-        console.log(array[i].value); 
       };
 
       $.ajax({
@@ -324,7 +319,6 @@ function deleteSelected(){
         },
         error: function(){}           
       });
-      console.log(Arrayofvlaues);
     }
   });
 }
