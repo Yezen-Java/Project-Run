@@ -22,7 +22,7 @@ for ($i = 0; $i < $len; $i++){
 
     if(in_array($ext, $valid_formats)){
 
-      if(in_array($ext, $imageFormate)){
+      if(in_array($ext, $imageFormates)){
         $MediaType ="image";
       }else{
           $MediaType ="video";

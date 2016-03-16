@@ -13,6 +13,4 @@ $valid_formats = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF
 
 $imageFormates = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF");
 
-$videoFormates = array("mp4","m4v","avi","mpeg");
-
 ?>
