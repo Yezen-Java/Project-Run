@@ -77,11 +77,10 @@ $(document).ready(function(){
       }
     }); 
 
-
-    $("#deleteImage").on('submit',(function(e){
-      e.preventDefault();
     var check = false;
-    var Arrayofvlaues = [];
+
+  $("#deleteCheckedItems").click(function(){
+    var Arrayofvalues = [];
     var array = getCheckedBoxes('checkboxmedia');
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
@@ -92,16 +91,16 @@ $(document).ready(function(){
       check = false;
       return;
     } else {
-      // for (var i = 0; i < array.length; i++) {
-      //   Arrayofvlaues.push(array[i].value);
-      // }
+      for (var i = 0; i < array.length; i++) {
+        Arrayofvalues.push(array[i].value);
+      }
       
-      console.log(Arrayofvlaues);
+      console.log(Arrayofvalues);
 
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: new FormData(this),
+        data: {:Arrayofvalues.join("::")},
         contentType: false,
         cache: false,
         processData:false,

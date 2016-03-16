@@ -1,9 +1,10 @@
 <?php
 
+
+$mediaid = $_POST['array']; 
+
 include 's3_config.php';
 include 'database/Connect.php';
-
-$mediaid = $_POST['items']; 
 
 $liarray = explode("::", $mediaid);
 
