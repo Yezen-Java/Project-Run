@@ -320,9 +320,8 @@ console.log("test "+locationID)
   $(function() {
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
-
         $("#listMedia").append(data);
-        $('.sortable').sortable();
+        //$('.sortable').sortable();
        });
        return false;
   });
@@ -364,6 +363,7 @@ var touridSelected = TourCodeSelected;
        $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
         if(data == true){
           alert("locations Added successfully");
+          w3_open(touridSelected);
         }else{
           alert("SomeThing went wrong");
         }
