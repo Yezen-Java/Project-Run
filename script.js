@@ -141,7 +141,6 @@ $(document).ready(function(){
       }
       setTimeout(progress,3000);
     });
-
 });
 
 // $("#file-manager").click(function(){
