@@ -461,7 +461,7 @@ function getCheckedBoxes(element) {
         }
       });
     }
-    $("span#edit").tourButtons("dblclick", function(e){
+    $("span.tourButtons").editable("dblclick", function(e){
       alert(e.old_value + " => " + e.value);
     });
 
