@@ -296,6 +296,7 @@ function deleteSelected(){
     var array = getCheckedBoxes("checkboxmedia");
     console.log(array);
 
+
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
@@ -307,8 +308,9 @@ function deleteSelected(){
     } else {
 
       for (var i = 0; i < array.length; i++) {
-        array.push(array[i].value);
-        var valueChecked = array[i].value;    
+        Arrayofvlaues.push(array[i].value);
+        var valueChecked = array[i].value;   
+        console.log(array[i].value); 
       };
 
       $.ajax({
