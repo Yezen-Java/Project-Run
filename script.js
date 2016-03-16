@@ -461,9 +461,9 @@ function getCheckedBoxes(element) {
         }
       });
     }
-    $("span.tourButtons").editable("dblclick", function(e){
-      alert(e.old_value + " => " + e.value);
-    });
+    // $("span.tourButtons").editable("dblclick", function(e){
+    //   alert(e.old_value + " => " + e.value);
+    // }); http://shokai.github.io/jQuery.editable/
 
 
 
