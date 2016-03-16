@@ -179,7 +179,7 @@ $LoadOnStart = new LoadOnStart();
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">File Manager</h4>
         </div>
-            
+             <form id="deleteImage" method="post">
                 <div id= "fileManagerDiv" class="modal-body">
                     <div class = "list-group" id="modalc">
                         <?php  
@@ -188,8 +188,9 @@ $LoadOnStart = new LoadOnStart();
                     </div>
                 </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
+              <input type="submit" class="btn btn-warning" id="deleteCheckedItems" value"Delete"/>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </form>
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                   <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/></div>
               </form>

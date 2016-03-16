@@ -35,22 +35,22 @@ $(document).ready(function(){
     }));
   
 
-    $("#deleteImage").on('submit',(function(e){
-      e.preventDefault();
-      $.ajax({
-        url: "DeleteMedia.php",
-        type: "POST",
-        data: new FormData(this),
-        contentType: false,
-        cache: false,
-        processData:false,
-        success: function(data){
+    // $("#deleteImage").on('submit',(function(e){
+    //   e.preventDefault();
+    //   $.ajax({
+    //     url: "DeleteMedia.php",
+    //     type: "POST",
+    //     data: new FormData(this),
+    //     contentType: false,
+    //     cache: false,
+    //     processData:false,
+    //     success: function(data){
 
-          alert(data);
-        },
-        error: function(){}           
-      });
-    }));
+    //       alert(data);
+    //     },
+    //     error: function(){}           
+    //   });
+    // }));
 
     $('#locationManagerModel').on('show.bs.modal', function () {
 
@@ -77,9 +77,9 @@ $(document).ready(function(){
       }
     }); 
 
-    var check = false;
 
-  $("#deleteCheckedItems").click(function(){
+    $("#deleteImage").on('submit',(function(e){
+    var check = false;
     var Arrayofvlaues = [];
     var array = getCheckedBoxes('checkboxmedia');
     if (check == false){
@@ -91,16 +91,16 @@ $(document).ready(function(){
       check = false;
       return;
     } else {
-      for (var i = 0; i < array.length; i++) {
-        Arrayofvlaues.push(array[i].value);
-      }
+      // for (var i = 0; i < array.length; i++) {
+      //   Arrayofvlaues.push(array[i].value);
+      // }
       
       console.log(Arrayofvlaues);
 
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: {items:Arrayofvlaues.join("::")},
+        data: new FormData(this),
         contentType: false,
         cache: false,
         processData:false,
