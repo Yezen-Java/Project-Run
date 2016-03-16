@@ -137,25 +137,9 @@ for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
 };
 
-// $("#listMedia").children("li").each(function()
-// {
-//     array.push($(this).value;
-// });
-
-
-// $.ajax({
-//     url: "/database/AddMediaToLocation.php",
-//     type: "POST",
-//     data: { items: array.join("::"), locationNo:LocationIdNumber },
-//     success: function(response) { 
-//       alert(response); 
-//     }
-// });
-
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
-         alert(data);
          if (data==true) {
           alert("Media Added");
          }else{

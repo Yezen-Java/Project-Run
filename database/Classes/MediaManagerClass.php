@@ -51,7 +51,6 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
 	return $getContent;
 }
 
-
 return $getContent;
 
 }
