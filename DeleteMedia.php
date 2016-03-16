@@ -3,7 +3,7 @@
 include 's3_config.php';
 include 'database/Connect.php';
 
-$mediaid = $_POST['checkboxmedia']; 
+$mediaid = $_POST['items']; 
 
 $liarray = explode("::", $mediaid);
 
