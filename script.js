@@ -1,8 +1,4 @@
 $(document).ready(function(){
-  $("span.tourButtons").editable("dblclick", function(e){
-    alert(e.old_value + " => " + e.value);
-  });
-
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
@@ -465,6 +461,9 @@ function getCheckedBoxes(element) {
         }
       });
     }
+    $("span.tourButtons").editable("dblclick", function(e){
+      alert(e.old_value + " => " + e.value);
+    });
 
 
 
