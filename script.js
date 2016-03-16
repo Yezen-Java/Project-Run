@@ -84,7 +84,7 @@ $(document).ready(function(){
     $('.chkbox:checked').each(function() {
             arrayofvalues.push($(this).val());
         });
-    console.log(array);
+    console.log(arrayofvalues);
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
