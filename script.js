@@ -293,19 +293,16 @@ function deleteSelected(){
 
   $("#deleteCheckedItems").click(function(){
     var Arrayofvlaues = [];
-    var array = [];
-    array = getCheckedBoxes('checkboxmedia');
+    var array = getCheckedBoxes('checkboxmedia');
 
-    console.log(array.length);
 
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
 
-    }else if (check == true && array == null){
+    }else if (check == true && array.length == 0){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
-      console.log("works");
     
     } else {
 
@@ -406,7 +403,7 @@ function getCheckedBoxes(element) {
      }
   }
   // Return the array if it is non-empty, or null
-  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+  return checkboxesChecked.length > 0 ? checkboxesChecked : [];
 }
 
 /*
