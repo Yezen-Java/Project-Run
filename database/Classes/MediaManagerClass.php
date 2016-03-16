@@ -2,8 +2,6 @@
 <?php
 
 
-
-
 class MediaManager 
 {
 
@@ -45,7 +43,7 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
                $media_name = $rows['media_name'];
 
 
-        $getContent = $getContent."<li value ='mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
+        $getContent = $getContent."<li value ='$mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
 	}
 }else{
 	return $getContent;
