@@ -106,7 +106,6 @@ $(document).ready(function(){
         data: {items:array},
         success: function(data){
           alert(data);
-          reloaddiv();
         },
         error: function(){}           
       });
