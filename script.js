@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $("span.tourButtons").editable("dblclick", function(e){
+    alert(e.old_value + " => " + e.value);
+  });
+
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
@@ -38,10 +42,6 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
-    $("span.tourButtons").editable("dblclick", function(e){
-      alert(e.old_value + " => " + e.value);
-    });
-  }));
 
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();
