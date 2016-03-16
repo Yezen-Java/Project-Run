@@ -92,7 +92,7 @@ $(document).ready(function(){
       return;
     } else {
       for (var i = 0; i < array.length; i++) {
-        Arrayofvalues.push(array[i].value);
+        Arrayofvlaues.push(array[i].value);
       }
       
       console.log(Arrayofvalues);
@@ -100,7 +100,7 @@ $(document).ready(function(){
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: {:Arrayofvalues.join("::")},
+        data: {items:Arrayofvalues.join("::")},
         contentType: false,
         cache: false,
         processData:false,
