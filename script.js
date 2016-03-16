@@ -80,29 +80,31 @@ $(document).ready(function(){
     var check = false;
 
   $("#deleteCheckedItems").click(function(){
-    var Arrayofvalues = [];
-    var array = getCheckedBoxes('checkboxmedia');
+    var arrayofvalues = [];
+    $('.chkbox:checked').each(function() {
+            arrayofvalues.push($(this).val());
+        });
     console.log(array);
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
       return;
-    }else if (check == true && array == null){
+    }else if (check == true && arrayofvalues == null){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
       return;
     } else {
-      for (var i = 0; i < array.length; i++) {
-        Arrayofvlaues.push(array[i].val());
-        console.log(array[i].val());
-      }
+      // for (var i = 0; i < array.length; i++) {
+      //   Arrayofvlaues.push(array[i].val());
+      //   console.log(array[i].val());
+      // }
       
-      console.log(Arrayofvalues);
+      console.log(arrayofvalues);
 
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: {items:Arrayofvalues.join("::")},
+        data: {items:arrayofvalues.join("::")},
         contentType: false,
         cache: false,
         processData:false,
