@@ -191,9 +191,9 @@ $LoadOnStart = new LoadOnStart();
 
               <!--<progress id="uploadFileProgress" value="0" max="100"></progress>-->
               <div class="progress">
-                  <div class ="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                  <div class ="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0"
                   aria-valuemax="100" style="width:70%">
-                    <span class="sr-only" value="40% Complete" id="status"></span>
+                    70% Complete
                   </div>
               </div>
 
