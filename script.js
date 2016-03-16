@@ -38,7 +38,10 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
-  
+    $("span.tourButtons").editable("dblclick", function(e){
+      alert(e.old_value + " => " + e.value);
+    });
+  }));
 
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();

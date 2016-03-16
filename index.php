@@ -53,9 +53,10 @@ $LoadOnStart = new LoadOnStart();
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="jquery.sortable.js"></script>
     <script src="js/CreateTour.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.editable.js"></script>
     <script src="tests.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="myJquery.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
 
