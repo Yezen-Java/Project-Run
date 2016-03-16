@@ -5,7 +5,11 @@ include 'database/Connect.php';
 
 $mediaid = $_POST['checkboxmedia']; 
 
-echo count($mediaid);
+$liarray = explode("::", $mediaid);
+
+$numberOfMedia = count($liarray);
+
+echo "The number of Media: " . $numberOfMedia;
 
 $query = "DELETE From media where mediaid = $1";
 $query2 = "SELECT * From media where mediaid = $1";
@@ -14,7 +18,7 @@ $result = pg_prepare($dbconn,"query", $query);
 $amazonQuery = pg_prepare($dbconn,"query2", $query2);
 
 
-foreach ($mediaid as $number) {
+foreach ($liarray as $number) {
 
 	$amazonQuery = pg_execute($dbconn,"query2",  array($number));
 	$rows = pg_fetch_array($amazonQuery);

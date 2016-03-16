@@ -19,6 +19,7 @@ $(document).ready(function(){
 
     $("#uploadForm").on('submit',(function(e){
       e.preventDefault();
+
       $.ajax({
         url: "UploadScript.php",
         type: "POST",
@@ -27,7 +28,6 @@ $(document).ready(function(){
         cache: false,
         processData:false,
         success: function(data){
-
           $('#modalc').append(data);
         },
         error: function(){}           
@@ -287,7 +287,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 }
 
-$(function(){
+function deleteSelected(){
   
   var check = false;
 
@@ -305,14 +305,25 @@ $(function(){
 
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
-        var valueChecked= array[i].value;
-        
+        var valueChecked= array[i].value;    
       };
-      console.log(Arrayofvlaues);
 
+      $.ajax({
+        url: "DeleteMedia.php",
+        type: "POST",
+        data: {items:Arrayofvlaues.join("::")},
+        contentType: false,
+        cache: false,
+        processData:false,
+        success: function(data){
+          alert(data);
+        },
+        error: function(){}           
+      });
+      console.log(Arrayofvlaues);
     }
   });
-});
+}
 
 function appendMediaToLocaiton(value){
 var locationID = value;
@@ -325,7 +336,6 @@ console.log("test "+locationID)
        });
        return false;
   });
-
 }
 
 
