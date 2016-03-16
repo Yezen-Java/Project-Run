@@ -79,6 +79,7 @@ $(document).ready(function(){
 
 
     $("#deleteImage").on('submit',(function(e){
+      e.preventDefault();
     var check = false;
     var Arrayofvlaues = [];
     var array = getCheckedBoxes('checkboxmedia');
