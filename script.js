@@ -98,13 +98,11 @@ $(document).ready(function(){
       //   Arrayofvlaues.push(array[i].val());
       //   console.log(array[i].val());
       // }
-      
-      console.log(arrayofvalues);
-
+      var array = arrayofvalues;
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: {items:arrayofvalues.join("::")},
+        data: {items:array.join("::")},
         contentType: false,
         cache: false,
         processData:false,

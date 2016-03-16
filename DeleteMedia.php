@@ -1,7 +1,7 @@
 <?php
 
 
-$mediaid = $_POST['array']; 
+$mediaid = $_POST['items']; 
 
 include 's3_config.php';
 include 'database/Connect.php';
