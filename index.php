@@ -201,7 +201,7 @@ $LoadOnStart = new LoadOnStart();
 
               <div id="progressbar-5">
                 <div class="progress-label">
-                  Loading....
+                  <h4>Loading....</h4>
                 </div>
               </div>
 
