@@ -94,7 +94,7 @@ if ($mediaResults) {
 
       <div class='displayCheckBoxSpan'>
           <span class='input-group-addon' id='checkBoxDeleteSpan'>
-            <input type='checkbox' name='checkboxmedia[]' value ='$mediaid'>
+            <input type='checkbox' name='checkboxmedia' value ='$mediaid'>
           </span>
       </div>
 
