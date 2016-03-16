@@ -191,7 +191,8 @@ $LoadOnStart = new LoadOnStart();
               <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
-                  <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/></div>
+                <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
+                <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> <input type ='submit' value='Upload Image'/></div>
               </form>
             </div>
       </div>
