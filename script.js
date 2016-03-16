@@ -82,6 +82,7 @@ $(document).ready(function(){
   $("#deleteCheckedItems").click(function(){
     var Arrayofvalues = [];
     var array = getCheckedBoxes('checkboxmedia');
+    console.log(array);
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
@@ -93,6 +94,7 @@ $(document).ready(function(){
     } else {
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
+        console.log(array[i].value);
       }
       
       console.log(Arrayofvalues);
