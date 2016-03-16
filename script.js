@@ -293,9 +293,10 @@ function deleteSelected(){
 
   $("#deleteCheckedItems").click(function(){
     var Arrayofvlaues = [];
-    var array = getCheckedBoxes("checkboxmedia");
-    console.log(array);
-    console.log(array.length);
+    var array = [];
+    array = getCheckedBoxes('checkboxmedia');
+
+    console.log(array.length());
 
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
