@@ -106,7 +106,7 @@ $(document).ready(function(){
         data: {items:array},
         success: function(data){
           alert(data);
-          reloaddiv("#mediaList");
+          reloaddiv();
         },
         error: function(){}           
       });
@@ -202,9 +202,9 @@ function myFunction() {
   document.getElementById('notesArea').placeholder= Date();
 }
 
-function reloaddiv(divname){
+function reloaddiv(evt){
 
-         $(divname).load("index.php")
+         $("#mediaList").load("index.php")
          evt.preventDefault();
      
 }
