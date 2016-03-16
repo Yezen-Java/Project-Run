@@ -1,12 +1,14 @@
 <?php
 
 
-$mediaid = $_POST['items']; 
+$arrayMeida = $_POST['items']; 
+
+echo "Testing $arrayMeida ";
 
 include 's3_config.php';
 include 'database/Connect.php';
 
-$liarray = explode("::", $mediaid);
+$liarray = explode("::", $arrayMeida);
 
 $numberOfMedia = count($liarray);
 

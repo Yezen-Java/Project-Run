@@ -98,14 +98,12 @@ $(document).ready(function(){
       //   Arrayofvlaues.push(array[i].val());
       //   console.log(array[i].val());
       // }
-      var array = arrayofvalues;
+      var array = arrayofvalues.join("::");
+      console.log(array);
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
-        data: {items:array.join("::")},
-        contentType: false,
-        cache: false,
-        processData:false,
+        data: {items:array},
         success: function(data){
           alert(data);
         },
