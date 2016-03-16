@@ -287,8 +287,6 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 }
 
-function deleteSelected(){
-  
   var check = false;
 
   $("#deleteCheckedItems").click(function(){
@@ -323,7 +321,6 @@ function deleteSelected(){
       // });
     }
   });
-}
 
 function appendMediaToLocaiton(value){
 var locationID = value;
