@@ -190,13 +190,12 @@ $LoadOnStart = new LoadOnStart();
                     </div>
                 </div>
             <div class="modal-footer">
-
-              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
               <div id="progressbar-5">
                 <div class="progress-label">
                   <h4>Loading....</h4>
                 </div>
               </div>
+              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> 
                   <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
