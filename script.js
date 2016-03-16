@@ -295,13 +295,13 @@ function deleteSelected(){
     var Arrayofvlaues = [];
     var array = getCheckedBoxes("checkboxmedia");
 
-    console.log(array);
+    console.log(Arrayofvlaues);
 
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
 
-    }else if (check == true && array.length <= 0){
+    }else if (check == true && array.length == 0){
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
     
