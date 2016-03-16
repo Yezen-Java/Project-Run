@@ -307,20 +307,20 @@ function deleteSelected(){
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
         var valueChecked = array[i].value;   
-      };
+      }
 
-      $.ajax({
-        url: "DeleteMedia.php",
-        type: "POST",
-        data: {items:Arrayofvlaues.join("::")},
-        contentType: false,
-        cache: false,
-        processData:false,
-        success: function(data){
-          alert(data);
-        },
-        error: function(){}           
-      });
+      // $.ajax({
+      //   url: "DeleteMedia.php",
+      //   type: "POST",
+      //   data: {items:Arrayofvlaues.join("::")},
+      //   contentType: false,
+      //   cache: false,
+      //   processData:false,
+      //   success: function(data){
+      //     alert(data);
+      //   },
+      //   error: function(){}           
+      // });
     }
   });
 }
