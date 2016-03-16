@@ -87,11 +87,11 @@ $(document).ready(function(){
       check = true;
       return;
     }else if (check == true && array == null){
-      console.log("works");
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
       return;
     } else {
+      console.log("works");
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
         var valueChecked = array[i].value;   
