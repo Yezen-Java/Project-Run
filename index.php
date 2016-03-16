@@ -96,6 +96,7 @@ $LoadOnStart = new LoadOnStart();
         
         <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
+          <button id="editTour" type="button" class="btn btn-success"><strong>Edit</strong></button>
         </div>
             </div>
 
