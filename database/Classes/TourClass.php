@@ -14,8 +14,7 @@ class TourClass
 		global $dbconn;
 		$msg ='work';
 
-		$TourIDCheck = pg_query("SELECT * from tour where tourid = '$escapeTourid'");
-
+		$TourIDCheck = pg_query("SELECT * from tour where tourid = '{$escapeTourid}'");
 		$TourNumberIDs = pg_num_rows($TourIDCheck);
 
 		if ( $TourNumberIDs == 0) {
