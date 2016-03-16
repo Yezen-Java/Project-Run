@@ -188,13 +188,13 @@ $LoadOnStart = new LoadOnStart();
                     </div>
                 </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <progress id="uploadFileProgress" value="0" max="100"></progress>
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 
                 <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> 
-                                        <progress id="uploadFileProgress" value="0" max="100"></progress>
-                                        <input type ='submit' value='Upload Image'/>
+                  <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <input type ='submit' value='Upload Image'/>
                 </div>
               </form>
             </div>
