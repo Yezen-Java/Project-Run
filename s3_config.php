@@ -1,7 +1,7 @@
 <?php
 
 use Aws\S3\S3Client;
-$bucket="storage.s3.website.com";
+$bucket="hive.testing.storage";
 if (!class_exists('S3'))require('s3.php');
 
 			
