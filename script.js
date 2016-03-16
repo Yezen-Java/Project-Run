@@ -295,7 +295,7 @@ function deleteSelected(){
     var Arrayofvlaues = [];
     var array = getCheckedBoxes("checkboxmedia");
     console.log(array);
-
+    console.log(array.length);
 
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
