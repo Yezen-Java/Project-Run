@@ -21,6 +21,9 @@ html, body {
 }
 /*circle button code end */
 
+#uploadFileProgress{
+  height: 20px;
+}
 
 #fileContent{
   width: 80%;
