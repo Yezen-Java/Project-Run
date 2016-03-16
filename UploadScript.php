@@ -5,7 +5,7 @@ include('s3_config.php');
 
 $len = count($_FILES['file']['name']);
 $msg='';
-$query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3)";
+$query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3,$4)";
 $result = pg_prepare($dbconn,"query", $query);
 $sizeLimit = 2097152;
 
