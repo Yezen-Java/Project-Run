@@ -106,6 +106,7 @@ $(document).ready(function(){
         data: {items:array},
         success: function(data){
           alert(data);
+          reloaddiv("#mediaList");
         },
         error: function(){}           
       });
@@ -199,6 +200,13 @@ if(window.File && window.FileReader && window.FileList && window.Blob){
 
 function myFunction() {
   document.getElementById('notesArea').placeholder= Date();
+}
+
+function reloaddiv(divname){
+
+         $(divname).load("index.php")
+         evt.preventDefault();
+     
 }
 
 function deleteTourLi(tourId){
