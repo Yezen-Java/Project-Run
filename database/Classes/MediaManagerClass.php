@@ -6,7 +6,7 @@
 
 class MediaManager 
 {
-	
+
 public function addMeidaToLocation($le,$liarray,$location,$dbconn){
 
     $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
@@ -23,8 +23,32 @@ public function addMeidaToLocation($le,$liarray,$location,$dbconn){
 
 			echo "Faild";
 		}
-
 	}
+}
+
+
+
+public function getMediaOfLocation($getLocationId){
+
+$getContent ='';
+$escapeGetLocationId = pg_escape_string($getLocationId);
+$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = '{$escapeGetLocationId}' and location_res.mediaid = media.mediaid;");
+
+	if($getLocationMedia){
+
+	    while ($rows = pg_fetch_array($getLocationMedia)) {
+		       $mediaId = $rows['mediaid'];
+               $media_name = $rows['media_name'];
+
+
+        $getContent = $getContent."<li value ='mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
+	}
+}else{
+	return $getContent;
+}
+
+
+return $getContent;
 
 }
 

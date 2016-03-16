@@ -1,27 +1,16 @@
 <?php 
 
 include 'Connect.php';
-
+include 'Classes/MediaManagerClass.php';
 $getLocationId = $_POST['LocationId'];
 
 
-$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = $getLocationId and location_res.mediaid = media.mediaid;");
+$getMediaLocation = new MediaManager();
 
+$getresults = $getMediaLocation->getMediaOfLocation($getLocationId);
 
-	if($getLocationMedia){
+echo $getresults;
 
-	    while ($rows = pg_fetch_array($getLocationMedia)) {
-		       $mediaId = $rows['mediaid'];
-               $media_name = $rows['media_name'];
-
-
-        echo "<li value ='mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia'></button> <a>$media_name</a> </li>";
-
-
-	}
-}else{
-	echo "No Media";
-}
 
 
 ?>
