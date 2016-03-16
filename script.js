@@ -156,6 +156,11 @@ for (var i = 0; i < array.length; i++) {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
          alert(data);
+         if (data==true) {
+          alert("Media Added");
+         }else{
+          alert("error, Please try Again");
+         }
        });
        return false;
   });
