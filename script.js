@@ -403,7 +403,7 @@ function getCheckedBoxes(element) {
      }
   }
   // Return the array if it is non-empty, or null
-  return checkboxesChecked.length > 0 ? checkboxesChecked : [];
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
 /*
