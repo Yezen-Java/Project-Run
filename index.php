@@ -193,7 +193,7 @@ $LoadOnStart = new LoadOnStart();
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 
                 <div style='margin:10px'><input type='file'  name='file[]' multiple=""/> 
-                                        <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
+                                        <progress id="uploadFileProgress" value="0" max="100"></progress>
                                         <input type ='submit' value='Upload Image'/>
                 </div>
               </form>
