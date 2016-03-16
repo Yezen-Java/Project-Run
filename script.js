@@ -297,10 +297,12 @@ function deleteSelected(){
     if (check == false){
       $(".displayCheckBoxSpan").show("slow");
       check = true;
+      return;
     }else if (check == true && array == null){
       console.log("works");
       $(".displayCheckBoxSpan").hide("slow");
       check = false;
+      return;
     } else {
       for (var i = 0; i < array.length; i++) {
         Arrayofvlaues.push(array[i].value);
