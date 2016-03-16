@@ -93,8 +93,8 @@ $(document).ready(function(){
       return;
     } else {
       for (var i = 0; i < array.length; i++) {
-        Arrayofvlaues.push(array[i].value);
-        console.log(array[i].value);
+        Arrayofvlaues.push(array[i].value());
+        console.log(array[i].value());
       }
       
       console.log(Arrayofvalues);
