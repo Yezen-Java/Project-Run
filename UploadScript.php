@@ -52,23 +52,31 @@ for ($i = 0; $i < $len; $i++){
                 }
         }
   else{
-    echo "S3 Upload Fail.";
+    echo false;
+
+    return;
 
   }
 
 }else{
 
-  echo $name +" Was not uploaded, File Too Large";
+   echo false;
+
+    return;
 }
 
 }else{
 
- echo $name +" invalid file type";
+  echo false;
+
+    return;
 
 }
 
 }else{
-  echo "error, not valid file name";
+   echo false;
+
+    return;
 }
 
  sleep(3);
