@@ -97,18 +97,18 @@ $(document).ready(function(){
         var valueChecked = array[i].value;   
       }
 
-      // $.ajax({
-      //   url: "DeleteMedia.php",
-      //   type: "POST",
-      //   data: {items:Arrayofvlaues.join("::")},
-      //   contentType: false,
-      //   cache: false,
-      //   processData:false,
-      //   success: function(data){
-      //     alert(data);
-      //   },
-      //   error: function(){}           
-      // });
+      $.ajax({
+        url: "DeleteMedia.php",
+        type: "POST",
+        data: {items:Arrayofvlaues.join("::")},
+        contentType: false,
+        cache: false,
+        processData:false,
+        success: function(data){
+          alert(data);
+        },
+        error: function(){}           
+      });
     }
   });
 });
