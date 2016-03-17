@@ -4,6 +4,12 @@ $(document).ready(function(){
         $("#createTourDialogue").modal('show');
     });
 
+    $(".tourButtons").each(function(index,object){
+      $(object).dblclick(function () {
+        $('#editTourDialogue').modal('toggle');
+      });
+    });
+
     $("#menu-toggle").click(function(e) {
       console.log("button");
       e.preventDefault();
@@ -461,11 +467,6 @@ function getCheckedBoxes(element) {
         }
       });
     }
-    $(".tourButtons").each(function(index,object){
-        $(object).dblclick(function () {
-          $('#editTourDialogue').modal('toggle');
-        });
-    });
 
 
 
