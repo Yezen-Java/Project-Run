@@ -83,7 +83,7 @@ if ($locationsQuery2) {
 
 public function mediaResultsFucntion(){
 
-$mediaResults = pg_query("SELECT * from media order by mediaid");
+$mediaResults = pg_query("SELECT * from media order by mediaid ASC");
 
 if ($mediaResults) {
 	# code...
