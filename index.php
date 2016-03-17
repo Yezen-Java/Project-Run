@@ -158,7 +158,12 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
-          <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+          <div class='input-group date' id='datetimepicker1'>
+            <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
           <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">
         </div>
 
