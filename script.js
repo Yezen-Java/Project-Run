@@ -4,8 +4,10 @@ $(document).ready(function(){
       
       $(".searching li").each(function(index,object){
         $(object).find("textarea");
-        console.log(($(object).find("textarea")).text());
-      
+        var description = ($(object).find("textarea")).text();
+        if (($("#search").val()).contains(description)){
+          console.log("hello");
+        }    
       });
 
       
