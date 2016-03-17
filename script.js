@@ -3,7 +3,8 @@ $(document).ready(function(){
       console.log($("#search").val());
       
       $(".searching li").each(function(index,object){
-        console.log($(object).text());
+        $(object).find(textarea);
+        console.log($(object).find(textarea));
       
       });
 
