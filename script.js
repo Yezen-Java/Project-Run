@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#search").keypress(function(e){
       console.log($("#search").val());
       
-      $(".searching").each(function(index,object){
+      $(".searching li").each(function(index,object){
         console.log($(object));
       
       });
