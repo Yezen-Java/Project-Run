@@ -194,22 +194,12 @@ $LoadOnStart = new LoadOnStart();
                 </div>
 
                 <div class="modal-footer">
-
-                  <div class="progressbar-5">
-                    <div class="progress-label"></div>
-                      <div class="percent">0%</div >
-                        <div class="status"></div>
-                  </div>
-     <!--        <div class="progress">
-    <div class="bar"></div >
-    <div class="percent">0%</div >
-  </div> -->
-
-              <form id = 'uploadForm' action="UploadScript.php" method="post" enctype="multipart/form-data">
+                <!--Code for hourglass goes here.-->
+              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
                   <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input type ="submit" value='Upload Image'/>
+                  <input type ="submit" class="btn btn-default" value='Upload Image'/>
                 </div>
               </form>
             </div>

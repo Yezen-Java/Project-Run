@@ -30,27 +30,27 @@ $(document).ready(function(){
         $("#middleContainer").add("#file_manager");
     });
 
-    // $("#uploadForm").on('submit',(function(e){
-    //   e.preventDefault();
+    $("#uploadForm").on('submit',(function(e){
+      e.preventDefault();
 
-    //   $.ajax({
-    //     url: "UploadScript.php",
-    //     type: "POST",
-    //     data: new FormData(this),
-    //     contentType: false,
-    //     cache: false,
-    //     processData:false,
-    //     success: function(data){
+      $.ajax({
+        url: "UploadScript.php",
+        type: "POST",
+        data: new FormData(this),
+        contentType: false,
+        cache: false,
+        processData:false,
+        success: function(data){
 
-    //       if (data == false) {
-    //         alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
-    //       }else{
-    //       $('#modalc').append(data);
-    //     }
-    //     },
-    //     error: function(){}           
-    //   });
-    // }));
+          if (data == false) {
+            alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+          }else{
+          $('#modalc').append(data);
+        }
+        },
+        error: function(){}           
+      });
+    }));
 
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();
@@ -467,39 +467,6 @@ function getCheckedBoxes(element) {
         }
       });
     }
-
-  $(function() {
-      /* variables */
-      var status = $('.status');
-      var percent = $('.percent');
-      var bar = $('.progress-label'); //previous .bar
-      
-      /* submit form with ajax request using jQuery.form plugin */
-      $('#UploadScript').ajaxForm({
-
-        /* set data type json */
-        dataType:'json',
-
-        /* reset before submitting */
-        beforeSend: function() {
-          status.fadeOut();
-          bar.width('0%');
-          percent.html('0%');
-        },
-
-        /* progress bar call back*/
-        uploadProgress: function(event, position, total, percentComplete) {
-          var pVel = percentComplete + '%';
-          bar.width(pVel);
-          percent.html(pVel);
-        },
-
-        /* complete call back */
-        complete: function(data) {
-          status.html(data.responseJSON.count + ' Files uploaded!').fadeIn();
-        }
-      });
-  });
 
 
 
