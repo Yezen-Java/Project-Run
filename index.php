@@ -205,7 +205,7 @@ $LoadOnStart = new LoadOnStart();
     <div class="percent">0%</div >
   </div> -->
 
-              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
+              <form id = 'uploadForm' action="UploadScript.php" method="post" enctype="multipart/form-data">
                 <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
                   <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
