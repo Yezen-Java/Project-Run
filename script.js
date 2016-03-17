@@ -5,7 +5,8 @@ $(document).ready(function(){
       $(".searching li").each(function(index,object){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
-        if (($("#search").val()).contains(description)){
+        var temp = $("#search").val();
+        if (temp.indexOf(description)){
           console.log("hello");
         }    
       });
