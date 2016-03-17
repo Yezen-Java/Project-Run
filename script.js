@@ -13,6 +13,12 @@ $(document).ready(function(){
       });
     });
 
+    $('#example1').datepicker({
+      format: "dd/mm/yyyy"
+    });  
+            
+         
+
     $("#menu-toggle").click(function(e) {
       console.log("button");
       e.preventDefault();

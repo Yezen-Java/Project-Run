@@ -36,12 +36,13 @@ $LoadOnStart = new LoadOnStart();
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.editable.js"></script>
+    <script src="datepicker.js"></script>
 
     <!--CSS LINK-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="css/datepicker.css">
     <!--JS LINK-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
@@ -158,7 +159,12 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
-          <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+          <div class="container">
+            <div class="hero-unit">
+                <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+                <input  type="text" placeholder="click to show datepicker"  id="example1">
+            </div>
+          </div>
           <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">
         </div>
 
