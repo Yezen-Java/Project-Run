@@ -194,14 +194,11 @@ $LoadOnStart = new LoadOnStart();
                 </div>
 
                 <div class="modal-footer">
-                <div class="container">
-                  <h2>Animated Progress Bar</h2>
-                  <p>The .active class animates the progress bar:</p> 
-                  <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" style="width:40%">
-                    </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" style="width:40%">
                   </div>
                 </div>
+             
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
                   <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
