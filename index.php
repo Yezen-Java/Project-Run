@@ -163,7 +163,7 @@ $LoadOnStart = new LoadOnStart();
         </div>
 
         <div class="modal-footer">
-          <a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a>
+          <button id="generateCode" onclick="randomStringGenerator();">Generate Code</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTourDetails();" 
           id="createTourDialogueButton" >Create</button>
