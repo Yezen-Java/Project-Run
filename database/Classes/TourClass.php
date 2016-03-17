@@ -22,7 +22,7 @@ class TourClass
 			$result = pg_query("INSERT INTO usertour Values('$escapeUser','$escapeTourid')");
 
 			if ($tourQuery && $result) {
-				$msg = "TourCreated";
+			 return true;
 
 
 				}else{
@@ -35,7 +35,7 @@ class TourClass
 			}
 
 
-			return $msg;
+			return false;
 	}
 
 

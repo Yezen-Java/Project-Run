@@ -4,6 +4,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 require 'Connect.php';
 include 'Classes/TourClass.php';
+include 'LoadDataOnstart.php';
 
 $tourID = $_POST['TourID'];
 $tourName = $_POST['Tourname'];
@@ -18,8 +19,22 @@ $escapeUser = pg_escape_string($username);
 
 $tourClass = new TourCLass();
 
-$message = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
+$tourData = new LoadOnStart();
 
-echo $message;
+$checkTourCreated = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
+
+$htmlTage = $tourData->getTourList();
+
+
+if ($checkTourCreated) {
+	echo $htmlTage;
+
+}else{
+
+echo $checkTourCreated;
+
+}
+
+
 
 ?>

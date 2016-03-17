@@ -12,8 +12,14 @@ TourID: Tourid,
 Tourname: tourname,
 TourDate: tourDate,
 }, function(data) {
-alert(data);
-//$('#form')[0].reset(); 
+
+	if (data = false) {
+
+		alert('Error, Try again');
+	}else{
+		alert('Tour Created');
+	$('#buttonsListTours').html(data);
+}
 });
 }
 });

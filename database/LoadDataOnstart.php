@@ -11,16 +11,15 @@ class LoadOnStart{
 public function getTourList(){
 
 $username= $_SESSION['username'];
-//$queryTour ="SELECT * From Tour, usertour where usertour.username = $1 and usertour.tourid = tour.tourid";
-//$toursListQuery =pg_prepare($dbconn, "toursListQuery1", $queryTour);
+$htmltage ='';
 $escape = pg_escape_string($username);
 $toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '{$escape}' and usertour.tourid = tour.tourid");
- //$toursListQuery = pg_execute($dbconn,"toursListQuery1", array($username));
+
 if (pg_num_rows($toursListQuery)>0) {
  	    while ($rows =pg_fetch_array($toursListQuery)) {
             $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
-        echo "<li id='$tour_id'>  
+       $htmltage = $htmltage. "<li id='$tour_id'>  
                   <div class='input-group'>
                     <span class='input-group-addon'> 
                       <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
@@ -31,8 +30,10 @@ if (pg_num_rows($toursListQuery)>0) {
       }  
 }
 else{
-	echo "No Data Found";
+	$htmltage = "Create new Tour";
 }
+
+return $htmltage;
 
 }
 
