@@ -86,7 +86,7 @@ $LoadOnStart = new LoadOnStart();
         <div class="list-group" id="tourList">
             <ul id="buttonsListTours">  
         <?php
-             $LoadOnStart->getTourList();
+            echo $LoadOnStart->getTourList();
           ?>
           </ul>
           </div>
