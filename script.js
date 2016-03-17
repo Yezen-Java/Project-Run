@@ -10,6 +10,7 @@ $(document).ready(function(){
         var temp = $("#search").val();
         if (temp.indexOf(description)){
           console.log("hello");
+          $(".searching").append($(object));
         }    
       });
 
