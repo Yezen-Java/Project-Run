@@ -92,13 +92,9 @@ $LoadOnStart = new LoadOnStart();
           ?>
           </ul>
           </div>
-        
-        
-        <div class="btn-group" role="group" aria-label="Basic example" id="tourButtonGroup">
           <button id="addTour" type="button" class="btn btn-success"><strong>Add</strong></button>
-          <button id="editTour" type="button" class="btn btn-success"><strong>Edit</strong></button>
-        </div>
-            </div>
+        
+      </div>
 
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
