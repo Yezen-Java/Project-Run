@@ -4,10 +4,6 @@ $(document).ready(function(){
         $("#createTourDialogue").modal('show');
     });
 
-    $(function () {
-      $('#datetimepicker1').datetimepicker();
-    });
-
     $(".tourButtons").each(function(index,object){
       $(object).dblclick(function () {
         $('#editTourDialogue').modal('toggle');
