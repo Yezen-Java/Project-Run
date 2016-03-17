@@ -56,12 +56,11 @@ return $getContent;
 
 
 public function meidaDescription($mediaid,$description,$dbconn){
-
 	$query = "UPDATE media SET description = $1 WHERE mediaid = $2";
 	$updateQuery = pg_prepare($dbconn,"updateQuery",$query);
 	$updateQuery = pg_execute($dbconn,"updateQuery", array($description,$mediaid));
 
-	if (pg_affected_rows($updateQuery)>0) {
+	if (pg_affected_rows($updateQuery)>0){
 		return true;
 	}
 
