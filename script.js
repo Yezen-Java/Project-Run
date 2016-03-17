@@ -3,7 +3,7 @@ $(document).ready(function(){
       console.log($("#search").val());
       
       $(".searching li").each(function(index,object){
-        console.log($(object).html());
+        console.log($(object).text());
       
       });
 
