@@ -140,8 +140,6 @@ $LoadOnStart = new LoadOnStart();
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-          <li><a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a></li>
-          <li id="codeGenerateCssLi"><input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly"></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -161,9 +159,11 @@ $LoadOnStart = new LoadOnStart();
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
           <input type="text" class="form-control" id="tourDateField" placeholder="Date">
+          <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">
         </div>
 
         <div class="modal-footer">
+          <a href="#" id="generateCode" onclick="randomStringGenerator();">Generate Code</a>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createTourDetails();" 
           id="createTourDialogueButton" >Create</button>
