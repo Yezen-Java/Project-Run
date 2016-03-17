@@ -344,5 +344,12 @@ ul{
   text-shadow:1px 1px 0 #fff;
 }
 
+video{
+  max-width: 260px;
+  width: 260px;
+  max-height: 200px;
+  height: 200px;
+}
+
 
 

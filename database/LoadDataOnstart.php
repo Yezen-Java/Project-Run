@@ -103,7 +103,7 @@ if ($mediaResults) {
       $Close = ">";
       
     }else{
-      $Tag = "<video width='250' controls> <source";
+      $Tag = "<video controls> <source";
     $Close = "></video>";
     }
 
