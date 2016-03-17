@@ -48,8 +48,8 @@ $LoadOnStart = new LoadOnStart();
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.22.0.css">
     <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
 
-    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="jquery.sortable.js"></script>
     <script src="js/CreateTour.js"></script>
     <script src="tests.js"></script>
