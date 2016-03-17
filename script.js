@@ -16,8 +16,6 @@ $(document).ready(function(){
     $('#tourDateField').datepicker({
       format: "dd-mm-yyyy"
     });  
-            
-         
 
     $("#menu-toggle").click(function(e) {
       console.log("button");
@@ -130,31 +128,6 @@ $(document).ready(function(){
       });
     }
   });
-/*
-  progress bar jQuery for transition
-*/
-    $(function(){
-        var progressbar = $("#progressbar-5");
-        progressLabel = $(".progress-label");
-        $("#progressbar-5").progressbar({
-          value : false,
-          change:function(){
-            progressLabel.text(
-              progressbar.progressbar("value") + "%");
-          },
-          complete:function(){
-            progressLabel.text("Loading Completed!");
-          }
-        });
-        function progress(){
-          var val = progressbar.progressbar("value") || 0;
-          progressbar.progressbar("value", val + 1);
-          if(val < 99){
-            setTimeout(progress, 100);
-          }
-        }
-        setTimeout(progress,3000);
-    });
 });
 
 // $("#file-manager").click(function(){
@@ -493,9 +466,40 @@ function getCheckedBoxes(element) {
           });
         }
       });
-
-
     }
+
+  $(function() {
+      /* variables */
+      var status = $('.status');
+      var percent = $('.percent');
+      var bar = $('.progress-label'); //previous .bar
+      
+      /* submit form with ajax request using jQuery.form plugin */
+      $('#UploadScript').ajaxForm({
+
+        /* set data type json */
+        dataType:'json',
+
+        /* reset before submitting */
+        beforeSend: function() {
+          status.fadeOut();
+          bar.width('0%');
+          percent.html('0%');
+        },
+
+        /* progress bar call back*/
+        uploadProgress: function(event, position, total, percentComplete) {
+          var pVel = percentComplete + '%';
+          bar.width(pVel);
+          percent.html(pVel);
+        },
+
+        /* complete call back */
+        complete: function(data) {
+          status.html(data.responseJSON.count + ' Files uploaded!').fadeIn();
+        }
+      });
+  });
 
 
 
