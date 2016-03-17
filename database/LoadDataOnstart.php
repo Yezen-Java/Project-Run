@@ -90,6 +90,7 @@ if ($mediaResults) {
 	while ($rows =pg_fetch_array($mediaResults)) {
 
 	  $link = $rows['link'];
+    $description = $rows['description'];
 	  $name = $rows['media_name'];
 	  $mediaid = $rows['mediaid'];
 
@@ -106,7 +107,7 @@ if ($mediaResults) {
 
       <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
-          <textarea class='form-control textAreas' rows='2' name ='$mediaid' id='descriptionBox'></textarea>
+          <textarea class='form-control textAreas' rows='2' name ='$mediaid' id='descriptionBox'>$description</textarea>
           <button type='button' class='btn btn-info' id ='$mediaid' onclick='descriptionBoxEdit(this.id)'>Save</button>
       </div>
     </div>";

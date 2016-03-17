@@ -478,8 +478,6 @@ function getCheckedBoxes(element) {
             if ($(bobj).attr('id') == currentValue ) {
               if($(bobj).text() == "Save" && descriptionText != null){
                 $(bobj).text("Edit");
-                console.log($(bobj).attr('id'));
-                console.log(descriptionText);
                 $.post('database/AddMediaDescription.php',{Mediaid:$(bobj).attr('id'),Description:descriptionText}, function(data){
                   if(data == false){
                     alert("error");
