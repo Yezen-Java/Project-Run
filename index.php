@@ -161,8 +161,7 @@ $LoadOnStart = new LoadOnStart();
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
           <div class="container">
             <div class="hero-unit">
-                <input type="text" class="form-control" id="tourDateField" placeholder="Date">
-                <input  type="text" placeholder="click to show datepicker"  id="example1">
+                <input type="text" class="form-control" id="tourDateField" placeholder="click to show datepicker">
             </div>
           </div>
           <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">

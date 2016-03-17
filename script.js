@@ -13,8 +13,8 @@ $(document).ready(function(){
       });
     });
 
-    $('#example1').datepicker({
-      format: "dd/mm/yyyy"
+    $('#tourDateField').datepicker({
+      format: "dd-mm-yyyy"
     });  
             
          
