@@ -112,7 +112,7 @@ $LoadOnStart = new LoadOnStart();
                       <input type="text" name="toDoTextArea" id="toDoTextArea" autofocus>
                       <button type="button" class="btn-success" name="addBtn" id="addBtn" autofocus>Add</button>
                     </form>
-                    <ul id="myList" class="sortable list"></ul>
+                    <ul id="myList" class="sortable list searching"></ul>
                     <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
                   </div>
                 </li>
