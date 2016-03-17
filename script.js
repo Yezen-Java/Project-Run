@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#progressBar").addClass("hidden");
+    $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
@@ -34,7 +34,7 @@ $(document).ready(function(){
     $("#uploadForm").on('submit',(function(e){
       e.preventDefault();
 
-      $("#progressBar").removeClass("hidden");
+      $(".progress").removeClass("hidden");
 
       $.ajax({
         url: "UploadScript.php",
@@ -46,12 +46,12 @@ $(document).ready(function(){
         success: function(data){
 
           if (data == false) {
-            $("#progressBar").addClass("hidden");
+            $(".progress").addClass("hidden");
             alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
           }else{
           $('#modalc').append(data);
 
-          $("#progressBar").addClass("hidden");
+          $(".progress").addClass("hidden");
           
         }
         },
