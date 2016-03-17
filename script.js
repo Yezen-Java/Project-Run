@@ -7,7 +7,9 @@ $(document).ready(function(){
     $(".tourButtons").each(function(index,object){
       $(object).dblclick(function () {
         $('#editTourDialogue').modal('toggle');
-      });
+        $('#editTourDialogue').val($(object).attr("value"));
+        console.log($('#editTourDialogue').attr('value'))
+;      });
     });
 
     $("#menu-toggle").click(function(e) {
