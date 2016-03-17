@@ -26,10 +26,8 @@ if (pg_num_rows($toursListQuery)>0) {
                     <span class='input-group-addon'> 
                       <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
                     </span>
-                    <div class= 'container'> 
-                      <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button>
-                      <button type='button' class='btn btn-success'>Edit</button>
-                    </div>
+                    <button type='button' class='list-group-item tourButtons' value='$tour_id' onclick='w3_open(this.value)'>$tour_name $tour_id</button>
+                    <button type='button' class='btn btn-success'>Edit</button>
                   </div>
                 </div> 
               </li>";

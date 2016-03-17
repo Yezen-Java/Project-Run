@@ -83,7 +83,8 @@ html, body {
 }
 
 .tourButtons{
-  
+  width:auto;
+  width-max:auto;
 }
 
 #sideBar {
