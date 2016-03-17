@@ -116,7 +116,7 @@ if ($mediaResults) {
           </span>
       </div>
 
-	    $Tag src='$link'$Close
+	    $Tag src='$link' $Close
 	         <h3>$name</h3>
 
       <div class='form-group saveButtonContainer'>
