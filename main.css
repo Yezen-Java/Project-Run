@@ -17,7 +17,9 @@ html, body {
 	background-color: red;
 }
 /*circle button code end */
-
+textarea {
+   resize: none;
+}
 
 #fileContent{
   width: 80%;
