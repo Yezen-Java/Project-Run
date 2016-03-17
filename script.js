@@ -1,5 +1,15 @@
 $(document).ready(function(){
-   
+    $("#search").keypress(function(e){
+      console.log($("#search").val());
+      
+      $(".searching").each(function(index,object){
+        console.log($(object));
+      
+      });
+
+      
+    });
+
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
@@ -477,16 +487,6 @@ function getCheckedBoxes(element) {
     }
 
 
- $("#search").keypress(function(e){
-      console.log($("#search").val());
-      
-      $(".searching").each(function(index,object){
-        console.log($(object));
-      
-      });
-
-      
-    });
 
 
 
