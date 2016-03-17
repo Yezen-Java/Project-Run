@@ -10,7 +10,7 @@ $(document).ready(function(){
         var description = ($(object).find("textarea")).text();
         
         console.log(dInput);
-        if (dInput.indexOf(description) >= 0){
+        if (dInput.includes(description)){
           console.log(description);
           $(".searching").append($(object));
         }    
