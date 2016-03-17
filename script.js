@@ -2,12 +2,13 @@ $(document).ready(function(){
     $("#search").keypress(function(e){
       console.log($("#search").val());
       var listItems = $(".searching li");
+      var temp = $("#search").val();
       $(".searching").empty();
       
       $(listItems).each(function(index,object){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
-        var temp = $("#search").val();
+        
         console.log(temp);
         if (temp.indexOf(description) != -1){
           console.log(description);
