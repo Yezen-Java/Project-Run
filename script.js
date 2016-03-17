@@ -11,8 +11,7 @@ $(document).ready(function(){
         
         console.log(description);
         console.log(dInput);
-        console.log(dInput.indexOf(description));
-        if (description.indexOf(dInput)){
+        if (description.indexOf(dInput) > -1){
           $(".searching").append($(object));
         }    
       });
