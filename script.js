@@ -4,7 +4,7 @@ $(document).ready(function(){
       
       $(".searching li").each(function(index,object){
         $(object).find("textarea");
-        console.log($(object).find("textarea").innerHTML);
+        console.log(($(object).find("textarea")).innerHTML);
       
       });
 
