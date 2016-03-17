@@ -473,9 +473,11 @@ function getCheckedBoxes(element) {
           $(obj).prop('disabled', function(i,v) {
             return !v;
           });
+          var descriptionText = $(obj).val();
+          console.log(descriptionText);
           $("button").each(function(i,bobj){
               if ($(bobj).attr('id') == currentValue ) {
-                if($(bobj).text() == "Save"){
+                if($(bobj).text() == "Save" ){
                   $(bobj).text("Edit");
                 } else {
                   $(bobj).text("Save");
