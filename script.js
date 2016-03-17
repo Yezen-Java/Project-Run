@@ -9,9 +9,10 @@ $(document).ready(function(){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
         
+        console.log(description);
         console.log(dInput);
-        if (dInput.includes(description)){
-          console.log(description);
+        console.log(dInput.indexOf(description));
+        if (dInput.indexOf(description)){
           $(".searching").append($(object));
         }    
       });
