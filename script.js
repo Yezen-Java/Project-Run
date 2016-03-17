@@ -1,18 +1,16 @@
 $(document).ready(function(){
     $("#search").on("input", function() {
       var dInput = this.value;
-      console.log(dInput);
       console.log($("#search").val());
       var listItems = $(".searching li");
-      var temp = $("#search").val();
       $(".searching").empty();
       
       $(listItems).each(function(index,object){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
         
-        console.log(temp);
-        if (temp.indexOf(description) != -1){
+        console.log(dInput);
+        if (dInput.indexOf(description) != -1){
           console.log(description);
           $(".searching").append($(object));
         }    
