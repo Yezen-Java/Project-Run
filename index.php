@@ -194,7 +194,9 @@ $LoadOnStart = new LoadOnStart();
                 </div>
 
                 <div class="modal-footer">
-                <!--Code for hourglass goes here.-->
+                <div class="bar">
+                  <span></span>
+                </div>
               <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
                 <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
                   <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
