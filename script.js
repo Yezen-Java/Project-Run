@@ -1,7 +1,13 @@
 $(document).ready(function(){
     $("#search").keypress(function(e){
       console.log($("#search").val());
-      console.log($(myList));
+      
+      $("#myList").each(function(index,object){
+        console.log($(object));
+      
+      });
+
+      
     });
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
