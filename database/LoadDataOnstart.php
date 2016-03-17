@@ -104,7 +104,7 @@ if ($mediaResults) {
       
     }else{
       $Tag = "<iframe";
-    $Close = "</frame>";
+    $Close = "</iframe>";
     }
 
 
