@@ -108,7 +108,7 @@ if ($mediaResults) {
       <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
           <textarea disabled class='form-control textAreas' rows='2' name ='$mediaid' id='descriptionBox'>$description</textarea>
-          <button type='button' class='btn btn-info' id ='$mediaid' onclick='descriptionBoxEdit(this.id)'>Save</button>
+          <button type='button' class='btn btn-info' id ='$mediaid' onclick='descriptionBoxEdit(this.id)'>Edit</button>
       </div>
     </div>";
 }
