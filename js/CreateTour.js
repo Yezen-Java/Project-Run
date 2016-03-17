@@ -13,12 +13,12 @@ Tourname: tourname,
 TourDate: tourDate,
 }, function(data) {
 
-	if (data == false) {
-		alert('Error, Try again');
-	}else{
-		alert('Tour Created');
+	// if (data == false) {
+	// 	alert('Error, Try again');
+	// }else{
+	// 	alert('Tour Created');
 	$('#buttonsListTours').html(data);
-}
+//}
 });
 }
 });
