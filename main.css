@@ -21,11 +21,6 @@ textarea {
    resize: none;
 }
 
-#wrapper {
-    min-width: 300px; /* 100px x3 = 300 */
-    overflow:scroll;
-}
-
 #fileContent{
   width: 80%;
 }
