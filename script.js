@@ -9,7 +9,7 @@ $(document).ready(function(){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
         var temp = $("#search").val();
-        if (temp.indexOf(description)){
+        if (temp.indexOf(description) > -1){
           console.log(description);
           $(".searching").append($(object));
         }    
