@@ -5,7 +5,6 @@ $(document).ready(function(){
       $(".searching").empty();
       
       $(listItems).each(function(index,object){
-        $(".searching").empty();
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
         var temp = $("#search").val();
