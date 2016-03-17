@@ -35,6 +35,7 @@ $LoadOnStart = new LoadOnStart();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.editable.js"></script>
     <script src="datepicker.js"></script>
+    <script type="text/javascript" src="jquery.form.min.js"></script>
 
     <!--CSS LINK-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -193,7 +194,7 @@ $LoadOnStart = new LoadOnStart();
                 </div>
 
                 <div class="modal-footer">
-                
+
                   <div class="progressbar-5">
                     <div class="progress-label"></div>
                       <div class="percent">0%</div >
