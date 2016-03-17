@@ -103,6 +103,10 @@ html, body {
     margin: 10px;
     width: 470px;
 }
+#codeField{
+  margin:10px;
+  width: 470px;
+}
 #tourLevelField {
     margin: 10px;
     width: 470px;
