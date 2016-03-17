@@ -467,27 +467,27 @@ function getCheckedBoxes(element) {
     */
     function descriptionBoxEdit(idOfDescriptionBox){
       var currentValue = null; 
-      var descriptionText = "";
       $(".textAreas").each(function(i,obj){
         if($(obj).attr('name') == idOfDescriptionBox){
           currentValue = $(obj).attr('name');
           $(obj).prop('disabled', function(i,v) {
             return !v;
           });
-          descriptionText = $(obj).val();
+          var descriptionText = $(obj).val();
+          $("button").each(function(i,bobj){
+            if ($(bobj).attr('id') == currentValue ) {
+              if($(bobj).text() == "Save" && descriptionText != null){
+                $(bobj).text("Edit");
+                console.log(descriptionText);
+              } else {
+                $(bobj).text("Save");
+              }
+            }
+          });
         }
       });
 
-      $("button").each(function(i,bobj){
-        if ($(bobj).attr('id') == currentValue ) {
-          if($(bobj).text() == "Save" && descriptionText != ""){
-            $(bobj).text("Edit");
-            console.log(descriptionText);
-          } else {
-            $(bobj).text("Save");
-          }
-        }
-      });
+
     }
 
 
