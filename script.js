@@ -12,7 +12,7 @@ $(document).ready(function(){
         console.log(description);
         console.log(dInput);
         console.log(dInput.indexOf(description));
-        if (dInput.indexOf(description)){
+        if (description.indexOf(dInput)){
           $(".searching").append($(object));
         }    
       });
