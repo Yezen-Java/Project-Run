@@ -195,7 +195,7 @@ $LoadOnStart = new LoadOnStart();
 
                 <div class="modal-footer">
                 <div class="progress">
-                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" style="width:40px">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" width ="40px"style="width:100%">
                   </div>
                 </div>
              
