@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#search").keypress(function(e){
-      console.log(e);
+      console.log($("#search").val());
     });
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
