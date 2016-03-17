@@ -234,6 +234,28 @@ $LoadOnStart = new LoadOnStart();
     </div>
   </div>
 
+    <!--EditTourDialogue-->
+  <div class="modal fade" id="editTourDialogue" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Tour</h4>
+        </div>
+
+        <div class="modal-body" id="tourTextFields">
+          <input type="text" class="form-control" id="editTourNameField" placeholder="Name of tour" value="" >
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End of edit tour dialogue-->
+
 <div class="modal fade" id="locationManagerModel" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
