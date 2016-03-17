@@ -13,8 +13,7 @@ Tourname: tourname,
 TourDate: tourDate,
 }, function(data) {
 
-	if (data = false) {
-
+	if (data == false) {
 		alert('Error, Try again');
 	}else{
 		alert('Tour Created');
