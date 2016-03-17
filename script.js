@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     $("#uploadForm").on('submit',(function(e){
       e.preventDefault();
-      $(".progress").hide();
+      $(".progress").addClass("hidden");
 
       $.ajax({
         url: "UploadScript.php",
@@ -47,7 +47,7 @@ $(document).ready(function(){
             alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
           }else{
           $('#modalc').append(data);
-          $(".progress").show();
+          $(".progress")removeClass("hidden");
         }
         },
         error: function(){}           
