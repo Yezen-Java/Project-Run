@@ -83,7 +83,7 @@ if ($locationsQuery2) {
 
 public function mediaResultsFucntion(){
 
-$mediaResults = pg_query("SELECT * from media");
+$mediaResults = pg_query("SELECT * from media order by mediaid");
 
 if ($mediaResults) {
 	# code...
@@ -103,9 +103,7 @@ if ($mediaResults) {
       </div>
 
 	    <img class='img-responsive' src='$link'>
-      <div class='wrapper'>
 	         <h3>$name</h3>
-      </div>
 
       <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
