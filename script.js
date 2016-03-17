@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $("#search").keypress(function(e){
+      console.log(e);
+    });
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
