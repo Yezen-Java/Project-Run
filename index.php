@@ -191,8 +191,9 @@ $LoadOnStart = new LoadOnStart();
                         ?>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
+                
                   <div class="progressbar-5">
                     <div class="progress-label"></div>
                       <div class="percent">0%</div >

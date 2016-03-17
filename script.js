@@ -30,27 +30,27 @@ $(document).ready(function(){
         $("#middleContainer").add("#file_manager");
     });
 
-    $("#uploadForm").on('submit',(function(e){
-      e.preventDefault();
+    // $("#uploadForm").on('submit',(function(e){
+    //   e.preventDefault();
 
-      $.ajax({
-        url: "UploadScript.php",
-        type: "POST",
-        data: new FormData(this),
-        contentType: false,
-        cache: false,
-        processData:false,
-        success: function(data){
+    //   $.ajax({
+    //     url: "UploadScript.php",
+    //     type: "POST",
+    //     data: new FormData(this),
+    //     contentType: false,
+    //     cache: false,
+    //     processData:false,
+    //     success: function(data){
 
-          if (data == false) {
-            alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
-          }else{
-          $('#modalc').append(data);
-        }
-        },
-        error: function(){}           
-      });
-    }));
+    //       if (data == false) {
+    //         alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+    //       }else{
+    //       $('#modalc').append(data);
+    //     }
+    //     },
+    //     error: function(){}           
+    //   });
+    // }));
 
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();
