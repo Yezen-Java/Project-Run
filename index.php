@@ -251,7 +251,7 @@ $LoadOnStart = new LoadOnStart();
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick = "TourEditName()">Save</button>
         </div>
       </div>
     </div>

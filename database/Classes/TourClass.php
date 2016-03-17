@@ -33,7 +33,7 @@ class TourClass
 
 				$msg ="Tour ID already exsits";
 			}
-			
+
 			return false;
 	}
 
@@ -57,6 +57,17 @@ class TourClass
 
 		return false;
 
+	}
+
+
+	public function EditTourName($TourId,$NewTourName,$dbconn){
+		$Query = "UPDATE tour SET tour_name = $1 WHERE tourid = $2";
+		$results = pg_prepare($dbconn,"query",$Query);
+		$results = pg_execute($dbconn,"query",array($NewTourName,$TourId));
+		if (pg_affected_rows($results)>0) {
+			return true;
+		}
+		return false;
 	}
 
 

@@ -18,7 +18,6 @@ $escapeUser = pg_escape_string($username);
 
 
 $tourClass = new TourCLass();
-
 $tourData = new LoadOnStart();
 
 $checkTourCreated = $tourClass->insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser);
