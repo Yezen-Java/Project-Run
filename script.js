@@ -1,8 +1,10 @@
 $(document).ready(function(){
     $("#search").keypress(function(e){
       console.log($("#search").val());
+      var listItems = $(".searching li");
+      $(".searching").empty();
       
-      $(".searching li").each(function(index,object){
+      $(listItems).each(function(index,object){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
         var temp = $("#search").val();
