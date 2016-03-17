@@ -8,8 +8,9 @@ $(document).ready(function(){
       $(object).dblclick(function () {
         $('#editTourDialogue').modal('toggle');
         $('#editTourDialogue').attr("value",$(object).attr("value"));
-        console.log($('#editTourDialogue').attr('value'))
-;      });
+        console.log($('#editTourDialogue').attr('value'));
+        $('#editTourNameField').val($('#editTourDialogue').attr('value'));
+      });
     });
 
     $("#menu-toggle").click(function(e) {
