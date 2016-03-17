@@ -159,7 +159,7 @@ $LoadOnStart = new LoadOnStart();
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
           <input type="text" class="form-control" id="tourDateField" placeholder="Date">
-          <input type="text" class="form-control" placeholder="Code" id="randomField" readonly="readonly">
+          <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">
         </div>
 
         <div class="modal-footer">
