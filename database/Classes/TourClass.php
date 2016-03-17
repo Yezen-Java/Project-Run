@@ -33,8 +33,7 @@ class TourClass
 
 				$msg ="Tour ID already exsits";
 			}
-
-
+			
 			return false;
 	}
 
