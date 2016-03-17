@@ -478,6 +478,7 @@ function getCheckedBoxes(element) {
             if ($(bobj).attr('id') == currentValue ) {
               if($(bobj).text() == "Save" && descriptionText != null){
                 $(bobj).text("Edit");
+                console.log($(bobj).attr('id'));
                 console.log(descriptionText);
               } else {
                 $(bobj).text("Save");
