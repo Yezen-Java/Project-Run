@@ -476,6 +476,7 @@ function getCheckedBoxes(element) {
           var descriptionText = $(obj).val();
           $("button").each(function(i,bobj){
             if ($(bobj).attr('id') == currentValue ) {
+              console.log(descriptionText);
               if($(bobj).text() == "Save" && descriptionText != null){
                 $(bobj).text("Edit");
                 $.post('database/AddMediaDescription.php',{Mediaid:$(bobj).attr('id'),Description:descriptionText}, function(data){
