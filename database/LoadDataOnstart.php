@@ -103,7 +103,9 @@ if ($mediaResults) {
       </div>
 
 	    <img class='img-responsive' src='$link'>
-	    <h3>$name</h3>
+      <div class='wrapper'>
+	         <h3>$name</h3>
+      </div>
 
       <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
