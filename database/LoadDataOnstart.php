@@ -93,6 +93,20 @@ if ($mediaResults) {
     $description = $rows['description'];
 	  $name = $rows['media_name'];
 	  $mediaid = $rows['mediaid'];
+    $inBucketName = $rows['ext_name'];
+    $imageFormates = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF");
+
+    $pieces = explode(".", $inBucketName);
+    if (in_array($pieces[1], $imageFormates)) {
+
+      $Tag = "<img class='img-responsive'";
+      $Close = ">";
+      
+    }else{
+      $Tag = "<iframe";
+    $Close = "</frame>";
+    }
+
 
 	  echo "<div class='col-md-3 portfolio-item' id='$mediaid'>
 
@@ -102,7 +116,7 @@ if ($mediaResults) {
           </span>
       </div>
 
-	    <img class='img-responsive' src='$link'>
+	    $Tag src='$link'$Close
 	         <h3>$name</h3>
 
       <div class='form-group saveButtonContainer'>
