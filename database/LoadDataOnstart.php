@@ -21,8 +21,8 @@ if (pg_num_rows($toursListQuery)>0) {
             $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
         echo "<li id='$tour_id'> 
-                <div class='btn-group' role='group' aria-label='...''> 
-                  <div class='input-group'>
+                <div class='input-group'>
+                  <div class='btn-group' role='group' aria-label='...''> 
                     <span class='input-group-addon'> 
                       <button class='glyphicon glyphicon-trash' id='$tour_id' onclick='deleteTourLi(this.id)'></button> 
                     </span> 
