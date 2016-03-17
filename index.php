@@ -105,6 +105,7 @@ $LoadOnStart = new LoadOnStart();
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
                 <li class="sidebar-brand" style="padding-top:10px;">
+                <input type="text" class="form-control" id="search">
                   <div id="container">
                     <form name="form1" method="post" action="">
                       <input type="text" name="toDoTextArea" id="toDoTextArea" autofocus>
