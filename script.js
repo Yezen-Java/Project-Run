@@ -480,6 +480,13 @@ function getCheckedBoxes(element) {
                 $(bobj).text("Edit");
                 console.log($(bobj).attr('id'));
                 console.log(descriptionText);
+                $.post('database/AddMediaDescription.php',{Mediaid:$(bobj).attr('id'),Description:descriptionText}, function(data){
+                  if(data == false){
+                    alert("error");
+                  }else{
+                    alert("works");
+                  }
+                }); 
               } else {
                 $(bobj).text("Save");
               }
