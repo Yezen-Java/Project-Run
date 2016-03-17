@@ -7,7 +7,6 @@ $(document).ready(function(){
     $(".tourButtons").each(function(index,object){
       $(object).dblclick(function () {
         $('#editTourDialogue').modal('toggle');
-        console.log($(object).attr("value"));
         $('#editTourDialogue').val($(object).attr("value"));
         console.log($('#editTourDialogue').attr('value'))
 ;      });

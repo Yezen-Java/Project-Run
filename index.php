@@ -235,7 +235,7 @@ $LoadOnStart = new LoadOnStart();
   </div>
 
     <!--EditTourDialogue-->
-  <div class="modal fade" id="editTourDialogue" role="dialog">
+  <div class="modal fade" id="editTourDialogue" role="dialog" value="">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
