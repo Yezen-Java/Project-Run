@@ -522,10 +522,13 @@ function getCheckedBoxes(element) {
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
             return;
-          }else if (locationCheck == true){
+          }else if (locationCheck == true && arrayofvalues == null){
             $(".locationManagerClass").addClass("hidden");
             locationCheck = false;
-                $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+            return;
+          } else {
+            console.log("It didn't work!");
+            $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
                 if(data == false){
                   alert("error");
                 }else{
@@ -533,9 +536,7 @@ function getCheckedBoxes(element) {
                     $('#locationManagerDiv').html(data);
                 }
                });
-            return;
-          } else {
-            console.log("It didn't work!")
+            locationCheck = false;
           }
       }
 
