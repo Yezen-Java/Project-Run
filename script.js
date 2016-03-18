@@ -24,9 +24,9 @@ $('.locationManagerClass').each(function(index,obj){
         arrayofvalues.push($(this).val());
       });
 
-    console.log(arrayofvalues.length);
+    console.log(arrayofvalues.size);
 
-    if (arrayofvalues.length >0){
+    if (arrayofvalues != []){
       $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
         if(data == false){
           alert("error");
