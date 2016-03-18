@@ -12,37 +12,6 @@ $('.locationManagerClass').each(function(index,obj){
     $(this).hide().siblings(".locationsName").show().text($(this).val());
   });
 
-
-   $("#deleteLocationManager").click(function(){
-    var arrayofvalues = [];
-    $('.locationManagerClass').each(function(index,obj){
-
-      $(obj).toggle();
-    });
-
-     $('.locationManagerClass:checked').each(function() {
-        arrayofvalues.push($(this).val());
-      });
-
-    console.log(arrayofvalues.length);
-
-    if (arrayofvalues !== []){
-      $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-        if(data == false){
-          alert("error");
-        }else{
-          alert("Locations where deleted");
-            $('#locationManagerDiv').html(data);
-        }
-       });
-      $('.locationManagerClass').toggleClass(true);
-    }
-
-    
-  });
-
-
-
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -543,7 +512,6 @@ function getCheckedBoxes(element) {
       var updateChecked = false;
 
       function deleteOnClick(){
-      
           var arrayofvalues = [];
 
           $('.locationManagerClass:checked').each(function() {
@@ -551,27 +519,27 @@ function getCheckedBoxes(element) {
           });
 
           console.log(arrayofvalues);
-          // if (locationCheck == false){
-          //   $(".locationManagerClass").removeClass("hidden");
-          //   locationCheck = true;
-          //   return;
-          // }else if (locationCheck == true && arrayofvalues == []){
-          //   $(".locationManagerClass").addClass("hidden");
-          //   locationCheck = false;
-          //   return;
-          // } else {
-          //   $(".locationManagerClass").addClass("hidden");
-          //   console.log("It didn't work!");
-          //   $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-          //       if(data == false){
-          //         alert("error");
-          //       }else{
-          //         alert("Locations where deleted");
-          //           $('#locationManagerDiv').html(data);
-          //       }
-          //      });
-          //   locationCheck = false;
-          // }
+          if (locationCheck == false){
+            $(".locationManagerClass").removeClass("hidden");
+            locationCheck = true;
+            return;
+          }else if (locationCheck == true && arrayofvalues == []){
+            $(".locationManagerClass").addClass("hidden");
+            locationCheck = false;
+            return;
+          } else {
+            $(".locationManagerClass").addClass("hidden");
+            console.log("It didn't work!");
+            $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+                if(data == false){
+                  alert("error");
+                }else{
+                  alert("Locations where deleted");
+                    $('#locationManagerDiv').html(data);
+                }
+               });
+            locationCheck = false;
+          }
       }
 
 

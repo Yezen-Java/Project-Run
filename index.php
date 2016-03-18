@@ -142,7 +142,6 @@ $LoadOnStart = new LoadOnStart();
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
           <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in" id="logoutButton"></span> Logout</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -292,16 +291,17 @@ $LoadOnStart = new LoadOnStart();
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1>Location Manager</h1>
           <h4 class="modal-title">Locations</h4>
         </div>
-      <div id="locationManagerDiv" class="modal-body">
+      <div class="modal-body">
+      <h1>Edit Locations</h1>
       <?php 
-    echo $LoadOnStart->getLocationManager();
-      ?>
+     $LoadOnStart->getLocationList();
+          ?>
+ 
       </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" id="deleteLocationManager">Delete</button>
+          <button type="button" class="btn btn-default" onclick="deleteOnClick();">Delete</button>
           <button type="button" class="btn btn-default" onclick="">Edit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
