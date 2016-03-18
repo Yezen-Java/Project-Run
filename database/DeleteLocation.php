@@ -5,9 +5,9 @@ include 'Classes/LocationClass.php';
 include 'LoadDataOnstart.php';
 
 $arrayIds = $_POST['LocationIds'];
-$arrayids = explode(".", $arrayIds);
+$arrayLocations = explode(".", $arrayIds);
 $Locationclass = new LocationClass();
-$CheckLocationDeleted = $Locationclass->deleteLocations($arrayids,$dbconn);
+$CheckLocationDeleted = $Locationclass->deleteLocations($arrayLocations,$dbconn);
 
 if ($CheckLocationDeleted) {
 	$LoadOnStart = new LoadOnStart();
