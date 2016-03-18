@@ -67,10 +67,14 @@ class LocationClass
 	public function deleteLocations($arrayLocations, $dbconn){
 		$query = "DELETE from location where locationid = $1";
 	    $DeleteQuery = pg_prepare($dbconn,"deletequery", $query);
-		foreach ($arrayLocations as $id) {
-			$DeleteQuery = pg_execute($dbconn,"deletequery", array($id));
-	    }
+	    $le = count($arrayLocations);
+
+	    for ($i=0; $i < $le; $i++) { 
+	    	# code...
 	    
+			$DeleteQuery = pg_execute($dbconn,"deletequery", array($arrayLocations[$i]));
+	    
+	    }
 	    if (pg_affected_rows($DeleteQuery)>0) {
 	    	return true;
 	    }
