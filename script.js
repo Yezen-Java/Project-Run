@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-$('.locationManagerClass').each(function(index,obj){
-      $(obj).hide();
-});
-
+  $(".locationManagerClass").addClass("hidden");
   $(".locationsName").dblclick(function(){
     $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
   });
