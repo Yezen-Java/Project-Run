@@ -357,7 +357,8 @@ video{
   height: 200px;
 } 
 #logoutButton{
-  padding-left: 550px;
+  padding-left: 90%;
+  position: relative;
 }
 
 
