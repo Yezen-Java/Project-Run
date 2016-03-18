@@ -516,15 +516,19 @@ function getCheckedBoxes(element) {
           });
 
           console.log(arrayofvalues);
+          var arrayofvalues = [];
+          $('.locationManagerClass:checked').each(function() {
+                  arrayofvalues.push($(this).val());
+          });
+          console.log(arrayofvalues);
           if (locationCheck == false){
-            $(".locationManagerClass").removeClass("hidden");
+            $(".locationManagerClass").show("slow");
             locationCheck = true;
             return;
-          }else if (locationCheck == true && arrayofvalues == []){
-            $(".locationManagerClass").addClass("hidden");
+          }else if (locationCheck == true && arrayofvalues == null){
+            $(".locationManagerClass").hide("slow");
             locationCheck = false;
             return;
-          } else {
             $(".locationManagerClass").addClass("hidden");
             console.log("It didn't work!");
             $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
