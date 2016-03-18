@@ -6,26 +6,26 @@ include 'LoadDataOnstart.php';
 
 $arrayIds = $_POST['LocationIds'];
 
+echo $arrayIds;
+
 $arrayids = explode("::", $arrayIds);
 
-echo $arrayIds[0];
-
-$Locationclass = new LocationClass();
 
 
-$CheckLocationDeleted = $Locationclass->deleteLocations($arrayids,$dbconn);
+// $Locationclass = new LocationClass();
 
+// $CheckLocationDeleted = $Locationclass->deleteLocations($arrayids,$dbconn);
 
-if ($CheckLocationDeleted) {
+// if ($CheckLocationDeleted) {
 
-	$LoadOnStart = new LoadOnStart();
+// 	$LoadOnStart = new LoadOnStart();
 
-	echo $LoadOnStart->getLocationManager();
-}else{
+// 	echo $LoadOnStart->getLocationManager();
+// }else{
 
-	echo $CheckLocationDeleted ;
+// 	echo $CheckLocationDeleted ;
 
-}
+// }
 
 
 
