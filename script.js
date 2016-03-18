@@ -509,28 +509,30 @@ function getCheckedBoxes(element) {
           $('.locationManagerClass:checked').each(function() {
             arrayofvalues.push($(this).val());
           });
+          $('.locationManagerClass').toggle('slow');
+          
           console.log(arrayofvalues);
-          if (locationCheck == false){
-            $(".locationManagerClass").removeClass("hidden");
-            locationCheck = true;
-            return;
-          }else if (locationCheck == true && arrayofvalues == []){
-            $(".locationManagerClass").addClass("hidden");
-            locationCheck = false;
-            return;
-          } else {
-            $(".locationManagerClass").addClass("hidden");
-            console.log("It didn't work!");
-            $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-                if(data == false){
-                  alert("error");
-                }else{
-                  alert("Locations where deleted");
-                    $('#locationManagerDiv').html(data);
-                }
-               });
-            locationCheck = false;
-          }
+          // if (locationCheck == false){
+          //   $(".locationManagerClass").removeClass("hidden");
+          //   locationCheck = true;
+          //   return;
+          // }else if (locationCheck == true && arrayofvalues == []){
+          //   $(".locationManagerClass").addClass("hidden");
+          //   locationCheck = false;
+          //   return;
+          // } else {
+          //   $(".locationManagerClass").addClass("hidden");
+          //   console.log("It didn't work!");
+          //   $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+          //       if(data == false){
+          //         alert("error");
+          //       }else{
+          //         alert("Locations where deleted");
+          //           $('#locationManagerDiv').html(data);
+          //       }
+          //      });
+          //   locationCheck = false;
+          // }
       }
 
   $(".locationsName").dblclick(function(){
