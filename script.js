@@ -2,6 +2,7 @@ $(document).ready(function(){
     var OriganalListItems = $(".searching li");
 
     $("#search").on("input", function() {
+      OriganalListItems = $(".searching li");
       var dInput = this.value;
       var listItems = $(".searching li");
       var check = document.getElementById("search").value;
