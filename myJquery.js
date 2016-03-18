@@ -12,9 +12,7 @@
 		
 		//check wether this is the first time a new list is being added
 		if (newNotesList == true) {
-			var valueFromInput = $("#toDoTextArea").val();
-			var timeAndDate =  new Date();
-			
+			var valueFromInput = $("#toDoTextArea").val();			
 			//handle is used to move the list items ie dragging 
 			newListItem = 
 		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl "+'">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
