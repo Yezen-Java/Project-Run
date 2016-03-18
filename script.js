@@ -529,6 +529,7 @@ function getCheckedBoxes(element) {
                 if(data == false){
                   alert("error");
                 }else{
+                  alert("Locations where deleted");
                     $('#locationManagerDiv').html(data);
                 }
                });
