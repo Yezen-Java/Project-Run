@@ -6,7 +6,7 @@ $(document).ready(function(){
 
       $(listItems).each(function(index,object){
         if (dInput == ""){
-          console.log(dInput);
+          console.log("works");
           $(".searching").append($(object));
         } else {
           $(object).find("textarea");
