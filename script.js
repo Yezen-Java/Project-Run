@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $(".locationsName").dblclick(function(){
+    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+  });
+
   $(".locationManagerClass").addClass("hidden");
 
 
@@ -500,6 +504,7 @@ function getCheckedBoxes(element) {
       });
     }
       var locationCheck = false;
+      var updateChecked = false;
 
       function deleteOnClick(){
       
@@ -508,9 +513,7 @@ function getCheckedBoxes(element) {
           $('.locationManagerClass:checked').each(function() {
             arrayofvalues.push($(this).val());
           });
-
           console.log(arrayofvalues);
-
           if (locationCheck == false){
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
@@ -523,7 +526,6 @@ function getCheckedBoxes(element) {
             console.log("It didn't work!")
           }
       }
-
 
 
 

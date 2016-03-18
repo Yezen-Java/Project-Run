@@ -150,25 +150,26 @@ if ($MediaSelect) {
 }
 }
 
-public function getLocationManager(){
+    public function getLocationManager(){
 
-$locationsQuery2 = pg_query("SELECT * From location");
+      $locationsQuery2 = pg_query("SELECT * From location");
 
-if ($locationsQuery2) {
-    echo"<ul>";
-    while($rows = pg_fetch_array($locationsQuery2)){
-    $id = $rows['locationid'];
-    $name = $rows['lname'];
-    echo"
-    <li value='$id'>
-      <input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> $name 
-    </li>";
+      if ($locationsQuery2) {
+          echo"<ul>";
+          while($rows = pg_fetch_array($locationsQuery2)){
+          $id = $rows['locationid'];
+          $name = $rows['lname'];
+          echo"
+          <li value='$id'>
+            <input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> <p class='locationsName'>$name</p>
+            <input type='text' class='editManagerBox' style='display:none'/> 
+          </li>";
+          }
+          echo"</ul>";
+      }else{
+        echo "noLocationsFound";
+      }
     }
-    echo"</ul>";
-}else{
-  echo "noLocationsFound";
-}
-}
 
 }
 
