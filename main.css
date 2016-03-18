@@ -15,6 +15,7 @@ html, body {
 
 #search{
   margin: 10px;
+  width: 60px;
 }
 
 .circleButtonX:hover{
