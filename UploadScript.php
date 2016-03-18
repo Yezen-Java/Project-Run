@@ -7,10 +7,10 @@ include'database/LoadDataOnstart.php';
 include'database/Classes/s3/image_check.php';
 include'database/Classes/s3/s3_config.php';
 
-$_files = $_FILES['file'];
+
 
 $uploadmedia = new MediaManager();
-$checkUpload = $uploadmedia->mediaUpload($_files,$dbconn,$s3);
+$checkUpload = $uploadmedia->mediaUpload($_FILES['file']['name'],$dbconn,$s3);
 $loadDataUploaded = new LoadOnStart();
 $htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
 
