@@ -3,18 +3,18 @@ $(document).ready(function(){
       var dInput = this.value;
       var listItems = $(".searching li");
       $(".searching").empty();
-      if (dInput == ""){
-        $(".searching").append(listItems);
-      }
+      console.log(dInput);
+      
       $(listItems).each(function(index,object){
-        $(object).find("textarea");
-        var description = ($(object).find("textarea")).text();
-        
-        console.log(description);
-        console.log(dInput);
-        if (description.indexOf(dInput) > -1){
+        if (dInput == ""){
           $(".searching").append($(object));
-        }    
+        } else {
+          $(object).find("textarea");
+          var description = ($(object).find("textarea")).text();
+          if (description.indexOf(dInput) > -1){
+            $(".searching").append($(object));
+          } 
+        }   
       });
 
       
