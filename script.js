@@ -169,13 +169,17 @@ $("#pointer1").click(function(){
   $('.sortable').sortable();
 });
 
+function EditTourName(value,name){
+  $('#editTourDialogue').modal('toggle');
+  $('#editTourDialogue').attr("value",value);
+        // console.log($('#editTourDialogue').attr('value'));
+  $('#editTourNameField').val(name);
+} 
+
 $(function() {
 $(".tourButtons").each(function(index,object){
       $(object).on('dblclick', function (e) {
-        $('#editTourDialogue').modal('toggle');
-        $('#editTourDialogue').attr("value",$(object).attr("value"));
-        // console.log($('#editTourDialogue').attr('value'));
-        $('#editTourNameField').val($(object).attr("name"));
+        
       });
     });
 });
