@@ -5,7 +5,7 @@ $(document).ready(function(){
       $(".searching").empty();
 
       $(listItems).each(function(index,object){
-        if (dInput == ""){
+        if (!$("#search").val()){
           console.log("works");
           $(".searching").append($(object));
         } else {
