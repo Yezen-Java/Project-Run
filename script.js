@@ -2,7 +2,10 @@ $(document).ready(function(){
 
   $("#deleteLocationManager").click(function(){
     console.log("works");
-    $('.locationManagerClass').toggle();
+    $('.locationManagerClass').each(function(index,obj){
+      $(obj).toggle();
+    });
+    
   });
 
   $(".locationManagerClass").addClass("hidden");
