@@ -1,14 +1,13 @@
 $(document).ready(function(){
+    var OriganalListItems = $(".searching li");
 
     $("#search").on("input", function() {
       var dInput = this.value;
       var listItems = $(".searching li");
-      var OriganalListItems = $(".searching li");
       var check = document.getElementById("search").value;
-      console.log(OriganalListItems);
-
       $(".searching").empty();
       if (check == ''){
+          console.log(OriganalListItems);
           $(OriganalListItems).each(function(index,object){
               $(".searching").append($(object));
           });
