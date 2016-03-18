@@ -473,11 +473,9 @@ function getCheckedBoxes(element) {
 
 function deleteOnClick(){
   var arrayofvalues = getCheckedBoxes('checkboxlocation');
-  var arrayChecked = arrayofvalues.join("::");
-  console.log(arrayChecked);
   if (arrayofvalues != null){
 
-    $.post('database/DeleteLocation.php',{LocationIds:arrayChecked}, function(data){
+    $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join(".")}, function(data){
         if(data == false){
           alert("error");
         }else{
