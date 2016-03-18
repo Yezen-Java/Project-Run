@@ -8,6 +8,25 @@ $(document).ready(function(){
     $(this).hide().siblings(".locationsName").show().text($(this).val());
   });
 
+  function deleteOnClick(){
+          var arrayofvalues = [];
+          $('.locationManagerClass:checked').each(function() {
+              arrayofvalues.push($(this).val());
+          });
+          console.log(arrayofvalues);
+          if (arrayofvalues.length > 0){
+            console.log("It didn't work!");
+            $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+                if(data == false){
+                  alert("error");
+                }else{
+                  alert("Locations where deleted");
+                    $('#locationManagerDiv').html(data);
+                }
+               });
+          }
+      }
+
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -504,26 +523,8 @@ function getCheckedBoxes(element) {
         }
       });
     }
-      var updateChecked = false;
 
-      function deleteOnClick(){
-          var arrayofvalues = [];
-          $('.locationManagerClass:checked').each(function() {
-              arrayofvalues.push($(this).val());
-          });
-          console.log(arrayofvalues);
-          if (arrayofvalues.length > 0){
-            console.log("It didn't work!");
-            $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-                if(data == false){
-                  alert("error");
-                }else{
-                  alert("Locations where deleted");
-                    $('#locationManagerDiv').html(data);
-                }
-               });
-          }
-      }
+      
 
 
 
