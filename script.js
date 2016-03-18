@@ -471,24 +471,24 @@ function getCheckedBoxes(element) {
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
-function deleteOnClick(){
-
-  var arrayofvalues = [];
-
-  $(".chkbox:checked").each(function() {
+var arrayofvalues = [];
+$(".locationManagerClass").each(function() {
       arrayofvalues.push($(this).attr("value"));
       console.log(arrayofvalues);
   });
 
+
+function deleteOnClick(){
+
   if (arrayofvalues.length > 0){
     console.log("It didn't work!");
-    $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-        if(data == false){
-          alert("error");
-        }else{
-          alert("Locations where deleted");
-            $('#locationManagerDiv').html(data);
-        }
+        $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+          if(data == false){
+            alert("error");
+          }else{
+            alert("Locations where deleted");
+              $('#locationManagerDiv').html(data);
+          }
        });
   }
 }
