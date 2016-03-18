@@ -296,12 +296,11 @@ $LoadOnStart = new LoadOnStart();
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-     $LoadOnStart->getLocationList();
-          ?>
- 
+     $LoadOnStart->getLocationManager();
+      ?>
       </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="">Delete</button>
+          <button type="button" class="btn btn-default" id="deleteLocationManager">Delete</button>
           <button type="button" class="btn btn-default" onclick="">Edit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>

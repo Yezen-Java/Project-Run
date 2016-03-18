@@ -152,4 +152,24 @@ if ($MediaSelect) {
 
 }
 
+public function getLocationManager(){
+
+$locationsQuery2 = pg_query("SELECT * From location");
+
+if ($locationsQuery2) {
+    echo"<ul>";
+    while($rows = pg_fetch_array($locationsQuery2)){
+    $id = $rows['locationid'];
+    $name = $rows['lname'];
+    echo"<input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> 
+    <li value='$id'>
+      $name 
+    </li>";
+    }
+    echo"</ul>";
+}else{
+  echo "noLocationsFound";
+}
+}
+
 ?>
