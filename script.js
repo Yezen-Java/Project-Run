@@ -4,6 +4,14 @@ $('.locationManagerClass').each(function(index,obj){
       $(obj).hide();
 });
 
+  $(".locationsName").dblclick(function(){
+    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+  });
+
+  $(".editManagerBox").focusout(function(){
+    $(this).hide().siblings(".locationsName").show().text($(this).val());
+  });
+
 
     $('#search').keyup(function(){
         
@@ -536,24 +544,21 @@ function getCheckedBoxes(element) {
           // }
       }
 
-  $(".locationsName").dblclick(function(){
-    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-  });
 
-  $(".editManagerBox").focusout(function(){
-    $(this).hide().siblings(".locationsName").show().text($(this).val());
-  });
 
   $("#deleteLocationManager").click(function(){
     var arrayofvalues = [];
     $('.locationManagerClass').each(function(index,obj){
 
       $(obj).toggle();
-      if($(obj).is(':visible')) {
-        arrayofvalues.push($(this).val());
-      }
-      console.log(arrayofvalues);
     });
+
+     $('.locationManagerClass:checked').each(function() {
+        arrayofvalues.push($(this).val());
+      });
+
+           console.log(arrayofvalues);
+
     
   });
 
