@@ -8,7 +8,7 @@ $arrayIds = $_POST['LocationIds'];
 
 $arrayids = explode("::", $arrayIds);
 
-echo $array[0];
+echo $arrayIds[0];
 
 $Locationclass = new LocationClass();
 
