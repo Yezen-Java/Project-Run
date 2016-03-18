@@ -26,7 +26,7 @@ $('.locationManagerClass').each(function(index,obj){
 
     console.log(arrayofvalues);
 
-    if (arrayofvalues != []){
+    if (arrayofvalues != null){
       $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
         if(data == false){
           alert("error");
