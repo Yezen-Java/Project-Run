@@ -82,7 +82,7 @@ if ($locationsQuery2) {
 }
 
 public function mediaResultsFucntion(){
-
+  $htmlTage = '';
 $mediaResults = pg_query("SELECT * from media order by mediaid ASC");
 
 if ($mediaResults) {
@@ -108,7 +108,7 @@ if ($mediaResults) {
     }
 
 
-	  echo "<div class='col-md-3 portfolio-item' id='$mediaid'>
+	  $htmlTage = $htmlTage."<div class='col-md-3 portfolio-item' id='$mediaid'>
 
       <div class='displayCheckBoxSpan'>
           <span class='input-group-addon' id='checkBoxDeleteSpan'>
@@ -128,8 +128,10 @@ if ($mediaResults) {
 }
      
 }else{
-	echo "No Data found";
+	$htmlTage = "No Data found";
 }
+
+return $htmlTage;
 
 }
 
