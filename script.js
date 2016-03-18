@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   $("#deleteLocationManager").click(function(){
+    console.log("works");
     $('.locationManagerClass').toggle('slow');
   });
 
