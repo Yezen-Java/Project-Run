@@ -1,12 +1,15 @@
 $(document).ready(function(){
+
     $("#search").on("input", function() {
       var dInput = this.value;
       var listItems = $(".searching li");
+      var check = document.getElementById("search").value;
+
       $(".searching").empty();
-      if (document.getElementById("search").value == ''){
+      if (check == ''){
           console.log("works");
           $(".searching").append(listItems);
-      } 
+      }else{ 
 
       $(listItems).each(function(index,object){
           $(object).find("textarea");
@@ -16,6 +19,7 @@ $(document).ready(function(){
           } 
            
       });
+    }
 
       
     });
