@@ -510,13 +510,13 @@ function getCheckedBoxes(element) {
           });
 
           console.log(arrayofvalues);
-          
+
           if (locationCheck == false){
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
             return;
           }else if (locationCheck == true && arrayofvalues == null){
-            
+            $(".locationManagerClass").addClass("hidden");
             locationCheck = false;
             return;
           } else {
