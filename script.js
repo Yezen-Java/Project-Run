@@ -451,9 +451,11 @@ function TourEditName(){
           alert("error");
         }else{
             $('#buttonsListTours').html(data);
-             $.ready();
+            
         }
        });
+
+     $.ready();
 } 
 
 
