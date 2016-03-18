@@ -1,6 +1,5 @@
 <?php
 
-
 include('image_check.php');
 include('database/Connect.php');
 include('s3_config.php');
@@ -36,44 +35,49 @@ for ($i = 0; $i < $len; $i++){
             if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
               $msg = "S3 Upload Successful."; 
               $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
+              //$result = pg_query("INSERT into media (media_name,link,ext_name) values ('$name','$s3file','$actual_media_name')");
+              // pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name));
               $nameData = $name;
               $nameLink = $s3file;
-               if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
-                $msg=false;
+                if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
-               }else{
-                $msg=false;
-               }
+                  $msg=true;
 
+                }else{
+                  $msg=false;
+
+                }
         }
   else{
+   
+   $msg=false;
 
-$msg=false;
 
   }
 
 }else{
 
-
-$msg=false;
-}
-
-}else{
-
-
 $msg=false;
 
 }
 
 }else{
 
+ $msg=false;
+
+
+}
+
+}else{
 $msg=false;
-}
-
- sleep(2);
 
 }
+
+ sleep(3);
+
+}
+
 
 
 if ($msg) {
