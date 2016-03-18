@@ -154,8 +154,9 @@ $(document).ready(function(){
             alert("Error, Try Again");
           }else{
           $('#modalc').html(data);
-          $(".progress").addClass("hidden");
-          
+          $(".progress").addClass("hidden"); 
+                check = false;
+
         }
         },
         error: function(){}           
