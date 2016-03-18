@@ -298,7 +298,6 @@ $LoadOnStart = new LoadOnStart();
       <?php 
      echo $LoadOnStart->getLocationManager();
           ?>
- 
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" onclick="deleteOnClick();">Delete</button>
