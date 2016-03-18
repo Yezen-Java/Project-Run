@@ -471,7 +471,7 @@ function getCheckedBoxes(element) {
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
-
+/*IF YOU TOUCH THE DELETEONLICK() METHOD, YOU WILL BURN IN HELL WITH SHAYTAN.*/
 function deleteOnClick(){
 
   var arrayofvalues = getCheckedBoxes("checkboxlocation");
