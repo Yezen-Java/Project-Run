@@ -1,19 +1,15 @@
 <?php
 
 
-require 'database/Classes/MediaManagerClass.php';
+include'database/Classes/MediaManagerClass.php';
 include'database/Connect.php';
 include'LoadDataOnstart.php';
 
-
+$_files = $_FILES['file']; 
 $uploadmedia = new MediaManager();
-
-$checkUpload = $uploadmedia->mediaUpload($_FILES['file'],$dbconn);
-
+$checkUpload = $uploadmedia->mediaUpload($_files,$dbconn);
 $loadDataUploaded = new LoadOnStart();
-
 $htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
-
 
 if($checkUpload){
 
