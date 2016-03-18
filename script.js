@@ -515,7 +515,7 @@ function getCheckedBoxes(element) {
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
             return;
-          }else if (locationCheck == true && arrayofvalues == null){
+          }else if (locationCheck == true){
             $(".locationManagerClass").addClass("hidden");
             locationCheck = false;
             return;
