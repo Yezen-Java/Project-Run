@@ -532,7 +532,7 @@ function deleteOnClick(){
 
 
      function dbClickEdit(obj){
-          $(obj).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+          $(obj).hide().siblings(".editManagerBox").show().val($(obj).text()).focus();
      }
 
       
