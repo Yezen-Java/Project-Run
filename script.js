@@ -468,7 +468,7 @@ function getCheckedBoxes(element) {
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        checkboxesChecked.push(checkboxes[i]);
+        checkboxesChecked.push(checkboxes[i].value);
      }
   }
   // Return the array if it is non-empty, or null
@@ -476,12 +476,10 @@ function getCheckedBoxes(element) {
 }
 
 function deleteOnClick(){
-  var arrayofvalues = [];
-  $('.locationManagerClass:checked').each(function() {
-      arrayofvalues.push($(this).val());
-  });
+  var arrayofvalues = getCheckedBoxes('checkboxlocation');
+
   console.log(arrayofvalues);
-  if (arrayofvalues.length > 0){
+  if (arrayofvalues.length != null){
     console.log("It didn't work!");
     $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
         if(data == false){
