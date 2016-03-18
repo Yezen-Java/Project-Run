@@ -500,7 +500,9 @@ function getCheckedBoxes(element) {
       });
     }
       var locationCheck = false;
-       $("#deleteLocationManager").click(function(){
+
+      function deleteOnClick(){
+      
           var arrayofvalues = [];
 
           $('.locationManagerClass:checked').each(function() {
@@ -508,6 +510,7 @@ function getCheckedBoxes(element) {
           });
 
           console.log(arrayofvalues);
+          
           if (locationCheck == false){
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
@@ -519,7 +522,7 @@ function getCheckedBoxes(element) {
           } else {
             console.log("It didn't work!")
           }
-        });
+      }
 
 
 

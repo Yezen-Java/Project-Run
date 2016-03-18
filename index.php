@@ -300,7 +300,7 @@ $LoadOnStart = new LoadOnStart();
       ?>
       </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" id="deleteLocationManager">Delete</button>
+          <button type="button" class="btn btn-default" id="deleteLocationManager" onclick="deleteOnClick()">Delete</button>
           <button type="button" class="btn btn-default" onclick="">Edit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
