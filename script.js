@@ -7,7 +7,6 @@ $(document).ready(function(){
       var check = document.getElementById("search").value;
       $(".searching").empty();
       if (check == ''){
-          console.log(OriganalListItems);
           $(OriganalListItems).each(function(index,object){
               $(".searching").append($(object));
           });
