@@ -150,8 +150,6 @@ if ($MediaSelect) {
 }
 }
 
-}
-
 public function getLocationManager(){
 
 $locationsQuery2 = pg_query("SELECT * From location");
@@ -170,6 +168,8 @@ if ($locationsQuery2) {
 }else{
   echo "noLocationsFound";
 }
+}
+
 }
 
 ?>
