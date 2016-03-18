@@ -8,6 +8,8 @@ $arrayIds = $_POST['LocationIds'];
 
 $array = explode("::", $arrayIds);
 
+echo $array ;
+
 $Locationclass = new LocationClass();
 
 
