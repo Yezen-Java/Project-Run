@@ -8,10 +8,10 @@ $arrayIds = $_POST['LocationIds'];
 
 $array = explode("::", $arrayIds);
 
-$tourclass = new LocationClass();
+$Locationclass = new LocationClass();
 
 
-$CheckLocationDeleted = $tourclass->deleteLocations($array,$dbconn);
+$CheckLocationDeleted = $Locationclass->deleteLocations($array,$dbconn);
 
 
 if ($CheckLocationDeleted) {

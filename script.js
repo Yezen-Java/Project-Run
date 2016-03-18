@@ -479,7 +479,7 @@ function deleteOnClick(){
     console.log("It did work!");
     
     for (var i = 0; i < arrayofvalues.length; i++) {
-      arrayChecked.push(arrayofvalues[i].value);
+      arrayChecked.push(arrayofvalues[i]);
     }
   console.log(arrayChecked);
 
