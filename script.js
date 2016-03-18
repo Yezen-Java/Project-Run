@@ -7,7 +7,7 @@ $(document).ready(function(){
 
       $(".searching").empty();
       if (check == ''){
-          console.log("works");
+          console.log(listItems);
           $(listItems).each(function(index,object){
               $(".searching").append($(object));
           });
