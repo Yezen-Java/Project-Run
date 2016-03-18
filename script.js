@@ -4,6 +4,10 @@ $(document).ready(function(){
     $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
   });
 
+  $(".editManagerBox").focusout(function(){
+    $(this).hide().siblings(".locationsName").show().text($(this).val());
+  });
+
   $(".locationManagerClass").addClass("hidden");
 
 
