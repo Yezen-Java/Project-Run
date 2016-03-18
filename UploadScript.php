@@ -1,13 +1,12 @@
 <?php
 
+include'database/LoadDataOnstart.php';
 include('image_check.php');
 include('database/Connect.php');
 include('s3_config.php');
-include'database/LoadDataOnstart.php';
-
 
 $len = count($_FILES['file']['name']);
-$msg=false;
+$msg='';
 $query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3,$4)";
 $result = pg_prepare($dbconn,"query", $query);
 $sizeLimit = 2097152;
@@ -33,6 +32,7 @@ for ($i = 0; $i < $len; $i++){
         if($size<=$sizeLimit){
 
             if($s3->putObjectFile($tmp, $bucket,$actual_media_name, S3::ACL_PUBLIC_READ) ){
+              $msg = "S3 Upload Successful."; 
               $s3file='http://'.$bucket.'.s3.amazonaws.com/'.$actual_media_name;
               //$result = pg_query("INSERT into media (media_name,link,ext_name) values ('$name','$s3file','$actual_media_name')");
               // pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name));
@@ -41,49 +41,43 @@ for ($i = 0; $i < $len; $i++){
 
                 if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
-                  $msg=true;
-
+                  $loadData = new LoadDataOnstart();
+                  echo $loadData->mediaResultsFucntion();;
                 }else{
-                  $msg=false;
-
+                  echo "Faild To access database";
                 }
         }
   else{
-   
-   $msg=false;
+    echo false;
 
+    return;
 
   }
 
 }else{
 
-$msg=false;
+   echo false;
 
+    return;
 }
 
 }else{
 
- $msg=false;
+  echo false;
 
+    return;
 
 }
 
 }else{
-$msg=false;
+   echo false;
 
+    return;
 }
 
  sleep(3);
 
 }
-
-
-
-
-  $loadData = new LoadDataOnstart();
-   echo $loadData->mediaResultsFucntion();
-
-
 
 
 
