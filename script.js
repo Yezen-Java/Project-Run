@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   $(".locationManagerClass").addClass("hidden");
 
+
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -512,7 +513,7 @@ function getCheckedBoxes(element) {
             locationCheck = true;
             return;
           }else if (locationCheck == true && arrayofvalues == null){
-            $(".locationManagerClass").hide("slow");
+            $(".locationManagerClass").removeClass("hidden");
             locationCheck = false;
             return;
           } else {
