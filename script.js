@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+    $(".locationsName").dblclick(function(){
+      $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+    });
+
+    $(".editManagerBox").focusout(function(){
+      $(this).hide().siblings(".locationsName").show().text($(this).val());
+    });
+
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -455,7 +464,7 @@ function getCheckedBoxes(element) {
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        checkboxesChecked.push(checkboxes[i].value);
+        checkboxesChecked.push(checkboxes[i].value);//made it get value
      }
   }
   // Return the array if it is non-empty, or null
@@ -475,7 +484,7 @@ function deleteOnClick(){
           if(data == false){
             alert("error");
           }else{
-            alert("Locations where deleted");
+            alert("Locations were deleted");
               $('#locationManagerDiv').html(data);
           }
        });
@@ -515,13 +524,6 @@ function deleteOnClick(){
         }
       });
     }
-      $(".locationsName").dblclick(function(){
-    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-  });
-
-  $(".editManagerBox").focusout(function(){
-    $(this).hide().siblings(".locationsName").show().text($(this).val());
-  });
 
       
 
