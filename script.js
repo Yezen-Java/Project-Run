@@ -169,7 +169,7 @@ $("#pointer1").click(function(){
   $('.sortable').sortable();
 });
 
-
+$(function() {
 $(".tourButtons").each(function(index,object){
       $(object).on('dblclick', function (e) {
         $('#editTourDialogue').modal('toggle');
@@ -178,8 +178,9 @@ $(".tourButtons").each(function(index,object){
         $('#editTourNameField').val($(object).attr("name"));
       });
     });
+});
 
-    
+
 
 // var files = [
 //   {
