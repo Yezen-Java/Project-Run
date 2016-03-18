@@ -476,7 +476,7 @@ function deleteOnClick(){
   var arrayofvalues = [];
 
   $('.locationManagerClass:checked').each(function() {
-      arrayofvalues.push($(this).attr("value"));
+      arrayofvalues.push($(this).val());
       console.log(arrayofvalues);
   });
 
