@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-  $(".locationsName").dblclick(function(){
-    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-  });
-
-  $(".editManagerBox").focusout(function(){
-    $(this).hide().siblings(".locationsName").show().text($(this).val());
-  });
-
   $(".locationManagerClass").addClass("hidden");
 
 
@@ -522,11 +514,12 @@ function getCheckedBoxes(element) {
             $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
             return;
-          }else if (locationCheck == true && arrayofvalues == null){
+          }else if (locationCheck == true && arrayofvalues == []){
             $(".locationManagerClass").addClass("hidden");
             locationCheck = false;
             return;
           } else {
+            $(".locationManagerClass").addClass("hidden");
             console.log("It didn't work!");
             $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
                 if(data == false){
@@ -539,6 +532,15 @@ function getCheckedBoxes(element) {
             locationCheck = false;
           }
       }
+
+  $(".locationsName").dblclick(function(){
+    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+  });
+
+  $(".editManagerBox").focusout(function(){
+    $(this).hide().siblings(".locationsName").show().text($(this).val());
+  });
+
 
 
 
