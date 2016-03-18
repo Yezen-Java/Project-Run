@@ -24,7 +24,18 @@ $('.locationManagerClass').each(function(index,obj){
         arrayofvalues.push($(this).val());
       });
 
-           console.log(arrayofvalues);
+    console.log(arrayofvalues.length);
+
+    if (arrayofvalues.length >0){
+      $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+        if(data == false){
+          alert("error");
+        }else{
+          alert("Locations where deleted");
+            $('#locationManagerDiv').html(data);
+        }
+       });
+    }
 
     
   });
