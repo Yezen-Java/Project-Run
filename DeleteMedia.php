@@ -1,5 +1,6 @@
 <?php
 
+include'database/LoadDataOnstart.php';
 
 $arrayMeida = $_POST['items']; 
 
@@ -8,6 +9,8 @@ echo "Testing $arrayMeida ";
 include 's3_config.php';
 include 'database/Connect.php';
 
+
+$loadData = new LoadOnStart();
 $liarray = explode("::", $arrayMeida);
 
 $numberOfMedia = count($liarray);
@@ -28,9 +31,11 @@ for ($i=0; $i < $numberOfMedia; $i++) {
 	
 	if ($s3->deleteObject($bucket,$mediaExt)) {
 		$result = pg_execute($dbconn,"query",  array($liarray[$i]));
-		echo 'Deleted';
+		 echo $loadData->mediaResultsFucntion();;
+
+
 	}else{
-		echo "error";
+		echo false;
 	}
 	sleep(0.5);
 }

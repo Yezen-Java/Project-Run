@@ -143,12 +143,20 @@ $(document).ready(function(){
       // }
       var array = arrayofvalues.join("::");
       console.log(array);
+      $(".progress").removeClass("hidden");
       $.ajax({
         url: "DeleteMedia.php",
         type: "POST",
         data: {items:array},
         success: function(data){
-          alert(data);
+           if (data == false) {
+            $(".progress").addClass("hidden");
+            alert("Error, Try Again");
+          }else{
+          $('#modalc').html(data);
+          $(".progress").addClass("hidden");
+          
+        }
         },
         error: function(){}           
       });
