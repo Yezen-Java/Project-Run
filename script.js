@@ -472,15 +472,15 @@ function getCheckedBoxes(element) {
 }
 
 function deleteOnClick(){
+
   var arrayofvalues = [];
 
-  var searchIDs = $(".locationManagerClass:checkbox:checked").map(function(){
-      return $(this).val();
-  }).get(); // <----
-  console.log(searchIDs);
-  $('.locationManagerClass:checked').each(function() {
-      arrayofvalues.push($(this).val());
+  $('.locationManagerClass input:checked').each(function() {
+      arrayofvalues.push($(this).attr("value"));
+      console.log(arrayofvalues);
   });
+
+
   console.log(arrayofvalues);
   if (arrayofvalues.length > 0){
     console.log("It didn't work!");
