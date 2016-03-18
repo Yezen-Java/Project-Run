@@ -32,7 +32,7 @@ include'database/LoadDataOnstart.php';
 
 $_files = $_FILES['file'];
 
-$checkUpload = uploadMedia($_files,$dbconn);
+$checkUpload = uploadMedia($_files,$dbconn,$s3);
 
 $loadDataUploaded = new LoadOnStart();
 $htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
