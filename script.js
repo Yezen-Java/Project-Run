@@ -3,12 +3,13 @@ $(document).ready(function(){
     $("#search").on("input", function() {
       var dInput = this.value;
       var listItems = $(".searching li");
+      var OriganalListItems = $(".searching li");
       var check = document.getElementById("search").value;
 
       $(".searching").empty();
       if (check == ''){
-          console.log(listItems);
-          $(listItems).each(function(index,object){
+          console.log(OriganalListItems);
+          $(OriganalListItems).each(function(index,object){
               $(".searching").append($(object));
           });
       }else{ 
