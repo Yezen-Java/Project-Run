@@ -3,7 +3,7 @@ $(document).ready(function(){
       var dInput = this.value;
       var listItems = $(".searching li");
       $(".searching").empty();
-      if (dInput.length > 0){
+      if (!(dInput.length > 0)){
           console.log("works");
           $(".searching").append(listItems);
       } 
