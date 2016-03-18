@@ -472,7 +472,7 @@ function getCheckedBoxes(element) {
 }
 
 var arrayofvalues = [];
-$(".locationManagerClass").each(function() {
+$(".locationManagerClass:checked").each(function() {
       arrayofvalues.push($(this).attr("value"));
       console.log(arrayofvalues);
   });
