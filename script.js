@@ -3,10 +3,10 @@ $(document).ready(function(){
       var dInput = this.value;
       var listItems = $(".searching li");
       $(".searching").empty();
-      console.log(dInput);
-      
+
       $(listItems).each(function(index,object){
         if (dInput == ""){
+          console.log(dInput);
           $(".searching").append($(object));
         } else {
           $(object).find("textarea");
