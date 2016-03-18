@@ -28,7 +28,7 @@ $(document).ready(function(){
     });
 
     $(".tourButtons").each(function(index,object){
-      $(object).live('dblclick', function (e) {
+      $(object).on('dblclick', function (e) {
         $('#editTourDialogue').modal('toggle');
         $('#editTourDialogue').attr("value",$(object).attr("value"));
         // console.log($('#editTourDialogue').attr('value'));
