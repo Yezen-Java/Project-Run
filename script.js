@@ -476,11 +476,12 @@ function deleteOnClick(){
   var arrayChecked = arrayofvalues.join("::");
   console.log(arrayChecked);
   if (arrayofvalues != null){
+
     $.post('database/DeleteLocation.php',{LocationIds:arrayChecked}, function(data){
         if(data == false){
           alert("error");
         }else{
-          alert("Locations where deleted");
+          alert(data);
             $('#locationManagerDiv').html(data);
         }
        });
