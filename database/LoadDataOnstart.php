@@ -159,9 +159,9 @@ if ($locationsQuery2) {
     while($rows = pg_fetch_array($locationsQuery2)){
     $id = $rows['locationid'];
     $name = $rows['lname'];
-    echo"<input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> 
+    echo"
     <li value='$id'>
-      $name 
+      <input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> $name 
     </li>";
     }
     echo"</ul>";
