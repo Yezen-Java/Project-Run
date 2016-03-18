@@ -15,7 +15,7 @@
 			var valueFromInput = $("#toDoTextArea").val();			
 			//handle is used to move the list items ie dragging 
 			newListItem = 
-		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput + " \nl "+'">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
+		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput +'">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
 			newNotesList = true;
 			
 		} else {
