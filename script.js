@@ -79,15 +79,6 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
-
-        $(".locationsName").dblclick(function(){
-      $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-    });
-
-    $(".editManagerBox").focusout(function(){
-      $(this).hide().siblings(".locationsName").show().text($(this).val());
-    });
-
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();
     //   $.ajax({
@@ -460,6 +451,8 @@ function TourEditName(){
           alert("error");
         }else{
             $('#buttonsListTours').html(data);
+            jQuery.ready();
+
         }
        });
 } 
@@ -494,6 +487,7 @@ function deleteOnClick(){
           }else{
             alert("Locations were deleted");
               $('#LocationManagerDiv').html(data);
+              jQuery.ready();
           }
        });
   }
