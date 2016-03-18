@@ -8,16 +8,18 @@ $(document).ready(function(){
       $(".searching").empty();
       if (check == ''){
           console.log("works");
-          $(".searching").append(listItems);
+          $(listItems).each(function(index,object){
+              $(".searching").append($(object));
+          });
       }else{ 
-
-      $(listItems).each(function(index,object){
-          $(object).find("textarea");
-          var description = ($(object).find("textarea")).text();
-          if (description.indexOf(dInput) > -1){
-            $(".searching").append($(object));
-          }   
-      });
+        $(listItems).each(function(index,object){
+            $(object).find("textarea");
+            var description = ($(object).find("textarea")).text();
+            if (description.indexOf(dInput) > -1){
+              $(".searching").append($(object));
+            }   
+        });
+      }
       
     });
 
