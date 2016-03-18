@@ -79,12 +79,11 @@ $msg=false;
 
 
 
-if ($msg) {
+
   $loadData = new LoadDataOnstart();
    echo $loadData->mediaResultsFucntion();
-}else{
-  echo false;
-}
+
+
 
 
 
