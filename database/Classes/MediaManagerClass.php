@@ -71,8 +71,8 @@ public function meidaDescription($mediaid,$description,$dbconn){
 
 public function mediaUpload($_files, $dbconn){
 
-include('s3/image_check.php');
-include('s3/s3_config.php');
+include's3/image_check.php';
+include's3/s3_config.php';
 
 $len = count($_files);
 $msg='';
@@ -109,33 +109,28 @@ for ($i = 0; $i < $len; $i++){
                 if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
                 }else{
-                  echo flase;
+                
+                return flase;
                 }
         }
   else{
-    echo false;
-    return;
+     
+    return false;
   }
 
 }else{
 
-   echo false;
-
-    return;
+    return false;
 }
 
 }else{
 
-  echo false;
-
-    return;
-
 }
 
 }else{
-   echo false;
+ 
 
-    return;
+    return false;;
 }
 
  sleep(2);
