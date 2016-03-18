@@ -452,7 +452,7 @@ function TourEditName(){
           alert("error");
         }else{
             $('#buttonsListTours').html(data);
-            location.reload();
+            $('#buttonsListTours').load(document.URL +  ' #buttonsListTours');
         }
        });
 } 
