@@ -27,15 +27,6 @@ $(document).ready(function(){
         $("#createTourDialogue").modal('show');
     });
 
-    $(".tourButtons").each(function(index,object){
-      $(object).on('dblclick', function (e) {
-        $('#editTourDialogue').modal('toggle');
-        $('#editTourDialogue').attr("value",$(object).attr("value"));
-        // console.log($('#editTourDialogue').attr('value'));
-        $('#editTourNameField').val($(object).attr("name"));
-      });
-    });
-
     $('#tourDateField').datepicker({
       format: "dd-mm-yyyy"
     });  
@@ -177,6 +168,18 @@ $("#pointer1").click(function(){
   $("#myModal").modal('show');
   $('.sortable').sortable();
 });
+
+
+$(".tourButtons").each(function(index,object){
+      $(object).on('dblclick', function (e) {
+        $('#editTourDialogue').modal('toggle');
+        $('#editTourDialogue').attr("value",$(object).attr("value"));
+        // console.log($('#editTourDialogue').attr('value'));
+        $('#editTourNameField').val($(object).attr("name"));
+      });
+    });
+
+    
 
 // var files = [
 //   {
