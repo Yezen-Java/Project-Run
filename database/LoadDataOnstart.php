@@ -161,7 +161,7 @@ if ($MediaSelect) {
           $name = $rows['lname'];
           echo"
           <li value='$id'>
-            <input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> 
+            <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'> 
             <p class='locationsName'>$name</p>
             <input type='text' class='editManagerBox' style='display:none'/>
           </li>";

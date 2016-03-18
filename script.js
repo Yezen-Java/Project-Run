@@ -471,14 +471,12 @@ function getCheckedBoxes(element) {
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
-var arrayofvalues = [];
-$(".locationManagerClass:checked").each(function() {
-      arrayofvalues.push($(this).attr("value"));
-      console.log(arrayofvalues);
-  });
-
 
 function deleteOnClick(){
+
+  var arrayofvalues = getCheckedBoxes("checkboxlocation");
+
+  console.log(arrayofvalues);
 
   if (arrayofvalues.length > 0){
     console.log("It didn't work!");
