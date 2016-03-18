@@ -4,11 +4,13 @@
 include'database/Classes/MediaManagerClass.php';
 include'database/Connect.php';
 include'database/LoadDataOnstart.php';
+include'database/Classes/s3/image_check.php';
+include'database/Classes/s3/s3_config.php';
 
 $_files = $_FILES['file'];
 
 $uploadmedia = new MediaManager();
-$checkUpload = $uploadmedia->mediaUpload($_files,$dbconn);
+$checkUpload = $uploadmedia->mediaUpload($_files,$dbconn,$s3);
 $loadDataUploaded = new LoadOnStart();
 $htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
 

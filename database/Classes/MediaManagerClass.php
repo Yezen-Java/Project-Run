@@ -69,10 +69,7 @@ public function meidaDescription($mediaid,$description,$dbconn){
 }
 
 
-public function mediaUpload($_files, $dbconn){
-
-include's3/image_check.php';
-include's3/s3_config.php';
+public function mediaUpload($_files, $dbconn,$s3){
 
 $len = count($_files);
 $msg='';
