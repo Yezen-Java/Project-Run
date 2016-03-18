@@ -32,25 +32,26 @@ include'database/LoadDataOnstart.php';
 
 $_files = $_FILES['file'];
 
-$checkUpload = uploadMedia($_files,$dbconn,$s3);
+$checkUpload = uploadMedia();
 
-$loadDataUploaded = new LoadOnStart();
-$htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
 
 if($checkUpload){
 
+$loadDataUploaded = new LoadOnStart();
+$htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
 echo $htmlTageOuput;
-
-
 }else{
-
   echo false;
-
 }
 
 
 
-function uploadMedia($_files,$dbconn,$s3){
+function uploadMedia(){
+
+global $dbconn;
+global $s3;
+global $_files;
+
 $len = count($_files['file']['name']);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3,$4)";
@@ -86,36 +87,35 @@ for ($i = 0; $i < $len; $i++){
 
         }
   else{
-    echo false;
 
-    return;
+    return false;
 
   }
 
 }else{
 
-   echo false;
 
-    return;
+    return false;
 }
 
 }else{
 
-  echo false;
 
-    return;
+    return false;
 
 }
 
 }else{
-   echo false;
 
-    return;
+    return false;
 }
 
  sleep(2);
 
 }
+
+
+return true;
 
 }
 
