@@ -65,6 +65,7 @@ class TourClass
 		$results = pg_prepare($dbconn,"query",$Query);
 		$results = pg_execute($dbconn,"query",array($NewTourName,$TourId));
 		if (pg_affected_rows($results)>0) {
+			
 			return true;
 		}
 		return false;

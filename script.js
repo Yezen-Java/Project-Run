@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
- 
-
- 
-
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -477,11 +473,12 @@ function getCheckedBoxes(element) {
 
 function deleteOnClick(){
   var arrayofvalues = getCheckedBoxes('checkboxlocation');
-
+  var arrayChecked = [];
   console.log(arrayofvalues);
   if (arrayofvalues != null){
-    console.log("It didn't work!");
-    $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+    console.log("It did work!");
+    arrayChecked = arrayofvalues;
+    $.post('database/DeleteLocation.php',{LocationIds:arrayChecked.join("::")}, function(data){
         if(data == false){
           alert("error");
         }else{
