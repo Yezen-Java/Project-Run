@@ -142,6 +142,7 @@ $LoadOnStart = new LoadOnStart();
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
           <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in" id="logoutButton"></span> Login</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
