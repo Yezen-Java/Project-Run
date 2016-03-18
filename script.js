@@ -511,7 +511,6 @@ function getCheckedBoxes(element) {
           $('.locationManagerClass:checked').each(function() {
             arrayofvalues.push($(this).val());
           });
-          $('.locationManagerClass').toggle('slow');
 
           console.log(arrayofvalues);
           // if (locationCheck == false){
@@ -546,9 +545,14 @@ function getCheckedBoxes(element) {
   });
 
   $("#deleteLocationManager").click(function(){
-    console.log($('.locationManagerClass'));
+    var arrayofvalues = [];
     $('.locationManagerClass').each(function(index,obj){
+
       $(obj).toggle();
+      if($(obj).is(':visible')) {
+        arrayofvalues.push($(this).val());
+      }
+      console.log(arrayofvalues);
     });
     
   });
