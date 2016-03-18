@@ -77,7 +77,7 @@ $LoadOnStart = new LoadOnStart();
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
           <div id="pointersDiv">Locations</div>
           <div class="btn-group" role="group" aria-label="Basic example" id="buttonGroupPointer">
-            <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#locationManagerModel"><strong>Add</strong></button>
+            <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#EditlocationModel"><strong>Add</strong></button>
           </div>    
         </nav>
       </div>
@@ -263,7 +263,7 @@ $LoadOnStart = new LoadOnStart();
   </div>
   <!--End of edit tour dialogue-->
 
-<div class="modal fade" id="locationManagerModel" role="dialog">
+<div class="modal fade" id="EditlocationModel" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -278,7 +278,6 @@ $LoadOnStart = new LoadOnStart();
  
       </div>
         <div class="modal-footer">
-          <button type ="button" class="btn btn-default" onclick = "DeleteCircle()">Delete All</button>
           <button type="button" class="btn btn-default" onclick="saveLocations()">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>

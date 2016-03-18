@@ -98,7 +98,7 @@ $(document).ready(function(){
     //   });
     // }));
 
-    $('#locationManagerModel').on('show.bs.modal', function () {
+    $('#EditlocationModel').on('show.bs.modal', function () {
 
   // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
   // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
