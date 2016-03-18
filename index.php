@@ -141,7 +141,7 @@ $LoadOnStart = new LoadOnStart();
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-          <li><a href="#" id="location-manager" data-toggle="modal">Location Manager</a></li>
+          <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -279,6 +279,30 @@ $LoadOnStart = new LoadOnStart();
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" onclick="saveLocations()">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="modal fade" id="LocationMangerModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Locations</h4>
+        </div>
+      <div class="modal-body">
+      <h1>Edit Locations</h1>
+      <?php 
+     $LoadOnStart->getLocationList();
+          ?>
+ 
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="">Delete</button>
+          <button type="button" class="btn btn-default" onclick="">Edit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
