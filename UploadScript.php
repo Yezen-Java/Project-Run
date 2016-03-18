@@ -3,9 +3,10 @@
 
 include'database/Classes/MediaManagerClass.php';
 include'database/Connect.php';
-include'LoadDataOnstart.php';
+include'database/LoadDataOnstart.php';
 
-$_files = $_FILES['file']; 
+$_files = $_FILES['file'];
+
 $uploadmedia = new MediaManager();
 $checkUpload = $uploadmedia->mediaUpload($_files,$dbconn);
 $loadDataUploaded = new LoadOnStart();
