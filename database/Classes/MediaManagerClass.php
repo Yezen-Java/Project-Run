@@ -69,7 +69,7 @@ public function meidaDescription($mediaid,$description,$dbconn){
 }
 
 
-public function mediaUpload($_files, $dbconn,$s3){
+public function mediaUpload($files, $dbconn,$s3){
 
 $len = count($_files);
 $msg='';
@@ -79,9 +79,9 @@ $sizeLimit = 2097152;
 
 for ($i = 0; $i < $len; $i++){
 
-  $tmp = $_files['tmp_name'][$i];
-  $name = $_files['file']['name'][$i];
-  $size = $_files['file']['size'][$i];
+  $tmp = $files['tmp_name'][$i];
+  $name = $files['file']['name'][$i];
+  $size = $files['file']['size'][$i];
   $ext = getExtension($name);
   $actual_media_name = time().".".$ext;
   $MediaType = '';
@@ -103,12 +103,8 @@ for ($i = 0; $i < $len; $i++){
               $nameData = $name;
               $nameLink = $s3file;
 
-                if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
+              pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType));
 
-                }else{
-                
-                return flase;
-                }
         }
   else{
      
@@ -122,6 +118,7 @@ for ($i = 0; $i < $len; $i++){
 
 }else{
 
+	return false;
 }
 
 }else{

@@ -10,7 +10,7 @@ include'database/Classes/s3/s3_config.php';
 
 
 $uploadmedia = new MediaManager();
-$checkUpload = $uploadmedia->mediaUpload($_FILES['file']['name'],$dbconn,$s3);
+$checkUpload = $uploadmedia->mediaUpload($_FILES['file'],$dbconn,$s3);
 $loadDataUploaded = new LoadOnStart();
 $htmlTageOuput = $loadDataUploaded->admediaResultsFucntion();
 
