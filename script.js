@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
-  $(".locationsName").dblclick(function(){
-    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-  });
+ 
 
   $(".editManagerBox").focusout(function(){
     $(this).hide().siblings(".locationsName").show().text($(this).val());
@@ -531,6 +529,11 @@ function deleteOnClick(){
         }
       });
     }
+
+
+     function dbClickEdit(obj){
+          $(obj).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+     }
 
       
 

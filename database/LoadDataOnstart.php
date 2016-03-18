@@ -163,7 +163,7 @@ if ($MediaSelect) {
            $htmlTag = $htmlTag."
           <li value='$id'>
             <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'/> 
-            <p class='locationsName'>$name</p>
+            <p class='locationsName' ondblclick='dbClickEdit(this);'>$name</p>
             <input type='text' class='editManagerBox' style='display:none'/>
             
           </li>";
