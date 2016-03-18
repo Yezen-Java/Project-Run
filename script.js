@@ -525,11 +525,21 @@ function getCheckedBoxes(element) {
           }else if (locationCheck == true){
             $(".locationManagerClass").addClass("hidden");
             locationCheck = false;
+                $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+                if(data == false){
+                  alert("error");
+                }else{
+                    $('#locationManagerDiv').html(data);
+                }
+               });
             return;
           } else {
             console.log("It didn't work!")
           }
       }
+
+
+
 
 
 

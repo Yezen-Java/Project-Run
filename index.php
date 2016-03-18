@@ -291,12 +291,12 @@ $LoadOnStart = new LoadOnStart();
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1>Location Manager</h1>
           <h4 class="modal-title">Locations</h4>
         </div>
-      <div class="modal-body">
-      <h1>Location Manager</h1>
+      <div id="locationManagerDiv" class="modal-body">
       <?php 
-     $LoadOnStart->getLocationManager();
+    echo $LoadOnStart->getLocationManager();
       ?>
       </div>
         <div class="modal-footer">
