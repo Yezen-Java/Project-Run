@@ -387,7 +387,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
 function appendMediaToLocaiton(value){
 var locationID = value;
-console.log("test "+locationID)
+console.log("test "+locationID);
   $(function() {
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
@@ -452,7 +452,7 @@ function TourEditName(){
           alert("error");
         }else{
             $('#buttonsListTours').html(data);
-            $('#buttonsListTours').reload();
+            location.reload();
         }
        });
 } 
