@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  $(".locationManagerClass").addClass("hidden");
+
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
