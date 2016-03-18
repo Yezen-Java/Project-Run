@@ -1,9 +1,9 @@
 <?php
 
 include'database/LoadDataOnstart.php';
-include('image_check.php');
+include('s3/image_check.php');
 include('database/Connect.php');
-include('s3_config.php');
+include('s3/s3_config.php');
 
 
 $loadData = new LoadOnStart();

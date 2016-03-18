@@ -4,8 +4,8 @@ include'database/LoadDataOnstart.php';
 
 $arrayMeida = $_POST['items']; 
 
-include 's3_config.php';
-include 'database/Connect.php';
+include 's3/s3_config.php';
+include 's3/database/Connect.php';
 
 
 $loadData = new LoadOnStart();
