@@ -141,6 +141,7 @@ $LoadOnStart = new LoadOnStart();
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
+          <li><a href="#" id="location-manager" data-toggle="modal">Location Manager</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
