@@ -1,15 +1,12 @@
 $(document).ready(function(){
 
-  $("#deleteLocationManager").click(function(){
-    console.log("works");
+$("#deleteLocationManager").click(function(){
+    console.log($('.locationManagerClass'));
     $('.locationManagerClass').each(function(index,obj){
       $(obj).toggle();
     });
     
   });
-
-  $(".locationManagerClass").addClass("hidden");
-
 
     $('#search').keyup(function(){
         
