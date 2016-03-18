@@ -24,7 +24,7 @@ $('.locationManagerClass').each(function(index,obj){
         arrayofvalues.push($(this).val());
       });
 
-    console.log(arrayofvalues.size);
+    console.log(arrayofvalues);
 
     if (arrayofvalues != []){
       $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
@@ -35,6 +35,7 @@ $('.locationManagerClass').each(function(index,obj){
             $('#locationManagerDiv').html(data);
         }
        });
+      $(obj).toggle(false);
     }
 
     
