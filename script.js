@@ -13,6 +13,24 @@ $('.locationManagerClass').each(function(index,obj){
   });
 
 
+   $("#deleteLocationManager").click(function(){
+    var arrayofvalues = [];
+    $('.locationManagerClass').each(function(index,obj){
+
+      $(obj).toggle();
+    });
+
+     $('.locationManagerClass:checked').each(function() {
+        arrayofvalues.push($(this).val());
+      });
+
+           console.log(arrayofvalues);
+
+    
+  });
+
+
+
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -546,21 +564,6 @@ function getCheckedBoxes(element) {
 
 
 
-  $("#deleteLocationManager").click(function(){
-    var arrayofvalues = [];
-    $('.locationManagerClass').each(function(index,obj){
-
-      $(obj).toggle();
-    });
-
-     $('.locationManagerClass:checked').each(function() {
-        arrayofvalues.push($(this).val());
-      });
-
-           console.log(arrayofvalues);
-
-    
-  });
 
 
 
