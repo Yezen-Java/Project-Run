@@ -3,18 +3,18 @@ $(document).ready(function(){
       var dInput = this.value;
       var listItems = $(".searching li");
       $(".searching").empty();
+      if (dInput.length > 0){
+          console.log("works");
+          $(".searching").append(listItems);
+      } 
 
       $(listItems).each(function(index,object){
-        if ($('#search').val().trim().length > 0){
-          console.log("works");
-          $(".searching").append($(object));
-        } else {
           $(object).find("textarea");
           var description = ($(object).find("textarea")).text();
           if (description.indexOf(dInput) > -1){
             $(".searching").append($(object));
           } 
-        }   
+           
       });
 
       
