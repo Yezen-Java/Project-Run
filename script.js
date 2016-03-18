@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-    $(".locationsName").dblclick(function(){
-      $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-    });
+  $(".locationsName").dblclick(function(){
+    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+  });
 
-    $(".editManagerBox").focusout(function(){
-      $(this).hide().siblings(".locationsName").show().text($(this).val());
-    });
+  $(".editManagerBox").focusout(function(){
+    $(this).hide().siblings(".locationsName").show().text($(this).val());
+  });
 
     $('#search').keyup(function(){
         
@@ -28,7 +28,7 @@ $(document).ready(function(){
     });
 
     $(".tourButtons").each(function(index,object){
-      $(object).live('dblclick', function(e){ 
+      $(object).dblclick(function () {
         $('#editTourDialogue').modal('toggle');
         $('#editTourDialogue').attr("value",$(object).attr("value"));
         // console.log($('#editTourDialogue').attr('value'));
@@ -79,6 +79,7 @@ $(document).ready(function(){
         error: function(){}           
       });
     }));
+
     // $("#deleteImage").on('submit',(function(e){
     //   e.preventDefault();
     //   $.ajax({
@@ -451,11 +452,9 @@ function TourEditName(){
           alert("error");
         }else{
             $('#buttonsListTours').html(data);
-            
+            window.location.reload();
         }
        });
-
-     $.ready();
 } 
 
 
@@ -466,30 +465,28 @@ function getCheckedBoxes(element) {
   for (var i=0; i<checkboxes.length; i++) {
      // And stick the checked ones onto an array...
      if (checkboxes[i].checked) {
-        checkboxesChecked.push(checkboxes[i].value);//made it get value
+        checkboxesChecked.push(checkboxes[i]);
      }
   }
   // Return the array if it is non-empty, or null
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
-/*IF YOU TOUCH THE DELETEONLICK() METHOD, YOU WILL BURN IN HELL WITH SHAYTAN.*/
 function deleteOnClick(){
-
-  var arrayofvalues = getCheckedBoxes("checkboxlocation");
-
+  var arrayofvalues = [];
+  $('.locationManagerClass:checked').each(function() {
+      arrayofvalues.push($(this).val());
+  });
   console.log(arrayofvalues);
-
-  if (arrayofvalues != null){
+  if (arrayofvalues.length > 0){
     console.log("It didn't work!");
-        $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
-          if(data == false){
-            alert("error");
-          }else{
-            alert("Locations were deleted");
-              $('#LocationManagerDiv').html(data);
-              jQuery.ready();
-          }
+    $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
+        if(data == false){
+          alert("error");
+        }else{
+          alert("Locations where deleted");
+            $('#locationManagerDiv').html(data);
+        }
        });
   }
 }
