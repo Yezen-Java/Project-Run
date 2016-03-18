@@ -476,12 +476,10 @@ function deleteOnClick(){
   var arrayofvalues = [];
 
   $('.locationManagerClass:checked').each(function() {
-      arrayofvalues.push($(this).val());
+      arrayofvalues.push($(this).attr("value"));
       console.log(arrayofvalues);
   });
 
-
-  console.log(arrayofvalues);
   if (arrayofvalues.length > 0){
     console.log("It didn't work!");
     $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
