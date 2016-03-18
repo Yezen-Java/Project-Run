@@ -294,7 +294,7 @@ $LoadOnStart = new LoadOnStart();
           <h4 class="modal-title">Locations</h4>
         </div>
       <div class="modal-body">
-      <h1>Edit Locations</h1>
+      <h1>Location Manager</h1>
       <?php 
      $LoadOnStart->getLocationManager();
       ?>

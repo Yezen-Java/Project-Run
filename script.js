@@ -495,29 +495,27 @@ function getCheckedBoxes(element) {
         }
       });
     }
+      var locationCheck = false;
+       $("#deleteLocationManager").click(function(){
+          var arrayofvalues = [];
 
-      var locationCheck;
+          $('.locationManagerClass:checked').each(function() {
+            arrayofvalues.push($(this).val());
+          });
 
-     $("#deleteLocationManager").click(function(){
-        var arrayofvalues = [];
-
-        $('.locationManagerClass:checked').each(function() {
-          arrayofvalues.push($(this).val());
+          console.log(arrayofvalues);
+          if (locationCheck == false){
+            $(".locationManagerClass").show("slow");
+            locationCheck = true;
+            return;
+          }else if (locationCheck == true && arrayofvalues == null){
+            $(".locationManagerClass").hide("slow");
+            locationCheck = false;
+            return;
+          } else {
+            console.log("It didn't work!")
+          }
         });
-
-        console.log(arrayofvalues);
-        if (locationCheck == false){
-          $(".locationManagerClass").show("slow");
-          locationCheck = true;
-          return;
-        }else if (locationCheck == true && arrayofvalues == null){
-          $(".locationManagerClass").hide("slow");
-          locationCheck = false;
-          return;
-        } else {
-          console.log("It didn't work!")
-        }
-      });
 
 
 
