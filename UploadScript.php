@@ -50,7 +50,7 @@ echo $htmlTageOuput;
 
 
 
-function uploadMedia($_files,$dbconn){
+function uploadMedia($_files,$dbconn,$s3){
 $len = count($_files['file']['name']);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3,$4)";
