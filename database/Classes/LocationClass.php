@@ -70,10 +70,10 @@ class LocationClass
 		foreach ($arrayLocations as $id) {
 			$DeleteQuery = pg_execute($dbconn,"deletequery", array($id));
 	    }
-	    if (pg_affected_rows($DeleteQuery)==0) {
-	    	return false;
+	    if (pg_affected_rows($DeleteQuery)>0) {
+	    	return true;
 	    }
-	    return true;
+	    return false;
 
 
 	}
