@@ -190,7 +190,7 @@ $LoadOnStart = new LoadOnStart();
                 <div id= "fileManagerDiv" class="modal-body">
                     <div class = "list-group" id="modalc">
                         <?php  
-                          $LoadOnStart->mediaResultsFucntion();
+                         echo $LoadOnStart->mediaResultsFucntion();
                         ?>
                     </div>
                 </div>
