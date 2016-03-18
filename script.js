@@ -512,7 +512,7 @@ function getCheckedBoxes(element) {
               arrayofvalues.push($(this).val());
           });
           console.log(arrayofvalues);
-          if (array.length > 0){
+          if (arrayofvalues.length > 0){
             console.log("It didn't work!");
             $.post('database/DeleteLocation.php',{LocationIds:arrayofvalues.join("::")}, function(data){
                 if(data == false){
