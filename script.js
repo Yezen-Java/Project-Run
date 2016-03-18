@@ -1,13 +1,4 @@
 $(document).ready(function(){
-
-  $(".locationsName").dblclick(function(){
-    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
-  });
-
-  $(".editManagerBox").focusout(function(){
-    $(this).hide().siblings(".locationsName").show().text($(this).val());
-  });
-
     $('#search').keyup(function(){
         
         var searchText = $(this).val();
@@ -524,6 +515,13 @@ function deleteOnClick(){
         }
       });
     }
+      $(".locationsName").dblclick(function(){
+    $(this).hide().siblings(".editManagerBox").show().val($(this).text()).focus();
+  });
+
+  $(".editManagerBox").focusout(function(){
+    $(this).hide().siblings(".locationsName").show().text($(this).val());
+  });
 
       
 
