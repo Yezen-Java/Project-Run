@@ -509,11 +509,11 @@ function getCheckedBoxes(element) {
 
           console.log(arrayofvalues);
           if (locationCheck == false){
-            $(".locationManagerClass").show("slow");
+            $(".locationManagerClass").removeClass("hidden");
             locationCheck = true;
             return;
           }else if (locationCheck == true && arrayofvalues == null){
-            $(".locationManagerClass").removeClass("hidden");
+            
             locationCheck = false;
             return;
           } else {
