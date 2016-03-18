@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $("#deleteLocationManager").click(function(){
+    $('.locationManagerClass').toggle('slow');
+  });
+
   $(".locationManagerClass").addClass("hidden");
 
 
@@ -510,7 +514,7 @@ function getCheckedBoxes(element) {
             arrayofvalues.push($(this).val());
           });
           $('.locationManagerClass').toggle('slow');
-          
+
           console.log(arrayofvalues);
           // if (locationCheck == false){
           //   $(".locationManagerClass").removeClass("hidden");
