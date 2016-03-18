@@ -5,6 +5,10 @@ include('image_check.php');
 include('database/Connect.php');
 include('s3_config.php');
 
+
+$loadData = new LoadOnStart();
+
+
 $len = count($_FILES['file']['name']);
 $msg='';
 $query = "INSERT into media (media_name,link,ext_name,media_type) values ($1,$2,$3,$4)";
@@ -41,7 +45,6 @@ for ($i = 0; $i < $len; $i++){
 
                 if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
-                  $loadData = new LoadDataOnstart();
                   echo $loadData->mediaResultsFucntion();;
                 }else{
                   echo "Faild To access database";
