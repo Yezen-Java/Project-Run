@@ -485,7 +485,7 @@ function deleteOnClick(){
             alert("error");
           }else{
             alert("Locations were deleted");
-              $('#locationManagerDiv').html(data);
+              $('#LocationManagerDiv').html(data);
           }
        });
   }
