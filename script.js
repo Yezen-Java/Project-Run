@@ -1,27 +1,4 @@
 $(document).ready(function(){
-    // var OriganalListItems = $(".searching li");
-
-    // $("#search").on("input", function() {
-    //   var dInput = this.value;
-    //   var listItems = $(".searching li");
-    //   var check = document.getElementById("search").value;
-    //   $(".searching").empty();
-    //   if (check == ''){
-    //       $(OriganalListItems).each(function(index,object){
-    //           $(".searching").append($(object));
-    //       });
-    //   }else{ 
-    //     $(listItems).each(function(index,object){
-    //         $(object).find("textarea");
-    //         var description = ($(object).find("textarea")).text();
-    //         if (description.indexOf(dInput) > -1){
-    //           $(".searching").append($(object));
-    //         }   
-    //     });
-    //   }
-      
-    // });
-
     $('#search').keyup(function(){
         
         var searchText = $(this).val();

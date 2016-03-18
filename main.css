@@ -12,6 +12,11 @@ html, body {
 
 
 }
+
+#search{
+  margin: 10px;
+}
+
 .circleButtonX:hover{
 	
 	background-color: red;
