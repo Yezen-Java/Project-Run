@@ -477,7 +477,12 @@ function deleteOnClick(){
   console.log(arrayofvalues);
   if (arrayofvalues != null){
     console.log("It did work!");
-    arrayChecked = arrayofvalues;
+    
+    for (var i = 0; i < arrayofvalues.length; i++) {
+      arrayChecked.push(arrayofvalues[i]);
+    }
+  console.log(arrayChecked);
+
     $.post('database/DeleteLocation.php',{LocationIds:arrayChecked.join("::")}, function(data){
         if(data == false){
           alert("error");
