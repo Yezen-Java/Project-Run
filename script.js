@@ -35,7 +35,7 @@ $('.locationManagerClass').each(function(index,obj){
             $('#locationManagerDiv').html(data);
         }
        });
-      $(obj).toggle(false);
+      $(obj).toggle(true);
     }
 
     
