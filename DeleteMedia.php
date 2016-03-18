@@ -37,7 +37,7 @@ for ($i=0; $i < $numberOfMedia; $i++) {
 	}else{
 		echo false;
 	}
-	sleep(0.5);
+	sleep(1);
 }
 
 
