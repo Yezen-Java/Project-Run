@@ -1,10 +1,11 @@
 $(document).ready(function(){
     $("#search").on("input", function() {
       var dInput = this.value;
-      console.log($("#search").val());
       var listItems = $(".searching li");
       $(".searching").empty();
-      
+      if (dInput == ""){
+        $(".searching").append(listItems);
+      }
       $(listItems).each(function(index,object){
         $(object).find("textarea");
         var description = ($(object).find("textarea")).text();
