@@ -162,9 +162,9 @@ if ($MediaSelect) {
           echo"
           <li value='$id'>
             <input type='checkbox' name='checkboxmedia' class='chkbox locationManagerClass' value ='$id'> 
-            <input type='text' class='editManagerBox' style='display:none'/> 
             <p class='locationsName'>$name</p>
-          </li>";
+          </li><input type='text' class='editManagerBox' style='display:none'/> ";
+          
           }
           echo"</ul>";
       }else{
