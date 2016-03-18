@@ -2,9 +2,7 @@ $(document).ready(function(){
 
  
 
-  $(".editManagerBox").focusout(function(){
-    $(this).hide().siblings(".locationsName").show().text($(this).val());
-  });
+ 
 
     $('#search').keyup(function(){
         
@@ -534,6 +532,10 @@ function deleteOnClick(){
      function dbClickEdit(obj){
           $(obj).hide().siblings(".editManagerBox").show().val($(obj).text()).focus();
      }
+
+      function fcEdit(obj){
+          $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+      }
 
       
 
