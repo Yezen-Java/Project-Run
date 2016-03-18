@@ -16,11 +16,8 @@ $(document).ready(function(){
           var description = ($(object).find("textarea")).text();
           if (description.indexOf(dInput) > -1){
             $(".searching").append($(object));
-          } 
-           
+          }   
       });
-    }
-
       
     });
 
