@@ -483,8 +483,7 @@ var yourArray = [];
         if(data == false){
           alert("error");
         }else{
-          alert(data);
-            $('#locationManagerDiv').html(data);
+            $('#LocationManagerDiv').html(data);
         }
        });
   }
