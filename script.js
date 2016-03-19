@@ -424,12 +424,13 @@ function saveLocations(){
   var array = [];
   for (var i = 0; i < checked.length; i++) {
     console.log("Checked "+checked[i]);
-    array.push(checked[i].value);
+    array.push(checked[i]);
   }
 
 
 var touridSelected = TourCodeSelected;
 
+if(array !=null){
     $(function() {
 
        $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
@@ -442,6 +443,10 @@ var touridSelected = TourCodeSelected;
        });
        return false;
   });
+
+}else{
+  alert('no Locations where Selected');
+}
 
 }
 
