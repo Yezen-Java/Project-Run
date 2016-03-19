@@ -551,12 +551,12 @@ var yourArray = [];
         console.log(LocationIdNumber);
         console.log(value);
 
-   $.post('database/DeleteMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
+   $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
     if(data==true){
          $("li").remove("."+value);
          addLocationRes();
        }else{
-        console.log('Error, function : deleteMediaLi ');
+        console.log('Error, function : deleteMediaLi');
        }
         });
 
