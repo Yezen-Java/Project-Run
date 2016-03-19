@@ -365,8 +365,8 @@ video{
 }
 #modifyAccountBody{
   overflow-y: scroll;
-  width: auto;
-  max-width: auto;
+  width: 250px;
+  max-width: 250px;
   height: 300px;
   max-height: 300px;
 }
