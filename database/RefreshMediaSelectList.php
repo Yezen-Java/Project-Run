@@ -11,7 +11,4 @@ $refreshList = $LoadDataOnstart->MediaSelectFucntion();
 
 echo $refreshList;
 
-
-
-
 ?>

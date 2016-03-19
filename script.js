@@ -142,7 +142,6 @@ $(document).ready(function(){
           $('#modalc').html(data);
           $(".progress").addClass("hidden"); 
                 check = false;
-                console.log("deleteMedia");
                 refreshMediaList();
         }
         },
@@ -539,12 +538,12 @@ var yourArray = [];
       }
 
       function refreshMediaList(){
-        console.log("working");
-        //  $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
-        //   console.log(data);
-        //   var select = $('#MediaSelectId');
-        //   select.empty().append(data);
-        // }); 
+        
+         $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
+          alert(data);
+          var select = $('#MediaSelectId');
+          select.empty().append(data);
+        }); 
       }
 
       
