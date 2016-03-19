@@ -242,8 +242,8 @@ $LoadOnStart = new LoadOnStart();
         </div>
     	<div class="modal-body">
 			<h1>Upload Files</h1>
-        	<ul id ="listMedia">
-        	</ul>
+        	<dl id ="listMedia">
+        	</dl>
     	</div>
         <div class="modal-footer">
 

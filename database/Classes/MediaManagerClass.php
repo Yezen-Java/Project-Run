@@ -43,7 +43,7 @@ $getLocationMedia = pg_query("SELECT * From location_res, media where location_r
                $media_name = $rows['media_name'];
 
 
-        $getContent = $getContent."<li class ='$mediaId' value ='$mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia' value ='$mediaId' onclick='deleteMediaLi(this.value);'></button> <a>$media_name</a> </li>";
+        $getContent = $getContent."<dt class ='$mediaId' value ='$mediaId'><button class='glyphicon glyphicon-trash' id='trashBoxMedia' value ='$mediaId' onclick='deleteMediaLi(this.value);'></button> <a>$media_name</a> </dt>";
 	}
 }else{
 	return $getContent;

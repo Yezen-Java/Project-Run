@@ -180,7 +180,7 @@ var LocationIdNumber ='';
 function Save(){
 
 var array = [];
- $('#listMedia li').each(function(i, li) {
+ $('#listMedia dt').each(function(i, li) {
   array.push($(li).attr('class'));
 });
 for (var i = 0; i < array.length; i++) {
@@ -313,7 +313,7 @@ function createTourDetails(){
 function addLocationRes(value) {
    LocationIdNumber = value;
   console.log("test value "+ value);
-  $("#myModal ul").empty();
+  $("#myModal dt").empty();
   console.log("works");
  // reorder();
   $("#myModal").modal();
@@ -354,8 +354,7 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-        
-
+      
        });
 
        return false;
@@ -372,7 +371,7 @@ function addmeidaFromSelectList(){
     console.log(selectedValue);
     console.log(selectedText);
 
-    $('#listMedia').append('<li class='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
+    $('#listMedia').append('<dt class='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </dt>');
     $('#listMedia').sortable();
 
 
