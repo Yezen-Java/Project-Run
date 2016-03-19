@@ -1,7 +1,7 @@
 <?php
 
 include 'Connect.php';
-include 'database/MediaManagerClass.php';
+include 'Classes/MediaManagerClass.php';
 
 
 $locationId = $_POST['LocationId'];
