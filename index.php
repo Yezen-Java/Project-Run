@@ -152,7 +152,7 @@ $LoadOnStart = new LoadOnStart();
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
             </ul>
-             <li id="logoutButton"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+             <li id="logoutButton"><a href="#logoutModal" id="logout-modal-button" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
           </li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -356,6 +356,15 @@ $LoadOnStart = new LoadOnStart();
       
     </div>
   </div>
+  <div class="modal bs-example-modal-sm" id="logoutModal"tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
+      <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+      <div class="modal-footer"><a href="javascript:;" class="btn btn-primary btn-block">Logout</a></div>
+    </div>
+  </div>
+</div>
   <!--QUnit test results are displayed here!-->
   	<div id="qunit"></div>
     <div id="qunit-fixture"></div>
