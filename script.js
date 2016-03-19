@@ -220,7 +220,7 @@ var LocationIdNumber ='';
 function Save(){
 
 var array = [];
- $('.sortable li').each(function(i, li) {
+ $('#listMedia li').each(function(i, li) {
   array.push($(li).attr('class'));
 });
 for (var i = 0; i < array.length; i++) {
@@ -413,7 +413,7 @@ function addmeidaFromSelectList(){
     console.log(selectedText);
 
     $('#listMedia').append('<li class='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
-    $('.sortable').sortable();
+    $('#listMedia').sortable();
 
 
 }
