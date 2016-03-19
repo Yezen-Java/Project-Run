@@ -291,10 +291,8 @@ $LoadOnStart = new LoadOnStart();
         <div class="modal-body" id="modifyAccountBody">
           <div class="container" id="accountManagerModalCss">
             <div class='input-group'>
-              <span class='input-group-addon'> 
-                <input type="checkbox" checked data-toggle="toggle">
-              </span>
-              <p>MR OLMEZ</p>
+              <input type="checkbox" checked data-toggle="toggle">
+              <p class="user-names">MR OLMEZ</p>
             </div>
           </div>
         </div>
