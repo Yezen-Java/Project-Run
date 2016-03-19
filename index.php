@@ -289,8 +289,17 @@ $LoadOnStart = new LoadOnStart();
         </div>
 
         <div class="modal-body" id="modifyAccountBody">
-          <div class="container" style="overflow-y: scroll;">
+          <div class="container" id="accountManagerModalCss">
             <ul>
+              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
               <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
               <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
               <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>

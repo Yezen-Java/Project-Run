@@ -363,6 +363,13 @@ video{
 #managerModeBtnGroup{
   margin: 15px;
 }
+#accountManagerModalCss{
+  overflow-y: scroll;
+  width: 250px;
+  max-width: 250px;
+  height: 300px;
+  max-height: 300px;
+}
 
 
 
