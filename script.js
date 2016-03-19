@@ -221,7 +221,7 @@ function Save(){
 
 var array = [];
  $('.sortable li').each(function(i, li) {
-  array.push($(li).attr('value'));
+  array.push($(li).attr('class'));
 });
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
