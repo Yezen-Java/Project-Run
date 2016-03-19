@@ -477,7 +477,7 @@ var yourArray = [];
   $("input:checkbox[name=checkboxlocation]:checked").each(function(){
     yourArray.push($(this).val());
 });
-  if (arrayofvalues != null){
+  if (yourArray != null){
 
     $.post('database/DeleteLocation.php',{LocationIds:yourArray.join(".")}, function(data){
         if(data == false){
