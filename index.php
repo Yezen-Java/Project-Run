@@ -290,7 +290,7 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="modifyAccountBody">
           <div class="container" id="accountManagerModalCss">
-            <table style="width:100%">
+            <table style="width:auto">
               <tr>
                 <td><p>ACCOUNT ON</p></td>
                 <td><p>USER NAME</p></td>
