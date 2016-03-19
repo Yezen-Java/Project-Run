@@ -186,7 +186,7 @@ var array = [];
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
 };
-
+$('#listMedia').removeClass(".sortable");
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
@@ -195,7 +195,6 @@ for (var i = 0; i < array.length; i++) {
          }else{
           alert("error, Please try Again");
          }
-         $('#listMedia').removeClass(".sortable");
        });
        return false;
   });
