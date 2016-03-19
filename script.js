@@ -537,9 +537,10 @@ var yourArray = [];
       }
 
       function refreshMediaList(){
-         $.post('database/RefreshMediaSelectList.php', function(data){
+         $.post('database/RefreshMediaSelectList.php',{}, function(data){
           console.log(data);
-          $('#MediaSelectId').html(data);
+          var select = $('#MediaSelectId');
+          select.empty().append(data);
         }); 
       }
 
