@@ -144,7 +144,6 @@ $LoadOnStart = new LoadOnStart();
           <li><a href="#" id="menu-toggle">Note</a></li>
           <!-- Single button -->
           <li class="dropdown" id="managerModeBtnGroup">
-          
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown">
               Manager  <span class="caret"></span>
            </a>
@@ -152,6 +151,9 @@ $LoadOnStart = new LoadOnStart();
               <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -172,11 +174,9 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="tourTextFields">
           <input type="text" class="form-control" id="tourNameField" placeholder="Name of tour" value="" >
-         
             <div class="hero-unit">
                 <input type="text" class="form-control" id="tourDateField" placeholder="click to show datepicker">
             </div>
-          
           <input type="text" class="form-control" placeholder="Code" id="randomfield" readonly="readonly">
         </div>
 
