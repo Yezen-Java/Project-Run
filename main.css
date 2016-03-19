@@ -369,6 +369,10 @@ video{
   height: 300px;
   max-height: 300px;
 }
+.account-manager-checkbox{
+  margin: 10px;
+  height:10px;
+}
 
 
 
