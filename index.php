@@ -221,9 +221,11 @@ $LoadOnStart = new LoadOnStart();
         <div id="mediaList" class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
+          <select id="MediaSelectId" class="form-control" onchange="addmeidaFromSelectList()">
           <?php
-          $LoadOnStart -> MediaSelectFucntion();
+          echo $LoadOnStart -> MediaSelectFucntion();
           ?>
+          </select>
         </div>
     	<div class="modal-body">
 			<h1>Upload Files</h1>

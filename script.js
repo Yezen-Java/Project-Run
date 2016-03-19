@@ -531,9 +531,8 @@ var yourArray = [];
 
       function fcEdit(obj){
       
-      var testvalue= $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+      $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
-      console.log(testvalue);
 
       }
 

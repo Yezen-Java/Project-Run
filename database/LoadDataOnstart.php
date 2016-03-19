@@ -136,18 +136,17 @@ return $htmlTage;
 }
 
 public function MediaSelectFucntion(){
+  $htmltag = '';
 $MediaSelect = pg_query("SELECT * from media");
-
 if ($MediaSelect) {
 	# code...
-	echo "<select id='MediaSelectId' class='form-control' onchange='addmeidaFromSelectList();'>";
         while($rows = pg_fetch_array($MediaSelect)){
         $mediaid = $rows['mediaid'];
         $mediaName = $rows['media_name'];
-        echo "<option id='option' value='$mediaid'>$mediaName</option>";
+        $htmltag=$htmltag."<option id='option' value='$mediaid'>$mediaName</option>";
     }
-    echo "</select>";
 }
+return $htmltag;
 }
 
     public function getLocationManager(){
