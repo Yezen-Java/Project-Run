@@ -73,7 +73,7 @@ $LoadOnStart = new LoadOnStart();
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#" id="menu-toggle">Note</a></li>
-      <li class="dropdown"><a hret="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
           <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
