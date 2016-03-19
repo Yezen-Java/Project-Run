@@ -155,13 +155,6 @@ $(document).ready(function(){
 //         $("#file_manager_dialogue").modal('show');
 //     });
 
-
-$("#pointer1").click(function(){
-  reorder();
-  $("#myModal").modal('show');
-  $('#listMedia').sortable();
-});
-
 function EditTourName(value,name){
   $('#editTourDialogue').modal('toggle');
   $('#editTourDialogue').attr("value",value);
@@ -349,19 +342,6 @@ function createTourDetails(){
   createTour(tourName);
 }
 //this function open the file model for specific locations.
-
-function addLocationRes(value) {
-   LocationIdNumber = value;
-  console.log("test value "+ value);
-  $("#myModal ul").empty();
-  console.log("works");
- // reorder();
-  $("#myModal").modal();
-  $('#listMedia').sortable();
-
-  appendMediaToLocaiton(value);
-}
-
 
 function addLocations(){
 var  selectedTourId = TourCodeSelected;
