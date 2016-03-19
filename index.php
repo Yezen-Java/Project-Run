@@ -67,6 +67,9 @@ $LoadOnStart = new LoadOnStart();
 
 <body onload="myFunction()">
 
+<!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
+<div id="wrapperLeft"> 
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -84,9 +87,6 @@ $LoadOnStart = new LoadOnStart();
     </ul>
   </div>
 </nav>
-
-<!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
-<div id="wrapperLeft"> 
 
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
