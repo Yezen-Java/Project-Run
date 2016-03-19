@@ -540,10 +540,15 @@ var yourArray = [];
       function refreshMediaList(){
         
          $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
-          alert(data);
           var select = $('#MediaSelectId');
           select.empty().append(data);
         }); 
+      }
+
+      function deleteMediaLi(value){
+
+         $("li").remove("."+value);
+
       }
 
       
