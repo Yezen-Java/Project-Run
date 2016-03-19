@@ -194,8 +194,8 @@ for (var i = 0; i < array.length; i++) {
          }else{
           alert("error, Please try Again");
          }
-
-         $('#listMedia').sortable('disable');
+         Sortable.create($('#listMedia'));
+         //$('#listMedia').sortable('disable');
        });
        return false;
   });
@@ -354,8 +354,9 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-        $('#listMedia').sortable('enable');
-        $('#listMedia').sortable();
+        // $('#listMedia').sortable('enable');
+        Sortable.create($('#listMedia'));
+        //$('#listMedia').sortable();
        });
 
        return false;
@@ -373,7 +374,9 @@ function addmeidaFromSelectList(){
     console.log(selectedText);
 
     $('#listMedia').append('<dt class='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </dt>');
-    $('#listMedia').sortable();
+    //$('#listMedia').sortable();
+    Sortable.create($('#listMedia'));
+
 
 
 }
