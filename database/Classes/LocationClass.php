@@ -71,7 +71,6 @@ class LocationClass
 
 	    for ($i=0; $i < $le; $i++) { 
 	    	# code...
-	    
 			$DeleteQuery = pg_execute($dbconn,"deletequery", array($arrayLocations[$i]));
 	    
 	    }
