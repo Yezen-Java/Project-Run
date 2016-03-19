@@ -10,7 +10,7 @@ $mediaid = $_POST['MediaId'];
 
 $mediaManager = new MediaManager();
 
-$checkMedia = $mediaManager->deleteMediaOfLocation($locationId,$meidaid,$dbconn);
+$checkMedia = $mediaManager->deleteMediaOfLocation($locationId,$mediaid,$dbconn);
 
 if ($checkMedia) {
 	

@@ -547,18 +547,14 @@ var yourArray = [];
       }
 
       function deleteMediaLi(value){
-
-        console.log(LocationIdNumber);
-        console.log(value);
-
-   $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
-    if(data==true){
-         $("li").remove("."+value);
-         addLocationRes();
-       }else{
-        console.log('Error, function : deleteMediaLi');
-       }
-        });
+        $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
+              if(data==true){
+                $("li").remove("."+value);
+                 addLocationRes();
+              }else{
+                console.log('Error, function : deleteMediaLi');
+              }
+        }); 
 
 
       }
