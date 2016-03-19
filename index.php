@@ -143,8 +143,9 @@ $LoadOnStart = new LoadOnStart();
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <!-- Single button -->
-          <div class="btn-group" id="managerModeBtnGroup">
-            <a hret="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="dropdown" id="managerModeBtnGroup">
+          
+            <a hret="#" class="dropdown-toggle" data-toggle="dropdown">
               Manager  <span class="caret"></span>
            </a>
             <ul class="dropdown-menu">
@@ -152,9 +153,7 @@ $LoadOnStart = new LoadOnStart();
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
             </ul>
-          </div>
-
-          
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
