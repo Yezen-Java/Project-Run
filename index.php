@@ -152,7 +152,7 @@ $LoadOnStart = new LoadOnStart();
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
               <li id="logoutButton"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
             </ul>
           </li>
