@@ -290,20 +290,12 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="modifyAccountBody">
           <div class="container" id="accountManagerModalCss">
-            <ul>
-              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
-              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
-            </ul>
+            <div class='input-group'>
+              <span class='input-group-addon'> 
+                <input type="checkbox" checked data-toggle="toggle">
+              </span>
+              <p>MR OLMEZ</p>
+            </div>
           </div>
         </div>
 
