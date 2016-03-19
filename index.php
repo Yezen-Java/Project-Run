@@ -122,8 +122,6 @@ $LoadOnStart = new LoadOnStart();
         </div>
     </div>
 </div>
-
-<div class="container">
   <nav class="navbar navbar-inverse" id="topNavbarDefault">
     <div class="container-fluid">
       <div class="navbar-header" id="topNavbar">
@@ -147,8 +145,6 @@ $LoadOnStart = new LoadOnStart();
         </ul>
     </div>
   </nav>
-
-  </div>
 
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
