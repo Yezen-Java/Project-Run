@@ -70,6 +70,24 @@ public function meidaDescription($mediaid,$description,$dbconn){
 
 
 
+	public function deleteMediaOfLocation($locationId,$meidaid,$dbconn){
+
+		$query = "DELETE FROM location_res where locationid = $1 and mediaid = $2";
+
+	    $result = pg_prepare($dbconn, "query",$query);
+	    $result = pg_execute($dbconn,"query", array($locationId,$meidaid));
+
+	    if (pg_affected_rows($result)) {
+	    	
+	    	return true;
+	    }
+
+	    return false;
+
+
+	}
+
+
 }
 
 ?>

@@ -349,6 +349,7 @@ function createTourDetails(){
   createTour(tourName);
 }
 //this function open the file model for specific locations.
+
 function addLocationRes(value) {
    LocationIdNumber = value;
   console.log("test value "+ value);
@@ -547,7 +548,15 @@ var yourArray = [];
 
       function deleteMediaLi(value){
 
+   $.post('database/DeleteMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
+    if(data==true){
          $("li").remove("."+value);
+         addLocationRes();
+       }else{
+        console.log('Error, function : deleteMediaLi ');
+       }
+        });
+
 
       }
 
