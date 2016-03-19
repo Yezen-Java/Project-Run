@@ -52,6 +52,7 @@ $LoadOnStart = new LoadOnStart();
 
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="myJquery.js"></script>
     <script src="jquery.sortable.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
@@ -59,10 +60,9 @@ $LoadOnStart = new LoadOnStart();
     <script src="tests.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript">
-
-    </script>
-
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
 </head>
 
 <body onload="myFunction()">
