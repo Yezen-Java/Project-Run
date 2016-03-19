@@ -423,7 +423,7 @@ function saveLocations(){
   // var unchecked = [];
   var array = [];
   for (var i = 0; i < checked.length; i++) {
-    console.log("Checked "+checked[i].value);
+    console.log("Checked "+checked[i]);
     array.push(checked[i].value);
   }
 
