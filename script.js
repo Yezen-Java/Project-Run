@@ -371,8 +371,9 @@ function addmeidaFromSelectList(){
 
     console.log(selectedValue);
     console.log(selectedText);
+    var nullValue = null;
 
-    $('#listMedia').append('<li class='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
+    $('#listMedia').append('<li class='+selectedValue+' value='+nullValue+'><button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
     $('#listMedia').sortable();
 
 
