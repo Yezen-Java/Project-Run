@@ -301,31 +301,7 @@ $LoadOnStart = new LoadOnStart();
               </tr>
               <tr>
                 <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
+                <td style="padding-left:30px;"><p>HAIWAN HASSAN</p></td>
               </tr>
             </table>
           </div>

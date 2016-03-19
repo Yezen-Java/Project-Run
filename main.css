@@ -369,8 +369,8 @@ video{
   height: 300px;
   max-height: 300px;
 }
-.second-row-account-manager{
-  padding-right: 200px;
+.tr{
+  margin: 10px;
 }
 
 
