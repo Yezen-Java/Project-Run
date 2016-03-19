@@ -301,7 +301,7 @@ $LoadOnStart = new LoadOnStart();
               </tr>
               <tr>
                 <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>HAIWAN HASSAN fdajfodfhidosahfodshfoahdsofahdsofdfhaosdifhodasifhodisahfdoais</p></td>
+                <td style="padding-left:30px;"><p>HAfIWAN HASSAN fdajfodfhidosahfodshfoahdsofahdsofdfhaosdifhodasifhodisahfdoais</p></td>
               </tr>
             </table>
           </div>
