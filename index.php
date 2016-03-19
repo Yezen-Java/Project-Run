@@ -36,6 +36,16 @@ $LoadOnStart = new LoadOnStart();
     <script src="jquery.editable.js"></script>
     <script src="datepicker.js"></script>
     <script type="text/javascript" src="jquery.form.min.js"></script>
+    <!-- CDNJS :: Sortable (https://cdnjs.com/) -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
+
+
+<!-- jsDelivr :: Sortable (http://www.jsdelivr.com/) -->
+<script src="//cdn.jsdelivr.net/sortable/1.4.2/Sortable.min.js"></script>
+
+
+<!-- jsDelivr :: Sortable :: Latest (http://www.jsdelivr.com/) -->
+<script src="//cdn.jsdelivr.net/sortable/latest/Sortable.min.js"></script>
 
     <!--CSS LINK-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -53,7 +63,6 @@ $LoadOnStart = new LoadOnStart();
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="myJquery.js"></script>
-    <script src="jquery.sortable.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="js/CreateTour.js"></script>
     <script src="tests.js"></script>
