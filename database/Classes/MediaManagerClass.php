@@ -77,7 +77,7 @@ public function meidaDescription($mediaid,$description,$dbconn){
 	    $result = pg_prepare($dbconn, "query",$query);
 	    $result = pg_execute($dbconn,"query", array($locationId,$meidaid));
 
-	    if (pg_affected_rows($result)) {
+	    if (pg_affected_rows($result)>0) {
 	    	
 	    	return true;
 	    }
