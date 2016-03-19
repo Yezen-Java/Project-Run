@@ -287,9 +287,12 @@ $LoadOnStart = new LoadOnStart();
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Account Manager</h4>
         </div>
-
         <div class="modal-body" id="modifyAccountBody">
           <div class="container" id="accountManagerModalCss">
+          <!-- The table contains two rows, these are the "access all features" switches
+          within the modal that contain all user account names, the admin account can
+          enter this modal and grant administritive privilages. 
+          -->
             <table style="width:auto">
               <tr>
                 <td><p>ACCOUNT ON</p></td>
@@ -298,10 +301,6 @@ $LoadOnStart = new LoadOnStart();
               <tr>
                 <td><input type="checkbox" checked data-toggle="toggle"></td>
                 <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td style="padding-left:30px;"><p>HAfIWAN HASSAN fdajfodfhidosahfodshfoahdsofahdsofdfhaosdifhodasifhodisahfdoais</p></td>
               </tr>
             </table>
           </div>
