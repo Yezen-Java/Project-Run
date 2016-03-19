@@ -537,7 +537,8 @@ var yourArray = [];
       }
 
       function refreshMediaList(){
-         $.post('database/RefreshMediaSelectList.php',{}, function(data){
+        console.log('working');
+         $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
           console.log(data);
           var select = $('#MediaSelectId');
           select.empty().append(data);
