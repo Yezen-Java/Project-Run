@@ -147,7 +147,7 @@ $LoadOnStart = new LoadOnStart();
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown">
               Manager  <span class="caret"></span>
            </a>
-            <ul class="dropdown-menu">
+            <ul class="nav navbar-nav">
               <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
