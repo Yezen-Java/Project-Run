@@ -526,10 +526,22 @@ var yourArray = [];
 
      function dbClickEdit(obj){
           $(obj).hide().siblings(".editManagerBox").show().val($(obj).text()).focus();
+
      }
 
       function fcEdit(obj){
-          $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+          $('.editManagerBox').keypress(function (e) {
+             var key = e.which;
+             if(key == 13)  // the enter key code
+              {
+              $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+
+                
+
+              }
+            }); 
+
+
       }
 
       
