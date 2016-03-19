@@ -122,13 +122,26 @@ $LoadOnStart = new LoadOnStart();
         </div>
     </div>
 </div>
-  <nav class="navbar navbar-inverse" id="topNavbarDefault">
-    <div class="container-fluid">
+<div class="container">
+  <nav class="navbar navbar-default navbar-fixed-top" id="topNavbarDefault">
+    <div class="container">
       <div class="navbar-header" id="topNavbar">
-      	<a class="navbar-brand"><strong>Hive</strong> Dashboard</a> 
+        <div class=".col-md-9" id="topNavbarContainer">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class=".col-md-3" id="bottomNavbarContainer">
+          <a class="navbar-brand"><strong>Hive</strong> Dashboard</a> 
+        </div>
       </div>
+      <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
+          <!-- Single button -->
           <li class="dropdown" id="managerModeBtnGroup">
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown">
               Manager  <span class="caret"></span>
@@ -138,13 +151,13 @@ $LoadOnStart = new LoadOnStart();
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
               <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
              <li id="logoutButton"><a href="#logoutModal" id="logout-modal-button" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-            </ul>
           </li>
         </ul>
+      </div><!--/.nav-collapse -->
     </div>
   </nav>
+  </div>
 
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
