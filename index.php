@@ -46,6 +46,7 @@ $LoadOnStart = new LoadOnStart();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
     <!--QUnit testing LINK-->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.22.0.css">
     <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
 
@@ -53,6 +54,7 @@ $LoadOnStart = new LoadOnStart();
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="myJquery.js"></script>
     <script src="jquery.sortable.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="js/CreateTour.js"></script>
     <script src="tests.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -140,6 +142,7 @@ $LoadOnStart = new LoadOnStart();
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
+          <input type="checkbox" checked data-toggle="toggle">
           <!-- Single button -->
           <div class="btn-group" id="managerModeBtnGroup">
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
