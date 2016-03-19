@@ -155,6 +155,11 @@ $(document).ready(function(){
 //         $("#file_manager_dialogue").modal('show');
 //     });
 
+
+$("#pointer1").click(function(){
+  $("#myModal").modal('show');
+});
+
 function EditTourName(value,name){
   $('#editTourDialogue').modal('toggle');
   $('#editTourDialogue').attr("value",value);
@@ -170,43 +175,6 @@ $(".tourButtons").each(function(index,object){
     });
 });
 
-
-
-// var files = [
-//   {
-//     name: "file1",
-//     order: 2
-//   },
-  
-//   {
-//     name: "file2",
-//     order: 1  
-//   },
-  
-//   {
-//     name: "file3",
-//     order: 3
-//   }
-// ];
-
-function compare (a,b){
-  if(a.order < b.order)
-    return -1;
-  else if (a.order > b.order)
-    return 1;
-  else
-    return 0;
-}
-
-// function reorder(){
-//   //files.sort(compare);
-//  // console.table(files);
-
-//   for (var i = 0; i < files.length;i++){
-//     console.log(files[i].name);
-//     $("#myModal ul").append("<li>" +files[i].name);
-//   }
-// }
 
 var LocationIdNumber ='';
 
@@ -342,6 +310,7 @@ function createTourDetails(){
   createTour(tourName);
 }
 //this function open the file model for specific locations.
+
 
 function addLocations(){
 var  selectedTourId = TourCodeSelected;
