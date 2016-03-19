@@ -290,7 +290,11 @@ $LoadOnStart = new LoadOnStart();
 
         <div class="modal-body" id="modifyAccountBody">
           <div class="container" style="overflow-y: scroll;">
-            <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+            <ul>
+              <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR DUNCAN</p><input type="checkbox" checked data-toggle="toggle"></li>
+              <li><p>MR PITBULL</p><input type="checkbox" checked data-toggle="toggle"></li>
+            </ul>
           </div>
         </div>
 
