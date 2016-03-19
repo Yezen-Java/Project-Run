@@ -66,7 +66,7 @@ $LoadOnStart = new LoadOnStart();
 
 <body onload="myFunction()">
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default navbar-static-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><strong>Hive</strong>Login</a>
