@@ -56,7 +56,7 @@ $(document).ready(function(){
           }else{
           $('#modalc').html(data);
           $(".progress").addClass("hidden");
-          
+          refreshMediaList();
         }
         },
         error: function(){}           
@@ -141,7 +141,7 @@ $(document).ready(function(){
           $('#modalc').html(data);
           $(".progress").addClass("hidden"); 
                 check = false;
-
+                refreshMediaList();
         }
         },
         error: function(){}           
@@ -534,6 +534,12 @@ var yourArray = [];
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
 
+      }
+
+      function refreshMediaList(){
+         $.post('database/RefreshMediaSelectList.php'}, function(data){
+          $('#MediaSelectId').html(data);
+        }); 
       }
 
       
