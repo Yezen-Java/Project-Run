@@ -142,9 +142,9 @@ $LoadOnStart = new LoadOnStart();
           <li><a href="#" id="menu-toggle">Note</a></li>
           <!-- Single button -->
           <div class="btn-group">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Manager <span class="caret"></span>
-           </a>
+           </button>
             <ul class="dropdown-menu">
               <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
