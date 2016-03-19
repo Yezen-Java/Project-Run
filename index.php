@@ -292,8 +292,8 @@ $LoadOnStart = new LoadOnStart();
           <div class="container" id="accountManagerModalCss">
             <table style="width:100%">
               <tr>
-                <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td><p class="user-names">MR OLMEZ</p></td>
+                <td style="padding:0 15px 0 15px;"><input type="checkbox" checked data-toggle="toggle"></td>
+                <td style="padding:0 15px 0 15px;"><p>MR OLMEZ</p></td>
               </tr>
             </table>
           </div>
