@@ -54,6 +54,7 @@ $(document).ready(function(){
             $(".progress").addClass("hidden");
             alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
           }else{
+            console.log("Inside else.");
             refreshMediaList();
           $('#modalc').html(data);
           $(".progress").addClass("hidden");
@@ -141,6 +142,7 @@ $(document).ready(function(){
           $('#modalc').html(data);
           $(".progress").addClass("hidden"); 
                 check = false;
+                console.log("deleteMedia");
                 refreshMediaList();
         }
         },
@@ -537,12 +539,12 @@ var yourArray = [];
       }
 
       function refreshMediaList(){
-        console.log('working');
-         $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
-          console.log(data);
-          var select = $('#MediaSelectId');
-          select.empty().append(data);
-        }); 
+        console.log("working");
+        //  $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
+        //   console.log(data);
+        //   var select = $('#MediaSelectId');
+        //   select.empty().append(data);
+        // }); 
       }
 
       
