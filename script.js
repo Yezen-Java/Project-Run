@@ -530,17 +530,10 @@ var yourArray = [];
      }
 
       function fcEdit(obj){
-          $('.editManagerBox').keypress(function (e) {
-             var key = e.which;
-             if(key == 13)  // the enter key code
-              {
-              $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+      
+      var testvalue= $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
-                
-
-              }
-            }); 
-
+      console.log(testvalue);
 
       }
 
