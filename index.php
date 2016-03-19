@@ -83,7 +83,7 @@ $LoadOnStart = new LoadOnStart();
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li id="logoutButton"><a href="#logoutModal" id="logout-modal-button" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
