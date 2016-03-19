@@ -141,7 +141,7 @@ $LoadOnStart = new LoadOnStart();
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
           <!-- Single button -->
-          <div class="btn-group">
+          <div class="btn-group" id="managerModeBtnGroup">
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Manager  <span class="caret"></span>
            </a>
