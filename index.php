@@ -142,7 +142,7 @@ $LoadOnStart = new LoadOnStart();
           <li><a href="#" id="menu-toggle">Note</a></li>
           <!-- Single button -->
           <div class="btn-group">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a hret="#managerDropDown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Manager  <span class="caret"></span>
            </a>
             <ul class="dropdown-menu">
