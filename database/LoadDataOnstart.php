@@ -137,7 +137,7 @@ return $htmlTage;
 
 public function MediaSelectFucntion(){
   $htmltag = '';
-$MediaSelect = pg_query("SELECT * from media");
+$MediaSelect = pg_query("SELECT * from media order by mediaid ASC");
 if ($MediaSelect) {
 	# code...
         while($rows = pg_fetch_array($MediaSelect)){
