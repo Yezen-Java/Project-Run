@@ -293,11 +293,11 @@ $LoadOnStart = new LoadOnStart();
             <table style="width:auto">
               <tr>
                 <td><p>ACCOUNT ON</p></td>
-                <td><p>USER NAME</p></td>
+                <td style="padding-left:30px;"><p>USER NAME</p></td>
               </tr>
               <tr>
                 <td><input type="checkbox" checked data-toggle="toggle"></td>
-                <td><p>MR OLMEZ</p></td>
+                <td style="padding-left:30px;"><p>MR OLMEZ</p></td>
               </tr>
             </table>
           </div>
