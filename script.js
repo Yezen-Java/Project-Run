@@ -194,6 +194,8 @@ for (var i = 0; i < array.length; i++) {
          }else{
           alert("error, Please try Again");
          }
+
+         $('#listMedia').sortable('disable');
        });
        return false;
   });
@@ -352,6 +354,7 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
+        $('#listMedia').sortable('enable');
         $('#listMedia').sortable();
        });
 
