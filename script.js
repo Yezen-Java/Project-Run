@@ -317,7 +317,6 @@ function addLocationRes(value) {
   console.log("works");
  // reorder();
   $("#myModal").modal();
-  $('#listMedia').sortable();
 
   appendMediaToLocaiton(value);
 }
