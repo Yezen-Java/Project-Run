@@ -195,6 +195,7 @@ for (var i = 0; i < array.length; i++) {
          }else{
           alert("error, Please try Again");
          }
+         $('#listMedia').removeClass(".sortable");
        });
        return false;
   });
