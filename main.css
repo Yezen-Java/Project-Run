@@ -366,7 +366,9 @@ video{
   height: 300px;
   max-height: 300px;
 }
-
+#logoutButton{
+  padding-left: 400px;
+}
 
 
 
