@@ -354,7 +354,6 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-        $('#listMedia').sortable('enable');
         $('#listMedia').sortable();
        });
 
