@@ -67,26 +67,29 @@ $LoadOnStart = new LoadOnStart();
 
 <body onload="myFunction()">
 
-<!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
-<div id="wrapperLeft"> 
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#"><strong>Hive</strong>Login</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li> 
-      <li><a href="#">Page 3</a></li> 
+      <li><a href="#" id="menu-toggle">Note</a></li>
+      <li class="dropdown"><a hret="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
+          <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+          <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+        </ul>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li id="logoutButton"><a href="#logoutModal" id="logout-modal-button" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
+
+<!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
+<div id="wrapperLeft"> 
 
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
       tour, so when the user clicks a tour from the middle list, this left nav bar should appear with the
