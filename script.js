@@ -186,7 +186,6 @@ var array = [];
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
 };
-$('#listMedia').removeClass(".sortable");
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
@@ -319,7 +318,6 @@ function addLocationRes(value) {
   $("#myModal").modal();
 
   appendMediaToLocaiton(value);
-  $('#listMedia').sortable();
 }
 
 
@@ -354,7 +352,7 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-      
+        $('#listMedia').sortable();
        });
 
        return false;
