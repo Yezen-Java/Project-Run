@@ -142,7 +142,6 @@ $LoadOnStart = new LoadOnStart();
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#" id="menu-toggle">Note</a></li>
-          <input type="checkbox" checked data-toggle="toggle">
           <!-- Single button -->
           <div class="btn-group" id="managerModeBtnGroup">
             <a hret="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -151,6 +150,7 @@ $LoadOnStart = new LoadOnStart();
             <ul class="dropdown-menu">
               <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+              <li><a href="#AccountManagerModal" id="account-manager" data-toggle="modal">Account Manager</a></li>
             </ul>
           </div>
 
