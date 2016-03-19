@@ -29,6 +29,11 @@ $(document).ready(function(){
       $("#wrapper").toggleClass("toggled");
     });
 
+    $("#account-manager").click(function(e) {
+      console.log("Account Manager Toggle");
+      $('#account-manager-modal').dialog('open');
+    });
+
     $("#fileMangerNav").click(function(){
         console.log("clicked");
         $("#middleContainer").empty("#tourList");
@@ -559,10 +564,7 @@ var yourArray = [];
                 console.log('Error, function : deleteMediaLi');
               }
         }); 
-
-
       }
-
       
 
 

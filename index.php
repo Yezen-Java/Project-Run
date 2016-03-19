@@ -150,7 +150,7 @@ $LoadOnStart = new LoadOnStart();
             <ul class="dropdown-menu">
               <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
               <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-              <li><a href="#AccountManagerModal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+              <li><a href="#AccountManagerModal" id="account-manager" data-toggle="modal" onclick="openAccountManager()">Account Manager</a></li>
             </ul>
           </div>
 
@@ -277,6 +277,30 @@ $LoadOnStart = new LoadOnStart();
     </div>
   </div>
   <!--End of edit tour dialogue-->
+
+  <!--Account Manager Modal-->
+  <div class="modal fade" id="account-manager-modal" role="dialog" value="">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Account Manager</h4>
+        </div>
+
+        <div class="modal-body" id="modifyAccountBody">
+          <div class="container" style="overflow-y: scroll;">
+            <li><p>MR OLMEZ</p><input type="checkbox" checked data-toggle="toggle"></li>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End of account manager modal-->
 
 <div class="modal fade" id="EditlocationModel" role="dialog">
     <div class="modal-dialog">
