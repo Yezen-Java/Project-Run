@@ -159,7 +159,7 @@ $(document).ready(function(){
 $("#pointer1").click(function(){
   reorder();
   $("#myModal").modal('show');
-  $('.sortable').sortable();
+  $('#listMedia').sortable();
 });
 
 function EditTourName(value,name){
@@ -357,7 +357,7 @@ function addLocationRes(value) {
   console.log("works");
  // reorder();
   $("#myModal").modal();
-  $('.sortable').sortable();
+  $('#listMedia').sortable();
 
   appendMediaToLocaiton(value);
 }
