@@ -550,7 +550,7 @@ var yourArray = [];
         $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
                 $("li").remove("."+value);
-                 addLocationRes();
+                 addLocationRes(LocationIdNumber);
               }else{
                 console.log('Error, function : deleteMediaLi');
               }
