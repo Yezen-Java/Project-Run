@@ -528,9 +528,11 @@ var yourArray = [];
         var selected = document.getElementsByName(userid);
 
         if(value == "ON"){
-          selected.toggle(true);
+          $(selected).toggle(true);
+          console.log("ON");
         }else{
-          selected.toggle(false);
+          $(selected).toggle(false);
+          console.log("OFF");
         }
 
       }
