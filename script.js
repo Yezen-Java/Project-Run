@@ -499,9 +499,9 @@ var yourArray = [];
 
      }
 
-      function fcEdit(obj){
+      function fcEdit(obj,id){
       console.log($(obj).val());
-      console.log($(obj).attr('value'));
+      console.log(id);
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
 
