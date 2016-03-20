@@ -525,6 +525,7 @@ var yourArray = [];
       }
 
       function checkToggleOn(value, active){
+        console.log(active);
         if(active == 1){
           console.log("ONE");
         }else{
