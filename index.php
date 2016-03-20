@@ -213,11 +213,11 @@ $LoadOnStart = new LoadOnStart();
           ?>
           </select>
         </div>
-    	<div class="modal-body">
-			<h1>Upload Files</h1>
-        	<ul id ="listMedia">
-        	</ul>
-    	</div>
+      <div class="modal-body">
+      <h1>Upload Files</h1>
+          <ul id ="listMedia">
+          </ul>
+      </div>
         <div class="modal-footer">
 
           <button type ="button" class="btn btn-default" onclick = "Save()">Save</button>
@@ -228,6 +228,7 @@ $LoadOnStart = new LoadOnStart();
       
     </div>
   </div>
+
 
     <!--EditTourDialogue-->
   <div class="modal fade" id="editTourDialogue" role="dialog" value="">

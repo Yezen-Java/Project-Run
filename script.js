@@ -180,7 +180,7 @@ var LocationIdNumber ='';
 function Save(){
 
 var array = [];
- $('.sortable li').each(function(i, li) {
+ $('#listMedia li').each(function(i, li) {
   array.push($(li).attr('value'));
 });
 for (var i = 0; i < array.length; i++) {
@@ -319,7 +319,7 @@ function addLocationRes(value) {
   console.log("works");
  // reorder();
   $("#myModal").modal();
-  $('.sortable').sortable();
+  $('#listMedia').sortable();
 
   appendMediaToLocaiton(value);
 }
@@ -373,7 +373,7 @@ function addmeidaFromSelectList(){
     console.log(selectedText);
 
     $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
-    $('.sortable').sortable();
+    $('#listMedia ').sortable();
 
 
 }
