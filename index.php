@@ -176,36 +176,37 @@ $LoadOnStart = new LoadOnStart();
             <h4 class="modal-title">File Manager</h4>
         </div>
             
-                <div id= "fileManagerDiv" class="modal-body">
-
-                    <div>
-                      <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles()" placeholder ="Search">
-                      <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Image</button>
-                        <button type="button" class="btn btn-secondary">Video</button>
-                      </div>
-                    </div>
-                    <div class = "list-group" id="modalc">
-                        <?php  
-                         echo $LoadOnStart->mediaResultsFucntion();
-                        ?>
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped active" id="progressBar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" width ="40px"style="width:100%">
-                  </div>
-                </div>
-             
-              <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
-                <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
-                  <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input type ="submit" class="btn btn-default" value='Upload Image'/>
-                </div>
-              </form>
+        <div id= "fileManagerDiv" class="modal-body">
+          <div class="row">
+            <div class=".col-md-8">
+              <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles()" placeholder ="Search">
             </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Image</button>
+              <button type="button" class="btn btn-secondary">Video</button>
+            </div>
+          </div>
+          <div class = "list-group" id="modalc">
+            <?php  
+             echo $LoadOnStart->mediaResultsFucntion();
+            ?>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" id="progressBar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40" width ="40px"style="width:100%">
+          </div>
+        </div>
+             
+        <form id = 'uploadForm' action="" method="post" enctype="multipart/form-data">
+          <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
+            <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <input type ="submit" class="btn btn-default" value='Upload Image'/>
+          </div>
+        </form>
+      </div>
       </div>
     </div>
   </div> 
