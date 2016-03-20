@@ -508,6 +508,7 @@ var yourArray = [];
       var NewLocationName = $(obj).val();
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
       $.post('database/EditLocationName.php',{LocationId:locationId,NewLocationName:NewLocationName}, function(data){
+        console.log(data);
       if(data == false){
         alert("error");
       }else{

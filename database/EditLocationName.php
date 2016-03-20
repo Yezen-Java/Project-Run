@@ -21,6 +21,5 @@ if($checkLocation){
 }
 
 
-
 ?>
 
