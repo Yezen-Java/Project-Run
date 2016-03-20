@@ -59,6 +59,11 @@ $LoadOnStart = new LoadOnStart();
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
       <a class="navbar-brand" href="#"><strong>Hive</strong>Dashboard</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
