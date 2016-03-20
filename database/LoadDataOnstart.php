@@ -188,7 +188,7 @@ return $htmltag;
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' class='toggleSwitch' checked onchange ='onToggleClick(this.value, this)' data-toggle='toggle' name='$userId' value='ON'></td>
+                <td><input type='checkbox' class='toggleSwitch' checked data-toggle='toggle' name='$userId' value='ON' onchange ='onToggleClick(this.value, this)' ></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
