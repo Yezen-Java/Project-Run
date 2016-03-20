@@ -91,6 +91,9 @@ textarea {
 #sideBar {
     margin: 10px;
 }
+.navbar{
+  background-color: #F2DF07;
+}
 #leftSidebar {
     padding-top: 50px;
     margin: 10px;
