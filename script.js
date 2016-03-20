@@ -16,6 +16,20 @@ $(document).ready(function(){
         });     
     });
 
+
+    $('#searchFile').keyup(function(){
+        
+        var searchText = $(this).val();
+        
+        $('.mediaItems > h3').each(function(){
+            
+            var currentLiText = $(this).text(),
+                showCurrentLi = currentLiText.indexOf(searchText) !== -1;
+            
+            $(this).toggle(showCurrentLi);
+        });       
+    });
+
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
