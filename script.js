@@ -26,7 +26,7 @@ $(document).ready(function(){
       format: "dd-mm-yyyy"
     });  
 
-    $("#menu-toggle").click(function(e) {
+    $("#notes-toggle").click(function(e) {
       console.log("button");
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
