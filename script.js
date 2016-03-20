@@ -523,6 +523,21 @@ var yourArray = [];
               }
         }); 
       }
+      
+      function checkToggleOn(name,active){
+       var selected = document.getElementsByName(name);
+       console.log(active);
+       if (active == 1){
+        selected.value = "ON";
+        return;
+       } else {
+        selected.value = "OFF";
+        return;
+       }
+       console.log(selected.value);
+      }
+      
+
 
 
 

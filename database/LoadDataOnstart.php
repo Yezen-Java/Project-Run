@@ -175,8 +175,6 @@ return $htmltag;
           return $htmlTag;
     }
 
-
-
     public function getUsersAccounts(){
       $htmlTag = '';
       $results = pg_query("SELECT * FROM users");
@@ -186,26 +184,25 @@ return $htmltag;
               while($rows = pg_fetch_array($results)){
                 $userNameForm = $rows['username'];
                 $active = $rows['active'];
+                $userId = $rows['userid'];
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' checked data-toggle='toggle'></td>
+                <td><input type='checkbox' checked data-toggle='toggle' value='$userId' ontoggle='checkToggleOn(this.value, $active)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' data-toggle='toggle'></td>
+                <td><input type='checkbox' data-toggle='toggle' value='$userId' ontoggle='checkToggleOn(this.value, $active)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
-              </tr>";
-
+                </tr>";
                 }
 
               }
       }
       return $htmlTag;              
     }
-
 }
 
 ?>
