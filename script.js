@@ -524,17 +524,17 @@ var yourArray = [];
         }); 
       }
 
-      function checkToggleOn(name,active){
-       var selected = document.getElementsByName(name);
-       console.log(active);
-       if (active == 0){
-        selected.value = "OFF";
-        return;
-       } else {
-        selected.value = "ON";
-        return;
-       }
-       console.log(selected.value);
+      function checkToggleOn(this,active){
+        if($(this).hasClass('locked_active') || $(this).hasClass('unlocked_inactive')){
+              console.log("ON");
+              $('#switch_status').html('Switched on.');
+        }else{
+              console.log("OFF");
+              $('#switch_status').html('Switched off.');
+        }
+        /* reverse locking status */
+        $('#toggle_event_editing button').eq(0).toggleClass('locked_inactive locked_active btn-default btn-info');
+        $('#toggle_event_editing button').eq(1).toggleClass('unlocked_inactive unlocked_active btn-info btn-default');
       }
       
 
