@@ -177,6 +177,10 @@ $LoadOnStart = new LoadOnStart();
         </div>
             
                 <div id= "fileManagerDiv" class="modal-body">
+
+                    <div>
+                      <input type="text" class="form-control" id="searchFile" placeholder ="Search">
+                    </div>
                     <div class = "list-group" id="modalc">
                         <?php  
                          echo $LoadOnStart->mediaResultsFucntion();
