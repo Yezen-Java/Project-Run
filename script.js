@@ -559,7 +559,7 @@ var yourArray = [];
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
             
-            (this).toggle(showCurrentLi);
+            $(this).toggle(showCurrentLi);
         });       
       }
 
