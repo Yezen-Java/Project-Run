@@ -67,11 +67,11 @@ public function meidaDescription($mediaid,$description,$dbconn){
 
 
 ///username one by one delete
-	public function deleteMediaOfLocation($locationId,$mediaid,$dbconn){
+	public function deleteMediaOfLocation($locationId,$mediaid,$dbconn,$username){
 
-		$query = "DELETE FROM location_res where locationid = $1 and mediaid = $2";
+		$query = "DELETE FROM location_res where locationid = $1 and mediaid = $2 and username = $3";
 	    $result = pg_prepare($dbconn, "query",$query);
-	    $result = pg_execute($dbconn,"query", array($locationId,$mediaid));
+	    $result = pg_execute($dbconn,"query", array($locationId,$mediaid,$username));
 
 	    if (pg_affected_rows($result)>0) {
 	    	
