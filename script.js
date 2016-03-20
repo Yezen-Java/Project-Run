@@ -539,8 +539,8 @@ var yourArray = [];
           }
       }
 
-      function searchFiles(value){
-        var searchText = value;
+      function searchFiles(){
+        var searchText = $('#searchFile').val();
         console.log(searchText);
         $('.mediaItems > h3').each(function(){
             console.log($(this));
