@@ -212,12 +212,13 @@ $LoadOnStart = new LoadOnStart();
   </div> 
   <!--File manager dialogue box-->
 
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog" name="">
     <div class="modal-dialog">
       <div class="modal-content">
         <div id="mediaList" class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <div class="modal-title" id="locationName">
+          </div>
           <select id="MediaSelectId" class="form-control" onchange="addmeidaFromSelectList()">
           <?php
           echo $LoadOnStart -> MediaSelectFucntion();

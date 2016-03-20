@@ -26,7 +26,7 @@ class LocationClass
 
 			//this generates a list based on the number of the locations.
 
-		$getLocations =  $getLocations."<a href ='#myModal' class='previousLocations' data-toggle='modal' value ='$locationId' name='$locationname' onclick='addLocationRes($locationId)'>$locationname</a>";
+		$getLocations =  $getLocations."<a href ='#myModal' class='previousLocations' data-toggle='modal' value ='$locationId' name='$locationname' onclick='addLocationRes($locationId,this.name)'>$locationname</a>";
 		    }
 
 		}

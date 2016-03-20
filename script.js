@@ -311,10 +311,15 @@ function createTourDetails(){
 }
 //this function open the file model for specific locations.
 
-function addLocationRes(value) {
+function addLocationRes(value,name) {
   LocationIdNumber = value;
+  $("#locationName").append("<h4>"+name+"</h4>");
+
   $("#myModal ul").empty();
   $('#listMedia').sortable();
+  // $( "#myModal" ).on('shown', function(){
+  //   $("#myModal").attr('name',name);
+  // });
 
   appendMediaToLocaiton(value);
 }
