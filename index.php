@@ -276,7 +276,7 @@ $LoadOnStart = new LoadOnStart();
           -->
             <table style="width:auto">
               <tr>
-                <td><p>Active</p></td>
+                <td><p>ACTIVE</p></td>
                 <td style="padding-left:30px;"><p>USER NAME</p></td>
               </tr>
               <?php 
