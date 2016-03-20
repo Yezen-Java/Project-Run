@@ -527,13 +527,16 @@ var yourArray = [];
         }); 
       }
 
-      function onToggleClick(value, userid){
+      function onToggleClick(value, this){
           if(value == "ON"){
+            this.value = "OFF";
             console.log("0");
           }else{
+            this.value = "ON";
             console.log("1");
           }
       }
+
 
 
       
