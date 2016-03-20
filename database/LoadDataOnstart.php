@@ -188,13 +188,13 @@ return $htmltag;
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' checked data-toggle='toggle' value='$userId' ontoggle='checkToggleOn(this.value, $active)'></td>
+                <td><input type='checkbox' checked data-toggle='toggle' value='$userId' onclick='checkToggleOn(this.value, $active)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' data-toggle='toggle' value='$userId' ontoggle='checkToggleOn(this.value, $active)'></td>
+                <td><input type='checkbox' data-toggle='toggle' value='$userId' onclick='checkToggleOn(this.value, $active)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
