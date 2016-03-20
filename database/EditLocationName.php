@@ -9,7 +9,7 @@ $newLocationName = $_POST['NewLocationName'];
 
 $locationClass = new LocationClass();
 
-$checkLocation = $locationClass-> editLocaitonName($newLocationName, $locationId);
+$checkLocation = $locationClass->editLocaitonName($newLocationName, $locationId,$dbconn);
 
 if($checkLocation){
 

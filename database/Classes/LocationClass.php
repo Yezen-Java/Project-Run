@@ -84,7 +84,7 @@ class LocationClass
 
 
 
-	public function editLocaitonName($newLocationName, $locationId){
+	public function editLocaitonName($newLocationName, $locationId,$dbconn){
 		$Query = "UPDATE location set lname = $1  where locationid = $2";
 		$results = pg_prepare($dbconn,"updateQuery",$Query);
 		$results = pg_execute($dbconn,"updateQuery",array($newLocationName,$locationid));
