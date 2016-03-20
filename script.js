@@ -88,13 +88,6 @@ $(document).ready(function(){
     // }));
 
     $('#EditlocationModel').on('show.bs.modal', function () {
-
-  // $getLocations =  $getLocations."<a href ='#'id ='pointer1' value ='$locationId' onclick='addLocationRes($locationId)'>$locationname</a>
-  // <button type='button' value ='$locationId' class='btn btn-default btn-sm'>
-  //           <span class='glyphicon glyphicon-trash'></span> Trash 
-  //         </button>";
-  //     }
-    
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
         selectedID.push($(obj).attr('value'));
@@ -106,6 +99,7 @@ $(document).ready(function(){
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
+         console.log($(checkboxes[i]).attr('value'));
          if(selectedID.indexOf($(checkboxes[i]).attr('value')) > 0){
             $(checkboxes[i]).prop('checked', true);
          }
