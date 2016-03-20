@@ -311,8 +311,9 @@ function createTourDetails(){
 }
 //this function open the file model for specific locations.
 
-function addLocationRes(value,name) {
+function addLocationRes(value,name,obj) {
   LocationIdNumber = value;
+  console.log(obj);
   $("#locationName").empty();
   $("#locationName").append("<h4>"+name+"</h4>");
 
