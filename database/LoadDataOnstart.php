@@ -188,19 +188,13 @@ return $htmltag;
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><div class='btn-group' onclick='checkToggleOn(this,$userId)'>
-                      <button type='button' class='btn btn-info locked_active'>OFF</button>
-                      <button type='button' class='btn btn-default unlocked_inactive'>ON</button>
-                    </div></td>
+                <td><input type='checkbox' checked data-toggle='toggle' name='$userId' value='ON' onchange='checkToggleOn(this.value, this.name)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
-                <td><div class='btn-group' onclick='checkToggleOn(this,$userId)'>
-                      <button type='button' class='btn btn-info locked_active'>OFF</button>
-                      <button type='button' class='btn btn-default unlocked_inactive'>ON</button>
-                    </div></td>
+                <td><input type='checkbox' data-toggle='toggle' name='$userId' value='OFF' onchange='checkToggleOn(this.value, this.name)'></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
                 </tr>";
                 }
