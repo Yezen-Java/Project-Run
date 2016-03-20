@@ -102,6 +102,7 @@ $(document).ready(function(){
     }); 
 
     $('#EditlocationModel').on('hidden', function () {
+      console.log("works");
       $('#EditlocationModel li').each(function(){
         console.log($(this));
         $(this).attr('checked', false);
