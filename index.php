@@ -179,7 +179,7 @@ $LoadOnStart = new LoadOnStart();
                 <div id= "fileManagerDiv" class="modal-body">
 
                     <div>
-                      <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles(this.val())" placeholder ="Search">
+                      <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles(this.text)" placeholder ="Search">
                     </div>
                     <div class = "list-group" id="modalc">
                         <?php  
