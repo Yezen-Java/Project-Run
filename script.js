@@ -16,20 +16,6 @@ $(document).ready(function(){
         });     
     });
 
-
-    $('#searchFile').keyup(function(){
-        
-        var searchText = $(this).val();
-        
-        $('.mediaItems > h3').each(function(){
-            console.log($(this));
-            var currentLiText = $(this).text(),
-                showCurrentLi = currentLiText.indexOf(searchText) !== -1;
-            
-            $(this).toggle(showCurrentLi);
-        });       
-    });
-
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
@@ -551,6 +537,18 @@ var yourArray = [];
             console.log($(nameOfToggle).attr("value"));
 
           }
+      }
+
+      function searchFiles(value){
+        var searchText = value;
+        console.log(searchText);
+        $('.mediaItems > h3').each(function(){
+            console.log($(this));
+            var currentLiText = $(this).text(),
+                showCurrentLi = currentLiText.indexOf(searchText) !== -1;
+            
+            $(this).toggle(showCurrentLi);
+        });       
       }
 
 
