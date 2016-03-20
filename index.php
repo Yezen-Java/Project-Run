@@ -345,7 +345,11 @@ $LoadOnStart = new LoadOnStart();
     <div class="modal-content">
       <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
       <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
-      <div class="modal-footer"><a href="javascript:;" class="btn btn-primary btn-block">Logout</a></div>
+      <div class="modal-footer">
+      <form action="database/logout.php" method="post">
+      <input type="submit" class="btn btn-primary btn-block">Logout/>
+      </form>
+      </div>
     </div>
   </div>
 </div>
