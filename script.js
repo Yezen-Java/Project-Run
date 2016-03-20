@@ -191,7 +191,6 @@ for (var i = 0; i < array.length; i++) {
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
          if (data==true) {
           alert("Media Added");
-          array = [];
          }else{
           alert("error, Please try Again");
          }
@@ -414,7 +413,6 @@ if(array !=null){
   alert('no Locations where Selected');
 }
 
-array =[];
 
 }
 
