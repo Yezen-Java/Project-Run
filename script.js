@@ -22,7 +22,7 @@ $(document).ready(function(){
         var searchText = $(this).val();
         
         $('.mediaItems > h3').each(function(){
-            
+            console.log($(this));
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
             
