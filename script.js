@@ -89,7 +89,6 @@ $(document).ready(function(){
     });
 
     $('#EditlocationModel').on('show.bs.modal', function () {
-      console.log("works");
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
         selectedID.push($(obj).attr('value'));
@@ -101,7 +100,7 @@ $(document).ready(function(){
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
          if(selectedID.indexOf($(checkboxes[i]).attr('value')) > -1){
-
+            console.log($(checkboxes[i]));
             $(checkboxes[i]).attr('checked', true);
          }
       }
