@@ -318,9 +318,7 @@ function addLocationRes(value,name) {
 
   $("#myModal ul").empty();
   $('#listMedia').sortable();
-  // $( "#myModal" ).on('shown', function(){
-  //   $("#myModal").attr('name',name);
-  // });
+
 
   appendMediaToLocaiton(value);
 }

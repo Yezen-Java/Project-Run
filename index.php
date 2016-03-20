@@ -212,7 +212,7 @@ $LoadOnStart = new LoadOnStart();
   </div> 
   <!--File manager dialogue box-->
 
-  <div class="modal fade" id="myModal" role="dialog" name="">
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div id="mediaList" class="modal-header">
