@@ -523,15 +523,15 @@ var yourArray = [];
               }
         }); 
       }
-      
+
       function checkToggleOn(name,active){
        var selected = document.getElementsByName(name);
        console.log(active);
-       if (active == 1){
-        selected.value = "ON";
+       if (active == 0){
+        selected.value = "OFF";
         return;
        } else {
-        selected.value = "OFF";
+        selected.value = "ON";
         return;
        }
        console.log(selected.value);
