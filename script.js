@@ -89,6 +89,7 @@ $(document).ready(function(){
     });
 
     $('#EditlocationModel').on('show.bs.modal', function () {
+      location.reload(true);
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
         selectedID.push($(obj).attr('value'));
