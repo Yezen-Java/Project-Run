@@ -532,9 +532,11 @@ var yourArray = [];
           if(value == "ON"){
             nameOfToggle.value = "OFF";
             console.log(nameOfToggle.value);
+            nameOfToggle.value = "ON";
           }else{
             nameOfToggle.value = "ON";
             console.log(nameOfToggle.value);
+            nameOfToggle.value = "OFF";
           }
       }
 
