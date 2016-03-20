@@ -180,12 +180,13 @@ var LocationIdNumber ='';
 function Save(){
 
 var array = [];
- $('#listMedia li').each(function(i, li) {
-  array.push($(li).attr('class'));
+ $('.sortable li').each(function(i, li) {
+  array.push($(li).attr('value'));
 });
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]+ i);
 };
+
       $(function() {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
@@ -194,12 +195,9 @@ for (var i = 0; i < array.length; i++) {
          }else{
           alert("error, Please try Again");
          }
-
-         $('#listMedia').sortable('disable');
        });
        return false;
   });
-
 
 }
 
@@ -317,10 +315,11 @@ function createTourDetails(){
 function addLocationRes(value) {
    LocationIdNumber = value;
   console.log("test value "+ value);
-  $("#myModal li").empty();
+  $("#myModal ul").empty();
   console.log("works");
  // reorder();
   $("#myModal").modal();
+  $('.sortable').sortable();
 
   appendMediaToLocaiton(value);
 }
@@ -357,9 +356,8 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-        $('#listMedia').sortable('enable');
+        //$('.sortable').sortable();
        });
-
        return false;
   });
 }
@@ -373,10 +371,9 @@ function addmeidaFromSelectList(){
 
     console.log(selectedValue);
     console.log(selectedText);
-    var nullValue = null;
 
-    $('#listMedia').append('<li class='+selectedValue+' value='+nullValue+'><button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
-    $('#listMedia').sortable();
+    $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
+    $('.sortable').sortable();
 
 
 }
