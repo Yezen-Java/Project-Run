@@ -554,7 +554,7 @@ var yourArray = [];
       function searchLoactions(){
         var searchText = $('#searchLoaction').val();
         console.log(searchText);
-        $('.searcLocations > li').each(function(){
+        $('.searcLocations > p').each(function(){
 
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;

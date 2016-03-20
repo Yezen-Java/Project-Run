@@ -160,7 +160,7 @@ return $htmltag;
           $id = $rows['locationid'];
           $name = $rows['lname'];
            $htmlTag = $htmlTag."
-          <li value='$id'>
+          <li class='searcLocations' value='$id'>
             <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'/> 
             <p class='locationsName' ondblclick='dbClickEdit(this);'>$name</p>
             <input type='text' class='editManagerBox' onfocusout='fcEdit(this);'style='display:none'/>
