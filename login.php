@@ -1,12 +1,11 @@
 <?php
 
-  
+  error_reporting(E_ALL & ~E_NOTICE);
+  include("database/signUpValidation.php");
+  $userclass = new UserClass();
   if (isset($_POST['btlogin'])) {
-    include("database/UserLoginSession.php");
-    loginUserSession();
+    $userclass->loginUserSession();
   }
-
-      
 
 if (isset($_POST['signup'])){
       $fname= pg_escape_string($_POST['firstname']);
@@ -14,9 +13,6 @@ if (isset($_POST['signup'])){
       $email=pg_escape_string($_POST['form-create-email']);
       $username=pg_escape_string($_POST['form-create-username']);
       $password= pg_escape_string($_POST['form-create-password']);
-      include'database/signUpValidation.php';
-
-      $userclass = new UserClass();
       $checkUserValidation = $userclass->checkUser($email,$username);
       if($checkUserValidation){
       $userclass-> signUpuser($fname,$lastname,$email,$username,$password); 
