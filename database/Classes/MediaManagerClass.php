@@ -8,8 +8,6 @@ class MediaManager
 public function addMeidaToLocation($le,$liarray,$location,$dbconn,$username){
 	$escapeIDLocation = pg_escape_string($location);
 	$deleteQuery = pg_query("DELETE FROM location_res where locationid = '{$escapeIDLocation}' and username ='{$username}' ");
-
-	
 	    $query = "INSERT into location_res(locationid,mediaid,$username) values ($1,$2,$3);";
 		$result = pg_prepare($dbconn,"query", $query);
 		    for ($i=0; $i < $le;$i++) { 
