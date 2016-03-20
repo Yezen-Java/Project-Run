@@ -56,31 +56,33 @@ $LoadOnStart = new LoadOnStart();
 </head>
 
 <body onload="myFunction()">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"><strong>Hive</strong>Dashboard</a>
+      <a class="navbar-brand" href="#"><strong>HIVE</strong>Dashboard</a>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
+    <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-      <li><a href="#" id="menu-toggle">Note</a></li>
-      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-          <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-          <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
-        </ul>
-      </li>
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-          <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+        <li><a href="#" id="menu-toggle">Note</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
+            <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+            <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+          </ul>
+        </li>
       </ul>
-    </div><!--/.nav-collapse -->
+      <ul class="nav navbar-nav navbar-right">
+        <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
