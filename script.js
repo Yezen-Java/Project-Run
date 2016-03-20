@@ -159,10 +159,6 @@ $(document).ready(function(){
 //     });
 
 
-$("#pointer1").click(function(){
-  $("#myModal").modal('show');
-});
-
 function EditTourName(value,name){
   $('#editTourDialogue').modal('toggle');
   $('#editTourDialogue').attr("value",value);
@@ -316,11 +312,9 @@ function createTourDetails(){
 //this function open the file model for specific locations.
 
 function addLocationRes(value) {
-   LocationIdNumber = value;
-  console.log("test value "+ value);
+  LocationIdNumber = value;
   $("#myModal ul").empty();
-  console.log("works");
- // reorder();
+
   $("#myModal").modal();
   $('#listMedia').sortable();
 
