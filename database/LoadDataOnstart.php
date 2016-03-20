@@ -108,7 +108,7 @@ if ($mediaResults) {
     }
 
 
-    $htmlTage = $htmlTage."<div class='col-md-3 portfolio-item' id='$mediaid'>
+    $htmlTage = $htmlTage."<div class='col-md-3 mediaItems portfolio-item' id='$mediaid'>
 
       <div class='displayCheckBoxSpan'>
           <span class='input-group-addon' id='checkBoxDeleteSpan'>
