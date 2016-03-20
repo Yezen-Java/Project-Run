@@ -16,7 +16,7 @@ $escape = pg_escape_string($username);
 $toursListQuery = pg_query("SELECT * From Tour, usertour where usertour.username = '{$escape}' and usertour.tourid = tour.tourid");
 
 if (pg_num_rows($toursListQuery)>0) {
- 	    while ($rows =pg_fetch_array($toursListQuery)) {
+      while ($rows =pg_fetch_array($toursListQuery)) {
             $tour_id =$rows["tourid"];
             $tour_name =$rows["tour_name"];
        $htmltage = $htmltage. "<li id='$tour_id'>  
@@ -30,7 +30,7 @@ if (pg_num_rows($toursListQuery)>0) {
       }  
 }
 else{
-	$htmltage = "Create new Tour";
+  $htmltage = "Create new Tour";
 }
 
 return $htmltage;
@@ -44,7 +44,7 @@ return $htmltage;
 // $locationsQuery = pg_query("SELECT * From location");
 
 // if ($locationsQuery) {
-	
+  
 
 // echo"<select id ='selectLocation' class='form-control'>";
 //          echo"<option>Choose Room To Add:</option>";
@@ -55,7 +55,7 @@ return $htmltage;
 //          }
 //          echo"</select>";
 // }else{
-// 	echo "No Location where Found";
+//  echo "No Location where Found";
 // }
 // }
 
@@ -77,7 +77,7 @@ if ($locationsQuery2) {
 }
     echo"</ul>";
 }else{
-	echo "noLocationsFound";
+  echo "noLocationsFound";
 }
 }
 
@@ -86,13 +86,13 @@ public function mediaResultsFucntion(){
 $mediaResults = pg_query("SELECT * from media order by mediaid ASC");
 
 if ($mediaResults) {
-	# code...
-	while ($rows =pg_fetch_array($mediaResults)) {
+  # code...
+  while ($rows =pg_fetch_array($mediaResults)) {
 
-	  $link = $rows['link'];
+    $link = $rows['link'];
     $description = $rows['description'];
-	  $name = $rows['media_name'];
-	  $mediaid = $rows['mediaid'];
+    $name = $rows['media_name'];
+    $mediaid = $rows['mediaid'];
     $inBucketName = $rows['ext_name'];
     $imageFormates = array("jpg", "png", "gif", "bmp","jpeg","PNG","JPG","JPEG","GIF");
 
@@ -108,7 +108,7 @@ if ($mediaResults) {
     }
 
 
-	  $htmlTage = $htmlTage."<div class='col-md-3 portfolio-item' id='$mediaid'>
+    $htmlTage = $htmlTage."<div class='col-md-3 portfolio-item' id='$mediaid'>
 
       <div class='displayCheckBoxSpan'>
           <span class='input-group-addon' id='checkBoxDeleteSpan'>
@@ -116,8 +116,8 @@ if ($mediaResults) {
           </span>
       </div>
 
-	    $Tag src='$link' $Close
-	         <h3>$name</h3>
+      $Tag src='$link' $Close
+           <h3>$name</h3>
 
       <div class='form-group saveButtonContainer'>
           <label for='comment'>Description:</label>
@@ -128,7 +128,7 @@ if ($mediaResults) {
 }
      
 }else{
-	$htmlTage = "No Data found";
+  $htmlTage = "No Data found";
 }
 
 return $htmlTage;
@@ -139,7 +139,7 @@ public function MediaSelectFucntion(){
   $htmltag = '';
 $MediaSelect = pg_query("SELECT * from media order by mediaid ASC");
 if ($MediaSelect) {
-	# code...
+  # code...
         while($rows = pg_fetch_array($MediaSelect)){
         $mediaid = $rows['mediaid'];
         $mediaName = $rows['media_name'];
@@ -186,19 +186,19 @@ return $htmltag;
               while($rows = pg_fetch_array($results)){
                 $userNameForm = $rows['username'];
                 $active = $rows['active'];
-                $userId = $rows['userid'];
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' ontoggle='clickedAccountToggle(this.value, $active)' checked data-toggle='toggle' value='$userId'></td>
-                  <td style='padding-left:30px;''><p>$userNameForm</p></td>
-                </tr>";
+                <td><input type='checkbox' checked data-toggle='toggle'></td>
+                <td style='padding-left:30px;''><p>$userNameForm</p></td>
+              </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
-                    <td><input type='checkbox' ontoggle='clickedAccountToggle(this.value, $active)' data-toggle='toggle' value='$userId'></td>
-                      <td style='padding-left:30px;''><p>$userNameForm</p></td>
-                    </tr>";
+                <td><input type='checkbox' data-toggle='toggle'></td>
+                <td style='padding-left:30px;''><p>$userNameForm</p></td>
+              </tr>";
+
                 }
 
               }
