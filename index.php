@@ -122,7 +122,7 @@ $LoadOnStart = new LoadOnStart();
     <!--Below we have the notes nav bar wrapped, here we should be able to add new notes, delete notes and
     so forth.-->
     
- 
+    <div id="wrapper">
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
                 <li class="sidebar-brand" style="padding-top:10px;">
@@ -205,7 +205,7 @@ $LoadOnStart = new LoadOnStart();
             </div>
       </div>
     </div>
-   
+  </div> 
   <!--File manager dialogue box-->
 
   <div class="modal fade" id="myModal" role="dialog">
