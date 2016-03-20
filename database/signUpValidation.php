@@ -65,6 +65,19 @@ return false;
 
 }
 
+
+public function setUserActivition($userid,$number,$dbconn){
+  $Query = "UPDATE users set active = $1 where userid = $2";
+  $results = pg_prepare($dbconn,"queryUpdate",$Query);
+  $results = pg_execute($dbconn,"queryUpdate",array($number,$userid));
+
+  if(pg_affected_rows($results)){
+
+    return true;
+  }
+return false;
+}
+
 }
 
 

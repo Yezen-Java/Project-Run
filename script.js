@@ -526,7 +526,7 @@ var yourArray = [];
       }
 
       function deleteMediaLi(value){
-        $.post('database/edit.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
+        $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
                 $("li").remove("."+value);
               }else{
@@ -536,14 +536,16 @@ var yourArray = [];
       }
 
       function onToggleClick(value, name){
+        console.log('name '+name+'value '+ value);
         var nameOfToggle = document.getElementsByName(name);
           if(value == "ON"){
             $(nameOfToggle).attr("value","OFF");
             console.log($(nameOfToggle).attr("value"));
+            ManageUsers(name,0)
           }else{
             $(nameOfToggle).attr("value", "ON");
             console.log($(nameOfToggle).attr("value"));
-
+            ManageUsers(name,1)
           }
       }
 
@@ -573,7 +575,17 @@ var yourArray = [];
 
 
 
-      
+      function ManageUsers(usernameid,number){
+           $.post('database/ManageUsers.php',{Usernameid:usernameid,Number:number}, function(data){
+              if(data==true){
+                console.log('successfully, done');
+
+              }else{
+                console.log('Error');
+              }
+        }); 
+
+      }
 
 
 
