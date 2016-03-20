@@ -332,7 +332,7 @@ $LoadOnStart = new LoadOnStart();
         </div>
       <div id ="LocationManagerDiv" class="modal-body">
       <div>      
-        <input type="text" class="form-control" id="searchLoaction" onkeyup="searchFiles()" placeholder ="Search">
+        <input type="text" class="form-control" id="searchLoaction" onkeyup="searchLoactions()" placeholder ="Search">
       </div>
 
       <?php 
