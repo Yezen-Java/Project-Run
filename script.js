@@ -525,12 +525,13 @@ var yourArray = [];
       }
 
       function checkToggleOn(value, active){
-        console.log(active);
         if(active == 1){
+          active = 0;
           console.log("ONE");
         }else{
-          console.log("ZERO");
+          active = 1;
         }
+        console.log(active);
       }
       
 
