@@ -81,6 +81,14 @@ $(document).ready(function(){
     //   });
     // }));
 
+    $('#EditlocationModel').on('hidden.bs.modal', function () {
+      console.log("works");
+      $('#EditlocationModel li').each(function(){
+        console.log($(this));
+        $(this).attr('checked', false);
+      });
+    });
+
     $('#EditlocationModel').on('show.bs.modal', function () {
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
@@ -101,13 +109,6 @@ $(document).ready(function(){
       }
     }); 
 
-    $('#EditlocationModel').on('hidden', function () {
-      console.log("works");
-      $('#EditlocationModel li').each(function(){
-        console.log($(this));
-        $(this).attr('checked', false);
-      });
-    });
 
     var check = false;
 
