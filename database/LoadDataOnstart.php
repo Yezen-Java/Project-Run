@@ -140,6 +140,7 @@ public function MediaSelectFucntion(){
 $MediaSelect = pg_query("SELECT * from media order by mediaid ASC");
 if ($MediaSelect) {
   # code...
+        $htmltag=$htmltag."<option id='option' value=''>Choose</option>";
         while($rows = pg_fetch_array($MediaSelect)){
         $mediaid = $rows['mediaid'];
         $mediaName = $rows['media_name'];
