@@ -1,10 +1,4 @@
 $(document).ready(function(){
-  $('#EditlocationModel').on('hidden.bs.modal', function () {
-      $('#EditlocationModel li').each(function(){
-        console.log($(this));
-        $(this).attr('checked', false);
-      });
-  });
 
   $('.toggleSwitch').bootstrapToggle();
     $('#search').keyup(function(){
@@ -106,6 +100,13 @@ $(document).ready(function(){
          }
       }
     }); 
+
+    $('#EditlocationModel').on('hidden.bs.modal', function () {
+      $('#EditlocationModel li').each(function(){
+        console.log($(this));
+        $(this).attr('checked', false);
+      });
+    });
 
     var check = false;
 
