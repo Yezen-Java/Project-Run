@@ -38,10 +38,8 @@ return true;
 
 }
 
-public function loginUserSession(){
+public function loginUserSession($username,$password){
 
-$username = $_POST['form-username'];
-$password = $_POST['form-password'];
 $escape = pg_escape_string($username);
 $result = pg_query("SELECT * FROM users WHERE Username='{$escape}'");
 

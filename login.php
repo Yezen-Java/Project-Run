@@ -4,7 +4,9 @@
   include("database/signUpValidation.php");
   $userclass = new UserClass();
   if (isset($_POST['btlogin'])) {
-    $userclass->loginUserSession();
+    $username = $_POST['form-username'];
+    $password = $_POST['form-password'];
+    $userclass->loginUserSession($username,$password);
   }
 
 if (isset($_POST['signup'])){
