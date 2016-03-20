@@ -268,7 +268,7 @@ function randomStringGenerator() {
 
 var TourCodeSelected ="";
 
-function w3_open(value) {
+function w3_open(value,name) {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
       var TourIdCode=value;
       TourCodeSelected = value;
@@ -497,7 +497,7 @@ var yourArray = [];
      }
 
       function fcEdit(obj){
-      
+      console.log($(obj).val());
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
 
