@@ -56,6 +56,36 @@ $LoadOnStart = new LoadOnStart();
 
 <body onload="myFunction()">
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><strong>Hive</strong> Dashboard</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="notes-toggle">Note</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
+            <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+            <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
       <!--Below we have the left nav bar, this nav bar will contain the pointers the user creates for each
@@ -108,39 +138,6 @@ $LoadOnStart = new LoadOnStart();
         </div>
     </div>
 </div>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><strong>Hive</strong> Dashboard</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#" id="notes-toggle">Note</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-            <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-            <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
     <div class="modal-dialog">
