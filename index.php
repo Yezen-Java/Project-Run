@@ -331,6 +331,10 @@ $LoadOnStart = new LoadOnStart();
              <h1>Edit Locations</h1>
         </div>
       <div id ="LocationManagerDiv" class="modal-body">
+      <div>      
+        <input type="text" class="form-control" id="searchLoaction" onkeyup="searchFiles()" placeholder ="Search">
+      </div>
+
       <?php 
      echo $LoadOnStart->getLocationManager();
           ?>

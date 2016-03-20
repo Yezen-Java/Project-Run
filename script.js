@@ -551,6 +551,18 @@ var yourArray = [];
         });       
       }
 
+      function searchLoactions(){
+        var searchText = $('#searchLoaction').val();
+        console.log(searchText);
+        $('.searcLocations > li').each(function(){
+
+            var currentLiText = $(this).text(),
+                showCurrentLi = currentLiText.indexOf(searchText) !== -1;
+            
+            (this).toggle(showCurrentLi);
+        });       
+      }
+
 
 
       
