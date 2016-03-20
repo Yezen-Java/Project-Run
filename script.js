@@ -504,9 +504,16 @@ var yourArray = [];
       function fcEdit(obj,id){
       console.log($(obj).val());
       console.log(id);
+      var locationId = id;
+      var NewLocationName = $(obj).val();
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
-
-
+      $.post('database/EditLocationName.php',{LocationId:locationId,NewLocationName:NewLocationName}, function(data){
+      if(data == false){
+        alert("error");
+      }else{
+        console.log('Location Edit successfully');
+      }
+       });
       }
 
       function refreshMediaList(){
@@ -518,7 +525,7 @@ var yourArray = [];
       }
 
       function deleteMediaLi(value){
-        $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
+        $.post('database/edit.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
                 $("li").remove("."+value);
               }else{
