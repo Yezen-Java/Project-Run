@@ -313,9 +313,9 @@ function createTourDetails(){
 
 function addLocationRes(value,name,obj) {
   LocationIdNumber = value;
-  console.log(($(obj).parent().attr('name')));
+  var tourName = ($(obj).parent().attr('name'));
   $("#locationName").empty();
-  $("#locationName").append("<h4>"+name+"</h4>");
+  $("#locationName").append("<h4>"+tourName+">"+name+"</h4>");
 
   $("#myModal ul").empty();
   $('#listMedia').sortable();
