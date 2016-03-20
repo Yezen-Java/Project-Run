@@ -56,29 +56,24 @@ $LoadOnStart = new LoadOnStart();
 </head>
 
 <body onload="myFunction()">
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><strong>Hive</strong>Dashboard</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="#" id="menu-toggle">Note</a></li>
-      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-          <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-          <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-    </ul>
-    </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
+        <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
+        <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
   </div>
 </nav>
+
 
 <!--The main Rapper that keeps the left nav bar, middle list of tours and right notes nav bar-->
 <div id="wrapperLeft"> 
