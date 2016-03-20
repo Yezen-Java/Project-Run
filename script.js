@@ -100,7 +100,8 @@ $(document).ready(function(){
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
-         if(selectedID.indexOf($(checkboxes[i]).attr('value')) > 0){
+         if(selectedID.indexOf($(checkboxes[i]).attr('value')) > -1){
+
             $(checkboxes[i]).attr('checked', true);
          }
       }
