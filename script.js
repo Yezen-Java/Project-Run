@@ -527,7 +527,7 @@ var yourArray = [];
       function checkToggleOn(value,userid){
         var selected = document.getElementsByName(userid);
 
-        if(value == ON){
+        if(value == "ON"){
           selected.toggle(true);
         }else{
           selected.toggle(false);
