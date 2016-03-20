@@ -17,3 +17,4 @@ $getResults = $Addmedia-> addMeidaToLocation($le,$liarray,$location,$dbconn,$use
 echo $getResults;
 
 
+?>
