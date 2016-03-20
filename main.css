@@ -195,6 +195,7 @@ padding-left: 210px;
 
 #wrapperLeft{
   display: flex;
+  margin-top: -20px;
 }
 
 #noteFieldContainer{
