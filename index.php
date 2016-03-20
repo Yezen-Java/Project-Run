@@ -58,10 +58,11 @@ $LoadOnStart = new LoadOnStart();
 <body onload="myFunction()">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#"><strong>Hive</strong>Dashboard</a>
     </div>
+    <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
       <li><a href="#" id="menu-toggle">Note</a></li>
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
@@ -75,6 +76,7 @@ $LoadOnStart = new LoadOnStart();
     <ul class="nav navbar-nav navbar-right">
       <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
     </ul>
+    </div>
   </div>
 </nav>
 
