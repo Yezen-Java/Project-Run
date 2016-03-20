@@ -68,7 +68,7 @@ $LoadOnStart = new LoadOnStart();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#" id="notes-toggle">Note</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
