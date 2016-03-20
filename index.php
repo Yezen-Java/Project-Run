@@ -69,7 +69,7 @@ $LoadOnStart = new LoadOnStart();
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><strong>Hive</strong>Login</a>
+      <a class="navbar-brand" href="#"><strong>Hive</strong>Dashboard</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#" id="menu-toggle">Note</a></li>
@@ -82,7 +82,7 @@ $LoadOnStart = new LoadOnStart();
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li id="logoutButton"><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -347,7 +347,7 @@ $LoadOnStart = new LoadOnStart();
       <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
       <div class="modal-footer">
       <form action="database/logout.php" method="post">
-      <input type="submit" class="btn btn-primary btn-block">Logout/>
+      <input type="submit" value="Logout" class="btn btn-primary btn-block"/>
       </form>
       </div>
     </div>
