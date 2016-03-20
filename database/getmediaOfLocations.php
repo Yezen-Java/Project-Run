@@ -8,3 +8,5 @@ $username = $_SESSION['username'];
 $getMediaLocation = new MediaManager();
 $getresults = $getMediaLocation->getMediaOfLocation($getLocationId,$username);
 echo $getresults;
+
+?>
