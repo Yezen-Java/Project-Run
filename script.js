@@ -543,13 +543,11 @@ var yourArray = [];
         var searchText = $('#searchFile').val();
         console.log(searchText);
         $('.mediaItems > h3').each(function(){
-          var currentLiText1 = $(this).text();
-            console.log(currentLiText1);
 
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
             
-            $(this).toggle(showCurrentLi);
+            $(this).toggle();
         });       
       }
 
