@@ -501,6 +501,7 @@ var yourArray = [];
 
       function fcEdit(obj){
       console.log($(obj).val());
+      console.log($(obj).attr('value'));
       $(obj).hide().siblings(".locationsName").show().text($(obj).val());
 
 
