@@ -5,16 +5,16 @@
 class MediaManager 
 {
 
-public function addMeidaToLocation($le,$liarray,$location,$dbconn){
+public function addMeidaToLocation($le,$liarray,$location,$dbconn,$username){
 	$escapeIDLocation = pg_escape_string($location);
-	$deleteQuery = pg_query("DELETE FROM location_res where locationid = '{$escapeIDLocation}'");
+	$deleteQuery = pg_query("DELETE FROM location_res where locationid = '{$escapeIDLocation}' and username ='{$username}' ");
 
 	if($deleteQuery){
-	    $query = "INSERT into location_res(locationid,mediaid) values ($1,$2);";
+	    $query = "INSERT into location_res(locationid,mediaid,$username) values ($1,$2,$3);";
 		$result = pg_prepare($dbconn,"query", $query);
 		    for ($i=0; $i < $le;$i++) { 
 				# code...
-				$result = pg_execute($dbconn,"query",  array($location,$liarray[$i]));
+				$result = pg_execute($dbconn,"query",  array($location,$liarray[$i],$username));
 			}
 				$cmdtuples = pg_affected_rows($result);
 				if ($cmdtuples > 0) {
@@ -30,11 +30,11 @@ return false;
 
 
 
-public function getMediaOfLocation($getLocationId){
+public function getMediaOfLocation($getLocationId,$username){
 
 $getContent ='';
 $escapeGetLocationId = pg_escape_string($getLocationId);
-$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = '{$escapeGetLocationId}' and location_res.mediaid = media.mediaid;");
+$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = '{$escapeGetLocationId}' and location_res.username = '{$username}' and location_res.mediaid = media.mediaid;");
 
 	if($getLocationMedia){
 
@@ -69,7 +69,7 @@ public function meidaDescription($mediaid,$description,$dbconn){
 }
 
 
-
+///username one by one delete
 	public function deleteMediaOfLocation($locationId,$mediaid,$dbconn){
 
 		$query = "DELETE FROM location_res where locationid = $1 and mediaid = $2";
