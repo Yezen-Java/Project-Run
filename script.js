@@ -1,6 +1,11 @@
 $(document).ready(function(){
+  $('#EditlocationModel').on('hidden.bs.modal', function () {
+      $('#EditlocationModel li').each(function(){
+        console.log($(this));
+      });
+  });
 
-  $('.toggleSwitch').bootstrapToggle()
+  $('.toggleSwitch').bootstrapToggle();
     
 
     $('#search').keyup(function(){
@@ -492,13 +497,6 @@ var yourArray = [];
         }
       });
     }
-
-    $('#EditlocationModel').on('hidden.bs.modal', function () {
-      $('#EditlocationModel > li').each(function(){
-        console.log($(this));
-      });
-    });
-
 
      function dbClickEdit(obj){
           $(obj).hide().siblings(".editManagerBox").show().val($(obj).text()).focus();
