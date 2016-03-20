@@ -101,7 +101,7 @@ $(document).ready(function(){
       }
     }); 
 
-    $('#EditlocationModel').on('hidden.bs.modal', function () {
+    $('#EditlocationModel').on('hidden', function () {
       $('#EditlocationModel li').each(function(){
         console.log($(this));
         $(this).attr('checked', false);
