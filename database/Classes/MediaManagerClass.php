@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -30,11 +29,11 @@ return false;
 
 
 
-public function getMediaOfLocation($getLocationId){
+public function getMediaOfLocation($getLocationId,$username){
 
 $getContent ='';
 $escapeGetLocationId = pg_escape_string($getLocationId);
-$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = '{$escapeGetLocationId}' and location_res.mediaid = media.mediaid;");
+$getLocationMedia = pg_query("SELECT * From location_res, media where location_res.locationid = '{$escapeGetLocationId}' and location_res.username = '{$username}'and location_res.mediaid = media.mediaid;");
 
 	if($getLocationMedia){
 
