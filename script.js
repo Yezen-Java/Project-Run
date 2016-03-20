@@ -524,9 +524,9 @@ var yourArray = [];
         }); 
       }
 
-      function checkToggleOn(name){
+      function checkToggleOn(name,active){
        var selected = document.getElementsByName(name);
-       if (selected.value == "OFF"){
+       if (active == 1){
         selected.value = "ON";
        } else {
         selected.value = "OFF";
