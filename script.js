@@ -1,13 +1,7 @@
 $(document).ready(function(){
 
   $('.toggleSwitch').bootstrapToggle()
-  $('.toggleSwitch').each(function(index, obj){
-    if ($(this).attr("value") == "ON"){
-      $(this).bootstrapToggle('ON')
-    }else{
-      $(this).bootstrapToggle('OFF')
-    }
-  });    
+    
 
     $('#search').keyup(function(){
         
@@ -533,19 +527,12 @@ var yourArray = [];
         }); 
       }
 
-      function checkToggleOn(value,userid){
-
-        
-        // var selected = document.getElementsByName(userid);
-
-        // if(value == "ON"){
-        //   $(selected).toggle(true);
-        //   console.log("ON");
-        // }else{
-        //   $(selected).toggle(false);
-        //   console.log("OFF");
-        // }
-
+      function onToggleClick(value, userid){
+          if(value == "ON"){
+            console.log("1");
+          }else{
+            console.log("0");
+          }
       }
 
 
