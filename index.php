@@ -177,13 +177,15 @@ $LoadOnStart = new LoadOnStart();
         </div>
             
         <div id= "fileManagerDiv" class="modal-body">
-          <div class="row">
-            <div class=".col-sm-8">
-              <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles()" placeholder ="Search">
-            </div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Image</button>
-              <button type="button" class="btn btn-secondary">Video</button>
+          <div class="container col-md-12">
+            <div class="row">
+              <div class=".col-md-8">
+                <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles()" placeholder ="Search">
+              </div>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Image</button>
+                <button type="button" class="btn btn-secondary">Video</button>
+              </div>
             </div>
           </div>
           <div class = "list-group" id="modalc">
