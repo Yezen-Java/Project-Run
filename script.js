@@ -530,13 +530,12 @@ var yourArray = [];
       function onToggleClick(value, name){
         var nameOfToggle = document.getElementsByName(name);
           if(value == "ON"){
-            nameOfToggle.value = "OFF";
+            $(nameOfToggle).attr("value") = "OFF";
             console.log(nameOfToggle.value);
-            nameOfToggle.value = "ON";
           }else{
-            nameOfToggle.value = "ON";
+            $(nameOfToggle).attr("value") = "ON";
             console.log(nameOfToggle.value);
-            nameOfToggle.value = "OFF";
+
           }
       }
 
