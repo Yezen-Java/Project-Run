@@ -531,10 +531,10 @@ var yourArray = [];
         var nameOfToggle = document.getElementsByName(name);
           if(value == "ON"){
             nameOfToggle.value = "OFF";
-            console.log(nameOfToggle);
+            console.log(nameOfToggle.value);
           }else{
             nameOfToggle.value = "ON";
-            console.log(nameOfToggle);
+            console.log(nameOfToggle.value);
           }
       }
 
