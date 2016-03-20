@@ -6,10 +6,23 @@
     loginUserSession();
   }
 
-// if (isset($_POST['signup'])){
-//       include'database/signUpValidation.php';
-//       createAccount();    
-// }
+      
+
+if (isset($_POST['signup'])){
+      $fname= pg_escape_string($_POST['firstname']);
+      $lastname=pg_escape_string($_POST['lastname']);
+      $email=pg_escape_string($_POST['form-create-email']);
+      $username=pg_escape_string($_POST['form-create-username']);
+      $password= pg_escape_string($_POST['form-create-password']);
+      include'database/signUpValidation.php';
+
+      $userclass = new UserClass();
+      $checkUserValidation = $userclass->checkUser($email,$username);
+      if($checkUserValidation){
+      $userclass-> signUpuser($fname,$lastname,$email,$username,$password); 
+
+    }
+}
 
 ?>
 
