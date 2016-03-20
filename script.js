@@ -225,6 +225,8 @@ function reloaddiv(evt){
 }
 
 function deleteTourLi(tourId){
+
+  if (confirm("Press a button!") == true) {
     var list = document.getElementById("buttonsListTours");
     var size = $("#buttonsListTours li").length;
     console.log(size);
@@ -245,6 +247,10 @@ function deleteTourLi(tourId){
 
          }
     }
+  }else{
+
+    console.log("Tour was not deleted")
+  }
       // $(".tourButtons").get(i).remove();
       // $(this).remove();
 }
