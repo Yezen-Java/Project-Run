@@ -523,21 +523,16 @@ var yourArray = [];
               }
         }); 
       }
-
+      
       function clickedAccountToggle(value, active){
-
         if(active == 1){
           console.log("ONE");
           console.log(value);
-
         }else{
           console.log("ZERO");
           console.log(value);
         }
-
-
       }
-      
 
 
 
