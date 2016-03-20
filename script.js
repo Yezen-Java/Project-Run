@@ -524,14 +524,14 @@ var yourArray = [];
         }); 
       }
 
-      function checkToggleOn(value, active){
-        if(active == 1){
-          active = 0;
-          console.log("ONE");
-        }else{
-          active = 1;
-        }
-        console.log(active);
+      function checkToggleOn(name){
+       var selected = document.getElementsByName(name);
+       if (selected.value == "OFF"){
+        selected.value = "ON";
+       } else {
+        selected.value = "OFF";
+       }
+       console.log(selected.value);
       }
       
 
