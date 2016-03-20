@@ -29,7 +29,6 @@ return false;
 }
 
 
-
 public function getMediaOfLocation($getLocationId,$username){
 
 $getContent ='';
