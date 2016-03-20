@@ -11,14 +11,14 @@ $locationClass = new LocationClass();
 
 $checkLocation = $locationClass->editLocaitonName($newLocationName, $locationId,$dbconn);
 
-// if($checkLocation){
+if($checkLocation){
 
-// 	echo true;
+	echo true;
 
-// }else{
+}else{
 
-// 	echo false;
-// }
+	echo false;
+}
 
 
 ?>
