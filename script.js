@@ -370,12 +370,11 @@ function addmeidaFromSelectList(){
   var selectedText = selectBox.options[selectBox.selectedIndex].text;
   console.log(selectedValue);
   console.log(selectedText);
-  if (selectedValue !== null){
+  if (selectedValue !== ""){
     $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
     $('#listMedia ').sortable();
   }
-   
-
+  
 }
 
 
