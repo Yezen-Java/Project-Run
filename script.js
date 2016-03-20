@@ -202,7 +202,7 @@ for (var i = 0; i < array.length; i++) {
 
 
 
-
+array = [];
 
 }
 
@@ -415,6 +415,8 @@ if(array !=null){
 }else{
   alert('no Locations where Selected');
 }
+
+array =[];
 
 }
 
