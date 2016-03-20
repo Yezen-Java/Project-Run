@@ -85,11 +85,11 @@ $(document).ready(function(){
       $('#EditlocationModel input').each(function(){
         console.log($(this));
         $(this).attr('checked', false);
+        $(this).prop('checked', false);
       });
     });
 
     $('#EditlocationModel').on('show.bs.modal', function () {
-      location.reload(true);
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
         selectedID.push($(obj).attr('value'));
@@ -103,6 +103,7 @@ $(document).ready(function(){
          if(selectedID.indexOf($(checkboxes[i]).attr('value')) > -1){
             console.log($(checkboxes[i]));
             $(checkboxes[i]).attr('checked', true);
+            $(checkboxes[i]).prop('checked', true);
          }
       }
     }); 
