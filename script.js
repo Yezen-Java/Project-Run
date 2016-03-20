@@ -94,8 +94,9 @@ $(document).ready(function(){
       });
 
       console.log(selectedID);
+      var checkboxes = document.getElementsByClassName('checkLocation');
+      console.log(checkboxes);
 
-      var checkboxes = document.getElementsByName('checkboxlocation');
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
          // And stick the checked ones onto an array...
