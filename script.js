@@ -313,6 +313,7 @@ function createTourDetails(){
 
 function addLocationRes(value,name) {
   LocationIdNumber = value;
+  $("#locationName").empty();
   $("#locationName").append("<h4>"+name+"</h4>");
 
   $("#myModal ul").empty();
