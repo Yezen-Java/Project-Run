@@ -5,7 +5,7 @@ session_destroy();
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Loged Out</title>
@@ -14,7 +14,5 @@ session_destroy();
 
 <h1>You have Successfully Loged out</h1></br>
 <button type="button" action="login.php">login</button>
-
-
 </body>
-</html>
+</html> -->
