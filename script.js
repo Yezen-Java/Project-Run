@@ -226,7 +226,7 @@ function reloaddiv(evt){
 
 function deleteTourLi(tourId){
 
-  if (confirm("Press a button!") == true) {
+  if (confirm("Confirm") == true) {
     var list = document.getElementById("buttonsListTours");
     var size = $("#buttonsListTours li").length;
     console.log(size);
