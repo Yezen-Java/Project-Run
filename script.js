@@ -83,7 +83,7 @@ $(document).ready(function(){
 
     $('#EditlocationModel').on('hidden.bs.modal', function () {
       console.log("works");
-      $('#EditlocationModel li').each(function(){
+      $('#EditlocationModel input').each(function(){
         console.log($(this));
         $(this).attr('checked', false);
       });
@@ -95,9 +95,7 @@ $(document).ready(function(){
         selectedID.push($(obj).attr('value'));
       });
 
-      console.log(selectedID);
       var checkboxes = document.getElementsByClassName('checkLocation');
-      console.log(checkboxes);
 
       // loop over them all
       for (var i=0; i<checkboxes.length; i++) {
