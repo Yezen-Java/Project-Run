@@ -89,7 +89,8 @@ textarea {
 }
 
 #sideBar {
-    
+    padding-top: 50px;
+    margin: 10px;
 }
 #leftSidebar {
     padding-top: 50px;
