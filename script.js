@@ -523,6 +523,14 @@ var yourArray = [];
               }
         }); 
       }
+
+      function checkToggleOn(value, active){
+        if(active == 1){
+          console.log("ONE");
+        }else{
+          console.log("ZERO");
+        }
+      }
       
 
 
