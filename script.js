@@ -527,12 +527,13 @@ var yourArray = [];
         }); 
       }
 
-      function onToggleClick(value, this){
+      function onToggleClick(value, name){
+        var nameOfToggle = document.getElementsByName(name);
           if(value == "ON"){
-            this.value = "OFF";
+            nameOfToggle.value = "OFF";
             console.log("0");
           }else{
-            this.value = "ON";
+            nameOfToggle.value = "ON";
             console.log("1");
           }
       }
