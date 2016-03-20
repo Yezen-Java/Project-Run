@@ -181,41 +181,29 @@ return $htmltag;
       $htmlTag = '';
       $results = pg_query("SELECT * FROM users");
 
-      if($results ){
-
-        $htmlTag="<table style='width:auto'>
-              <tr>
-                <td><p>Active</p></td>
-                <td style='padding-left:30px;''><p>USER NAME</p></td>
-              </tr>";
+      if($results){
 
               while($rows = pg_fetch_array($results)){
-
                 $userNameForm = $rows['username'];
                 $active = $rows['active'];
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' checked data-toggle='toggle'></td>
-                <td style='padding-left:30px;''><p>MR OLMEZ</p></td>
+                <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' data-toggle='toggle'></td>
-                <td style='padding-left:30px;''><p>MR OLMEZ</p></td>
+                <td style='padding-left:30px;''><p>$userNameForm</p></td>
               </tr>";
 
                 }
 
               }
-
-              $htmlTag = $htmlTag."</table>";
-
       }
       return $htmlTag;              
-
-
     }
 
 }
