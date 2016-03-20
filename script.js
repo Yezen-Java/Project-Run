@@ -2,15 +2,12 @@ $(document).ready(function(){
   $('#EditlocationModel').on('hidden.bs.modal', function () {
       $('#EditlocationModel li').each(function(){
         console.log($(this));
-        $(this).prop('checked', false);
+        $(this).attr('checked', false);
       });
   });
 
   $('.toggleSwitch').bootstrapToggle();
-    
-
     $('#search').keyup(function(){
-        
         var searchText = $(this).val();
         
         $('#myList > li').each(function(){
