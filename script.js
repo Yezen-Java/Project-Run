@@ -82,7 +82,6 @@ $(document).ready(function(){
     // }));
 
     $('#EditlocationModel').on('hidden.bs.modal', function () {
-      console.log("works");
       $('#EditlocationModel input').each(function(){
         console.log($(this));
         $(this).attr('checked', false);
@@ -90,6 +89,7 @@ $(document).ready(function(){
     });
 
     $('#EditlocationModel').on('show.bs.modal', function () {
+      console.log("works");
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
         selectedID.push($(obj).attr('value'));
