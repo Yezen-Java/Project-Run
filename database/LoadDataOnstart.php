@@ -186,19 +186,19 @@ return $htmltag;
               while($rows = pg_fetch_array($results)){
                 $userNameForm = $rows['username'];
                 $active = $rows['active'];
+                $userId = $rows['userid'];
 
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' checked data-toggle='toggle'></td>
-                <td style='padding-left:30px;''><p>$userNameForm</p></td>
-              </tr>";
+                <td><input type='checkbox' ontoggle='clickedAccountToggle(this.value, $active)' checked data-toggle='toggle' value='$userId'></td>
+                  <td style='padding-left:30px;''><p>$userNameForm</p></td>
+                </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
-                <td><input type='checkbox' data-toggle='toggle'></td>
-                <td style='padding-left:30px;''><p>$userNameForm</p></td>
-              </tr>";
-
+                    <td><input type='checkbox' ontoggle='clickedAccountToggle(this.value, $active)' data-toggle='toggle' value='$userId'></td>
+                      <td style='padding-left:30px;''><p>$userNameForm</p></td>
+                    </tr>";
                 }
 
               }
