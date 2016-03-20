@@ -314,8 +314,6 @@ function createTourDetails(){
 function addLocationRes(value) {
   LocationIdNumber = value;
   $("#myModal ul").empty();
-
-  $("#myModal").modal();
   $('#listMedia').sortable();
 
   appendMediaToLocaiton(value);
