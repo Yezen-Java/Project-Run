@@ -543,7 +543,9 @@ var yourArray = [];
         var searchText = $('#searchFile').val();
         console.log(searchText);
         $('.mediaItems > h3').each(function(){
-            console.log($(this));
+          var currentLiText1 = $(this).text();
+            console.log(currentLiText1);
+
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
             
