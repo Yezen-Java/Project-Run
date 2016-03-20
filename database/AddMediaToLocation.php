@@ -15,7 +15,7 @@ $liarray = explode("::", $lis);
 $le = count($liarray);
 
 $Addmedia = new MediaManager();
-$getResults = $Addmedia-> addMeidaToLocation($le,$liarray,$location,$dbconn,$username);
+$getResults = $Addmedia-> addMeidaToLocation($le,$liarray,$location,$dbconn);
 
 echo $getResults;
 

@@ -11,7 +11,7 @@ $getLocationId = $_POST['LocationId'];
 $username = $_SESSION['username'];
 $getMediaLocation = new MediaManager();
 
-$getresults = $getMediaLocation->getMediaOfLocation($getLocationId,$username);
+$getresults = $getMediaLocation->getMediaOfLocation($getLocationId);
 
 echo $getresults;
 
