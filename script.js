@@ -365,16 +365,16 @@ console.log("test "+locationID);
 
 function addmeidaFromSelectList(){
 
-   var selectBox = document.getElementById("MediaSelectId");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    var selectedText = selectBox.options[selectBox.selectedIndex].text;
-
-    console.log(selectedValue);
-    console.log(selectedText);
-
+  var selectBox = document.getElementById("MediaSelectId");
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  var selectedText = selectBox.options[selectBox.selectedIndex].text;
+  console.log(selectedValue);
+  console.log(selectedText);
+  if (selectedValue !== null){
     $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
     $('#listMedia ').sortable();
-
+  }
+   
 
 }
 
