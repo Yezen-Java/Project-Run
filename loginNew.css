@@ -1,5 +1,5 @@
 body{
-    height: auto;
+    height: 100%;
 }
 .navbar {
   margin-bottom: 0px;
@@ -33,11 +33,11 @@ body{
     font-size: 2em;
 }
 .slide1{
-    height: auto;
+    height: 100%;
     background-position: center;
 }
 .slide2{
-    height: auto;
+    height: 100%;
     background-position: center;
 }
 .carousel-control.left, .carousel-control.right{
