@@ -68,17 +68,17 @@ $locationsQuery2 = pg_query("SELECT * From location");
 if ($locationsQuery2) {
     echo"<ul>";
     while($rows = pg_fetch_array($locationsQuery2)){
-    $id = $rows['locationid'];
-    $name = $rows['lname'];
-    echo"<li value='$id'>
-    <div class='checkbox'>
-      <label><input type='checkbox' class='checkLocation' id='$id' value='$id' name='checkboxlocation'>$name</label>
-    </div></li>";
-}
-    echo"</ul>";
-}else{
-  echo "noLocationsFound";
-}
+      $id = $rows['locationid'];
+      $name = $rows['lname'];
+      echo"<li value='$id'>
+      <div class='checkbox'>
+        <label><input type='checkbox' class='checkLocation' id='$id' value='$id' name='checkboxlocation'>$name</label>
+      </div></li>";
+    }
+  echo"</ul>";
+  }else{
+    echo "noLocationsFound";
+  }
 }
 
 public function mediaResultsFucntion(){

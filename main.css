@@ -52,6 +52,9 @@ textarea {
   overflow-y: auto;
   width: 100%;
 }
+#checkbox{
+  float: left;
+}
 
 #sortable { 
   list-style-type: none; 

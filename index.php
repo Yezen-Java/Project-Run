@@ -319,9 +319,8 @@ $LoadOnStart = new LoadOnStart();
       <div class="modal-body">
       <h1>Edit Locations</h1>
       <?php 
-     $LoadOnStart->getLocationList();
-          ?>
- 
+        $LoadOnStart->getLocationList();
+      ?>
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" onclick="saveLocations()">Save</button>

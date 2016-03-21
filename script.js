@@ -5,11 +5,9 @@ $(document).ready(function(){
     $('#search').keyup(function(){
         var searchText = $(this).val();
         
-        $('#myList').each(function(){
-            
+        $('#myList > li').each(function(){
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
-            
             $(this).toggle(showCurrentLi);
         });     
     });
