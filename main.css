@@ -177,8 +177,8 @@ padding-left: 210px;
 }
 
 #buttonsListTours {
-    height: 50%;
-    overflow: auto;
+    height: 20%;
+    overflow: scroll;
     list-style-type: none;
     position: relative;
 }
