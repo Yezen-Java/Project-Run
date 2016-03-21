@@ -133,7 +133,7 @@ $LoadOnStart = new LoadOnStart();
                       <div class="input-group">
                         <input type="text" class="form-control" name="toDoTextArea" id="toDoTextArea" autofocus placeholder="Message">
                         <span class="input-group-btn">
-                        <button type="button" class="btn btn-default-success" name="addBtn" id="addBtn" autofocus>Add</button>
+                        <button type="button" class="btn btn-success" name="addBtn" id="addBtn" autofocus>Add</button>
                         </span>
                       </div>
                     </form>
