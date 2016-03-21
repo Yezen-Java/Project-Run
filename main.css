@@ -164,6 +164,9 @@ padding-left: 210px;
 }
 #addPointer{
     width: 80px;
+    margin: 10px;
+    padding-top: 200px;
+    
 }
 
 #deleteTour{
@@ -191,11 +194,7 @@ padding-left: 210px;
 	margin: 10px 20px 10px 10px;
 	float: right;
 }
-#leftBarButtonContainer{
-  margin: 10px;
-  position: fixed;
-  padding-top: 200px;
-}
+
 
 #deleteNoteButton{
   margin: 10px 20px 10px 130px;
