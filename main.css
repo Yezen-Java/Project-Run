@@ -126,8 +126,8 @@ textarea {
   background-color: #3A539B;
 }
 
-.dropdown{
-    background-color: #3A539B;
+.nav ul:active {
+      background-color: #3A539B;
   color: #3A539B;
 }
 
