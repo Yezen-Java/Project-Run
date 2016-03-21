@@ -186,10 +186,11 @@ padding-left: 210px;
     margin: 10px;   
     position: relative;
 }
-#roomlist{
+#pointersDiv{
   overflow: scroll;
-  padding-right: 10px;
-  width: auto;
+}
+#roomlist{
+  padding-right: -50px;
 }
 
 #demo {
