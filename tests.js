@@ -50,44 +50,10 @@ QUnit.test('getCheckedBoxes', function(assert){
 });
 
 QUnit.test('descriptionBoxEdit', function(assert){
-	assert.deepEqual(descriptionBoxEdit(30), checkboxesChecked, "There exists more than 0 checked boxes, we return them.")
-	assert.deepEqual(descriptionBoxEdit("checkboxlocation"), null, "There exists no checked boxes, therefore the method returns null.")
+	assert.deepEqual(descriptionBoxEdit(152), 152, "The function returns the ID number of the media item passed in as an arugment, if this media exists.")
+	assert.deepEqual(descriptionBoxEdit(-1), null, "A media ID cannot be below 0, therefore this argument would return null.")
+	assert.equal(descriptionBoxEdit(), null, "Passing no parameter would return null at compile time.")
 });
-
-
-
-$mediaid = $rows['mediaid']; = idOfDescriptionBox
-
-    // function descriptionBoxEdit(idOfDescriptionBox){
-    //   var currentValue = null; 
-    //   $(".textAreas").each(function(i,obj){
-    //     if($(obj).attr('name') == idOfDescriptionBox){
-    //       currentValue = $(obj).attr('name');
-    //       $(obj).prop('disabled', function(i,v) {
-    //         return !v;
-    //       });
-    //       var descriptionText = $(obj).val();
-    //       $("button").each(function(i,bobj){
-    //         if ($(bobj).attr('id') == currentValue ) {
-    //           console.log(descriptionText);
-    //           if($(bobj).text() == "Save" && descriptionText != ""){
-    //             $(bobj).text("Edit");
-    //             $.post('database/AddMediaDescription.php',{Mediaid:$(bobj).attr('id'),Description:descriptionText}, function(data){
-    //               if(data == false){
-    //                 alert("error");
-    //               }else{
-    //                 alert("works");
-    //               }
-    //             }); 
-    //           } else {
-    //             $(bobj).text("Save");
-    //           }
-    //         }
-    //       });
-    //     }
-    //   });
-    // }
-
 
 
 
