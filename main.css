@@ -225,6 +225,7 @@ padding-left: 210px;
   overflow: scroll;
   width: auto;
   height: 430px;
+  background-color: #bdc3c7;
 }
 
 #demo {
@@ -263,7 +264,6 @@ padding-left: 210px;
 
 #leftBarId{
   display:none;
-  background-color: #bdc3c7;
   width: 250px;
 }
 
