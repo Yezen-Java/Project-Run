@@ -48,7 +48,8 @@ textarea {
   float:left;
 }
 .locationsName{
-  padding: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 #modalc{
