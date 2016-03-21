@@ -163,9 +163,8 @@ return $htmltag;
            $htmlTag = $htmlTag."
           <li class='searcLocations' value='$id'>
             <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'/> 
-            <p class='locationsName' ondblclick='dbClickEdit(this);'>   $name</p>
+            <p class='locationsName' ondblclick='dbClickEdit(this);'>$name</p>
             <input type='text' class='editManagerBox' onfocusout='fcEdit(this,$id);'style='display:none'/>
-            
           </li>";
 
           }

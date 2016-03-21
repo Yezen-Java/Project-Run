@@ -46,7 +46,8 @@ textarea {
 }
 .chkbox{
   float:left;
-  margin: 10px;
+}
+.locationsName{
   padding: 10px;
 }
 
