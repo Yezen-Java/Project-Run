@@ -130,8 +130,8 @@ $LoadOnStart = new LoadOnStart();
                 <input type="text" class="form-control" id="search" placeholder ="Search">
                   <div id="container">
                     <form name="form1" method="post" action="">
-                      <input type="text" name="toDoTextArea" id="toDoTextArea" autofocus>
-                      <button type="button" class="btn-success" name="addBtn" id="addBtn" autofocus>Add</button>
+                      <input type="text" class="form-control" name="toDoTextArea" id="toDoTextArea" autofocus placeholder="Message">
+                      <button type="button" class="btn btn-default-success" name="addBtn" id="addBtn" autofocus>Add</button>
                     </form>
                     <ul id="myList" class="sortable list searching"></ul>
                     <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
