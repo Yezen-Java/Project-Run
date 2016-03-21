@@ -190,7 +190,8 @@ padding-left: 210px;
   overflow: scroll;
 }
 #roomlist{
-  padding: -50px;
+  padding-left: -50px;
+  margin-left: -50px;
 }
 
 #demo {
