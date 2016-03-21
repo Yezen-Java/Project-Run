@@ -293,9 +293,24 @@ padding-left: 210px;
   margin: 10px;
 }
 
-#notesBarHeight{
-  height: 500px;
+.circleButtonX{
+background-color: darkgrey;
+  border-radius: 50%;
+  opacity: .5;
+
+};
+
+
+
+.circleButtonX:hover{
+    background-color: yellow;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 1;
+  color: white;
+
 }
+
 
 #wrapper.toggled {
     padding-left: 0;
