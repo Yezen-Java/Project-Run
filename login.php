@@ -138,5 +138,4 @@ if (isset($_POST['signup'])){
             </div>
         </div>
     </body>
-
 </html>

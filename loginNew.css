@@ -1,5 +1,5 @@
 body{
-    
+    height: auto;
 }
 .navbar {
   margin-bottom: 0px;
@@ -16,8 +16,8 @@ body{
 }
 .bottom-content{
     background:#ecf0f1;
-    height: auto;
 }
+
 #hiveLogin{
     color: #ecf0f1;
 }
