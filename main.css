@@ -130,11 +130,6 @@ textarea {
   background-color: #3A539B;
 }
 
-.navbar-nav > li{
-  color: #D8D8D8;
-  
-}
-
 #leftSidebar {
     padding-top: 50px;
     margin: 10px;
@@ -172,7 +167,7 @@ textarea {
 padding-top: 50px;  
 padding-left: 210px;
     margin: 10px;
-    width: 100%;
+    width: 95%;
     position: relative;
     float: center;
     overflow-y: auto;
