@@ -356,7 +356,7 @@ console.log("test "+locationID);
 
        $.post('database/getmediaOfLocations.php',{LocationId:locationID}, function(data){
         $("#listMedia").append(data);
-        //$('.sortable').sortable();
+        $('.sortable').sortable();
        });
        return false;
   });
@@ -371,7 +371,7 @@ function addmeidaFromSelectList(){
   console.log(selectedValue);
   console.log(selectedText);
   if (selectedValue !== ""){
-    $('#listMedia').append('<li value='+selectedValue+'> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button> <a>'+selectedText+'</a> </li>');
+    $('#listMedia').append('<li class =tourLoactions> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button><div class='+selectedValue+' value='+selectedValue+'></div> <a>'+selectedText+'</a> </li>');
     $('#listMedia ').sortable();
   }
   
