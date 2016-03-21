@@ -71,9 +71,10 @@ if ($locationsQuery2) {
       $id = $rows['locationid'];
       $name = $rows['lname'];
       echo"<li value='$id'>
+      <div class='container'>
       <div class='checkbox'>
         <label><input type='checkbox' class='checkLocation' id='$id' value='$id' name='checkboxlocation'>$name</label>
-      </div></li>";
+      </div></div></li>";
     }
   echo"</ul>";
   }else{
