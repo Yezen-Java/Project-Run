@@ -237,16 +237,11 @@ function deleteTourLi(tourId){
             alert("Deleteing tour falid");
           }
           });
- 
-
          }
     }
   }else{
-
     console.log("Tour was not deleted")
   }
-      // $(".tourButtons").get(i).remove();
-      // $(this).remove();
 }
 
 function addNoteFunc(){
@@ -319,8 +314,6 @@ function addLocationRes(value,name,obj) {
 
   $("#myModal ul").empty();
   $('#listMedia').sortable();
-
-
   appendMediaToLocaiton(value);
 }
 
@@ -343,8 +336,6 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
        });
        return false;
   });
-
-
 }
 
   
@@ -413,7 +404,6 @@ if(array !=null){
 }
 
 function TourEditName(){
-  //\\\\\\\\\\\\\\\
     var tourid = $('#editTourDialogue').attr('value');
      var newTourName = $("#editTourNameField").val();
      $.post('database/ModifyTour.php',{TourID:tourid,newName:newTourName}, function(data){
@@ -468,6 +458,7 @@ var yourArray = [];
         if($(obj).attr('name') == idOfDescriptionBox){
           currentValue = $(obj).attr('name');
           $(obj).prop('disabled', function(i,v) {
+            console.log(!v);
             return !v;
           });
           var descriptionText = $(obj).val();
