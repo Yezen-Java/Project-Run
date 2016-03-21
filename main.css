@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  background:#ecf0f1;
 }
 
 h3{
