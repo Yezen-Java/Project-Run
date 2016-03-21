@@ -300,12 +300,6 @@ background-color: darkgrey;
 
 };
 
-iframe{
-  max-width: 260px;
-  width: 260px;
-  max-height: 200px;
-  height: 200px;
-}
 
 .circleButtonX:hover{
     background-color: yellow;
