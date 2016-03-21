@@ -165,7 +165,7 @@ padding-left: 210px;
 
 #leftbarContainerManage{
   margin: 10px;
-  padding-top: 200px;
+  padding-top: 250px;
   position: fixed;
 }
 
@@ -185,6 +185,11 @@ padding-left: 210px;
     padding-left: 250px;
     margin: 10px;   
     position: relative;
+}
+#pointersDiv{
+  overflow: scroll;
+  padding-right: 10px;
+  width: auto;
 }
 
 #demo {
