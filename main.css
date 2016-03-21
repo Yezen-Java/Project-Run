@@ -125,6 +125,10 @@ textarea {
 .navbar{
   background-color: #3A539B;
 }
+.nav a:active {
+    background-color: #3A539B;
+}
+
 #leftSidebar {
     padding-top: 50px;
     margin: 10px;

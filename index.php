@@ -71,7 +71,7 @@ $LoadOnStart = new LoadOnStart();
         <li><a href="#">Home</a></li>
         <li><a href="#" id="notes-toggle">Note</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Manager  <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
             <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
