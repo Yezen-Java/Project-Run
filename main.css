@@ -46,6 +46,7 @@ textarea {
 }
 .chkbox{
   float:left;
+  margin: 10px;
 }
 
 #modalc{
