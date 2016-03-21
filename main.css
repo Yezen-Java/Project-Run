@@ -166,7 +166,7 @@ padding-left: 210px;
 #leftbarContainerManage{
   margin: 10px;
   padding-top: 250px;
-  position: fixed;
+  position: relative;
 }
 
 #deleteTour{
