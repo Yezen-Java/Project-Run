@@ -33,11 +33,11 @@ body{
     font-size: 2em;
 }
 .slide1{
-    height: 500px;
+    height: auto;
     background-position: center;
 }
 .slide2{
-    height: 500px;
+    height: auto;
     background-position: center;
 }
 .carousel-control.left, .carousel-control.right{
