@@ -287,6 +287,10 @@ padding-left: 210px;
     height: 100%
 }
 
+#btnClear{
+  padding-left: 50px;
+}
+
 #wrapper.toggled {
     padding-left: 0;
 }
