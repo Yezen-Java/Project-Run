@@ -130,16 +130,15 @@ $LoadOnStart = new LoadOnStart();
                   <div id="container">
                     <form name="form1" method="post" action="">
                       <input type="text" class="form-control" id="search" placeholder ="Search"> 
-          
-                           <div class="input-group" id="notesBarItemsTop">
-                            <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
+                        <div class="input-group" id="notesBarItemsTop">
+                          <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
                             <span class="input-group-btn">
                               <button class="btn btn-default" type="button" id="addBtn">Add</button>
                             </span>
-                          </div>
-
+                        </div>
                     </form>
                     <ul id="myList" class="sortable list searching"></ul>
+                    
                     <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
                   </div>
                 </li>

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   $('.toggleSwitch').bootstrapToggle();
+  
     $('#search').keyup(function(){
         var searchText = $(this).val();
         
