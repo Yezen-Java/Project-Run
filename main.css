@@ -163,9 +163,10 @@ padding-top: 50px;
 padding-left: 210px;
     margin: 10px;
     width: 100%;
+    height: 50%;
     position: relative;
     float: center;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 #toursListMiddle {
@@ -177,8 +178,6 @@ padding-left: 210px;
 }
 
 #buttonsListTours {
-    height: 20%;
-    overflow: scroll;
     list-style-type: none;
     position: relative;
 }
