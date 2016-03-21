@@ -44,6 +44,9 @@ textarea {
   width: 100%;
   height: auto;
 }
+#chkbox{
+  float:left;
+}
 
 #modalc{
   height: 60%;

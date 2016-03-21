@@ -71,10 +71,9 @@ if ($locationsQuery2) {
       $id = $rows['locationid'];
       $name = $rows['lname'];
       echo"<li value='$id'>
-      <div class='container'>
       <div class='checkbox'>
         <label><input type='checkbox' class='checkLocation' id='$id' value='$id' name='checkboxlocation'>$name</label>
-      </div></div></li>";
+      </div></li>";
     }
   echo"</ul>";
   }else{
@@ -163,6 +162,7 @@ return $htmltag;
           $name = $rows['lname'];
            $htmlTag = $htmlTag."
           <li class='searcLocations' value='$id'>
+          
             <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'/> 
             <p class='locationsName' ondblclick='dbClickEdit(this);'>$name</p>
             <input type='text' class='editManagerBox' onfocusout='fcEdit(this,$id);'style='display:none'/>
