@@ -16,6 +16,10 @@ body{
 }
 .bottom-content{
     background:#ecf0f1;
+    height: auto;
+}
+#hiveLogin{
+    color: #ecf0f1;
 }
 .inner-bg{
     background-color: #3A539B;
