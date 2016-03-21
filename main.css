@@ -127,6 +127,7 @@ textarea {
 }
 .nav a:active {
     background-color: #3A539B;
+    color: #3A539B;
 }
 
 #leftSidebar {
