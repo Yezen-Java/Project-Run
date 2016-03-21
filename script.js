@@ -522,6 +522,8 @@ var yourArray = [];
       }
 
       function deleteMediaLi(value){
+        console.log(value);
+        console.log(LocationIdNumber);
         $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
                 $("li").remove("."+value);
