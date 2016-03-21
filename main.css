@@ -46,7 +46,9 @@ textarea {
 }
 .chkbox{
   float:left;
-  margin: 10px;
+}
+#testingOneTwo{
+  padding-left: 10px;
 }
 
 #modalc{

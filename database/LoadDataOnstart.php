@@ -162,9 +162,10 @@ return $htmltag;
           $name = $rows['lname'];
            $htmlTag = $htmlTag."
           <li class='searcLocations' value='$id'>
-          
+          <div class='container' id='testingOneTwo'>
             <input type='checkbox' name='checkboxlocation' class='chkbox locationManagerClass' value ='$id'/> 
             <p class='locationsName' ondblclick='dbClickEdit(this);'>$name</p>
+            </div>
             <input type='text' class='editManagerBox' onfocusout='fcEdit(this,$id);'style='display:none'/>
             
           </li>";
