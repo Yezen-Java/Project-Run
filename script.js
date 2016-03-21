@@ -12,6 +12,10 @@ $(document).ready(function(){
         });     
     });
 
+    $('.dropdown-menu').on("click",function(){  
+      $(this).toggleClass('active');
+    });
+
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     $("#addTour").click(function(){
