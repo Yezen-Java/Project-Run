@@ -68,19 +68,19 @@ $LoadOnStart = new LoadOnStart();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#" id="notes-toggle">Note</a></li>
+        <li><a href="#" style="color:#D8D8D8;">Home</a></li>
+        <li><a href="#" style="color:#D8D8D8;" id="notes-toggle">Note</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
+          <a class="dropdown-toggle" style="color:#D8D8D8;" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#file_manager_dialogue" id="file-manager" data-toggle="modal">File Manager</a></li>
-            <li><a href="#LocationMangerModal" id="location-manager" data-toggle="modal">Location Manager</a></li>
-            <li><a href="#account-manager-modal" id="account-manager" data-toggle="modal">Account Manager</a></li>
+            <li><a href="#file_manager_dialogue" id="file-manager" style="color:#D8D8D8;" data-toggle="modal">File Manager</a></li>
+            <li><a href="#LocationMangerModal" id="location-manager" style="color:#D8D8D8;" data-toggle="modal">Location Manager</a></li>
+            <li><a href="#account-manager-modal" id="account-manager" style="color:#D8D8D8;" data-toggle="modal">Account Manager</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#logoutModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a href="#logoutModal" data-toggle="modal" style="color:#D8D8D8;"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </div>
