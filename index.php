@@ -97,9 +97,7 @@ $LoadOnStart = new LoadOnStart();
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
           <div id="pointersDiv">Locations</div>
         </nav>
-        <div class="container" id="leftBarButtonContainer">
-          <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#EditlocationModel"><strong>Manage</strong></button>
-        </div>
+        <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#EditlocationModel"><strong>Manage</strong></button>
       </div>
       <!--Below we have a list-group which includes pre-made tours, we must add functionality to the Add 
       tour button so that when we click the button, a function should add a new button to the end of the
