@@ -166,7 +166,7 @@ padding-left: 210px;
 #leftbarContainerManage{
   margin: 10px;
   padding-top: 250px;
-  position: relative;
+  position: fixed;
 }
 
 #deleteTour{
@@ -186,8 +186,8 @@ padding-left: 210px;
     margin: 10px;   
     position: relative;
 }
-#roomlist{
-  margin-left: -30px;
+#pointersDiv{
+  margin-left: -40px;
   overflow: scroll;
 }
 
