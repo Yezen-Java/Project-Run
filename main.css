@@ -126,7 +126,10 @@ textarea {
   background-color: #3A539B;
 }
 
-.navbar-nav > li > .dropdown-menu { background-color: #3A539B;}
+.navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover.navbar-inverse{
+  background-color: #3A539B;
+}
+
 
 
 #leftSidebar {
