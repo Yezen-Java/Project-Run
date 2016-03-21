@@ -1,5 +1,5 @@
 body{
-    background-color: #3A539B;
+    
 }
 .navbar {
   margin-bottom: 0px;
@@ -13,6 +13,12 @@ body{
     width: 500px;
     padding-bottom: 100px;
     padding-right: 200px;
+}
+.bottom-content{
+    background-color: #bdc3c7;
+}
+.inner-bg{
+    background-color: #3A539B;
 }
 .carousel-caption h1{
     font-size: 5.4em;
