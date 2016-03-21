@@ -4,7 +4,7 @@ html, body {
 }
 
 h3{
-  text-overflow: ellipsis;
+  overflow: ellipsis;
 }
 
 /*circle x button code start*/
