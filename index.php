@@ -293,6 +293,7 @@ $LoadOnStart = new LoadOnStart();
               <tr>
                 <td><p>ACTIVE</p></td>
                 <td style="padding-left:30px;"><p>USER NAME</p></td>
+                <td style="padding-left:30px;"><p>REMOVE</p></td>
               </tr>
               <?php 
             echo $LoadOnStart->getUsersAccounts();
