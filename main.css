@@ -49,7 +49,9 @@ textarea {
 }
 .locationsName{
   margin-left: 10px;
-  padding-left: 10px;
+}
+.editManagerBox{
+  margin-left: 10px;
 }
 
 #modalc{
