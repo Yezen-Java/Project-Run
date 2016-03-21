@@ -3,6 +3,10 @@ html, body {
   overflow: hidden;
 }
 
+h3{
+  overflow: hidden;
+}
+
 /*circle x button code start*/
 .circleButtonX {
 	border-radius: 50%;
