@@ -190,12 +190,16 @@ return $htmltag;
                   $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' checked data-toggle='toggle' name='$userId' value='ON' onchange ='onToggleClick(this.value, this.name)' ></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
+                <td style='padding-left:30px;''><button type='button' class='btn btn-default btn-lg'>
+                <span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' onchange='onToggleClick(this.value, this.name)' data-toggle='toggle' name='$userId' value='OFF' ></td>
                 <td style='padding-left:30px;''><p>$userNameForm</p></td>
+                <td style='padding-left:30px;''><button type='button' class='btn btn-default btn-lg'>
+                <span class='glyphicon glyphicon-star' aria-hidden='true'></span></button></td>
                 </tr>";
                 }
 
