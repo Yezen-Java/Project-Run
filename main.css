@@ -58,6 +58,10 @@ textarea {
   padding-left: -10px;
 }
 
+.LocationManagerDiv{
+  overflow: scroll;
+}
+
 #modalc{
   height: 60%;
   position: relative;
