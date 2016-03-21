@@ -29,6 +29,9 @@ body{
 .carousel-caption p{
     font-size: 2em;
 }
+.page-header h1{
+    color: #ecf0f1;
+}
 .slide1{
     height: 500px;
     background-position: center;
