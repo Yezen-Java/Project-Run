@@ -162,8 +162,11 @@ padding-left: 210px;
 #deletePointer{
     width: 80px;
 }
-#addPointer{
-    margin: 10px;
+
+#leftbarContainerManage{
+  margin: 10px;
+  padding-top: 200px;
+  position: fixed;
 }
 
 #deleteTour{
