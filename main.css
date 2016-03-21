@@ -198,7 +198,6 @@ padding-left: 210px;
   margin: 10px;
   padding-top: 10px;
   position: fixed;
-  background-color: #bdc3c7;
 }
 
 #deleteTour{
@@ -226,7 +225,6 @@ padding-left: 210px;
   overflow: scroll;
   width: auto;
   height: 430px;
-  background-color: #bdc3c7;
 }
 
 #demo {
@@ -255,7 +253,6 @@ padding-left: 210px;
 #leftBar{
   float: left;
   height: 100%;
-  background-color: #bdc3c7;
   
 }
 
@@ -267,7 +264,6 @@ padding-left: 210px;
 #leftBarId{
   display:none;
   width: 250px;
-  background-color: #bdc3c7;
 }
 
 #sidebar-wrapper {
