@@ -188,7 +188,11 @@ padding-left: 210px;
 }
 #pointersDiv{
   margin-left: -40px;
+}
+#leftBarButtonsContainer{
   overflow: scroll;
+  width: auto;
+  height: 200px;
 }
 
 #demo {

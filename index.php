@@ -95,7 +95,9 @@ $LoadOnStart = new LoadOnStart();
       <div id="leftBar">
         <nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="leftBarId">
           <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large">Close &times;</a>
-          <div id="pointersDiv">Locations</div>
+          <div class="container" id="leftBarButtonsContainer">
+            <div id="pointersDiv">Locations</div>
+          </div>
           <div class="container" id="leftbarContainerManage">
             <button id="addPointer" type="button" class="btn btn-success" data-toggle="modal" href="#EditlocationModel"><strong>Manage</strong></button>
           </div>
