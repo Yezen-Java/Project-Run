@@ -230,6 +230,7 @@ padding-left: 210px;
 
 #leftBarId{
   width: 250px;
+  height: auto;
 }
 
 #sidebar-wrapper {
