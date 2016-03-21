@@ -22,7 +22,7 @@ h3{
 }
 
 #toDoTextArea{
-  width: 150px;
+  width: auto;
 }
 
 .circleButtonX:hover{
@@ -67,8 +67,8 @@ textarea {
   height: 18px; 
 }
 #notesBarItemsTop{
-  margin: 10px;
-  
+  padding: 10px;
+
 }
 
 #sortable li span { 
