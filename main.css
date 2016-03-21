@@ -253,6 +253,7 @@ padding-left: 210px;
 #leftBar{
   float: left;
   height: 100%;
+  background-color: #bdc3c7;
 }
 
 .removeListXbtn hover{
@@ -262,7 +263,6 @@ padding-left: 210px;
 
 #leftBarId{
   width: 250px;
-  background-color: #bdc3c7;
 }
 
 #sidebar-wrapper {
