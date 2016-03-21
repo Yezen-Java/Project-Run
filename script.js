@@ -371,7 +371,7 @@ function addmeidaFromSelectList(){
   console.log(selectedValue);
   console.log(selectedText);
   if (selectedValue !== ""){
-    $('#listMedia').append('<li class =tourLoactions> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button><div class='+selectedValue+' value='+selectedValue+'></div> <a>'+selectedText+'</a> </li>');
+    $('#listMedia').append('<li class =tourLoactions> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button><a>'+selectedText+'</a><div class='+selectedValue+' value='+selectedValue+'></div> </li>');
     $('#listMedia ').sortable();
   }
   
