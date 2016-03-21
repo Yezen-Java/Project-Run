@@ -130,7 +130,7 @@ textarea {
   background-color: #3A539B;
 }
 
-.myNavbar{
+.myNavbar > ul > li > a{
   color: #D8D8D8;
 }
 
