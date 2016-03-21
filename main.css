@@ -186,7 +186,7 @@ padding-left: 210px;
     margin: 10px;   
     position: relative;
 }
-#pointersDiv{
+#roomlist{
   overflow: scroll;
   padding-right: 10px;
   width: auto;
