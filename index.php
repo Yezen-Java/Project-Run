@@ -73,9 +73,9 @@ $LoadOnStart = new LoadOnStart();
         <li class="dropdown">
           <a class="dropdown-toggle" style="color:#ecf0f1;" data-toggle="dropdown" href="#">Manager  <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#file_manager_dialogue" id="file-manager" style="color:#ecf0f1;" data-toggle="modal">File Manager</a></li>
-            <li><a href="#LocationMangerModal" id="location-manager" style="color:#ecf0f1;" data-toggle="modal">Location Manager</a></li>
-            <li><a href="#account-manager-modal" id="account-manager" style="color:#ecf0f1;" data-toggle="modal">Account Manager</a></li>
+            <li><a href="#file_manager_dialogue" id="file-manager" style="color:#2c3e50;" data-toggle="modal">File Manager</a></li>
+            <li><a href="#LocationMangerModal" id="location-manager" style="color:#2c3e50;" data-toggle="modal">Location Manager</a></li>
+            <li><a href="#account-manager-modal" id="account-manager" style="color:#2c3e50;" data-toggle="modal">Account Manager</a></li>
           </ul>
         </li>
       </ul>
