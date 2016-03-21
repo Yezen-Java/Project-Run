@@ -287,9 +287,14 @@ padding-left: 210px;
     height: 100%
 }
 
+
 #buttonContainer{
   padding-left: 10px;
-  padding-top: 350px;
+  margin: 10px;
+}
+
+#notesBarHeight{
+  height: 350px;
 }
 
 #wrapper.toggled {
