@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
   $('.toggleSwitch').bootstrapToggle();
-  
+
     $('#search').keyup(function(){
         var searchText = $(this).val();
         
-        $('#myList > li').each(function(){
+        $('#myList').each(function(){
             
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
