@@ -137,9 +137,9 @@ $LoadOnStart = new LoadOnStart();
                           </span>
                         </div> -->
                          <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search for...">
+                          <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
                             <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
+                            <button class="btn btn-default" type="button" id="addBtn">Add</button>
                           </span>
                         </div>
                     </form>
