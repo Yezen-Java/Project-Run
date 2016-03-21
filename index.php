@@ -137,9 +137,8 @@ $LoadOnStart = new LoadOnStart();
                         </div>
                     </form>
                     <ul id="myList" class="sortable list searching"></ul>
-                    
-                    <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
                   </div>
+                  <button class="btn btn-danger" id="btnClear"><a id="clearAll" href="javascript:void();">Delete All</a></button>
                 </li>
           </ul>
         </div>
