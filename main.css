@@ -300,9 +300,8 @@ background-color: darkgrey;
 
 };
 
-video{
-  padding-top: -10px;
-  margin-top: -10px;
+iframe{
+
 }
 
 .circleButtonX:hover{

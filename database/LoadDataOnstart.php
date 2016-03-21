@@ -103,8 +103,8 @@ if ($mediaResults) {
       $Close = ">";
       
     }else{
-      $Tag = "<video controls> <source";
-    $Close = "></video>";
+      $Tag = "<iframe controls> <source";
+    $Close = "></iframe>";
     }
 
 
