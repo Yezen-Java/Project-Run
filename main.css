@@ -165,7 +165,7 @@ padding-left: 210px;
 
 #leftbarContainerManage{
   margin: 10px;
-  padding-top: 100px;
+  padding-top: 50px;
   position: fixed;
 }
 
@@ -187,12 +187,12 @@ padding-left: 210px;
     position: relative;
 }
 #pointersDiv{
-  margin-left: -40px;
+  margin-left: -50px;
 }
 #leftBarButtonsContainer{
   overflow: scroll;
   width: auto;
-  height: 300px;
+  height: 350px;
 }
 
 #demo {
