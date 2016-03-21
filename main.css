@@ -44,7 +44,7 @@ textarea {
   width: 100%;
   height: auto;
 }
-#chkbox{
+.chkbox{
   float:left;
 }
 
