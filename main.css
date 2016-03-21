@@ -273,7 +273,7 @@ padding-left: 210px;
     width: 0;
     height: 100%;
     overflow-y: auto;
-    background: #95a5a6;
+    background-color: #e3e8e8;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
