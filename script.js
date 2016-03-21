@@ -179,7 +179,7 @@ var LocationIdNumber ='';
 function Save(){
 
 var array = [];
- $('#listMedia li').each(function(i, li) {
+ $('#listMedia div').each(function(i, li) {
   array.push($(li).attr('value'));
 });
 for (var i = 0; i < array.length; i++) {
