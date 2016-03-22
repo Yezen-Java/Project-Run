@@ -583,9 +583,7 @@ var yourArray = [];
       }
 
       function userAccountId(userId){
-        var userIds = [];
-        userIds.push(userId);
-        console.log(userIds);
+        console.log(userId);
       }
 
 
