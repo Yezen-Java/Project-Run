@@ -143,7 +143,7 @@ $LoadOnStart = new LoadOnStart();
                 </div>
           </ul>
           <div class="container" id="buttonContainer">
-            <button class="btn btn-danger" id="clearAll"><a href="javascript:void();" id="clearAll">Delete All</a></button>
+            <button class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
           </div>
         </div>
     </div>
