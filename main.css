@@ -23,8 +23,7 @@ h3{
 
 #notesBarContainer{
   overflow: scroll;
-  height: 80%;
-
+  height: 60%;
 }
 
 #toDoTextArea{
