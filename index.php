@@ -126,7 +126,7 @@ $LoadOnStart = new LoadOnStart();
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
                 <li class="sidebar-brand" style="padding-top:10px;">
-                  <div id="container">
+                  
                     <form name="form1" id="notesBarHeight" method="post" action="">
                       <input type="text" class="form-control" id="search" placeholder ="Search"> 
                         <div class="input-group" id="notesBarItemsTop">
@@ -142,7 +142,7 @@ $LoadOnStart = new LoadOnStart();
                         <ul id="myList" class="sortable list searching"></ul>
                       </div>
                     </form>
-                  </div>
+               
                 </li>
           </ul>
         </div>
