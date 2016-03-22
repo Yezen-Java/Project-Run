@@ -191,7 +191,7 @@ return $htmltag;
                   $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' checked data-toggle='toggle' name='$userId' value='ON' onchange ='onToggleClick(this.value, this.name)' ></td>
                 <td style='padding-left:30px;'><p>$userNameForm</p></td>
-                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm'>
+                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm' value='$userId' onclick='userAccountId(this.value)'>
                 <span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>
               </tr>";
 
@@ -199,7 +199,7 @@ return $htmltag;
                     $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' onchange='onToggleClick(this.value, this.name)' data-toggle='toggle' name='$userId' value='OFF' ></td>
                 <td style='padding-left:30px;'><p>$userNameForm</p></td>
-                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm'>
+                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm' value='$userId' onclick='userAccountId(this.value)'>
                 <span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>
                 </tr>";
                 }

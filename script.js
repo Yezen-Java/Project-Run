@@ -580,7 +580,10 @@ var yourArray = [];
                 console.log('Error');
               }
         }); 
+      }
 
+      function userAccountId(userId){
+        console.log(userId);
       }
 
 
