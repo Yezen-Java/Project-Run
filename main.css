@@ -75,7 +75,7 @@ textarea {
   height: 60%;
   position: relative;
   float: center;
-  overflow-y: auto;
+  overflow: scroll;
   width: 100%;
 }
 
