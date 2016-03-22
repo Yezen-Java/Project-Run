@@ -74,7 +74,7 @@ if (isset($_POST['signup'])){
                                        </div>
                                         <div class="btn-group">
                                           <button class="btn btn-primary btn-lg" name="btlogin">Sign in</button>
-                                          <button class="btn btn-primary btn-lg">Create Account</button>   
+                                          <button class="btn btn-primary btn-lg" href="#theCarousel" data-slide="next">Create Account</button>   
                                         </div>
                                     </div>
                               </div>
