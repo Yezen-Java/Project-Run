@@ -321,7 +321,7 @@ $LoadOnStart = new LoadOnStart();
       ?>
       </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="saveLocations()">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="saveLocations()">Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
