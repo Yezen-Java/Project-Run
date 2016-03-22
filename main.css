@@ -458,8 +458,9 @@ video{
   padding-left: 600px;
 }
 #buttonContainer{
-  padding-top: 250px;
-  margin-top: 250px;
+  padding-top: 260px;
+  margin-top: 260px;
+  padding-left: 10px;
 
 }
 
