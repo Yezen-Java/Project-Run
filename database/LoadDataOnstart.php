@@ -183,7 +183,7 @@ return $htmltag;
       if(pg_num_rows($adminresults)==1){
       $results = pg_query("SELECT * FROM users LEFT  JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
               while($rows = pg_fetch_array($results)){
-                $userNameForm = $rows['username'];
+                $userNameForm = $rows['email'];
                 $active = $rows['active'];
                 $userId = $rows['userid'];
 
