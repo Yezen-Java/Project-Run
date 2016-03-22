@@ -141,8 +141,10 @@ $LoadOnStart = new LoadOnStart();
                       <button class="btn btn-danger" id="clearAll"><a href="javascript:void();" id="clearAll">Delete All</a></button>
                     </div>
                   </div>
+                  <div class="container" id="leftNotesContainer">
+                    <ul id="myList" class="sortable list searching"></ul>
+                  </div>
                 </li>
-                <ul id="myList" class="sortable list searching"></ul>
           </ul>
         </div>
     </div>
