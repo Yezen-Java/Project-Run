@@ -57,14 +57,14 @@ textarea {
   padding-left: 10px;
   margin-left: 10px;
 }
+#searchLoaction{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
 
 .editManagerBox{
   margin-left: 10px;
   padding-left: -10px;
-}
-#locationsContainer{
-  padding-top: 10px;
-  margin-top: 10px;
 }
 
 .LocationManagerDiv{

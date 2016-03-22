@@ -70,10 +70,10 @@ if ($locationsQuery2) {
     while($rows = pg_fetch_array($locationsQuery2)){
       $id = $rows['locationid'];
       $name = $rows['lname'];
-      echo"<div class='container' id='locationsContainer'><li value='$id'>
+      echo"<li value='$id'>
       <div class='checkbox'>
         <label><input type='checkbox' class='checkLocation' id='$id' value='$id' name='checkboxlocation'>$name</label>
-      </div></li></div>";
+      </div></li>";
     }
   echo"</ul>";
   }else{
