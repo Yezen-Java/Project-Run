@@ -207,6 +207,7 @@ padding-left: 210px;
   margin: 10px;
   padding-top: 10px;
   position: fixed;
+  width: auto;
 }
 
 #deleteTour{
