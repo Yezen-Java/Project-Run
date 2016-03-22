@@ -135,12 +135,12 @@ $LoadOnStart = new LoadOnStart();
                               <button class="btn btn-default" type="button" id="addBtn">Add</button>
                             </span>
                         </div>
-                    <div class="container" id="notesBarContainer">
-                    <ul id="myList" class="sortable list searching"></ul>
-                    <div class="container" id="buttonContainer">
-                      <button class="btn btn-danger" id="clearAll"><a href="javascript:void();" id="clearAll">Delete All</a></button>
-                    </div>
-                    </div>
+                      <div class="container" id="notesBarContainer">
+                        <ul id="myList" class="sortable list searching"></ul>
+                        <div class="container" id="buttonContainer">
+                          <button class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 </li>
