@@ -72,7 +72,6 @@ textarea {
   position: relative;
   float: center;
   overflow-y: auto;
-  margin: 10px;
   width: 100%;
 }
 
@@ -450,6 +449,7 @@ video{
 
 #searchFile{
   width: 300px;
+  padding: 10px;
 }
 
 
