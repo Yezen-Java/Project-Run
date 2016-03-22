@@ -62,6 +62,10 @@ textarea {
   margin-left: 10px;
   padding-left: -10px;
 }
+#locationsContainer{
+  padding-top: 10px;
+  margin-top: 10px;
+}
 
 .LocationManagerDiv{
   overflow: scroll;
