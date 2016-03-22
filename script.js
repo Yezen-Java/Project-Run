@@ -12,6 +12,8 @@ $(document).ready(function(){
         });     
     });
 
+    $('.carousel').carousel('pause');
+
     $('.dropdown-menu').on("click",function(){  
       $(this).toggleClass('active');
     });

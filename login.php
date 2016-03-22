@@ -39,6 +39,7 @@ if (isset($_POST['signup'])){
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
         <script src="tests.js"></script>
+        <script src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="loginNew.css">
     </head>
     <body>
