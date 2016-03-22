@@ -72,6 +72,7 @@ textarea {
 
 #notesBarHeight{
   height: 100%;
+  width: auto;
 }
 
 .LocationManagerDiv{
