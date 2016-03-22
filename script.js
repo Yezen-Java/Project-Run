@@ -20,8 +20,10 @@ $(document).ready(function(){
 
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
+    
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
+        randomStringGenerator();
     });
 
     $('#tourDateField').datepicker({
