@@ -177,8 +177,10 @@ return $htmltag;
 
     public function getUsersAccounts(){
       $htmlTag = '';
-      $results = pg_query("SELECT * FROM users");
-
+      $username = $_SESSION['username'];
+      $adminresults = pg_query("SELECT * From admin where username ='{$username}';");
+      if(pg_num_rows($adminresults)==1){
+      $results = pg_query("SELECT * FROM  users LEFT   JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
       if($results){
 
               while($rows = pg_fetch_array($results)){
@@ -205,8 +207,12 @@ return $htmltag;
 
               }
       }
+    }else{
+      $htmlTag = "<h4> Admin Only</h4>";
+    }
       return $htmlTag;              
     }
-}
+    }
+
 
 ?>
