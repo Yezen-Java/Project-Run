@@ -85,9 +85,7 @@ textarea {
   overflow: scroll;
   width: 100%;
 }
-#leftNotesCont{
-  overflow: scroll;
-}
+
 #sortable { 
   list-style-type: none; 
   margin: 0; 
@@ -366,6 +364,9 @@ ul{
     margin: 10px;
     padding: 0;
     list-style: none;
+}
+#sideBar{
+  overflow: scroll;
 }
 
 .upload-drop-zone {

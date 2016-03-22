@@ -144,8 +144,8 @@ $LoadOnStart = new LoadOnStart();
                   </div>
                 </li>
                 <div class="container" id="leftNotesCont">
-          <ul id="myList" class="sortable list searching"></ul>
-        </div>
+                  <ul id="myList" class="sortable list searching"></ul>
+                </div>
           </ul>
         </div>
     </div>
