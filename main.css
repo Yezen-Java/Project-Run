@@ -302,9 +302,9 @@ padding-left: 210px;
     float:right;
     height: 100%
 }
-
-
-
+#myList{
+  overflow: scroll;
+}
 
 .circleButtonX{
 background-color: darkgrey;
