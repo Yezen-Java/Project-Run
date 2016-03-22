@@ -1,5 +1,26 @@
 //NOTES CODE ================================start=======================================	  
 	  $(document).ready(function() {
+		  
+		  
+		  
+		  function GetEditedTime() {
+    var modiDate = new Date();
+    var sec
+
+    if (modiDate.getSeconds() < 10) {
+        sec = "0" + modiDate.getSeconds();
+    } else {
+        sec = modiDate.getSeconds();
+    }
+
+    var modiDate = new Date();
+    var currentTime = modiDate.getHours() + ":" + modiDate.getMinutes() + ":" + sec
+    return currentTime
+}
+		  
+		  
+		  
+		  
 	//holds code for new list item
 	var newListItem;
 		  //wether we have a list or not
@@ -12,10 +33,13 @@
 		
 		//check wether this is the first time a new list is being added
 		if (newNotesList == true) {
-			var valueFromInput = $("#toDoTextArea").val();			
+			var valueFromInput = $("#toDoTextArea").val();
+			var timeAndDate =  GetEditedTime();
+			var currDate = new Date();
+			
 			//handle is used to move the list items ie dragging 
 			newListItem = 
-		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput +'">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
+		'<li><span class="handle"> :: </span><textarea class="listItem"> ' +valueFromInput  + '  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX btn-default"><span class="glyphicon glyphicon-trash"></button></a></li>'//a link to remove the items ie the x button; button;
 			newNotesList = true;
 			
 		} else {
