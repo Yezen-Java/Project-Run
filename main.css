@@ -284,7 +284,6 @@ padding-left: 210px;
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
     position: fixed;
     right: 0.5px;
     width: 0;
