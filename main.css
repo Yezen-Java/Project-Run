@@ -88,8 +88,6 @@ textarea {
 #leftNotesCont{
   overflow: scroll;
 }
-
-
 #sortable { 
   list-style-type: none; 
   margin: 0; 
