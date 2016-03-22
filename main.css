@@ -457,6 +457,10 @@ video{
 #logoutButton{
   padding-left: 600px;
 }
+#buttonContainer{
+  padding-top: 90%
+  
+}
 
 #searchFile{
   width: 300px;
