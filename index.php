@@ -192,10 +192,6 @@ $LoadOnStart = new LoadOnStart();
               <div class=".col-sm-8">
                 <input type="text" class="form-control" id="searchFile" onkeyup="searchFiles()" placeholder ="Search">
               </div>
-              <div class="btn-group .col-sm-4" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Image</button>
-                <button type="button" class="btn btn-secondary">Video</button>
-              </div>
             </div>
           </div>
           <div class = "list-group" id="modalc">
