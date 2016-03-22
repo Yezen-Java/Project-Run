@@ -53,10 +53,7 @@ if (isset($_POST['signup'])){
             <div class="bottom-content">
                <div class="container">
                   <div id="theCarousel" class="carousel slide" data-ride="carousel">
-                     <ol class="carousel-indicators">
-                        <li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
-                        <li data-target="#theCarousel" data-slide-to="1"> </li>
-                     </ol >
+                    
                      <div class="carousel-inner">
                      <div class="item active" id="firstCarousel">
                         <div class ="slide1"></div>
