@@ -127,15 +127,17 @@ $LoadOnStart = new LoadOnStart();
           <ul class="sidebar-nav" id="sideBar">  
                 <li class="sidebar-brand" style="padding-top:10px;">
                     <form name="form1" id="notesBarHeight" method="post" action="">
+                    <div class="container" id="notesBarItemsTop">
                         <input type="text" class="form-control" id="search" placeholder ="Search"> 
-                          <div class="input-group" id="notesBarItemsTop">
+                          <div class="input-group">
                             <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
                             <span class="input-group-btn">
                               <button class="btn btn-default" type="button" id="addBtn">Add</button>
                             </span>
                           </div>
+                    </div>
                       <div class="container" id="notesBarContainer">
-                      <div class="container" id="buttonContainer">
+                        <div class="container" id="buttonContainer">
                           <button type="button" class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
                         </div> 
                           <ul id="myList" class="sortable list searching"></ul>
