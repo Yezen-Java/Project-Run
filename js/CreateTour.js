@@ -17,6 +17,9 @@ TourDate: tourDate,
 	 }else{
 	 alert('Tour Created');
 	$('#buttonsListTours').html(data);
+	document.getElementById("randomfield").reset();
+	document.getElementById("tourNameField").reset();
+	document.getElementById("tourDateField").reset();
 }
 });
 }
