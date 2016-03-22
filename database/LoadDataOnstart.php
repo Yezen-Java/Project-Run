@@ -179,10 +179,9 @@ return $htmltag;
       $htmlTag = '';
       $username = $_SESSION['username'];
       $adminresults = pg_query("SELECT * From admin where username ='{$username}';");
+      if($adminresults){
       if(pg_num_rows($adminresults)==1){
-      $results = pg_query("SELECT * FROM  users LEFT   JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
-      if($results){
-
+      $results = pg_query("SELECT * FROM users LEFT  JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
               while($rows = pg_fetch_array($results)){
                 $userNameForm = $rows['username'];
                 $active = $rows['active'];
@@ -191,24 +190,24 @@ return $htmltag;
                 if($active==1){
                   $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' checked data-toggle='toggle' name='$userId' value='ON' onchange ='onToggleClick(this.value, this.name)' ></td>
-                <td style='padding-left:30px;''><p>$userNameForm</p></td>
-                <td style='padding-left:30px;''><button type='button' class='btn btn-default btn-sm'>
+                <td style='padding-left:30px;'><p>$userNameForm</p></td>
+                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm'>
                 <span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>
               </tr>";
 
                 }else if($active==0){
                     $htmlTag = $htmlTag."<tr>
                 <td><input type='checkbox' class='toggleSwitch' onchange='onToggleClick(this.value, this.name)' data-toggle='toggle' name='$userId' value='OFF' ></td>
-                <td style='padding-left:30px;''><p>$userNameForm</p></td>
-                <td style='padding-left:30px;''><button type='button' class='btn btn-default btn-sm'>
+                <td style='padding-left:30px;'><p>$userNameForm</p></td>
+                <td style='padding-left:30px;'><button type='button' class='btn btn-default btn-sm'>
                 <span class='glyphicon glyphicon-trash' aria-hidden='true'></span></button></td>
                 </tr>";
                 }
 
               }
-      }
-    }else{
+      }else{
       $htmlTag = "<h4> Admin Only</h4>";
+    }
     }
       return $htmlTag;              
     }
