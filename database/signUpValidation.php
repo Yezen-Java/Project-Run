@@ -50,13 +50,18 @@ if ($result) {
   $passwordR = $row[5];
   $active = $row[7];
 }
-if($username === $usernameR  && $password === $passwordR && $active == 1){
+if($username === $usernameR  && $password === $passwordR){
+  if($active == 1){
   session_start();
   $_SESSION['username'] = $username;
   $_SESSION['id'] = $userId;
   pg_close();
     header('Location: index.php');
    return true;
+ }else{
+  echo "Account Is Not Currently Active";
+  return false;
+ }
 }else{
   echo"Invalid Username or password";
 
