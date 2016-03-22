@@ -126,21 +126,21 @@ $LoadOnStart = new LoadOnStart();
         <div id="sidebar-wrapper">
           <ul class="sidebar-nav" id="sideBar">  
                 <li class="sidebar-brand" style="padding-top:10px;">
+                  <div id="container">
                     <form name="form1" id="notesBarHeight" method="post" action="">
-                        <input type="text" class="form-control" id="search" placeholder ="Search"> 
-                          <div class="input-group" id="notesBarItemsTop">
-                            <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
+                      <input type="text" class="form-control" id="search" placeholder ="Search"> 
+                        <div class="input-group" id="notesBarItemsTop">
+                          <input type="text" class="form-control" placeholder="Message" id="toDoTextArea">
                             <span class="input-group-btn">
                               <button class="btn btn-default" type="button" id="addBtn">Add</button>
                             </span>
-                          </div>
-                      <div class="container" id="notesBarContainer">
-                      <div class="container" id="buttonContainer">
-                          <button type="button" class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
-                        </div> 
-                          <ul id="myList" class="sortable list searching"></ul>
-                      </div>
+                        </div>
                     </form>
+                    <ul id="myList" class="sortable list searching"></ul>
+                    <div class="container" id="buttonContainer">
+                      <button class="btn btn-danger" id="clearAll"><a href="javascript:void();" id="clearAll">Delete All</a></button>
+                    </div>
+                  </div>
                 </li>
           </ul>
         </div>
