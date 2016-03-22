@@ -104,6 +104,7 @@ textarea {
 #notesBarItemsTop{
   padding: 10px;
   margin-right: 50px;
+  width: auto;
 }
 
 #sortable li span { 
