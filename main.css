@@ -214,6 +214,11 @@ padding-left: 210px;
   width: auto;
 }
 
+#leftNotesContainer{
+  overflow: scroll;
+  height: 80%;
+}
+
 #deleteTour{
     width: 80px;
 }
