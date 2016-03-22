@@ -135,9 +135,6 @@ textarea {
   font-size:12px;
 }
 
-#sideBar {
-    margin: 10px;
-}
 .navbar{
   background-color: #3A539B;
 }
@@ -363,7 +360,7 @@ ul{
     top: 0;
     width: 250px;
     height: 400px;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     list-style: none;
 }
