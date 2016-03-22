@@ -238,7 +238,7 @@ $LoadOnStart = new LoadOnStart();
           </select>
         </div>
       <div class="modal-body">
-      <h1>Upload Files</h1>
+      <h1>Uploaded Files</h1>
           <ul id ="listMedia">
           </ul>
       </div>
