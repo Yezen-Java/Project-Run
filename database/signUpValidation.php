@@ -59,11 +59,14 @@ if($username === $usernameR  && $password === $passwordR){
     header('Location: index.php');
    return true;
  }else{
-  echo "Account Is Not Currently Active";
+  echo "<div class='alert alert-warning'>
+  <strong>Activition!</strong> Account Is Not Currently Active.
+</div>";
   return false;
  }
 }else{
-  echo"Invalid Username or password";
+  echo"<div class='alert alert-danger'>
+  <strong>Invalid!</strong> Username or Password</div>";
 
 }
 return false;
