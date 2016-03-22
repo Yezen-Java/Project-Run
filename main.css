@@ -360,14 +360,13 @@ ul{
     position: absolute;
     top: 0;
     width: 250px;
-    height: 400px;
+    height: 80%;
+    overflow: scroll;
     margin: 10px;
     padding: 0;
     list-style: none;
 }
-#sideBar{
-  overflow: scroll;
-}
+
 
 .upload-drop-zone {
   height: 200px;
