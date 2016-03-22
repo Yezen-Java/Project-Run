@@ -21,6 +21,11 @@ h3{
   width: 200px;
 }
 
+#notesBarContainer{
+  overflow: scroll;
+  height: 400px;
+}
+
 #toDoTextArea{
   width: 150px;
 }
