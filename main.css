@@ -67,6 +67,10 @@ textarea {
   padding-left: -10px;
 }
 
+#notesBarHeight{
+  height: 100%;
+}
+
 .LocationManagerDiv{
   overflow: scroll;
 }
