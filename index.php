@@ -145,10 +145,10 @@ $LoadOnStart = new LoadOnStart();
                 </li>
           </ul>
         </div>
+        <div class="container" id="leftNotesCont">
+          <ul id="myList" class="sortable list searching"></ul>
+        </div>
     </div>
-    <div class="container" id="leftNotesCont">
-                      <ul id="myList" class="sortable list searching"></ul>
-                    </div>
 </div>
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
