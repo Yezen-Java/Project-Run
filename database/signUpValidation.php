@@ -86,11 +86,30 @@ public function setUserActivition($userid,$number,$dbconn){
 return false;
 }
 
+
+
+public function deleteUsers($userid,$dbconn){
+
+
+  if(isset($userid)){
+  $query = "DELETE FROM users where id = $1";
+  $resutls = pg_prepare($dbconn,"query",$query);
+  $resutls = pg_execute($dbconn,"query",array($userid));
+
+  if(pg_affected_rows($resutls)>0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+return false;
+
 }
 
 
 
-
+}
 
 
 
