@@ -416,7 +416,7 @@ function addmeidaFromSelectList(){
   console.log(selectedValue);
   console.log(selectedText);
   if (selectedValue !== ""){
-    $('#listMedia').append('<li class =tourLoactions> <button class="glyphicon glyphicon-trash" id="trashBoxMedia"></button><a>'+selectedText+'</a><div class='+selectedValue+' value='+selectedValue+'></div> </li>');
+    $('#listMedia').append('<li class =tourLoactions> <button class="glyphicon glyphicon-trash" class="trashBoxMedia"></button><a>'+selectedText+'</a><div class='+selectedValue+' value='+selectedValue+'></div> </li>');
     $('#listMedia ').sortable();
   }
   
@@ -579,10 +579,15 @@ var yourArray = [];
       }
 
       function deleteMediaLi(value){
-        console.log(value);
-        console.log(LocationIdNumber);
         $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
+                $(".trashBoxMedia").each(function(){
+                  if($(this).attr("value") == value){
+                    console.log($(this));
+                    console.log($(this).parent());
+                    ($(this).parent()).remove();
+                  }
+                });
                 $("li").remove("."+value);
               }else{
                 console.log('Error, function : deleteMediaLi');
