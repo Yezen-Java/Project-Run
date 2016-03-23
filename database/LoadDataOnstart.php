@@ -232,7 +232,7 @@ return $htmltag;
        $notesid = $rows['notesid'];
        $description = $rows['description'];
        
-    $htmltag = $htmltag."<li value='$notesid'><textarea class='listItem'>$description</textarea><a id ='$notesid' class='removeListXbtn' style='display: none;' href='#'><button class='circleButtonX'>x</button></a> </li>";
+    $htmltag = $htmltag."<li value='$notesid'><textarea disabled class='listItem'>$description</textarea><a id ='$notesid' class='removeListXbtn' style='display: none;' href='#'><button class='circleButtonX'>x</button></a> </li>";
 
     }
 
