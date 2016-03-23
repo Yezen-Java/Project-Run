@@ -59,7 +59,9 @@ $(document).ready(function(){
 
           if (data == false) {
             $(".progress").addClass("hidden");
-            alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+            window.setTimeout(function () {
+              showAlert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+            }, 3000);
           }else{
             console.log("Inside else.");
             refreshMediaList();
@@ -164,7 +166,10 @@ $(document).ready(function(){
 // $("#file-manager").click(function(){
 //         $("#file_manager_dialogue").modal('show');
 //     });
-
+function showAlert(message) {
+  $("#myAlert").addClass("in");
+  $("#myAlert").text(message);
+}
 
 function EditTourName(value,name){
   $('#editTourDialogue').modal('toggle');

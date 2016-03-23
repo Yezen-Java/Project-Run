@@ -56,6 +56,8 @@ $LoadOnStart = new LoadOnStart();
 
 <body onload="myFunction()">
 
+<div id="myAlert" class="alert success fade" data-alert="alert"></div>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
