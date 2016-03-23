@@ -61,6 +61,7 @@ $(document).ready(function(){
             $(".progress").addClass("hidden");
             window.setTimeout(function () {
               showAlert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+              $("#myAlert").show();
             }, 3000);
           }else{
             console.log("Inside else.");
@@ -169,6 +170,7 @@ $(document).ready(function(){
 function showAlert(message) {
   $("#myAlert").addClass("in");
   $("#myAlert").text(message);
+  $("#myAlert").hide();
 }
 
 function EditTourName(value,name){
