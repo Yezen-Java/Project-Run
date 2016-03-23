@@ -650,6 +650,12 @@ var yourArray = [];
               console.log('error');
            }else{
                 $('#accountManagerModalCss').html(data);
+                $(".userButtons").each(function(){
+                  if($(this).attr('value') == userId){
+                    console.log($(this));
+                    ($(this).parent()).remove();
+                  }
+                });
            }
         }); 
 

@@ -12,11 +12,7 @@ $results = $userClass->deleteUsers($userId,$dbconn);
 
 if ($results) {
 
-$loadOnStart =  new LoadOnStart();
-
-$htmlData = $loadOnStart->getUsersAccounts();
-
-echo $htmlData;
+echo true;
 
 }else{
 
