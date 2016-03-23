@@ -123,6 +123,7 @@
 			  	  $.post('database/DeleteNotes.php',{NoteId:id}, function(data){
               if(data==true){
                 console.log('successfully, done');
+                console.log($(this).parent());
                 $(this).parent().remove();
               }else{
                 console.log('Error');
