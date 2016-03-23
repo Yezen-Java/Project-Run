@@ -58,7 +58,7 @@ $(document).ready(function(){
         success: function(data){
 
           if (data == false) {
-           createNoty('Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg', 'success');
+           createNoty('Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg', 'warning');
            hideNotification();
       
           }else{
@@ -148,7 +148,8 @@ $(document).ready(function(){
         success: function(data){
            if (data == false) {
             $(".progress").addClass("hidden");
-            alert("Error, Try Again");
+            createNoty('Error, Try Again', 'warning');
+            hideNotification();
           }else{
           $('#modalc').html(data);
           $(".progress").addClass("hidden"); 
@@ -202,9 +203,11 @@ for (var i = 0; i < array.length; i++) {
       var value1 = $('#tourButton').val();
        $.post('database/AddMediaToLocation.php',{items:array.join("::"), locationNo:LocationIdNumber}, function(data){
          if (data==true) {
-          alert("Media Added");
+          createNoty('Media Added', 'success');
+          hideNotification();
          }else{
-          alert("error, Please try Again");
+          createNoty('error, Please try Again', 'warning');
+          hideNotification();
          }
        });
        return false;
@@ -244,9 +247,11 @@ function deleteTourLi(tourId){
           item.remove();
           $.post('database/DeleteTours.php',{TourID:tourId}, function(data){
             if (data==true) {
-              alert("TourDeleted");
+              createNoty('Tour deleted', 'success');
+              hideNotification();
           }else{
-            alert("Deleteing tour falid");
+            createNoty('Deleting tour failed', 'warning');
+            hideNotification();
           }
           });
          }
@@ -342,7 +347,8 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 
  $(function() {
        $.post('database/addLocationScript.php',{TourID:selectedTourId,LocationID:selectList}, function(data){
-        alert(data);
+        createNoty('Locations have been added.', 'success');
+        hideNotification();
         var addLocationsHtml = $("<a id="+selectedTourId+">"+selectedText+"</a>");
       $("#pointersDiv").append(addLocationsHtml);
        });
@@ -399,17 +405,20 @@ if(array !=null){
 
        $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
         if(data == true){
-          alert("locations Added successfully");
+          createNoty('Locations added successfully', 'success');
+          hideNotification();
           w3_open(touridSelected);
         }else{
-          alert("SomeThing went wrong");
+          createNoty('Something went wrong', 'warning');
+          hideNotification();
         }
        });
        return false;
   });
 
 }else{
-  alert('no Locations where Selected');
+  createNoty('No locations were selected', 'info');
+  hideNotification();
 }
 
 
@@ -420,9 +429,12 @@ function TourEditName(){
      var newTourName = $("#editTourNameField").val();
      $.post('database/ModifyTour.php',{TourID:tourid,newName:newTourName}, function(data){
         if(data == false){
-          alert("error");
+          createNoty('Error', 'warning');
+          hideNotification();
         }else{
             $('#buttonsListTours').html(data);
+            createNoty('Tours added.', 'success');
+            hideNotification();
         }
        });
 } 
@@ -452,9 +464,12 @@ var yourArray = [];
 
     $.post('database/DeleteLocation.php',{LocationIds:yourArray.join(".")}, function(data){
         if(data == false){
-          alert("error");
+          createNoty('Error', 'warning');
+          hideNotification();
         }else{
             $('#LocationManagerDiv').html(data);
+          createNoty('Tours added successfully', 'success');
+          hideNotification();
         }
        });
   }
@@ -481,9 +496,11 @@ var yourArray = [];
                 $(bobj).text("Edit");
                 $.post('database/AddMediaDescription.php',{Mediaid:$(bobj).attr('id'),Description:descriptionText}, function(data){
                   if(data == false){
-                    alert("error");
+                    createNoty('Error', 'warning');
+                    hideNotification();
                   }else{
-                    alert("works");
+                    createNoty('Success', 'success');
+                    hideNotification();
                   }
                 }); 
               } else {
@@ -509,7 +526,8 @@ var yourArray = [];
       $.post('database/EditLocationName.php',{LocationId:locationId,NewLocationName:NewLocationName}, function(data){
         console.log(data);
       if(data == false){
-        alert("error");
+        createNoty('Error', 'warning');
+        hideNotification();
       }else{
         console.log('Location Edit successfully');
       }
