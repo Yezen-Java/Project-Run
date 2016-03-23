@@ -462,7 +462,7 @@ function TourEditName(){
           hideNotification();
         }else{
             $('#buttonsListTours').html(data);
-            createNoty('Tours added.', 'success');
+            createNoty('Tour saved', 'success');
             hideNotification();
         }
        });
