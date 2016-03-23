@@ -35,17 +35,23 @@
 			$('#btnClear').css('display','none');
 			
 		}
-
 		$('#myList').append(newListItem);
-
-
 		$('#toDoTextArea').val('');			//clear val
 		$('#toDotextArea').focus();			//re-focus for new entry
-		
 		//this makes the notes dragable 
 		$('.sortable').sortable('destroy');
 		$('.sortable').sortable({
 		handle: '.handle'
+
+
+		  $.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
+              if(data==true){
+                console.log('successfully, done');
+
+              }else{
+                console.log('Error');
+              }
+        }); 
 			
 		});
 
