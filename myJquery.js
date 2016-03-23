@@ -86,20 +86,6 @@
 				  
 			  }
 		  });
-									 
-									 
-
-		  //hold all list items 
-		 //  $('#myList').on('change', '.listItem', function(e){
-			// localStorage.setItem('listReferenceKey', myList.innerHTML);//storage again  
-			//   currentValue = $(this).val();
-			//   $(this).attr('value', currentValue);
-		 //  });
-		  
-		  //check to see if list is resorted 
-		  // $('.sortable').sortable().bind('sortupdate',function(){
-	   //     localStorage.setItem('listReferenceKey', myList.innerHTML);
-		  // });
 		  
 		  //remove code - for showing the red x
 		  //what we are targeting 
@@ -121,60 +107,23 @@
 			  var id = $(this).attr('id');
 
 			  	  $.post('database/DeleteNotes.php',{NoteId:id}, function(data){
-              if(data==true){
-              	$("#myList li").each(function(){
-              		var temp = $(this).attr('value');
-              		if(temp == id){
-              			$(this).remove();
-              		}
-              	});
-                console.log('successfully, done');
-                //console.log($(this).parent());
-                //$(this).parent().remove();
-              }else{
-                console.log('Error');
-              }
+	          if(data==true){
+	          	$("#myList li").each(function(){
+	          		var temp = $(this).attr('value');
+	          		if(temp == id){
+	          			$(this).remove();
+	          		}
+	          	});
+	            console.log('successfully, done');
+	            //console.log($(this).parent());
+	            //$(this).parent().remove();
+	          }else{
+	            console.log('Error');
+	          }
         });
 
-			  //this is the anchor tag so we want to remove it and it's paent 
-			  //localStorage.setItem('listReferenceKey', myList.innerHTML);//to remember if we cleared the list
 		  });
 		  
-		  //code to clear all the list items
-		  // $('#btnClear').on('click', '#clearAll', function(e){
-			 //  var confirmMessage = confirm("Are you sure you want to delete all the files!");
-			 //  if (confirmMessage == true) {
-   	// 				$('#myList').children().remove();
-			 //   		newNotesList = true;
 
-				// 	//reset list items
-			 //  		$('#toDoTextArea')
-				// 	$('#btnClear').css('display','none');//hide clear all link
-			 //    	$('#toDoTextArea').focus();
-			 //   		localStorage.setItem('listReferenceKey', myList.innerHTML);//stroring of the list items 
-			 //  }
-			 //  else {
-    			   
-			 //  }
-			   
-		  // });
-		  	  //function to handle page load
-		  //loadToDo();
-		  
-		  // function loadToDo(){
-
-			 //  	if(localStorage.getItem('listReferenceKey')){
-				// ///just in case
-				// //localStorage.clear();
-				// myList.innerHTML = localStorage.getItem('listReferenceKey');
-				// //re-enable sorting 
-				// $('.sortable').sortable('destroy');
-				// $('.sortable').sortable({
-				// handle: '.handle'
-						
-				// });
-			 //  }
-		  // }
-	
 		
 });
