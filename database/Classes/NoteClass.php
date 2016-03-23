@@ -21,7 +21,21 @@ class NotesCLass
 	}
 
 
-	public function deleteNotes(){
+	public function deleteNotes($noteId,$userid,$dbconn){
+
+	$query = "DELETE from notes where notesid = $1 and userid = $2";
+
+		$results = pg_prepare($dbconn, "query", $query);
+		$results = pg_execute($dbconn, "query",array($noteId,$userid));
+
+		if(pg_affected_rows($results)>0){
+
+			return true;
+
+		}
+
+		return false;
+
 
 	}
 

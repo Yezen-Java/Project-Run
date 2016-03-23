@@ -119,7 +119,17 @@
 		  $('#myList').on('click','.removeListXbtn', function(e){
 			  e.preventDefault();
 			  var id = $(this).attr('id');
-			  $(this).parent().remove();//this is the anchor tag so we want to remove it and it's paent 
+
+			  	  $.post('database/DeleteNotes.php',{NoteId:id}, function(data){
+              if(data==true){
+                console.log('successfully, done');
+                $(this).parent().remove();
+              }else{
+                console.log('Error');
+              }
+        });
+
+			  //this is the anchor tag so we want to remove it and it's paent 
 			  //localStorage.setItem('listReferenceKey', myList.innerHTML);//to remember if we cleared the list
 		  });
 		  
