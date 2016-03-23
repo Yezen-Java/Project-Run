@@ -137,9 +137,6 @@ $LoadOnStart = new LoadOnStart();
                     </form>
                   </div>
                 </li>
-                <div class="container" id="buttonContainer">
-                  <button class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
-                </div>
                 <div class="container" id="leftNotesCont">
                   <ul id="myList" class="sortable list searching">
                     <?php
@@ -151,6 +148,7 @@ $LoadOnStart = new LoadOnStart();
           </ul>
         </div>
     </div>
+
 </div>
   <!--Create tour dialogue box-->
   <div class="modal fade" id="createTourDialogue" role="dialog">
