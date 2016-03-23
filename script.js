@@ -652,10 +652,10 @@ var yourArray = [];
                 $('#accountManagerModalCss').html(data);
                 $(".userButtons").each(function(){
                   console.log($(this));
-                  if($(this).attr('value') == userId){
-                    console.log($(this).parent());
-                    $(this).remove();
-                  }
+                  // if($(this).attr('value') == userId){
+                  //   console.log($(this).parent());
+                  //   $(this).remove();
+                  // }
                 });
            }
         }); 
