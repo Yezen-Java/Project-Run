@@ -82,11 +82,7 @@ textarea {
   height: 60%;
   position: relative;
   float: center;
-  overflow: scroll;
   width: 100%;
-}
-#fileManagerDiv{
-  overflow: scroll;
 }
 
 
@@ -460,6 +456,9 @@ video{
 }
 #logoutButton{
   padding-left: 600px;
+}
+#fileManagerDiv{
+  overflow: scroll;
 }
 
 
