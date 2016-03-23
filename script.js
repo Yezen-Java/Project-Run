@@ -1,10 +1,17 @@
 $(document).ready(function(){
 
+  /*The create tour dialogue button creates and appends the details used
+  to create a tour and add it to the SQL database, the physically see the
+  tour, it will be appended to the bottom of the current tours div and when
+  the user clicks this button which shows the tour name and code, the user 
+  can then double click and change the name of the tour if necessary*/
   $("#createTourDialogueButton").click(function() {
+    //variables for the tour ID (generated code), tour name and tour date, stored on SQL database.
     var Tourid = $("#randomfield").val();
     var tourname = $("#tourNameField").val();
     var tourDate = $("#tourDateField").val();
 
+    //If the code is not generated or the tour name isn't filled or the date isn't selected, error notified.
     if (Tourid == '' || tourname == '' || tourDate=='') {
       createNoty('Insertion Failed, Some Fields are Blank', 'warning');
       hideNotification();
@@ -192,38 +199,37 @@ $(document).ready(function(){
   });
 });
 
-// $("#file-manager").click(function(){
-//         $("#file_manager_dialogue").modal('show');
-//     });
-function showAlert(message) {
-  $("#myAlert").addClass("in");
-  $("#myAlert").text(message);
-  $("#myAlert").hide();
-}
+//The location ID number is an auto generated value by the database, for each new location added to the system.
+var LocationIdNumber ='';
 
+/*The EditTourName method takes as parameters the value attribute of the 
+tour selected, the new name we want to use to replace the current value
+and we change the value of the editTourNameField with the new name.*/
 function EditTourName(value,name){
   $('#editTourDialogue').modal('toggle');
   $('#editTourDialogue').attr("value",value);
-        // console.log($('#editTourDialogue').attr('value'));
+  // console.log($('#editTourDialogue').attr('value'));
   $('#editTourNameField').val(name);
 } 
 
-$(function() {
-$(".tourButtons").each(function(index,object){
-      $(object).on('dblclick', function (e) {
+// $(function() {
+// $(".tourButtons").each(function(index,object){
+//       $(object).on('dblclick', function (e) {
         
-      });
-    });
-});
+//       });
+//     });
+// });
 
-var LocationIdNumber ='';
-
+/*The save function returns all the ID's of media uploaded including, videos, images and so forth
+via the media manager, it then sends these files to the amazon s3 bucket, using SQL queries,
+we can manipulate the files within the bucket.*/
 function Save(){
 
 var array = [];
  $('#listMedia div').each(function(i, li) {
   array.push($(li).attr('value'));
 });
+ //Console log all the names of data stored in the amazon s3 bucket.
 for (var i = 0; i < array.length; i++) {
   console.log(array[i]);
 };
@@ -251,15 +257,16 @@ for (var i = 0; i < array.length; i++) {
 //   alert('The File API is is not fully supported in this browser.')
 // }
 
-function myFunction() {
-  document.getElementById('notesArea').placeholder= Date();
-}
+// function myFunction() {
+//   document.getElementById('notesArea').placeholder= Date();
+// }
 
+/*the reloaddiv method automatically reloads the mediaList container when called,
+that way the user is presented with the current state of the media stored in the 
+amazon s3 bucket. */
 function reloaddiv(evt){
-
-         $("#mediaList").load("index.php")
-         evt.preventDefault();
-     
+  $("#mediaList").load("index.php")
+  evt.preventDefault();
 }
 
 function deleteTourLi(tourId){
