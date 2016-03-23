@@ -45,9 +45,6 @@ textarea {
 #fileContent{
   width: 80%;
 }
-#file_manager_dialogue{
-  overflow: scroll;
-}
 
 .displayCheckBoxSpan{
   margin:5px;
@@ -88,6 +85,10 @@ textarea {
   overflow: scroll;
   width: 100%;
 }
+#fileManagerDiv{
+  overflow: scroll;
+}
+
 
 #sortable { 
   list-style-type: none; 
