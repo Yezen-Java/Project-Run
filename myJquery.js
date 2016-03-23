@@ -122,9 +122,16 @@
 
 			  	  $.post('database/DeleteNotes.php',{NoteId:id}, function(data){
               if(data==true){
+              	$("#myList li").each(function(){
+              		var temp = $(this).attr('value');
+              		console.log(temp);
+              		if(temp == id){
+              			$(this).remove();
+              		}
+              	});
                 console.log('successfully, done');
-                console.log($(this).parent());
-                $(this).parent().remove();
+                //console.log($(this).parent());
+                //$(this).parent().remove();
               }else{
                 console.log('Error');
               }
