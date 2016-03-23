@@ -12,15 +12,13 @@
 		if (newNotesList == true) {
 			var valueFromInput = $("#toDoTextArea").val();			
 			//handle is used to move the list items ie dragging 
-			newListItem = 
-		'<li><textarea class="listItem"> '+  valueFromInput +'</textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
 			newNotesList = true;
-			  $.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
-              if(data==true){
-                console.log('successfully, done');
+			$.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
+              if(data==false){
+                console.log('Error, done');
 
               }else{
-                console.log('Error');
+                $('#myList').html(data);
               }
         });
 			

@@ -2,6 +2,7 @@
 
 include 'Classes/NoteClass.php';
 include 'Connect.php';
+include 'LoadDataOnstart.php';
 
 session_start();
 
@@ -12,11 +13,13 @@ $notesCLass = new NotesCLass();
 $result = $notesCLass->addNotes($description,$userid,$dbconn);
 
 if($result){
+	$LoadDataOnstart = new LoadOnStart();
 
-	echo $result;
+	$htmlTag = $LoadDataOnstart->getNotesOfuser();
+
+	echo $htmlTag;
 }else{
 
 	echo $result;
 }
-
 ?>
