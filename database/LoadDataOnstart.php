@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * LoadDataOnstart.php 
+ * Load Data on start. 
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 include 'Connect.php';
 
 error_reporting(E_ALL & ~E_NOTICE);
@@ -7,6 +15,10 @@ session_start();
 
 
 class LoadOnStart{
+
+  /**
+  * Get The Tours for the loged in user.
+  */
 
 public function getTourList(){
 
@@ -37,30 +49,9 @@ return $htmltage;
 
 }
 
-
-// public function GetLocationQuery(){
-
-
-// $locationsQuery = pg_query("SELECT * From location");
-
-// if ($locationsQuery) {
-  
-
-// echo"<select id ='selectLocation' class='form-control'>";
-//          echo"<option>Choose Room To Add:</option>";
-//          while($rows = pg_fetch_array($locationsQuery)){
-//           $id = $rows['locationid'];
-//           $name = $rows['lname'];
-//           echo"<option value='$id'>$name</option>";
-//          }
-//          echo"</select>";
-// }else{
-//  echo "No Location where Found";
-// }
-// }
-
-
-
+/**
+* get Locations list from database, these location are inserted by the user.
+*/
 public function getLocationList(){
 
 $locationsQuery2 = pg_query("SELECT * From location");
@@ -80,6 +71,10 @@ if ($locationsQuery2) {
     echo "noLocationsFound";
   }
 }
+
+/**
+* get the media from the datanbase on start.
+*/
 
 public function mediaResultsFucntion(){
   $htmlTage = '';
@@ -135,6 +130,10 @@ return $htmlTage;
 
 }
 
+/**
+* select media function function for user to insert media for a location.
+*/
+
 public function MediaSelectFucntion(){
   $htmltag = '';
 $MediaSelect = pg_query("SELECT * from media order by mediaid ASC");
@@ -150,7 +149,11 @@ if ($MediaSelect) {
 return $htmltag;
 }
 
-    public function getLocationManager(){
+
+   /**
+   * Get the location for the amanager model.
+   */
+   public function getLocationManager(){
       $htmlTag = '';
 
       $locationsQuery2 = pg_query("SELECT * From location");
@@ -175,6 +178,9 @@ return $htmltag;
           return $htmlTag;
     }
 
+    /**
+    *get the user accounts, for the admin.
+    */
     public function getUsersAccounts(){
       $htmlTag = '';
       $username = $_SESSION['username'];
@@ -220,7 +226,9 @@ return $htmltag;
       return $htmlTag;              
     }
 
-
+    /**
+    *get Media Notes of the loged in user.
+    */
     public function getNotesOfuser(){
       $htmltag = '';
       $username = $_SESSION['id'];

@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * function call 'Destory user session'.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 session_destroy();

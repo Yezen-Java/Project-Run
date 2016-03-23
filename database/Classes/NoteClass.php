@@ -2,11 +2,18 @@
 
 
 /**
-* 
-*/
+ * LocationClass.php
+ * Location managent
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 class NotesCLass
 {
-	
+	/*
+	add notes inserted by the user, add notes id to username.
+	*/
 	public function addNotes($description,$userid,$dbconn){
 
 		$query = "INSERT into notes (description,userid) values ($1,$2);";
@@ -20,7 +27,10 @@ class NotesCLass
 		return false;
 	}
 
-
+    
+    /*
+    detele notes from specific user account.
+    */
 	public function deleteNotes($noteId,$userid,$dbconn){
 
 	$query = "DELETE from notes where notesid = $1 and userid = $2";

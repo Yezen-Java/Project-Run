@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * function call 'setUserActivition'.
+ * set user activition  by the user.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
 include 'Connect.php';
 include 'signUpValidation.php';
 

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * function Call 'deleteTour'.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 include 'Connect.php';
 include 'Classes/TourClass.php';
 

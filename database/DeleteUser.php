@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * function call 'deleteUsers'
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 include 'Connect.php';
 include 'signUpValidation.php';
 include 'LoadDataOnstart.php';

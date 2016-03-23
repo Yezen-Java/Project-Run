@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * function call 'edittourname'.
+ * edit tour name
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 require 'Connect.php';
 include 'Classes/TourClass.php';
 include 'LoadDataOnstart.php';

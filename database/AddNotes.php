@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * function call add Media To Location.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 include 'Classes/NoteClass.php';
 include 'Connect.php';
 include 'LoadDataOnstart.php';

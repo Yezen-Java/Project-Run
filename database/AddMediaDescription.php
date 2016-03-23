@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * function call add media description.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 require 'Connect.php';
 include 'Classes/MediaManagerClass.php';
 

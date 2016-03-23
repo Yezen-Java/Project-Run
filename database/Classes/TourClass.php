@@ -2,11 +2,18 @@
 
 
 /**
-* 
-*/
+ * LocationClass.php
+ * Location managent
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
 
 class TourClass
 {
+	/*
+	create tour and insert it into tour_res, which it will belongs to a user.
+	*/
 	public function insertTour($escapeTourid,$escapeTName,$escapeTD,$escapeUser){
 
 		global $dbconn;
@@ -35,8 +42,9 @@ class TourClass
 			return false;
 	}
 
-
-
+		/*
+		Delete specific tour.
+		*/
 	public function deleteTour($GetTourID){
 
 		global $dbconn;
@@ -56,7 +64,9 @@ class TourClass
 		return false;
 
 	}
-
+	/*
+	* Edit specific tour name.
+	*/
 
 	public function EditTourName($TourId,$NewTourName,$dbconn){
 		$Query = "UPDATE tour SET tour_name = $1 WHERE tourid = $2";

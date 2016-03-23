@@ -1,5 +1,13 @@
 <?php 
 
+/**
+ * function call 'InsertTour'.
+ * function call return LoadDataOnstart 'getTourList'.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 require 'Connect.php';

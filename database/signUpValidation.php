@@ -1,11 +1,20 @@
 <?php 
 
+/**
+ * userClass.php.
+ * @author Yezen Alnafei
+ * @version 1.0
+ *
+ */
+
 include 'Connect.php';
 
 
 Class UserClass{
 
-
+/**
+* sign up a user, .
+*/
   public function signUpuser($fname,$lastname,$email,$username,$password){
 
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -21,6 +30,9 @@ Class UserClass{
       pg_close ($connection);
 }
 
+/**
+* check whethre user input exists in the database already, if not return true.
+*/
 public function checkUser($email,$username){
 
   $resultemail = pg_query("SELECT * FROM users WHERE Email='{$email}'");
@@ -38,6 +50,9 @@ return true;
 
 }
 
+/**
+* check user login detlis and also check where its
+*/
 public function loginUserSession($username,$password){
 
 $escape = pg_escape_string($username);
@@ -74,6 +89,10 @@ return false;
 }
 
 
+/**
+* set user Activition.
+*/
+
 public function setUserActivition($userid,$number,$dbconn){
   $Query = "UPDATE users set active = $1 where userid = $2";
   $results = pg_prepare($dbconn,"queryUpdate",$Query);
@@ -87,7 +106,9 @@ return false;
 }
 
 
-
+/**
+*Delete user.
+*/
 public function deleteUsers($userid,$dbconn){
 
   $query = "DELETE FROM users where userid = $1";
