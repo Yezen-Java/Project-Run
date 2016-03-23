@@ -141,7 +141,7 @@
 			   
 		  // });
 		  	  //function to handle page load
-		  loadToDo();
+		  //loadToDo();
 		  
 		  // function loadToDo(){
 
