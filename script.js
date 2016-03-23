@@ -653,7 +653,7 @@ var yourArray = [];
                 $(".userButtons").each(function(){
                   if($(this).attr('value') == userId){
                     console.log($(this).parent());
-                    //$(this).remove();
+                    ($(this).parent()).remove();
                   }
                 });
            }
