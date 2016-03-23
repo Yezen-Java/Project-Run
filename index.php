@@ -140,11 +140,11 @@ $LoadOnStart = new LoadOnStart();
                 <div class="container" id="leftNotesCont">
                 <div class="container">
                   <ul id="myList" class="sortable list searching">
-                </div>
                     <?php
                     echo $LoadOnStart->getNotesOfuser();
                     ?>
                   </ul>
+                  </div>
                 </div>
           </ul>
         </div>
