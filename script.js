@@ -581,11 +581,8 @@ var yourArray = [];
       function deleteMediaLi(value){
         $.post('database/removeMediaOfLocation.php',{LocationId:LocationIdNumber, MediaId:value}, function(data){
               if(data==true){
-                console.log(data);
                 $(".trashBoxMedia").each(function(){
                   if($(this).attr("value") == value){
-                    console.log($(this));
-                    console.log($(this).parent());
                     ($(this).parent()).remove();
                   }
                 });
