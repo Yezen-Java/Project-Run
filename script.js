@@ -632,7 +632,7 @@ var yourArray = [];
 
       function searchLocationEdit(){
         var searchText = $('#searchEditLocations').val();
-        $('.editLoactionList > label').each(function(){
+        $('.editLoactionList').each(function(){
             console.log($(this));
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
