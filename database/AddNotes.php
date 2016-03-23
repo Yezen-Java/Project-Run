@@ -3,6 +3,8 @@
 include 'Classes/NoteClass.php';
 include 'Connect.php';
 
+session_start();
+
 $description = $_POST['Note'];
 $userid = $_SESSION['id'];
 
