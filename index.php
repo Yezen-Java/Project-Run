@@ -55,7 +55,7 @@ $LoadOnStart = new LoadOnStart();
 </head>
 
 <body onload="myFunction()">
-
+<div id="noty-holder"></div> <!--Notification bar-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">

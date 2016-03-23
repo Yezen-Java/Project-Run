@@ -461,11 +461,19 @@ video{
   overflow: scroll;
 }
 
-
 #searchFile{
   width: 300px;
   margin-left: 18px;
   margin-bottom: 10px;
+}
+
+#noty-holder{    
+    width: 100%;    
+    top: 0;
+    font-weight: bold;    
+    z-index: 1031; /* Max Z-Index in Fixed Nav Menu is 1030*/
+    text-align: center;
+    position: fixed;
 }
 
 
