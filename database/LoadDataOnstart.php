@@ -219,6 +219,7 @@ return $htmltag;
       $query = "SELECT * from notes where userid = $username";
       $results = pg_query($query);
 
+      if($results){
       while ($rows=pg_fetch_array($results)){
        $notesid = $rows['notesid'];
        $description = $rows['description'];
@@ -227,7 +228,13 @@ return $htmltag;
 
     }
 
+}else{
 
+  $htmltag = 'Create new Note';
+
+}
+
+return $htmltag;
 
     }
       }
