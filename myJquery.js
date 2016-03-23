@@ -8,7 +8,6 @@
 
 	$('#addBtn').on('click', function(e) {
 		e.preventDefault();
-		
 		//check wether this is the first time a new list is being added
 		if (newNotesList == true) {
 			var valueFromInput = $("#toDoTextArea").val();			
@@ -16,6 +15,14 @@
 			newListItem = 
 		'<li><span class="handle"> :: </span><textarea class="listItem"> '+  valueFromInput +'">  </textarea><a class="removeListXbtn" style="display: none;" href="#"><button class="circleButtonX">x</button></a> </li>'//a link to remove the items ie the x button; button;
 			newNotesList = true;
+			  $.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
+              if(data==true){
+                console.log('successfully, done');
+
+              }else{
+                console.log('Error');
+              }
+        });
 			
 		} else {
 			//get value from input field == The large text area 
@@ -23,6 +30,14 @@
 		    newListItem = $('#myList li:last').clone();
 			//substitute values for the value before with what the user entered
 			newListItem.find('textarea').attr('value', Value); 
+			  $.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
+              if(data==true){
+                console.log('successfully, done');
+
+              }else{
+                console.log('Error');
+              }
+        });
 		}
 		
 		//show or not show clear all according the number of list items 
@@ -44,14 +59,7 @@
 		handle: '.handle'
 
 
-		  $.post('database/AddNotes.php',{Note:valueFromInput}, function(data){
-              if(data==true){
-                console.log('successfully, done');
-
-              }else{
-                console.log('Error');
-              }
-        }); 
+	 
 			
 		});
 
