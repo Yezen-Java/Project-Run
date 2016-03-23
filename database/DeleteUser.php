@@ -1,7 +1,7 @@
 <?php
 
 include 'Connect.php';
-include 'Classes/NoteClass.php';
+include 'signUpValidation.php';
 include 'LoadDataOnstart.php';
 
 $userId = $_POST['userId'];
