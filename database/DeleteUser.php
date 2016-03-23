@@ -18,7 +18,6 @@ $htmlData = $loadOnStart->getUsersAccounts();
 
 echo $htmlData;
 
-
 }else{
 
 	echo false;
