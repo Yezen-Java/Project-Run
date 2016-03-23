@@ -184,7 +184,7 @@ return $htmltag;
         $htmlTag = "<table style='width:auto'>
               <tr>
                 <td><p>ACTIVE</p></td>
-                <td style='padding-left:30px;''><p>USER NAME</p></td>
+                <td style='padding-left:30px;''><p>EMAIL</p></td>
                 <td style='padding-left:30px;'><p>REMOVE</p></td>
               </tr>";
       $results = pg_query("SELECT * FROM users LEFT  JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
