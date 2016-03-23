@@ -9,7 +9,7 @@ class NotesCLass
 	
 	public function addNotes($description,$userid,$dbconn){
 
-		$query = "INSERT into media (description,userid) values ($1,$2);";
+		$query = "INSERT into notes (description,userid) values ($1,$2);";
 
 		$results = pg_prepare($dbconn, "query", $query);
 		$results = pg_execute($dbconn, "query",array($description,$userid));
