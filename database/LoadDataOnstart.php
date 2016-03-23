@@ -224,7 +224,7 @@ return $htmltag;
     public function getNotesOfuser(){
       $htmltag = '';
       $username = $_SESSION['id'];
-      $query = "SELECT * from notes where userid = $username";
+      $query = "SELECT * from notes where userid = $username order by mediaid DESC";
       $results = pg_query($query);
 
       if($results){
