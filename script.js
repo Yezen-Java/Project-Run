@@ -649,7 +649,7 @@ var yourArray = [];
            if(data==false){
               console.log('error');
            }else{
-                $('#accountManagerModalCss').html(data);
+                //$('#accountManagerModalCss').html(data);
                 $(".userButtons").each(function(){
                   console.log($(this));
                   // if($(this).attr('value') == userId){

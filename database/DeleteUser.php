@@ -12,7 +12,7 @@ $results = $userClass->deleteUsers($userId,$dbconn);
 
 if ($results) {
 
-echo true;
+	echo true;
 
 }else{
 
