@@ -47,7 +47,6 @@ $LoadOnStart = new LoadOnStart();
     <script src="myJquery.js"></script>
     <script src="jquery.sortable.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <script src="js/CreateTour.js"></script>
     <script src="tests.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script type="text/javascript" src="script.js"></script>

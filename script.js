@@ -1,5 +1,34 @@
 $(document).ready(function(){
 
+  $("#createTourDialogueButton").click(function() {
+    var Tourid = $("#randomfield").val();
+    var tourname = $("#tourNameField").val();
+    var tourDate = $("#tourDateField").val();
+
+    if (Tourid == '' || tourname == '' || tourDate=='') {
+      createNoty('Insertion Failed, Some Fields are Blank', 'warning');
+      hideNotification();
+    } else {
+      $.post("database/Insertour.php", {
+        TourID: Tourid,
+        Tourname: tourname,
+        TourDate: tourDate,
+      }, function(data) {
+        if (data == false) {
+          createNoty('Tourcode already exists', 'info');
+          hideNotification();
+         }else{
+          createNoty('Tour created', 'success');
+          hideNotification();
+          $('#buttonsListTours').html(data);
+          document.getElementById("randomfield").reset();
+          document.getElementById("tourNameField").reset();
+          document.getElementById("tourDateField").reset();
+        }
+      });
+    }
+  });
+
   $('.toggleSwitch').bootstrapToggle();
 
     $('#search').keyup(function(){
