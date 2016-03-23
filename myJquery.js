@@ -124,7 +124,6 @@
               if(data==true){
               	$("#myList li").each(function(){
               		var temp = $(this).attr('value');
-              		console.log(temp);
               		if(temp == id){
               			$(this).remove();
               		}
