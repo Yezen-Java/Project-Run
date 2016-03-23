@@ -89,16 +89,14 @@ return false;
 
 
 public function deleteUsers($userid,$dbconn){
-  $query = "DELETE FROM users where id = $1";
+
+  $query = "DELETE FROM users where userid = $1";
   $resutls = pg_prepare($dbconn,"query",$query);
   $resutls = pg_execute($dbconn,"query",array($userid));
 
   if(pg_affected_rows($resutls)>0){
     return true;
-  }else{
-    return false;
   }
-
 
 return false;
 
