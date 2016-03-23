@@ -137,10 +137,10 @@ $LoadOnStart = new LoadOnStart();
                     </form>
                   </div>
                 </li>
+                <div class="container" id="leftNotesCont">
                 <div class="container">
                   <ul id="myList" class="sortable list searching">
                 </div>
-                <div class="container" id="leftNotesCont">
                     <?php
                     echo $LoadOnStart->getNotesOfuser();
                     ?>
