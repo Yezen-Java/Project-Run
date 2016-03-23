@@ -116,11 +116,12 @@
 
 		  });
 		  
-		  // $('#myList').on('click','.removeListXbtn', function(e){
-			 //  e.preventDefault();
-			 //  $(this).parent().remove();//this is the anchor tag so we want to remove it and it's paent 
-			 //  localStorage.setItem('listReferenceKey', myList.innerHTML);//to remember if we cleared the list
-		  // });
+		  $('#myList').on('click','.removeListXbtn', function(e){
+			  e.preventDefault();
+			  console.log($(this).attr('id'));
+			  $(this).parent().remove();//this is the anchor tag so we want to remove it and it's paent 
+			  //localStorage.setItem('listReferenceKey', myList.innerHTML);//to remember if we cleared the list
+		  });
 		  
 		  //code to clear all the list items
 		  // $('#btnClear').on('click', '#clearAll', function(e){
