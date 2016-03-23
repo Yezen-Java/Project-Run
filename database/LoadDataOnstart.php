@@ -215,7 +215,7 @@ return $htmltag;
 
     public function getNotesOfuser(){
       $htmltag = '';
-      $username = $_SESSION['username'];
+      $username = $_SESSION['id'];
       $query = "SELECT * from notes where userid = $username";
       $results = pg_query($query);
 
