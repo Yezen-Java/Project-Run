@@ -89,9 +89,6 @@ return false;
 
 
 public function deleteUsers($userid,$dbconn){
-
-
-  if($userid){
   $query = "DELETE FROM users where id = $1";
   $resutls = pg_prepare($dbconn,"query",$query);
   $resutls = pg_execute($dbconn,"query",array($userid));
@@ -101,7 +98,7 @@ public function deleteUsers($userid,$dbconn){
   }else{
     return false;
   }
-}
+
 
 return false;
 
