@@ -2,6 +2,7 @@
 
 include 'Connect.php';
 include 'Classes/NoteClass.php';
+include 'LoadDataOnstart.php';
 
 $userId = $_POST['userId'];
 
@@ -11,7 +12,13 @@ $results = $userClass->deleteUsers($userId,$dbconn);
 
 if ($results) {
 
-	echo true;
+$loadOnStart =  new LoadOnStart();
+
+$htmlData = $loadOnStart->getUsersAccounts()
+
+echo $htmlData;
+
+
 }else{
 
 	echo false;
