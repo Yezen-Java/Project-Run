@@ -652,8 +652,7 @@ var yourArray = [];
                 //$('#accountManagerModalCss').html(data);
                 $(".userButtons").each(function(){
                   if($(this).attr('value') == userId){
-                    console.log($(this).parent());
-                    ($(this).parent()).remove();
+                    (($(this).parent()).parent()).remove();
                   }
                 });
            }
