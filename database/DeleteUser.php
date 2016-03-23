@@ -14,7 +14,7 @@ if ($results) {
 
 $loadOnStart =  new LoadOnStart();
 
-$htmlData = $loadOnStart->getUsersAccounts()
+$htmlData = $loadOnStart->getUsersAccounts();
 
 echo $htmlData;
 
