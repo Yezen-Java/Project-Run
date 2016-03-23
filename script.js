@@ -630,7 +630,7 @@ var yourArray = [];
         });       
       }
 
-      function searchLoactions(){
+      function searchLocationEdit(){
         var searchText = $('#searchEditLocations').val();
         console.log(searchText);
         $('.editLoactionList > label').each(function(){

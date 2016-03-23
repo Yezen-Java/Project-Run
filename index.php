@@ -312,6 +312,8 @@ $LoadOnStart = new LoadOnStart();
         </div>
       <div class="modal-body">
       <h1>Edit Locations</h1>
+      <input type="text" class="form-control" id="searchEditLocations" onkeyup="searchLocationEdit()" placeholder ="Search"> 
+
       <?php 
         $LoadOnStart->getLocationList();
       ?>
