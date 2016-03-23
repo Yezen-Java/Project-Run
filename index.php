@@ -138,12 +138,12 @@ $LoadOnStart = new LoadOnStart();
                   </div>
                 </li>
                 <div class="container" id="leftNotesCont">
-                <div class="container">
-                  <ul id="myList" class="sortable list searching">
-                    <?php
-                    echo $LoadOnStart->getNotesOfuser();
-                    ?>
-                  </ul>
+                  <div class="container">
+                    <ul id="myList" class="sortable list searching">
+                      <?php
+                      echo $LoadOnStart->getNotesOfuser();
+                      ?>
+                    </ul>
                   </div>
                 </div>
           </ul>
