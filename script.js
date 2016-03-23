@@ -630,6 +630,19 @@ var yourArray = [];
         });       
       }
 
+      function searchLoactions(){
+        var searchText = $('#searchEditLocations').val();
+        console.log(searchText);
+        $('.editLoactionList > label').each(function(){
+
+            var currentLiText = $(this).text(),
+                showCurrentLi = currentLiText.indexOf(searchText) !== -1;
+            
+            ($(this).parent()).toggle(showCurrentLi);
+        });       
+      }
+
+
 
 
       function ManageUsers(usernameid,number){
