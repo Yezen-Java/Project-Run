@@ -60,9 +60,9 @@ $(document).ready(function(){
           if (data == false) {
            createNoty('Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg', 'success');
            
-           $('.page-alert').setTimeout(function(e) {
+           setTimeout(function(e) {
               e.preventDefault();
-              $(this).closest('.page-alert').slideUp();
+              $('.page-alert').slideUp();
             }, 2000);
       
           }else{
