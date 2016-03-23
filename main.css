@@ -45,6 +45,9 @@ textarea {
 #fileContent{
   width: 80%;
 }
+#file_manager_dialogue{
+  overflow: scroll;
+}
 
 .displayCheckBoxSpan{
   margin:5px;
