@@ -181,6 +181,12 @@ return $htmltag;
       $adminresults = pg_query("SELECT * From admin where username ='{$username}';");
       if($adminresults){
       if(pg_num_rows($adminresults)==1){
+        $htmlTag = "<table style='width:auto'>
+              <tr>
+                <td><p>ACTIVE</p></td>
+                <td style='padding-left:30px;''><p>USER NAME</p></td>
+                <td style='padding-left:30px;'><p>REMOVE</p></td>
+              </tr>";
       $results = pg_query("SELECT * FROM users LEFT  JOIN admin USING (userid) WHERE  admin.userid IS NULL;");
               while($rows = pg_fetch_array($results)){
                 $userNameForm = $rows['email'];
@@ -205,6 +211,8 @@ return $htmltag;
                 }
 
               }
+              $htmlTag=$htmlTag.'</table>';
+
       }else{
       $htmlTag = "<h4> Admin Only</h4>";
     }
