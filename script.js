@@ -583,7 +583,19 @@ var yourArray = [];
       }
 
       function userAccountId(userId){
-        console.log(userId);
+
+        if(userId != null && user !=""){
+
+           $.post('database/DeleteUser.php',{userId:userId}, function(data){
+           if(data==true){
+              console.log('successfully, done');
+           }else{
+                console.log('Error');
+           }
+        }); 
+
+        }
+
       }
 
 
