@@ -291,16 +291,9 @@ $LoadOnStart = new LoadOnStart();
           within the modal that contain all user account names, the admin account can
           enter this modal and grant administritive privilages. 
           -->
-            <table style="width:auto">
-              <tr>
-                <td><p>ACTIVE</p></td>
-                <td style="padding-left:30px;"><p>USER NAME</p></td>
-                <td style="padding-left:30px;"><p>REMOVE</p></td>
-              </tr>
               <?php 
             echo $LoadOnStart->getUsersAccounts();
           ?>
-            </table>
           </div>
         </div>
 

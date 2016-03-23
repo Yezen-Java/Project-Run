@@ -590,8 +590,7 @@ var yourArray = [];
            if(data==false){
               console.log('error');
            }else{
-                console.log('successfully, done');
-                console.log(data);
+                $('#accountManagerModalCss').html(data);
            }
         }); 
 
