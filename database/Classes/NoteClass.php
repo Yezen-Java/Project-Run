@@ -7,7 +7,7 @@
 class NotesCLass
 {
 	
-	public function addNotes($description,$userid){
+	public function addNotes($description,$userid,$dbconn){
 
 		$query = "INSERT into media (description,userid) values ($1,$2);";
 
