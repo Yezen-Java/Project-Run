@@ -58,11 +58,8 @@ $(document).ready(function(){
         success: function(data){
 
           if (data == false) {
-            $(".progress").addClass("hidden");
-            window.setTimeout(function () {
-              showAlert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
-              $("#myAlert").show();
-            }, 3000);
+           alert("Some of the files did not meet the requried formates,Please only upload jpg, png, gif, bmp,jpeg,PNG,JPG,JPEG,GIF,BMP,txt,mp4,mp3,m4v,avi,mpeg");
+
           }else{
             console.log("Inside else.");
             refreshMediaList();

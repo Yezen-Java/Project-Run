@@ -364,6 +364,5 @@ $LoadOnStart = new LoadOnStart();
     </div>
   </div>
 </div>
-<div id="myAlert" class="alert success fade" data-alert="alert"></div>
 </body>
 </html>
