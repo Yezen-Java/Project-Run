@@ -142,7 +142,12 @@ $LoadOnStart = new LoadOnStart();
                   <button class="btn btn-danger" id="btnClear"><a href="javascript:void();" id="clearAll">Delete All</a></button>
                 </div>
                 <div class="container" id="leftNotesCont">
-                  <ul id="myList" class="sortable list searching"></ul>
+                  <ul id="myList" class="sortable list searching">
+                    <?php
+
+                    echo $LoadOnStart->getNotesOfuser();
+                    ?>
+                  </ul>
                 </div>
           </ul>
         </div>

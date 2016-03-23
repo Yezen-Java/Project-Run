@@ -211,7 +211,26 @@ return $htmltag;
     }
       return $htmlTag;              
     }
+
+
+    public function getNotesOfuser(){
+      $htmltag = '';
+      $username = $_SESSION['username'];
+      $query = "SELECT * from notes where userid = $username";
+      $results = pg_query($query);
+
+      while ($rows=pg_fetch_array($results)){
+       $notesid = $rows['notesid'];
+       $description = $rows['description'];
+       
+    $htmltag = $htmltag."<li><textarea class='listItem'>$description</textarea><a class='removeListXbtn' style='display: none;' href='#'><button id ='$notesid' class='circleButtonX'>x</button></a> </li>";
+
     }
+
+
+
+    }
+      }
 
 
 ?>
