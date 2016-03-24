@@ -48,6 +48,7 @@ $(document).ready(function(){
         });     
     });
 
+    //Pausing the carousel, and preventing it from swiping automatically login page.
     $('.carousel').carousel('pause');
 
     $('.dropdown-menu').on("click",function(){  
@@ -57,6 +58,8 @@ $(document).ready(function(){
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     
+    /*The add tour button triggers the create tour dialogue
+    and it also calls the randomString Generator method*/
     $("#addTour").click(function(){
         $("#createTourDialogue").modal('show');
         randomStringGenerator();
