@@ -22,7 +22,7 @@ if (isset($_POST['signup'])){
     }else{
       echo "<div class='alert alert-danger'>
     <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+    <strong>unsuccessful!</strong>  username or email already exists.
   </div>
 </div>";
     }

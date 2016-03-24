@@ -24,7 +24,7 @@ Class UserClass{
               if($query){
                   echo " <div class='alert alert-info'>
                    <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                    <strong>Registration!</strong> you have successfully registered
                      </div>";
               }else{
                   echo "Error!!";
