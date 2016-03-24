@@ -465,7 +465,7 @@ var yourArray = [];
           hideNotification();
         }else{
             $('#LocationManagerDiv').html(data);
-          createNoty('Tours added successfully', 'success');
+          createNoty('Locations Deleted', 'success');
           hideNotification();
         }
        });
