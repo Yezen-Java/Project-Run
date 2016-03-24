@@ -54,7 +54,7 @@ $(document).ready(function(){
     $('.dropdown-menu').on("click",function(){  
       $(this).toggleClass('active');
     });
-
+    // hide the progress bar in the file manger modal
     $(".progress").addClass("hidden");
     $("#file_manager").addClass('hidden');
     
@@ -197,14 +197,6 @@ function EditTourName(value,name){
   $('#editTourNameField').val(name);
 } 
 
-// $(function() {
-// $(".tourButtons").each(function(index,object){
-//       $(object).on('dblclick', function (e) {
-        
-//       });
-//     });
-// });
-
 /*The save function returns all the ID's of media uploaded including, videos, images and so forth
 via the media manager, it then sends these files to the amazon s3 bucket, using SQL queries,
 we can manipulate the files within the bucket.*/
@@ -242,7 +234,7 @@ function reloaddiv(evt){
   $("#mediaList").load("index.php")
   evt.preventDefault();
 }
-
+// method to delete a tour
 function deleteTourLi(tourId){
 
   if (confirm("Confirm") == true) {
@@ -277,6 +269,7 @@ function addNoteFunc(){
     ul.find('li:first').clone(true).appendTo(ul);
 }
 
+// generate a random code
 function randomStringGenerator() {
   var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
   var string_length = 6;
@@ -290,6 +283,7 @@ function randomStringGenerator() {
 
 var TourCodeSelected ="";
 
+// open the left bar and populate it with the applicable locations
 function w3_open(value,name) {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
       var TourIdCode=value;
@@ -306,6 +300,7 @@ function w3_open(value,name) {
   });
 }
 
+// close the left bar 
 function w3_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
 }
@@ -367,7 +362,7 @@ var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
 }
 
   
-
+// add the media to the location
 function appendMediaToLocaiton(value){
 var locationID = value;
 console.log("test "+locationID);
@@ -381,7 +376,7 @@ console.log("test "+locationID);
   });
 }
 
-
+// add selected media to sortable list for locataion
 function addmeidaFromSelectList(){
 
   var selectBox = document.getElementById("MediaSelectId");
@@ -398,7 +393,6 @@ function addmeidaFromSelectList(){
 
 
 function saveLocations(){
-
   var checked = getCheckedBoxes("checkboxlocation");
   // var unchecked = [];
   var array = [];
@@ -406,34 +400,28 @@ function saveLocations(){
     console.log("Checked "+checked[i]);
     array.push(checked[i]);
   }
+  var touridSelected = TourCodeSelected;
 
-
-var touridSelected = TourCodeSelected;
-
-if(array !=null){
-    $(function() {
-
-       $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
-        if(data == true){
-          createNoty('Locations added successfully', 'success');
-          hideNotification();
-          w3_open(touridSelected);
-        }else{
-          createNoty('Something went wrong', 'warning');
-          hideNotification();
-        }
-       });
-       return false;
-  });
-
-}else{
-  createNoty('No locations were selected', 'info');
-  hideNotification();
+  if(array !=null){
+      $(function() {
+         $.post('database/AddLocationClass.php',{TourID:touridSelected,items:array.join("::")}, function(data){
+          if(data == true){
+            createNoty('Locations added successfully', 'success');
+            hideNotification();
+            w3_open(touridSelected);
+          }else{
+            createNoty('Something went wrong', 'warning');
+            hideNotification();
+          }
+         });
+         return false;
+    });
+  }else{
+    createNoty('No locations were selected', 'info');
+    hideNotification();
+  }
 }
-
-
-}
-
+// edit tour name
 function TourEditName(){
     var tourid = $('#editTourDialogue').attr('value');
      var newTourName = $("#editTourNameField").val();
@@ -449,7 +437,7 @@ function TourEditName(){
        });
 } 
 
-
+// method to get all the checked boxes 
 function getCheckedBoxes(element) {
   var checkboxes = document.getElementsByName(element);
   var checkboxesChecked = [];
@@ -465,7 +453,6 @@ function getCheckedBoxes(element) {
 }
 
 function deleteOnClick(){
- // var arrayofvalues = getCheckedBoxes('checkboxlocation');
 var yourArray = []; 
   $("input:checkbox[name=checkboxlocation]:checked").each(function(){
     yourArray.push($(this).val());
@@ -524,28 +511,27 @@ var yourArray = [];
 
      function dbClickEdit(obj){
           $(obj).hide().siblings(".editManagerBox").show().val($(obj).text()).focus();
-
      }
 
-      function fcEdit(obj,id){
-      console.log($(obj).val());
-      console.log(id);
-      var locationId = id;
-      var NewLocationName = $(obj).val();
-      $(obj).hide().siblings(".locationsName").show().text($(obj).val());
-      $.post('database/EditLocationName.php',{LocationId:locationId,NewLocationName:NewLocationName}, function(data){
-        console.log(data);
+     // edit location name
+    function fcEdit(obj,id){
+    console.log($(obj).val());
+    console.log(id);
+    var locationId = id;
+    var NewLocationName = $(obj).val();
+    $(obj).hide().siblings(".locationsName").show().text($(obj).val());
+    $.post('database/EditLocationName.php',{LocationId:locationId,NewLocationName:NewLocationName}, function(data){
+      console.log(data);
       if(data == false){
         createNoty('Error', 'warning');
         hideNotification();
       }else{
         console.log('Location Edit successfully');
       }
-       });
-      }
+    });
+    }
 
       function refreshMediaList(){
-        
          $.post('database/RefreshMediaSelectList.php',{test:'test'}, function(data){
           var select = $('#MediaSelectId');
           select.empty().append(data);
@@ -564,8 +550,8 @@ var yourArray = [];
                 console.log('Error, function : deleteMediaLi');
               }
         }); 
-      }
-
+      } 
+      // method to enable and disable user accounts
       function onToggleClick(value, name){
         console.log('name '+name+'value '+ value);
         var nameOfToggle = document.getElementsByName(name);
@@ -579,7 +565,7 @@ var yourArray = [];
             ManageUsers(name,1)
           }
       }
-
+      // search functionality for files
       function searchFiles(){
         var searchText = $('#searchFile').val();
         console.log(searchText);
@@ -591,7 +577,7 @@ var yourArray = [];
             ($(this).parent()).toggle(showCurrentLi);
         });       
       }
-
+      // search functionality for loactions
       function searchLoactions(){
         var searchText = $('#searchLoaction').val();
         console.log(searchText);
@@ -603,7 +589,7 @@ var yourArray = [];
             ($(this).parent()).toggle(showCurrentLi);
         });       
       }
-
+      // search functionality for location edit
       function searchLocationEdit(){
         var searchText = $('#searchEditLocations').val();
         $('.editLoactionList label').each(function(){
@@ -614,9 +600,6 @@ var yourArray = [];
             ($(this).parent()).toggle(showCurrentLi);
         });       
       }
-
-
-
 
       function ManageUsers(usernameid,number){
            $.post('database/ManageUsers.php',{Usernameid:usernameid,Number:number}, function(data){
@@ -629,6 +612,7 @@ var yourArray = [];
         }); 
       }
 
+      // delete user account
       function userAccountId(userId){
 
         if(userId != null && userId !=""){
@@ -658,6 +642,7 @@ var yourArray = [];
       $(html).hide().prependTo('#noty-holder').slideDown();
     };
 
+    // hides the notification
     function hideNotification(){
       setTimeout(function() {
         $('.page-alert').slideUp();
