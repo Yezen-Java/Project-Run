@@ -22,7 +22,10 @@ Class UserClass{
       }else{
               $query = pg_query("INSERT into users (Firstname, Lastname,Email,Username, Password) values ('{$fname}', '{$lastname}','{$email}','{$username}','{$password}')"); // Insert query
               if($query){
-                  echo "You have Successfully Registered";
+                  echo " <div class='alert alert-info'>
+                   <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                     </div>";
               }else{
                   echo "Error!!";
               }
@@ -46,7 +49,7 @@ public function checkUser($email,$username){
   
   }
 
-return true;
+return false;
 
 }
 

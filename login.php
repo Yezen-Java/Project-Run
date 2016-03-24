@@ -17,8 +17,14 @@ if (isset($_POST['signup'])){
       $password= pg_escape_string($_POST['form-create-password']);
       $checkUserValidation = $userclass->checkUser($email,$username);
       if($checkUserValidation){
+        echo "let through";
       $userclass-> signUpuser($fname,$lastname,$email,$username,$password); 
-
+    }else{
+      echo "<div class='alert alert-danger'>
+    <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>";
     }
 }
 
