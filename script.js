@@ -37,10 +37,10 @@ $(document).ready(function(){
   });
 
   $('.toggleSwitch').bootstrapToggle();
-
+    // search function
     $('#search').keyup(function(){
         var searchText = $(this).val();
-        
+        // get the text of the search input and check with items
         $('#myList > li').each(function(){
             var currentLiText = $(this).text(),
                 showCurrentLi = currentLiText.indexOf(searchText) !== -1;
@@ -108,23 +108,7 @@ $(document).ready(function(){
       });
     }));
 
-    // $("#deleteImage").on('submit',(function(e){
-    //   e.preventDefault();
-    //   $.ajax({
-    //     url: "DeleteMedia.php",
-    //     type: "POST",
-    //     data: new FormData(this),
-    //     contentType: false,
-    //     cache: false,
-    //     processData:false,
-    //     success: function(data){
-
-    //       alert(data);
-    //     },
-    //     error: function(){}           
-    //   });
-    // }));
-
+    // uncheck all checboxes when modal is closed
     $('#EditlocationModel').on('hidden.bs.modal', function () {
       $('#EditlocationModel input').each(function(){
         console.log($(this));
@@ -133,6 +117,7 @@ $(document).ready(function(){
       });
     });
 
+    // check the appropriate checkboxes when modal is opne
     $('#EditlocationModel').on('show.bs.modal', function () {
       var selectedID = [];
       $(".previousLocations").each(function(index,obj){
@@ -170,10 +155,7 @@ $(document).ready(function(){
       check = false;
       return;
     } else {
-      // for (var i = 0; i < array.length; i++) {
-      //   Arrayofvlaues.push(array[i].val());
-      //   console.log(array[i].val());
-      // }
+
       var array = arrayofvalues.join("::");
       console.log(array);
       $(".progress").removeClass("hidden");
@@ -249,17 +231,6 @@ for (var i = 0; i < array.length; i++) {
   });
 
 }
-
-
-// if(window.File && window.FileReader && window.FileList && window.Blob){
-//   alert('The file API works on this browser.')
-// }else{
-//   alert('The File API is is not fully supported in this browser.')
-// }
-
-// function myFunction() {
-//   document.getElementById('notesArea').placeholder= Date();
-// }
 
 /*the reloaddiv method automatically reloads the mediaList container when called,
 that way the user is presented with the current state of the media stored in the 
