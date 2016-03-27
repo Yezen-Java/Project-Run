@@ -4,10 +4,9 @@ html, body {
 }
 
 h3{
-  width: 10px; 
   white-space: nowrap;
-  overflow:hidden;
   text-overflow: ellipsis;
+  overflow:hidden;
 }
 
 /*circle x button code start*/
