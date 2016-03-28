@@ -45,7 +45,6 @@ for ($i = 0; $i < $len; $i++){
 
                 if(pg_execute($dbconn,"query", array($name,$s3file,$actual_media_name,$MediaType))){
 
-                  echo $loadData->mediaResultsFucntion();;
                 }else{
                   echo "Faild To access database";
                 }
@@ -82,7 +81,7 @@ for ($i = 0; $i < $len; $i++){
 
 }
 
-
+ echo $loadData->mediaResultsFucntion();;
 
 ?>
 
