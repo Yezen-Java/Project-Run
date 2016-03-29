@@ -153,7 +153,7 @@ return $htmltag;
    /**
    * Get the location for the amanager model.
    */
-   public function getLocationManager(){
+  public function getLocationManager(){
       $htmlTag = '';
 
       $locationsQuery2 = pg_query("SELECT * From location");
