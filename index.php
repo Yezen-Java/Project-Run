@@ -213,7 +213,7 @@ $LoadOnStart = new LoadOnStart();
           <div style='margin:10px'><input type='file' name='file[]' multiple=""/> 
             <button type="button" class="btn btn-warning" id="deleteCheckedItems">Delete</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <input type ="submit" class="btn btn-default" value='Upload Image'/>
+            <input type ="submit" class="btn btn-default" value='Upload'/>
           </div>
         </form>
       </div>
