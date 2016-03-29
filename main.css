@@ -9,6 +9,10 @@ h3{
   text-overflow: ellipsis;
 }
 
+.tourLoactions{
+  padding:10px;
+}
+
 /*circle x button code start*/
 .circleButtonX {
   border-radius: 50%;
