@@ -7,8 +7,17 @@
  *
  */
 
-$dbconn = pg_connect("host=ec2-107-21-221-59.compute-1.amazonaws.com dbname=da2vmjb6giivfh user=enybctwamdyitl
- password=z3paibkPjPYeWNWib9d3nD0Pi8")
+$host = getenv('host');
+$databaseName = getenv('database');
+$user = getenv('user');
+$password = getenv('password');
+
+
+
+
+
+$dbconn = pg_connect("host= $host dbname=$databaseName user=$user
+ password=$password")
 or die('Could not connect: ' . pg_last_error());
 
 ?>
