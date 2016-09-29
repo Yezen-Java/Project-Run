@@ -9,8 +9,8 @@ Welcome to **HiveTours**,  This is the Content Management System where users can
 
 HiveTour Apps
 -------------
+ <a href="https://github.com/Yezen-Java/Project-Run-iOS_Application"><img src="https://cdn3.iconfinder.com/data/icons/socialnetworking/32/apple.png"/></a>  <a href="https://github.com/MustaRohman/Hospital-Tour"><img src="http://radio.rastafari.cz/content/files/images/ico/android.png"/></a> 
 
- ![](https://cdn3.iconfinder.com/data/icons/socialnetworking/32/apple.png) ![enter image description here](http://radio.rastafari.cz/content/files/images/ico/android.png)
 
 > **Note: Inorder for the system to work**
 
